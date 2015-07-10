@@ -112,6 +112,8 @@ module.exports = function (grunt) {
           base: '<%= yeoman.dist %>'
         }
       }
+
+
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
@@ -156,7 +158,7 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          map: true,
+          map: true
         },
         files: [{
           expand: true,
@@ -385,6 +387,21 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'test/karma.conf.js',
         singleRun: true
+      }
+    },
+/*https://github.com/robwierzbowski/grunt-build-control*/
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com/SergiiShapoval/nasha_lepta.git',
+          branch: 'gh-pages'
+        }
       }
     }
   });

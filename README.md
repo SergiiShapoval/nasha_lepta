@@ -1,12 +1,5 @@
 # nasha-lepta
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
-
-## Build & development
-
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+#https://github.com/yeoman/generator-angular
+#http://yeoman.io/learning/deployment.html
+#http://curtisblackwell.com/blog/my-deploy-method-brings-most-of-the-boys-to-the-yard
