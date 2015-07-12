@@ -11,19 +11,18 @@
 angular
   .module('nashaLeptaApp', [
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'nashaLeptaApp.services',
+    'nashaLeptaApp.controllers'
   ])
   .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+    for (var template in appData.views)
+    {
+      $routeProvider.when(
+        appData.views[template].url, {
+          template: appData.views[template].template,
+          controller: appData.views[template].controller
+        }
+      );
+    }
   });

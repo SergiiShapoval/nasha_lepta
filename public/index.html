@@ -23,24 +23,16 @@
     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">nashaLepta</a>
-          </div>
-
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li class="active"><a href="#/">О проекте</a></li>
+              <li><a ng-href="#/help">Помощь</a></li>
+              <li><a ng-href="#/partners">Партнеры</a></li>
+              <li><a ng-href="#/eventCalendar">Календарь событий</a></li>
+              <li><a ng-href="#/photos">Фотогалерея</a></li>
+              <li><a ng-href="#/videos">Видеогалерея</a></li>
+              <li><a ng-href="#/contacts">Контакты</a></li>
             </ul>
           </div>
         </div>
@@ -80,9 +72,10 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,public}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+              <script src="data/appData.js"></script>
+              <script src="scripts/app.js"></script>
+              <script src="scripts/services.js"></script>
+              <script src="scripts/controllers.js"></script>
         <!-- endbuild -->
 </body>
 </html>
