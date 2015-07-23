@@ -12,24 +12,22 @@ angular
   .module('nashaLeptaApp', [
     'ngResource',
     'ngRoute',
-    'firebase',
-    'nashaLeptaApp.services',
-    'nashaLeptaApp.controllers'
+    'firebase'
   ])
   .config(function ($routeProvider) {
-    for (var template in appData.views)
-    {
-      $routeProvider.when(
-        appData.views[template].url, {
-          template: appData.views[template].template,
-          controller: appData.views[template].controller
+    for (var template in appRoutes.views){
+      $routeProvider
+        .when(
+        '/' + appRoutes.views[template].url, {
+          template: '<nl-article data="'+appRoutes.views[template].url+'"></nl-article>'
         }
-      )
-        .when('/',{
-          template: '' +
-          '<input type="text" ng-model="views">' +
-          '<br/>  {{views}}',
-          controller: 'FireViewsCtrl'
-        });
+      );
     }
+    $routeProvider
+      .when('/', {
+        // redirect to the notes index
+        redirectTo: '/contacts'
+      }).otherwise({
+        redirectTo: '/'
+      });
   });

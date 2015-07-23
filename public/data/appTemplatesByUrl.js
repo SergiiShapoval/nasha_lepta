@@ -1,8 +1,5 @@
-var appData = {
-	"views": {
-		"contactsData": {
-			"controller": "ContactsCtrl",
-			"template": "<h2 style=\"text-align: center;\"><strong>КОНТАКТИ</strong></h2>" +
+var appTemplateByUrls = {
+		"contacts":  "<h2 style=\"text-align: center;\"><strong>КОНТАКТИ</strong></h2>" +
   "<p style=\"margin-left: 18pt; text-align: center;\"><span style=\"color: #0000ff;\"><strong><em><span style=\"text-decoration: underline;\"><span style=\"font-size: 10pt; font-family: Verdana;\">Ви можете внести свою лепту в добру справу</span></span>" +
   "</em></strong></span><span style=\"font-size: 10pt; font-family: Verdana;\"></span></p>" +
 "<p style=\"margin-left: 18pt; text-align: center;\">&nbsp;</p>" +
@@ -15,11 +12,8 @@ var appData = {
 "</p><p><strong><span style=\"text-decoration: underline;\"><span style=\"font-size: 10pt; font-family: Verdana;\">Призначення платежу</span></span></strong><span style=\"text-decoration: underline;\"><span style=\"font-size: 10pt; font-family: Verdana;\">: </span></span><span style=\"font-size: 10pt; font-family: Verdana;\">Благодійна допомога \"Наша Лепта\"</span><span style=\"text-decoration: underline;\"><span style=\"font-size: 10pt; font-family: Verdana;\"><br /></span></span>" +
       "</p><p>&nbsp;</p><p style=\"text-align: justify;\">&nbsp;<span style=\"text-decoration: underline; font-size: 10pt;\"><strong><span style=\"font-family: georgia,palatino;\">Як нас знайти:</span> </strong></span><span style=\"font-family: georgia,palatino; font-size: 12pt;\">Храм знаходиться&nbsp; в районі станції метро «Печерська»,&nbsp; а також &nbsp; можна&nbsp; дістатися від от метро «Палац Україна» - маршрутка 520 до зупинки&nbsp; \"17 лікарня\".</span></p>" +
       "",
-			"url": "/contacts"
-		},
-		"helpData": {
-			"controller": "HelpController",
-			"template": "<p>Help view</p>" +
+
+		"help": "<p>Help view</p>" +
   "<p style=\"text-align: center;\" align=\"center\"><span style=\"font-family: georgia,palatino; font-size: 12pt;\"><strong>Дорогі друзі!</strong></span></p>" +
   "<p style=\"text-align: center;\" align=\"center\"></p>" +
   "<p style=\"text-align: justify; text-indent: 35.45pt;\"><span style=\"font-size: 9pt; font-family: georgia,palatino;\">Запрошуємо Вас відвідати <strong>Новорічний Благодійний ярмарок - аукціон «НАША ЛЕПТА»</strong>, який відбудеться <strong>27 грудня </strong>(субота) в м. Києві, за адресою: <strong>галерея «Соборна</strong>», вул. Залізничне шосе, 3, з 10:00 до 16:00. </span></p>" +
@@ -64,11 +58,8 @@ var appData = {
       "<noscript>Включите поддержку JavaScript,<a href=\"https://disqus.com/?ref_noscript\" rel=\"nofollow\"> чтобы увидеть комментарии</a></noscript>" +
       "&lt;!&ndash;<noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\" rel=\"nofollow\">comments.</a></noscript>&ndash;&gt;" +
       "  &lt;!&ndash;Discuss plugin config end&ndash;&gt; -->  ",
-			"url": "/help"
-		},
-		"eventCalendarData": {
-			"controller": "EventCalendarController",
-			"template": "<p>Event calendar view</p>" +
+
+		"eventCalendar": "<p>Event calendar view</p>" +
   "<h2 style=\"text-align: center;\" align=\"center\"><strong><span style=\"font-size: 11pt; font-family: Verdana;\">Зробили добру справу разом!</span></strong></h2>" +
   "  <h2 style=\"text-align: center;\" align=\"center\"><strong><span style=\"font-size: 10pt; font-family: Verdana;\">«Наша Лепта» звітує.</span></strong></h2>" +
   "<p style=\"text-align: justify;\"><span style=\"font-family: georgia,palatino;\"><span style=\"font-size: 10pt;\">27 грудня 2014 року за благословенням Блаженнішого Митрополита Київського і всієї України Онуфрія в галереї «Соборна» відбувся Різдвяний благодійний ярмарок - аукціон «Наша Лепта». Під час проведення благодійної акції збирались кошти на лікування дітей, які постраждали в східних регіонах нашої держави, а також для дітей, що за складних економічних обставин </span><span style=\"font-size: 10pt;\">зостались сам на сам із тяжкими та невиліковними хворобами. </span></span></p>" +
@@ -125,16 +116,9 @@ var appData = {
   "  <p style=\"text-align: center;\"><span style=\"color: #993300;\"><em>ФОТОАЛЬБОМ </em></span>  </p>" +
       "  <p style=\"text-align: center;\"><span style=\"color: #993300;\"><em>\" 27 ГРУДНЯ 2014 Р. НАША ЛЕПТА\" </em></span><a href=\"index.php/zhizn/fotogallereya/category/96-blagodijna-aktsiya-nasha-lepta-27-12-2014\"><strong><span style=\"text-decoration: underline; color: #993300;\"><em> див. ТУТ</em></span></strong></a>  </p>" +
       "  <p></p>",
-			"url": "/eventCalendar"
-		},
-    "partnersData": {
-			"controller": "PartnersController",
-			"template": "<p>Partners view.</p>",
-			"url": "/partners"
-		},
-    "photosData": {
-			"controller": "PhotosController",
-			"template": "<embed type=\"application/x-shockwave-flash\"  " +
+    "partners": "<p>Partners view.</p>",
+
+    "photos": "<embed type=\"application/x-shockwave-flash\"  " +
   "src=\"https://photos.gstatic.com/media/slideshow.swf\"  " +
   "width=\"800\" height=\"533\"" +
   "  flashvars=\"host=picasaweb.google.com&hl=uk&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F111442129617636727768%2Falbumid%2F6100601476767132305%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk\"" +
@@ -180,21 +164,13 @@ var appData = {
       "<div id=\"gallery\"> </div>" +
       "</center>" +
       "  <!--Picasa Galerry end-->",
-			"url": "/photos"
 
-		},
-    "videosData": {
-			"controller": "VideosController",
-			"template": "<center>" +
+    "videos":  "<center>" +
   "  <iframe width=\"560\"" +
   "  height=\"315\"" +
   "  src=\"https://www.youtube.com/embed/YduSWVgj5ck\"" +
       "  frameborder=\"0\"" +
       "  allowfullscreen>" +
       "         </iframe>" +
-      "  </center>",
-			"url": "/videos"
-
-		}
+      "  </center>"
 	}
-};
