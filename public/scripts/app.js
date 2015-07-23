@@ -12,6 +12,7 @@ angular
   .module('nashaLeptaApp', [
     'ngResource',
     'ngRoute',
+    'firebase',
     'nashaLeptaApp.services',
     'nashaLeptaApp.controllers'
   ])
@@ -23,6 +24,12 @@ angular
           template: appData.views[template].template,
           controller: appData.views[template].controller
         }
-      );
+      )
+    .when('/',{
+      template: '' +
+      '<input type="text" ng-model="views">' +
+      '<br/>  {{views}}',
+      controller: 'FireViewsCtrl'
+    });
     }
   });
