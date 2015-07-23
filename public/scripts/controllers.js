@@ -10,7 +10,7 @@ angular.module('nashaLeptaApp').controller("FireViewsCtrl", function($scope, $fi
 
   for (var template in $scope.views)
   {
-    controllerModule.controller(appData.views[template].controller, ["$scope", template, function (scope, data) {
+    controllerModule.controller($scope.views[template].controller, ["$scope", template, function (scope, data) {
       scope.data = data;
     }]);
   }
