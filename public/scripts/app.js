@@ -27,7 +27,13 @@ angular
       .when('/', {
         // redirect to the notes index
         redirectTo: '/contacts'
-      }).otherwise({
+      })
+      //.when('/fillFireBase', {
+      //  // redirect to the notes index
+      //  template: '<h1>Should Be filled</h1>',
+      //  controller : 'FillCtrl'
+      //})
+      .otherwise({
         redirectTo: '/'
       });
   });
