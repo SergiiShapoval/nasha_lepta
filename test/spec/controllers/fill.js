@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: FillctrlCtrl', function () {
 
   // load the controller's module
   beforeEach(module('nashaLeptaApp'));
 
-  var MainCtrl,
+  var FillctrlCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    FillctrlCtrl = $controller('FillctrlCtrl', {
       $scope: scope
     });
   }));
