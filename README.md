@@ -7,3 +7,5 @@ Used resources:
 #http://yeoman.io/learning/deployment.html
 #http://curtisblackwell.com/blog/my-deploy-method-brings-most-of-the-boys-to-the-yard
 #https://www.firebase.com/docs/web/libraries/angular/guide/user-auth.html
+#https://www.firebase.com/docs/web/guide/understanding-security.html
+#https://github.com/codeschool/NoteWrangler/tree/master/app/js
