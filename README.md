@@ -9,3 +9,4 @@ Used resources:
 #https://www.firebase.com/docs/web/libraries/angular/guide/user-auth.html
 #https://www.firebase.com/docs/web/guide/understanding-security.html
 #https://github.com/codeschool/NoteWrangler/tree/master/app/js
+#https://www.firebase.com/docs/web/libraries/angular/api.html#angularfire-users-and-authentication

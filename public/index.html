@@ -37,6 +37,21 @@
           </div>
         </div>
       </div>
+      <form id="auth" class="navbar-form navbar-right collapse navbar-collapse" ng-controller="AuthCtrl">
+        <fieldset ng-hide="auth.user">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="email" ng-model="email" />
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="password" ng-model="password" />
+          </div>
+          <button type="submit" class="btn btn-default" ng-click="signIn()">Sign In</button>
+        </fieldset>
+        <span ng-show="auth.user">
+          {{auth.user.email}}
+          <button type="submit" class="btn btn-default" ng-click="logOut()">Sign Out</button>
+        </span>
+      </form>
     </div>
 
     <div class="container">
@@ -69,6 +84,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/firebase-simple-login/firebase-simple-login.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
@@ -79,7 +95,8 @@
               <script src="scripts/app.js"></script>
               <script src="scripts/services/fillfirebase.js"></script>
               <script src="scripts/controllers/fill.js"></script>
-        <script src="scripts/directives/nlarticle.js"></script>
+              <script src="scripts/directives/nlarticle.js"></script>
+        <script src="scripts/controllers/auth.js"></script>
         <!-- endbuild -->
 </body>
 </html>
