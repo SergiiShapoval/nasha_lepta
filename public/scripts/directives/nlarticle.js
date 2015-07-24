@@ -7,9 +7,11 @@
  * # nlArticle
  */
 angular.module('nashaLeptaApp')
-  .directive('nlArticle', ["$firebaseObject", "$sce",function ($firebaseObject, $sce) {
+  .directive('nlArticle', ["$firebaseObject", "$sce", "$timeout",function ($firebaseObject, $sce, $timeout) {
     return {
-      template: '<div ng-bind-html="toShow" auth="auth"></div>',
+      template: '<textarea ckeditor="editorOptions" ng-model="toEdit.$value"></textarea>' +
+        '{{toEdit.$value}}'+
+    '<div ng-bind-html="toShow" auth="auth"></div>',
       restrict: 'E',
       scope :{
         data : '@',
@@ -27,11 +29,15 @@ angular.module('nashaLeptaApp')
                 data.$value
               )
             ;
+            scope.toEdit = data;
+            console.log(scope.toEdit);
           })
           .catch(function(error) {
             console.error("Error:", error);
           });
 
       }
+      //,
+      //controller : 'UpdateTemplateCtrl'
     };
   }]);
