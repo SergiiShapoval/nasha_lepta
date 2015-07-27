@@ -345,8 +345,7 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*',
-            'scripts/ckeditor/**/*'
+            'styles/fonts/{,*/}*.*'
           ]
         }, {
           expand: true,
