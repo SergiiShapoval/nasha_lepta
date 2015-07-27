@@ -9,7 +9,7 @@
 angular.module('nashaLeptaApp')
   .directive('nlArticle', ["$firebaseObject", "$sce", function ($firebaseObject, $sce) {
     return {
-      template: '<textarea ckeditor="editorOptions" ng-model="toEdit.$value"></textarea>' +
+      template:
     '<div ng-bind-html="toShow" auth="auth"></div>',
       restrict: 'E',
       scope :{

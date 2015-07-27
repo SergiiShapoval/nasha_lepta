@@ -8,6 +8,5 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('UpdateTemplateCtrl', function ($scope, editorOptions) {
-    $scope.editorOptions = editorOptions;
+  .controller('UpdateTemplateCtrl', function ($scope) {
   });

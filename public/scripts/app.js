@@ -12,8 +12,7 @@ angular
   .module('nashaLeptaApp', [
     'ngResource',
     'ngRoute',
-    'firebase',
-    'ngCkeditor'
+    'firebase'
   ])
   .config(function ($routeProvider) {
     for (var template in appRoutes.views){
