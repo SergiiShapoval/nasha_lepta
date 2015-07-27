@@ -11,6 +11,8 @@ angular.module('nashaLeptaApp')
   .constant('editorOptions', {
     "language": "ru"
     ,
+    allowedContent: true,
+    entities: false,
     "toolbar": [
       {
         "name": "tools",

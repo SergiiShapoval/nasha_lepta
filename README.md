@@ -10,3 +10,10 @@ Used resources:
 #https://www.firebase.com/docs/web/guide/understanding-security.html
 #https://github.com/codeschool/NoteWrangler/tree/master/app/js
 #https://www.firebase.com/docs/web/libraries/angular/api.html#angularfire-users-and-authentication
+#https://github.com/angular-ui/ui-tinymce
+AND
+#http://www.tinymce.com/tryit/full.php
+OR
+#https://github.com/lemonde/angular-ckeditor
+OR
+#https://github.com/esvit/ng-ckeditor
