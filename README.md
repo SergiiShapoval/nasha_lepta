@@ -17,3 +17,4 @@ OR
 #https://github.com/lemonde/angular-ckeditor
 OR
 #https://github.com/esvit/ng-ckeditor
+#CkEditor config - http://www.onehippo.org/library/concepts/document-types/html-fields/ckeditor-toolbar-items.html
