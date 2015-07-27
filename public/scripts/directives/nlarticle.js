@@ -9,8 +9,10 @@
 angular.module('nashaLeptaApp')
   .directive('nlArticle', ["$firebaseObject", "$sce", function ($firebaseObject, $sce) {
     return {
-      template:
-    '<div ng-bind-html="toShow" auth="auth"></div>',
+      template: '<wysiwyg textarea-id="question" textarea-class="form-control"  textarea-height="80px" textarea-required ng-model="toEdit.$value" enable-bootstrap-title="true"></wysiwyg>'
+      +
+    '<div ng-bind-html="toShow" auth="auth"></div>'
+    ,
       restrict: 'E',
       scope :{
         data : '@',
