@@ -16,8 +16,8 @@ angular.module('nashaLeptaApp')
     'table,tableresize,tabletools,' +
     'clipboard,liststyle,selectall,uicolor,colorbutton,' +
     'lineutils,showblocks',
-    autoGrow_onStartup:true
-    ,
+    autoGrow_onStartup:true,
+    baseHref : '/scripts/ckeditor',
     toolbar: 'full',
     toolbar_full: [
       { name: 'base',
