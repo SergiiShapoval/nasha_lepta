@@ -26,7 +26,6 @@ angular
     }
     $routeProvider
       .when('/', {
-        // redirect to the notes index
         redirectTo: '/contacts'
       })
       //.when('/fillFireBase', {
