@@ -14,7 +14,8 @@ Used resources:
 AND
 #http://www.tinymce.com/tryit/full.php
 OR
-#https://github.com/lemonde/angular-ckeditor
-OR
+#https://github.com/lemonde/angular-ckeditor,
+
 #https://github.com/esvit/ng-ckeditor
 #CkEditor config - http://www.onehippo.org/library/concepts/document-types/html-fields/ckeditor-toolbar-items.html
+builded per requirement ckEditor = http://ckeditor.com/builder
