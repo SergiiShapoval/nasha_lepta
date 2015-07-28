@@ -1,4 +1,13 @@
 <!doctype html>
+<!--TODO сделать градиент-->
+<!--TODO Создать карусель, слева вверху логотип с лентами, справа внизу птичка с рисунка (которая клюёт)-->
+<!--TODO Разбить на колонки, основной текст 9 и 3 боковая для доп блока-->
+<!--переносим авторизацию в правый боковой блок,
+анонс событий,
+ фотогаллерею
+-->
+<!--TODO отражать авторизованному пользователю список доступных страниц-->
+
 <html class="no-js">
 <head>
   <meta charset="utf-8">
@@ -8,7 +17,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -24,24 +33,6 @@
 
 <!-- Add your site or application content here -->
 <div class="header">
-  <div class="container">
-    <form id="auth" class="navbar-form navbar-right collapse navbar-collapse"
-          ng-controller="AuthCtrl">
-      <fieldset ng-hide="auth.user">
-        <div class="form-group">
-          <input type="email" class="form-control" placeholder="email" ng-model="email"/>
-        </div>
-        <div class="form-group">
-          <input type="password" class="form-control" placeholder="password" ng-model="password"/>
-        </div>
-        <button type="submit" class="btn btn-default" ng-click="signIn()">Sign In</button>
-      </fieldset>
-          <span ng-show="auth.user">
-            {{auth.user.email}}
-            <button type="submit" class="btn btn-default" ng-click="logOut()">Sign Out</button>
-          </span>
-    </form>
-  </div>
   <div class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -62,7 +53,27 @@
 </div>
 
 <div class="container">
-  <div ng-view=""></div>
+  <div class="row">
+    <div ng-view="" class="col-md-9"></div>
+    <div class="col-md-3">
+      <form id="auth" class="navbar-form navbar-right collapse navbar-collapse"
+            ng-controller="AuthCtrl">
+        <fieldset ng-hide="auth.user">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="email" ng-model="email"/>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="password" ng-model="password"/>
+          </div>
+          <button type="submit" class="btn btn-default" ng-click="signIn()">Sign In</button>
+        </fieldset>
+          <span ng-show="auth.user">
+            {{auth.user.email}}
+            <button type="submit" class="btn btn-default" ng-click="logOut()">Sign Out</button>
+          </span>
+      </form>
+    </div>
+  </div>
 </div>
 
 <div class="footer">
