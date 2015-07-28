@@ -24,6 +24,10 @@ var appRoutes = {
     "videosData": {
 			"controller": "VideosCtrl",
 			"url": "videos"
+		},
+    "mainData": {
+			"controller": "MainCtrl",
+			"url": "main"
 		}
 	}
 };
