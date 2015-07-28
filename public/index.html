@@ -1,109 +1,115 @@
 <!doctype html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/pwi.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-app="nashaLeptaApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/pwi.css">
+  <!-- endbuild -->
+</head>
+<body ng-app="nashaLeptaApp">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+  href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">О проекте</a></li>
-              <li><a ng-href="#/help">Помощь</a></li>
-              <li><a ng-href="#/partners">Партнеры</a></li>
-              <li><a ng-href="#/eventCalendar">Календарь событий</a></li>
-              <li><a ng-href="#/photos">Фотогалерея</a></li>
-              <li><a ng-href="#/videos">Видеогалерея</a></li>
-              <li><a ng-href="#/contacts">Контакты</a></li>
-            </ul>
-          </div>
-          <form id="auth" class="navbar-form navbar-right collapse navbar-collapse" ng-controller="AuthCtrl">
-            <fieldset ng-hide="auth.user">
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="email" ng-model="email" />
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="password" ng-model="password" />
-              </div>
-              <button type="submit" class="btn btn-default" ng-click="signIn()">Sign In</button>
-            </fieldset>
-        <span ng-show="auth.user">
-          {{auth.user.email}}
-          <button type="submit" class="btn btn-default" ng-click="logOut()">Sign Out</button>
-        </span>
-          </form>
+<!-- Add your site or application content here -->
+<div class="header">
+  <div class="container">
+    <form id="auth" class="navbar-form navbar-right collapse navbar-collapse"
+          ng-controller="AuthCtrl">
+      <fieldset ng-hide="auth.user">
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="email" ng-model="email"/>
         </div>
-      </div>
-
-    </div>
-
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="password" ng-model="password"/>
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="signIn()">Sign In</button>
+      </fieldset>
+          <span ng-show="auth.user">
+            {{auth.user.email}}
+            <button type="submit" class="btn btn-default" ng-click="logOut()">Sign Out</button>
+          </span>
+    </form>
+  </div>
+  <div class="navbar navbar-default" role="navigation">
     <div class="container">
-    <div ng-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      <div class="collapse navbar-collapse" id="js-navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#/">О проекте</a></li>
+          <li><a ng-href="#/help">Помощь</a></li>
+          <li><a ng-href="#/partners">Партнеры</a></li>
+          <li><a ng-href="#/eventCalendar">Календарь событий</a></li>
+          <li><a ng-href="#/photos">Фотогалерея</a></li>
+          <li><a ng-href="#/videos">Видеогалерея</a></li>
+          <li><a ng-href="#/contacts">Контакты</a></li>
+        </ul>
       </div>
+
     </div>
+  </div>
+
+</div>
+
+<div class="container">
+  <div ng-view=""></div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+  </div>
+</div>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+  !function (A, n, g, u, l, a, r) {
+    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+      (A[l].q = A[l].q || []).push(arguments)
+    }, A[l].l = +new Date, a = n.createElement(g),
+      r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+  }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+</script>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/firebase/firebase.js"></script>
-    <script src="bower_components/angularfire/dist/angularfire.js"></script>
-    <script src="bower_components/ng-ckeditor/ng-ckeditor.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/firebase/firebase.js"></script>
+<script src="bower_components/angularfire/dist/angularfire.js"></script>
+<script src="bower_components/ng-ckeditor/ng-ckeditor.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-        <!-- build:js({.tmp,public}) scripts/scripts.js -->
-              <script src="data/appRoutes.js"></script>
-              <script src="data/appTemplatesByUrl.js"></script>
-              <script src="scripts/app.js"></script>
-              <script src="scripts/services/fillfirebase.js"></script>
-              <script src="scripts/controllers/fill.js"></script>
-              <script src="scripts/directives/nlarticle.js"></script>
-              <script src="scripts/controllers/auth.js"></script>
-              <script src="scripts/controllers/update_template.js"></script>
-              <script src="scripts/services/editoroptions.js"></script>
-        <!-- endbuild -->
-    <script src="scripts/ckeditor/ckeditor.js"></script>
+<!-- build:js({.tmp,public}) scripts/scripts.js -->
+<script src="data/appRoutes.js"></script>
+<script src="data/appTemplatesByUrl.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/services/fillfirebase.js"></script>
+<script src="scripts/controllers/fill.js"></script>
+<script src="scripts/directives/nlarticle.js"></script>
+<script src="scripts/controllers/auth.js"></script>
+<script src="scripts/controllers/update_template.js"></script>
+<script src="scripts/services/editoroptions.js"></script>
+<!-- endbuild -->
+<script src="scripts/ckeditor/ckeditor.js"></script>
 
-  </body>
+</body>
 </html>
