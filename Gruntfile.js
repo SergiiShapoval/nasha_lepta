@@ -206,7 +206,7 @@ module.exports = function (grunt) {
       dist: {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
-          '!<%= yeoman.dist %>/scripts/ckeditor/{,*/}*.*',
+          '!<%= yeoman.dist %>/scripts/ckeditor/**/*',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
@@ -347,7 +347,7 @@ module.exports = function (grunt) {
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*',
-            'scripts/ckeditor/{,*/}*.*'
+            'scripts/ckeditor/**/*'
           ]
         }, {
           expand: true,
