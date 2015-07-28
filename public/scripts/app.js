@@ -20,7 +20,7 @@ angular
       $routeProvider
         .when(
         '/' + appRoutes.views[template].url, {
-          template: '<nl-article data="'+appRoutes.views[template].url+'"></nl-article>'
+          template: '<nl-article data="'+appRoutes.views[template].url+'" auth="auth"></nl-article>'
         }
       );
     }
