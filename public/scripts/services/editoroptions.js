@@ -12,11 +12,10 @@ angular.module('nashaLeptaApp')
     "language": "ru",
     allowedContent: true,
     entities: false,
-    extraPlugins:'autogrow,image2,youtube,justify,font,embed,find,iframe,' +
+    extraPlugins:'image2,youtube,justify,font,embed,find,iframe,' +
     'table,tableresize,tabletools,' +
     'clipboard,liststyle,selectall,uicolor,colorbutton,' +
     'lineutils,showblocks',
-    autoGrow_onStartup:true,
     toolbar: 'full',
     toolbar_full: [
       { name: 'base',
