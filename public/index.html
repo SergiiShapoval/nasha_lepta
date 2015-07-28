@@ -1,11 +1,6 @@
 <!doctype html>
-<!--TODO сделать градиент-->
 <!--TODO Создать карусель, слева вверху логотип с лентами, справа внизу птичка с рисунка (которая клюёт)-->
-<!--TODO Разбить на колонки, основной текст 9 и 3 боковая для доп блока-->
-<!--переносим авторизацию в правый боковой блок,
-анонс событий,
- фотогаллерею
--->
+<!--анонс событий,фотогаллерею-->
 <!--TODO отражать авторизованному пользователю список доступных страниц-->
 
 <html class="no-js">
@@ -54,9 +49,10 @@
 
 <div class="container">
   <div class="row">
-    <div ng-view="" class="col-md-9"></div>
+    <div ng-view="" class="col-md-8"></div>
+    <div class="col-md-1"></div>
     <div class="col-md-3">
-      <form id="auth" class="navbar-form navbar-right collapse navbar-collapse"
+      <form id="auth" class="navbar-form collapse navbar-collapse text-center"
             ng-controller="AuthCtrl">
         <fieldset ng-hide="auth.user">
           <div class="form-group">
@@ -72,6 +68,11 @@
             <button type="submit" class="btn btn-default" ng-click="logOut()">Sign Out</button>
           </span>
       </form>
+      <div class="gallery">
+        <!--Picasa Galerry start-->
+        <embed wmode="transparent"
+               flashvars="host=picasaweb.google.com&amp;hl=uk&amp;feat=flashalbum&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F111442129617636727768%2Falbumid%2F6100601476767132305%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk" pluginspage="http://www.macromedia.com/go/getflashplayer" src="https://photos.gstatic.com/media/slideshow.swf" type="application/x-shockwave-flash"></embed>
+      </div>
     </div>
   </div>
 </div>
