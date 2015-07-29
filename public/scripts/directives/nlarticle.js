@@ -31,7 +31,7 @@ angular.module('nashaLeptaApp')
             //}else{
             //  console.log(data.$value);
             //}
-
+/*to commit delete after*/
             scope.toEdit = data;
             //console.log(scope.toEdit);
           })
