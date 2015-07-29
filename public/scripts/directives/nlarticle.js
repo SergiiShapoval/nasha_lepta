@@ -21,11 +21,17 @@ angular.module('nashaLeptaApp')
 
         receivedValue.$loaded()
           .then(function(data) {
-            scope.toShow =
-              $sce.trustAsHtml(
-                data.$value
-              )
-            ;
+            /*special case for picasa album*/
+            //if(data.$value.indexOf('picasa=') < 0){
+              scope.toShow =
+                //$sce.trustAsHtml(
+                  data.$value
+                //)
+              ;
+            //}else{
+            //  console.log(data.$value);
+            //}
+
             scope.toEdit = data;
             //console.log(scope.toEdit);
           })

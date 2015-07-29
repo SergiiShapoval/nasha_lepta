@@ -13,7 +13,8 @@ angular
     'ngResource',
     'ngRoute',
     'firebase',
-    'ngCkeditor'
+    'ngCkeditor',
+    'angularPicasa'
   ])
   .config(function ($routeProvider) {
     for (var template in appRoutes.views){

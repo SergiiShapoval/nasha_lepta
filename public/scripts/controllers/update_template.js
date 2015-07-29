@@ -35,4 +35,6 @@ angular.module('nashaLeptaApp')
       $scope.isEdit = false;
     };
 
+
+
   });
