@@ -8,8 +8,7 @@
     "angular-route": "^1.3.0",
     "firebase": "~2.2.7",
     "angularfire": "~1.1.2",
-    "ng-ckeditor": "~0.2.1",
-    "angular-picasa": "*"
+    "ng-ckeditor": "~0.2.1"
   },
   "devDependencies": {
     "angular-mocks": "^1.3.0"

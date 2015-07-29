@@ -24,18 +24,19 @@ angular.module('angularPicasa', [])
         scope.height = attrs.height;
         scope.width = attrs.width;
 
-        if (attrs.thumbHeight !== undefined && attrs.thumbWidth !== undefined) {
+        if (attrs.thumbheight !== undefined && attrs.thumbwidth !== undefined) {
           scope.thumbSize = 'both';
         } else {
-          if (attrs.thumbHeight !== undefined) {
+          if (attrs.thumbheight !== undefined) {
             scope.thumbSize = 'height';
           }
-          if (attrs.thumbWidth !== undefined) {
+          if (attrs.thumbwidth !== undefined) {
             scope.thumbSize = 'width';
           }
         }
-        scope.thumbHeight = attrs.thumbHeight;
-        scope.thumbWidth = attrs.thumbWidth;
+        scope.thumbheight = attrs.thumbheight;
+        scope.thumbwidth = attrs.thumbwidth;
+        console.log(attrs.thumbwidth);
 
         scope.$watch('picasa', function () {
           if (scope.picasa === '') {
@@ -79,8 +80,8 @@ angular.module('angularPicasa', [])
       var lastThumb = entry.media$group.media$thumbnail.length - 1
       var photo = {
         thumb: entry.media$group.media$thumbnail[lastThumb].url,
-        thumbHeight: entry.media$group.media$thumbnail[lastThumb].height,
-        thumbWidth: entry.media$group.media$thumbnail[lastThumb].width,
+        thumbheight: entry.media$group.media$thumbnail[lastThumb].height,
+        thumbwidth: entry.media$group.media$thumbnail[lastThumb].width,
         url: entry.media$group.media$content[0].url
       };
       return photo;
