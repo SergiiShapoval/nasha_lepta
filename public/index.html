@@ -27,28 +27,28 @@
   <!-- endbuild -->
 </head>
 <body ng-app="nashaLeptaApp">
-<div class="wrapper nl_grad_horizontal">
+<div class="wrapper">
   <!--[if lt IE 7]>
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
     href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="navbar navbar-default navbar-fixed-top" id="nav" role="navigation">
+  <div class="navbar navbar-default navbar-fixed-top nl_nav"  role="navigation">
     <div class="container">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#/">О проекте</a></li>
-        <li><a ng-href="#/help">Помощь</a></li>
-        <li><a ng-href="#/partners">Партнеры</a></li>
-        <li><a ng-href="#/eventCalendar">Календарь событий</a></li>
-        <li><a ng-href="#/photos">Фотогалерея</a></li>
-        <li><a ng-href="#/videos">Видеогалерея</a></li>
-        <li><a ng-href="#/contacts">Контакты</a></li>
+        <li class="active" data-toggle="tab"><a href="#/">О проекте</a></li>
+        <li data-toggle="tab"><a ng-href="#/help">Помощь</a></li>
+        <li data-toggle="tab"><a ng-href="#/partners">Партнеры</a></li>
+        <li data-toggle="tab"><a ng-href="#/eventCalendar">Календарь событий</a></li>
+        <li data-toggle="tab"><a ng-href="#/photos">Фотогалерея</a></li>
+        <li data-toggle="tab"><a ng-href="#/videos">Видеогалерея</a></li>
+        <li data-toggle="tab"><a ng-href="#/contacts">Контакты</a></li>
       </ul>
     </div>
   </div>
   <div class="container">
-    <div class="nl_carousel">
+    <div class="nl_carousel nl_grad_vertical">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -75,12 +75,12 @@
         </div>
 
         <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button"
+        <a class="left carousel-control nl_carousel" href="#carousel-example-generic" role="button"
            data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button"
+        <a class="right carousel-control nl_carousel" href="#carousel-example-generic" role="button"
            data-slide="next">
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
@@ -124,7 +124,7 @@
           </form>
         </div>
 
-        <div class="well well-sm" id="donate">
+        <div class="well well-sm nl_donate">
           <h3>Внести свою лепту</h3>
         </div>
         <div class="gallery">
@@ -163,6 +163,8 @@
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/bootstrap/js/tab.js"></script>
+<script src="bower_components/bootstrap/js/dropdown.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/firebase/firebase.js"></script>
