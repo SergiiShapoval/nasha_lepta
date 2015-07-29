@@ -344,7 +344,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
-            'views/{,*/}*.html',
+            'templates/**/*',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*',
             'scripts/ckeditor/**/*'
