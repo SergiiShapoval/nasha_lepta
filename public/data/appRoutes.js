@@ -1,33 +1,59 @@
 var appRoutes = {
 	"views": {
+    "news2015Data": {
+      "url": "news2015"
+    },
+    "news2014Data": {
+      "url": "news2014"
+    },
+    "news2016Data": {
+      "url": "news2016"
+    },
+    "aboutData": {
+      "url": "about"
+    },
+    "articlesData": {
+      "url": "articles"
+    },
+    "gratitudeData": {
+      "url": "gratitude"
+    },
+    "photosData": {
+      "url": "photos"
+    },
+    "videosData": {
+      "url": "videos"
+    },
 		"contactsData": {
-			"controller": "ContactsCtrl",
 			"url": "contacts"
 		},
-		"helpData": {
-			"controller": "HelpCtrl",
-			"url": "help"
+		"article1Data": {
+			"url": "article1"
 		},
-		"eventCalendarData": {
-			"controller": "EventCalendarCtrl",
-			"url": "eventCalendar"
+		"article2Data": {
+			"url": "article2"
 		},
-    "partnersData": {
-			"controller": "PartnersCtrl",
-			"url": "partners"
+		"article3Data": {
+			"url": "article3"
 		},
-    "photosData": {
-			"controller": "PhotosCtrl",
-			"url": "photos"
-
+		"article4Data": {
+			"url": "article4"
 		},
-    "videosData": {
-			"controller": "VideosCtrl",
-			"url": "videos"
+		"article5Data": {
+			"url": "article5"
 		},
-    "mainData": {
-			"controller": "MainCtrl",
-			"url": "main"
+		"article6Data": {
+			"url": "article6"
+		},
+		"article7Data": {
+			"url": "article7"
+		},
+		"article8Data": {
+			"url": "article8"
+		},
+		"requisitesData": {
+			"url": "requisites"
 		}
+
 	}
 };
