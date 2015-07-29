@@ -84,7 +84,12 @@ body {
   font-size: 1.3125em;
   padding: 0.875em 1.500em;
 }
-
+.carousel-control.right.nl_carousel{
+  background-image: none;
+}
+.carousel-control.left.nl_carousel{
+  background-image: none;
+}
 /* Supporting marketing content */
 .marketing {
   margin: 2.500em 0;
