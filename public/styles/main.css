@@ -28,7 +28,7 @@ body {
 }
 
 .nl_carousel{
-  margin-bottom: 1.250em;
+  margin: 1.250em 0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -103,6 +103,7 @@ body {
   height: auto !important;
   /* This line and the next line are not necessary unless you need IE6 support */
   height: 100%;
+  padding-top: 55px;
   margin: 0 auto -4em;
   /* the bottom margin is the negative value of the footer's height */
 }
