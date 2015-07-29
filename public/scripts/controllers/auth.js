@@ -12,6 +12,7 @@ angular.module('nashaLeptaApp')
     '$scope', '$rootScope', '$firebaseAuth', function($scope, $rootScope, $firebaseAuth) {
       var ref = new Firebase('https://boiling-fire-9518.firebaseio.com/');
       $rootScope.auth = $firebaseAuth(ref);
+      $scope.isShowLogin =false;
 
       $scope.signIn = function () {
         $rootScope.auth.$authWithPassword({
@@ -29,6 +30,10 @@ angular.module('nashaLeptaApp')
       $scope.logOut = function () {
         $rootScope.auth.$unauth();
         $rootScope.auth.user=null;
+      };
+
+      $scope.showLogin = function () {
+        $scope.isShowLogin=!$scope.isShowLogin;
       };
 
     }

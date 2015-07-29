@@ -94,24 +94,34 @@
       <div ng-view="" class="col-md-8"></div>
       <!--<div class="col-md-1"></div>-->
       <div class="col-md-4">
-        <form id="auth" ng-controller="AuthCtrl">
-          <fieldset ng-hide="auth.user">
-            <div class="form-group">
-              <input type="email" class="form-control" placeholder="email" ng-model="email"/>
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" placeholder="password"
-                     ng-model="password"/>
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-default" ng-click="signIn()">Sign In</button>
-            </div>
-          </fieldset>
+        <div id="auth" ng-controller="AuthCtrl">
+          <div class="form-group">
+            <button class="btn btn-info" ng-click="showLogin()">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </button>
+          </div>
+          <form ng-show="isShowLogin">
+            <fieldset ng-hide="auth.user">
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="email" ng-model="email"/>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="password"
+                       ng-model="password"/>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary" ng-click="signIn()">
+                  <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></button>
+              </div>
+            </fieldset>
           <span ng-show="auth.user">
             {{auth.user.email}}
-            <button type="submit" class="btn btn-default" ng-click="logOut()">Sign Out</button>
+            <button type="submit" class="btn btn-default" ng-click="logOut()">
+              <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+            </button>
           </span>
-        </form>
+          </form>
+        </div>
         <div class="gallery">
           <!--Picasa Galerry start-->
           <embed wmode="transparent"

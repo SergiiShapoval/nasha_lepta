@@ -51,6 +51,17 @@ body {
   line-height: 2.500em;
   padding-bottom: 1.1875em;
 }
+
+.footer {
+  padding-top: 1.1875em;
+  /*color: #777;*/
+  /*border-top: 1px solid #e5e5e5;*/
+  text-align: center;
+  /*background-color: #60CF45;*/
+  /*min-width: 100%;*/
+}
+
+
 .footer, .push {
   height: 4em;
 /*.push must be the same height as .footer*/
@@ -58,16 +69,7 @@ body {
 
 
 /* Custom page footer */
-.footer {
-  padding-top: 1.1875em;
-  /*color: #777;*/
-  /*border-top: 1px solid #e5e5e5;*/
-  /*position:fixed;*/
-  /*bottom: 0;*/
-  text-align: center;
-  /*background-color: #60CF45;*/
-  /*min-width: 100%;*/
-}
+
 
 .container-narrow > hr {
   margin: 1.875em 0;
