@@ -1,5 +1,4 @@
 <!doctype html>
-<!--TODO отражать авторизованному пользователю список доступных страниц-->
 <!--TODO добавить angular picasa-->
 <!--TODO добавить добавить picasa на основе carousel-->
 <!--TODO добавить птичку на кнопку по оплате-->
@@ -146,8 +145,13 @@
           </span>
           </form>
         </div>
-        <div class="nl_routes"  ng-controller="AdminRoutesCtrl">
-          <a ng-repeat="route in appRoutes" ng-href="#/{{route}}"></a>
+        <div class="nl_routes"   ng-controller="AdminRoutesCtrl" ng-show="auth.user">
+          <h4>Список доступных страниц</h4>
+
+          <div ng-repeat="route in routes " ng-show="$index % 2 === 0">
+            <a  ng-href="#{{route.originalPath}}">{{route.originalPath}}</a>
+          </div>
+
         </div>
 
         <div class="well well-sm nl_donate">
@@ -207,6 +211,7 @@
 <script src="scripts/controllers/auth.js"></script>
 <script src="scripts/controllers/update_template.js"></script>
 <script src="scripts/services/editoroptions.js"></script>
+<script src="scripts/controllers/adminroutes.js"></script>
 <!-- endbuild -->
 <script src="scripts/ckeditor/ckeditor.js"></script>
 
