@@ -11,12 +11,21 @@ html {
 body {
   padding: 0;
   height: 100%;
+}
+
+
+.nl_grad_horizontal{
   background: -webkit-linear-gradient(left, #F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right, #F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right,#F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right,#F8606A, #FDFBA0); /* Standard syntax */
 }
-
+.nl_grad_vertical{
+  background: -webkit-linear-gradient( #F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient( #F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#F8606A, #FDFBA0); /* Standard syntax */
+}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -38,12 +47,21 @@ body {
   line-height: 2.500em;
   padding-bottom: 1.1875em;
 }
+.footer, .push {
+  height: 4em;  .push must be the same height as .footer
+}
+
 
 /* Custom page footer */
 .footer {
   padding-top: 1.1875em;
-  color: #777;
+  /*color: #777;*/
   /*border-top: 1px solid #e5e5e5;*/
+  /*position:fixed;*/
+  /*bottom: 0;*/
+  text-align: center;
+  /*background-color: #60CF45;*/
+  /*min-width: 100%;*/
 }
 
 .container-narrow > hr {
@@ -67,6 +85,16 @@ body {
 .marketing p + h4 {
   margin-top: 1.750em;
 }
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  margin: 0 auto -4em;
+  /* the bottom margin is the negative value of the footer's height */
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
