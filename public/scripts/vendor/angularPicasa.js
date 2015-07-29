@@ -36,13 +36,81 @@ angular.module('angularPicasa', [])
         }
         scope.thumbheight = attrs.thumbheight;
         scope.thumbwidth = attrs.thumbwidth;
-        console.log(attrs.thumbwidth);
 
         scope.$watch('picasa', function () {
           if (scope.picasa === '') {
             return;
           }
           picasaService.get(scope.picasa).then(function(data) {
+            scope.photoObjects = data;
+            scope.current = data[0];
+            scope.ready = true;
+          })
+        });
+
+        scope.setCurrent = function(photo) {
+          scope.current = photo;
+        };
+        scope.move = function(event) {
+          var thumbDiv = element[0].lastElementChild;
+          var x = event.clientX - thumbDiv.offsetLeft;
+          var center = thumbDiv.offsetWidth / 2;
+          var factor = 20;
+
+          var delta = (x - center)/center * factor;
+
+          if (delta > 0 && thumbDiv.scrollLeft < (thumbDiv.scrollWidth - thumbDiv.clientWidth)) {
+              thumbDiv.scrollLeft += delta;
+          }
+          if (delta < 0 && thumbDiv.scrollLeft > 0) {
+              thumbDiv.scrollLeft += delta;
+          }
+
+        }
+      }
+    };
+  }])
+  .directive('picasaCarousel', ['picasaService', function(picasaService) {
+    return {
+      //works on attribute
+      restrict: 'A',
+      replace: true,
+      scope: {
+        picasaCarousel: '@'
+      },
+      templateUrl: 'templates/vendor/picasa/picasa-carousel.html',
+      link: function(scope, element, attrs) {
+        if (attrs.height !== undefined && attrs.width !== undefined) {
+          scope.size = 'both';
+        } else {
+          if (attrs.height !== undefined) {
+            scope.size = 'height';
+          }
+          if (attrs.width !== undefined) {
+            scope.size = 'width';
+          }
+        }
+        scope.height = attrs.height;
+        scope.width = attrs.width;
+
+        if (attrs.thumbheight !== undefined && attrs.thumbwidth !== undefined) {
+          scope.thumbSize = 'both';
+        } else {
+          if (attrs.thumbheight !== undefined) {
+            scope.thumbSize = 'height';
+          }
+          if (attrs.thumbwidth !== undefined) {
+            scope.thumbSize = 'width';
+          }
+        }
+        scope.thumbheight = attrs.thumbheight;
+        scope.thumbwidth = attrs.thumbwidth;
+
+        scope.$watch('picasaCarousel', function () {
+          if (scope.picasaCarousel === '') {
+            return;
+          }
+          picasaService.get(scope.picasaCarousel).then(function(data) {
             scope.photoObjects = data;
             scope.current = data[0];
             scope.ready = true;

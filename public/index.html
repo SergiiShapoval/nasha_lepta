@@ -1,5 +1,4 @@
 <!doctype html>
-<!--TODO добавить angular picasa-->
 <!--TODO добавить добавить picasa на основе carousel-->
 <!--TODO добавить птичку на кнопку по оплате-->
 <!--TODO отдельные страницы для новостей по годам-->
@@ -36,7 +35,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <link rel="apple-touch-icon" href="http://sergiishapoval.github.io/nasha_lepta/apple-touch-icon.png">
+  <link rel="apple-touch-icon"
+        href="http://sergiishapoval.github.io/nasha_lepta/apple-touch-icon.png">
   <link rel="icon" type="image/ico" href="http://sergiishapoval.github.io/nasha_lepta/favicon.ico">
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
@@ -55,7 +55,7 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="navbar navbar-default navbar-fixed-top nl_nav"  role="navigation">
+  <div class="navbar navbar-default navbar-fixed-top nl_nav" role="navigation">
     <div class="container">
       <ul class="nav navbar-nav">
         <li class="active" data-toggle="tab"><a href="#/news2015">Новости проекта</a></li>
@@ -75,7 +75,7 @@
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         </ol>
 
         <!-- Wrapper for slides -->
@@ -84,16 +84,16 @@
             <img src="images/slider.png" alt="...">
 
             <!--<div class="carousel-caption">-->
-              <!--<h1>НАША ЛЕПТА - ДЕТЯМ!</h1>-->
+            <!--<h1>НАША ЛЕПТА - ДЕТЯМ!</h1>-->
             <!--</div>-->
           </div>
-          <!--<div class="item">-->
-            <!--<img src="images/slider.png" alt="...">-->
+          <div class="item">
+          <img src="images/slider.png" alt="...">
 
-            <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
-              <!--&lt;!&ndash;<h1>НАША ЛЕПТА - ДЕТЯМ!</h1>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--<div class="carousel-caption">-->
+          <!--<h1>НАША ЛЕПТА - ДЕТЯМ!</h1>-->
           <!--</div>-->
+          </div>
         </div>
 
         <!-- Controls -->
@@ -145,11 +145,11 @@
           </span>
           </form>
         </div>
-        <div class="nl_routes"   ng-controller="AdminRoutesCtrl" ng-show="auth.user">
+        <div class="nl_routes" ng-controller="AdminRoutesCtrl" ng-show="auth.user">
           <h4>Список доступных страниц</h4>
 
           <div ng-repeat="route in routes " ng-show="$index % 2 === 0">
-            <a  ng-href="#{{route.originalPath}}">{{route.originalPath}}</a>
+            <a ng-href="#{{route.originalPath}}">{{route.originalPath}}</a>
           </div>
 
         </div>
@@ -164,6 +164,9 @@
                  pluginspage="http://www.macromedia.com/go/getflashplayer"
                  src="https://photos.gstatic.com/media/slideshow.swf"
                  type="application/x-shockwave-flash"></embed>
+        </div>
+        <div class="picasa-gallery"
+             picasa-carousel="https://picasaweb.google.com/data/feed/base/user/111442129617636727768/albumid/6169606250983202641" thumbwidth="200">
         </div>
       </div>
     </div>
