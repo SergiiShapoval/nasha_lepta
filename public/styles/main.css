@@ -27,6 +27,10 @@ body {
   background: linear-gradient(#F8606A, #FDFBA0); /* Standard syntax */
 }
 
+.nl_carousel{
+  margin-bottom: 1.250em;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

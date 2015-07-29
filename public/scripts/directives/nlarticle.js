@@ -9,17 +9,7 @@
 angular.module('nashaLeptaApp')
   .directive('nlArticle', ["$firebaseObject", "$sce", function ($firebaseObject, $sce) {
     return {
-      template:
-        '<div ng-show="auth.user">' +
-            '<button type="button" class="btn btn-primary" ng-click="edit()" ng-hide="isEdit">Изменить</button>' +
-            '<div class="btn-group" role="group" aria-label="..." ng-show="isEdit" >' +
-              '<button type="button" class="btn btn-default" ng-click="preview()" ng-hide="isPreview">Предпросмотр</button>' +
-              '<button type="button" class="btn btn-primary" ng-click="edit()" ng-show="isPreview">Изменить</button>' +
-              '<button type="button" class="btn btn-default" ng-click="save()">Сохранить</button>' +
-            '</div>' +
-            '<div ng-show="isEdit&&!isPreview"><textarea ckeditor="editorOptions" ng-model="toEdit.$value" ></textarea></div>' +
-        '</div>' +
-        '<div ng-bind-html="toShow"></div>',
+      templateUrl: 'templates/directives/nlarticle.html',
       restrict: 'E',
       scope :{
         data : '@',
