@@ -1,24 +1,5 @@
 <!doctype html>
-<!--TODO добавить добавить picasa на основе carousel-->
-<!--TODO добавить птичку на кнопку по оплате-->
-<!--TODO отдельные страницы для новостей по годам-->
 <!-- TODO От отца Владимира:
-увеличить знак в 2 раза, более читабельным
-венки убрать
-
-благотворительный проект разбить на два
-
-наша лепта
-детям больше
-под другим
-знак
-
-
-шрифт повеселее
-
-внести свою лепту
-зеленый цвет сбавить
-
 
 вишиванка более мягче орнаменты
 
@@ -26,6 +7,7 @@
 
 
 концовка подвеселить-->
+<!--TODO отдельные страницы для новостей по годам-->
 
 
 <html class="no-js">
@@ -69,8 +51,8 @@
       </ul>
     </div>
   </div>
-  <div class="container">
-    <div class="nl_carousel nl_grad_vertical">
+  <div class="container nl_grad_vertical">
+    <div class="nl_carousel " ng-controller="ButtonShowCtrl">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -83,16 +65,29 @@
           <div class="item active">
             <img src="images/slider.png" alt="...">
 
-            <!--<div class="carousel-caption">-->
-            <!--<h1>НАША ЛЕПТА - ДЕТЯМ!</h1>-->
-            <!--</div>-->
+            <div class="carousel-caption">
+              <h1>НАША ЛЕПТА</h1>
+              <h1>ДЕТЯМ</h1>
+              <br/>
+              <a href="#/requisites" role="button" ng-show="location() != '/requisites'"
+                 class="btn btn-primary btn-xs" style="padding:
+               1px 150px">
+                <h4>Внести свою лепту  <img src="images/ptica.png" alt="ptica" height="30px"></h4>
+              </a>
+            </div>
           </div>
           <div class="item">
           <img src="images/slider.png" alt="...">
 
-          <!--<div class="carousel-caption">-->
-          <!--<h1>НАША ЛЕПТА - ДЕТЯМ!</h1>-->
-          <!--</div>-->
+          <div class="carousel-caption">
+            <h1>НАША ЛЕПТА</h1>
+            <h1>ДЕТЯМ</h1>
+            <a href="#/requisites" role="button" ng-show="location() != '/requisites'"
+               class="btn btn-primary btn-xs"
+               style="padding: 1px 120px">
+              <h4>Внести свою лепту  <img src="images/ptica.png" alt="ptica" height="30px"></h4>
+            </a>
+          </div>
           </div>
         </div>
 
@@ -112,9 +107,9 @@
   </div>
 
 
-  <div class="container">
+  <div class="container nl_main">
     <div class="row">
-      <div ng-view="" class="col-md-8"></div>
+      <div ng-view="" class="col-md-8 "></div>
       <!--<div class="col-md-1"></div>-->
       <div class="col-md-4">
         <div id="auth" ng-controller="AuthCtrl">
@@ -154,11 +149,12 @@
 
         </div>
 
-        <div class="well well-sm nl_donate">
-          <h3>Внести свою лепту</h3>
-        </div>
-        <div class="picasa-gallery"
-             picasa-carousel="https://picasaweb.google.com/data/feed/base/user/111442129617636727768/albumid/6100601476767132305" thumbwidth="360">
+        <div class="gallery">
+          <h4 class="text-center">Благотворительный аукцион</h4>
+          <h4 class="text-center">27.12.2014</h4>
+          <div class="picasa-gallery"
+               picasa-carousel="https://picasaweb.google.com/data/feed/base/user/111442129617636727768/albumid/6100601476767132305" thumbwidth="360">
+          </div>
         </div>
       </div>
     </div>
@@ -211,6 +207,7 @@
 <script src="scripts/vendor/angularPicasa.js"></script>
 <script src="scripts/directives/compile.js"></script>
 <script src="scripts/controllers/carousel.js"></script>
+<script src="scripts/controllers/buttonshow.js"></script>
 <!-- endbuild -->
 <script src="scripts/ckeditor/ckeditor.js"></script>
 

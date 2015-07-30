@@ -11,6 +11,15 @@ html {
 body {
   padding: 0;
   height: 100%;
+  font-family: Georgia, Times, serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+.nl_main{
+  background-color: #FDFBA0;
 }
 
 
@@ -144,6 +153,31 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 }
 .btn-link:hover, .btn-link:focus {
   color: #45BD32;
+}
+
+.btn-primary {
+  color: #FDFBA0;
+  background-color: #289F16;
+  border-color: #45BD32;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  color: #D5D366;
+  background-color: #45BD32;
+  border-color: #289F16;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #FDFBA0;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
 
 /* Responsive: Portrait tablets and up */
