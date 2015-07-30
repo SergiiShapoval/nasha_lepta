@@ -30,7 +30,7 @@
   <!-- endbuild -->
 </head>
 <body ng-app="nashaLeptaApp">
-<div class="wrapper">
+<div class="wrapper" ng-controller="ButtonShowCtrl">
   <!--[if lt IE 7]>
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
     href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -40,19 +40,20 @@
   <div class="navbar navbar-default navbar-fixed-top nl_nav" role="navigation">
     <div class="container">
       <ul class="nav navbar-nav">
-        <li class="active" data-toggle="tab"><a href="#/news2015">Новости проекта</a></li>
+        <li ng-class="{active : location() === '/news2015'}"><a href="#/news2015">Новости проекта</a></li>
         <!--TODO add dropdown for 2014, 2015, 2016-->
-        <li data-toggle="tab"><a ng-href="#/about">О проекте</a></li>
-        <li data-toggle="tab"><a ng-href="#/articles">Статьи</a></li>
-        <li data-toggle="tab"><a ng-href="#/gratitude">Благодарности</a></li>
-        <li data-toggle="tab"><a ng-href="#/photos">Фотогалерея</a></li>
-        <li data-toggle="tab"><a ng-href="#/videos">Видеогалерея</a></li>
-        <li data-toggle="tab"><a ng-href="#/contacts">Контакты</a></li>
+        <li ng-class="{active : location() === '/about'}"><a ng-href="#/about">О проекте</a></li>
+        <li ng-class="{active : location() === '/articles'}"><a ng-href="#/articles">Статьи</a></li>
+        <li ng-class="{active : location() === '/gratitude'}"><a ng-href="#/gratitude">
+          Благодарности</a></li>
+        <li ng-class="{active : location() === '/photos'}"><a ng-href="#/photos">Фотогалерея</a></li>
+        <li ng-class="{active : location() === '/videos'}"><a ng-href="#/videos">Видеогалерея</a></li>
+        <li ng-class="{active : location() === '/contacts'}"><a ng-href="#/contacts">Контакты</a></li>
       </ul>
     </div>
   </div>
   <div class="container nl_grad_vertical">
-    <div class="nl_carousel " ng-controller="ButtonShowCtrl">
+    <div class="nl_carousel " >
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
