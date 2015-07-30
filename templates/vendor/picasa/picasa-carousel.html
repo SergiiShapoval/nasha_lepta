@@ -1,41 +1,10 @@
-<div ng-show="ready" class="text-center">
-
-
-
-
-
-
-  <div class="nl_carousel">
-    <div id="carousel-picasa" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <!--<ol class="carousel-indicators">-->
-        <!--<li ng-repeat="photo in photoObjects | orderBy:'thumbheight'"-->
-            <!--data-target="#carousel-picasa" data-slide-to="{{$index}}" class="active"></li>-->
-      <!--</ol>-->
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item" ng-class="{active: $index === 1}"
-             ng-repeat="photo in photoObjects | orderBy:'thumbheight'">
-        <img src="{{photo.thumb}}" alt="..." width="{{thumbwidth}}">
-
+<div ng-controller="CarouselCtrl">
+    <carousel interval="myInterval" no-wrap="noWrapSlides">
+      <slide ng-repeat="photo in photoObjects | orderBy:'thumbheight'" active="photo.active">
+        <img src="{{photo.thumb}}" style="margin:auto;" width="{{thumbwidth}}">
         <!--<div class="carousel-caption">-->
-        <!--<h1>НАША ЛЕПТА - ДЕТЯМ!</h1>-->
+          <!--<h4>Slide {{$index}}</h4>-->
         <!--</div>-->
-        </div>
-      </div>
-
-      <!-- Controls -->
-      <a class="left carousel-control nl_carousel" href="#carousel-picasa" role="button"
-         data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control nl_carousel" href="#carousel-picasa" role="button"
-         data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
+      </slide>
+    </carousel>
 </div>
