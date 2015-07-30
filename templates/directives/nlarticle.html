@@ -15,4 +15,5 @@
     </div>
   <div ng-show="isEdit&&!isPreview"><textarea ckeditor="editorOptions" ng-model="toEdit.$value" ></textarea></div>
   </div>
-<div compile="toShow"></div>
+<div compile="toShowCompile"></div>
+<div ng-bind-html="toShow"></div>
