@@ -126,6 +126,15 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   color: #FDFBA0;
 }
 
+.carousel-indicators li {
+  border: none;
+}
+
+.carousel-indicators .active {
+
+  background-color: transparent;
+}
+
 .nl_nav{
   background-color:#F8606A;
 }

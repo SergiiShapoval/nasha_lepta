@@ -5,7 +5,6 @@ angular.module('angularPicasa', [])
     return {
       //works on attribute
       restrict: 'A',
-      replace: true,
       scope: {
         picasa: '@'
       },
@@ -74,7 +73,6 @@ angular.module('angularPicasa', [])
     return {
       //works on attribute
       restrict: 'A',
-      replace: true,
       scope: {
         picasaCarousel: '@'
       },
@@ -112,6 +110,7 @@ angular.module('angularPicasa', [])
           }
           picasaService.get(scope.picasaCarousel).then(function(data) {
             scope.photoObjects = data;
+            scope.photoObjects[0].active = true ;
             scope.current = data[0];
             scope.ready = true;
           })
