@@ -22,15 +22,17 @@ angular.module('nashaLeptaApp')
         receivedValue.$loaded()
           .then(function(data) {
             /*special case for picasa album*/
-            //if(data.$value.indexOf('picasa=') < 0){
+            if(data.$value.indexOf('picasa=') < 0){
               scope.toShow =
-                //$sce.trustAsHtml(
+                $sce.trustAsHtml(
                   data.$value
-                //)
+                )
               ;
-            //}else{
-            //  console.log(data.$value);
-            //}
+              scope.toShowCompile=null;
+            }else{
+              scope.toShow=null;
+              scope.toShowCompile=data.$value;
+            }
 /*to commit delete after*/
             scope.toEdit = data;
             //console.log(scope.toEdit);
