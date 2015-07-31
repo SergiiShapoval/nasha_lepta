@@ -153,6 +153,8 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
 .nl_nav {
   background-color: #F8606A;
+  font-size: 20px !important;
+  font-weight: bold;
 }
 
 .btn-link {
