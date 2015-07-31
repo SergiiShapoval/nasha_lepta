@@ -1,7 +1,7 @@
 <div ng-controller="CarouselCtrl">
     <carousel interval="myInterval" no-wrap="noWrapSlides">
       <slide ng-repeat="photo in photoObjects | orderBy:'thumbheight'" active="photo.active">
-        <img src="{{photo.thumb}}" style="margin:auto;" width="{{thumbwidth}}">
+        <img src="{{photo.thumb}}" style="margin:auto; min-width: 100%" >
         <!--<div class="carousel-caption">-->
           <!--<h4>Slide {{$index}}</h4>-->
         <!--</div>-->

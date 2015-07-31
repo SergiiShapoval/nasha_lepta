@@ -1,5 +1,6 @@
 html {
   height: 100%;
+
 }
 
 .browsehappy {
@@ -16,14 +17,17 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background: url(/images/bgimage.png) no-repeat center center fixed;
+  /*background-size:100% auto;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.vishivanka {
-  background: url(/images/vishivanka.png) right repeat-y, url(/images/vishivanka.png) left repeat-y;
+.container-fluid{
+  width:83%;
 }
-
-
 
 h1, h2, h3, h4, h5{
   margin: 10px 0;
@@ -204,9 +208,6 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    /*max-width: 900px;*/
-  }
 
   /* Remove the padding we set earlier */
   .header,
@@ -214,11 +215,6 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   .footer {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 1.875em;
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */
