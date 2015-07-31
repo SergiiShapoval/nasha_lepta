@@ -17,19 +17,9 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background: url(../images/bgimage.png) no-repeat center center fixed;
-  /*background-size:100% auto;*/
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
-.container-fluid{
-  width:83%;
-}
-
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
   margin: 10px 0;
 }
 
@@ -165,10 +155,6 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   background-color: #F8606A;
 }
 
-.nl_vishivanka{
-  background: url("/images/vishivankaSmall.png") center top repeat-x;;
-}
-
 .btn-link {
   color: #289F16;
 }
@@ -189,7 +175,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   border-color: #289F16;
 }
 
-.gallery{
+.gallery {
   margin: 20px 0;
 }
 
@@ -207,18 +193,34 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+/* Large desktop */
+@media (min-width: 1200px) {
+  body {
+    background: url(../images/bgimage.png) no-repeat center center fixed;
+    /*background-size:100% auto;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+  .container-fluid {
+    width: 83%;
   }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }
