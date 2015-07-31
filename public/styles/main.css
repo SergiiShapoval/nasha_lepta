@@ -141,6 +141,19 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 .navbar-default .navbar-nav > li > a {
   color: #FDFBA0;
 }
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #D5D366;
+  background-color: #DF3B47;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #D5D366;
+  text-decoration: none;
+  background-color: #DF3B47;
+}
+
+.dropdown-menu > li > a {
+  color: #FDFBA0;
+}
 
 .carousel-indicators li {
   border: none;
@@ -155,6 +168,15 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   background-color: #F8606A;
   font-size: 20px !important;
   font-weight: bold;
+}
+
+.dropdown-menu {
+  background-color: #F8606A;
+  border: 1px solid #DF3B47;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: #DF3B47;
 }
 
 .btn-link {
