@@ -1,6 +1,7 @@
 html {
   height: 100%;
 }
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -18,25 +19,29 @@ body {
   background-color: #fff;
 }
 
-.nl_main{
+h1, h2, h3, h4, h5{
+  margin: 10px 0;
+}
+
+.nl_main {
   background-color: #FDFBA0;
 }
 
-
-.nl_grad_horizontal{
+.nl_grad_horizontal {
   background: -webkit-linear-gradient(left, #F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right, #F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right,#F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,#F8606A, #FDFBA0); /* Standard syntax */
+  background: -moz-linear-gradient(right, #F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #F8606A, #FDFBA0); /* Standard syntax */
 }
-.nl_grad_vertical{
-  background: -webkit-linear-gradient( #F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient( #F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
+
+.nl_grad_vertical {
+  background: -webkit-linear-gradient(#F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#F8606A, #FDFBA0); /* Standard syntax */
 }
 
-.nl_carousel{
+.nl_carousel {
   margin: 1.250em 0;
 }
 
@@ -53,6 +58,7 @@ body {
   /*border-bottom: 1px solid #e5e5e5;*/
   margin-bottom: 0.625em;
 }
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
@@ -70,15 +76,12 @@ body {
   /*min-width: 100%;*/
 }
 
-
 .footer, .push {
   height: 4em;
-/*.push must be the same height as .footer*/
+  /*.push must be the same height as .footer*/
 }
 
-
 /* Custom page footer */
-
 
 .container-narrow > hr {
   margin: 1.875em 0;
@@ -89,20 +92,25 @@ body {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
+
 .jumbotron .btn {
   font-size: 1.3125em;
   padding: 0.875em 1.500em;
 }
-.carousel-control.right.nl_carousel{
+
+.carousel-control.right.nl_carousel {
   background-image: none;
 }
-.carousel-control.left.nl_carousel{
+
+.carousel-control.left.nl_carousel {
   background-image: none;
 }
+
 /* Supporting marketing content */
 .marketing {
   margin: 2.500em 0;
 }
+
 .marketing p + h4 {
   margin-top: 1.750em;
 }
@@ -112,26 +120,25 @@ body {
   height: auto !important;
   /* This line and the next line are not necessary unless you need IE6 support */
   height: 100%;
-  padding-top: 55px;
+  padding-top: 51px;
   margin: 0 auto -4em;
   /* the bottom margin is the negative value of the footer's height */
 }
 
-.nl_donate{
+.nl_donate {
   background-color: #289F16;
   color: #B1EFA7;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   background-color: #DF3B47 !important;
 }
-
 
 ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #D5D366 !important;
 }
 
-.navbar-default .navbar-nav > li > a{
+.navbar-default .navbar-nav > li > a {
   color: #FDFBA0;
 }
 
@@ -144,20 +151,25 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   background-color: transparent;
 }
 
-.nl_nav{
-  background-color:#F8606A;
+.nl_nav {
+  background-color: #F8606A;
+}
+
+.nl_vishivanka{
+  background: url("/images/vishivankaSmall.png") center top repeat-x;;
 }
 
 .btn-link {
   color: #289F16;
 }
+
 .btn-link:hover, .btn-link:focus {
   color: #45BD32;
 }
 
 .btn-primary {
   color: #FDFBA0;
-  background-color: #289F16;
+  background-color: #71D961;
   border-color: #45BD32;
 }
 
@@ -167,6 +179,10 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   border-color: #289F16;
 }
 
+.gallery{
+  margin: 20px 0;
+}
+
 .carousel-caption {
   position: absolute;
   right: 15%;
@@ -174,7 +190,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   left: 15%;
   z-index: 10;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 35px;
   color: #FDFBA0;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
@@ -193,10 +209,12 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
     padding-left: 0;
     padding-right: 0;
   }
+
   /* Space out the masthead */
   .header {
     margin-bottom: 1.875em;
   }
+
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;

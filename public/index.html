@@ -1,13 +1,15 @@
 <!doctype html>
 <!-- TODO От отца Владимира:
 
-вишиванка более мягче орнаменты
+вишиванка по бокам, какая вишиванка????
+foberini_sxemi_vishivki_vinnica-5
 
-фон бледно-желтый
 
+справа добавить силует храма желтым цветом
 
 концовка подвеселить-->
 <!--TODO отдельные страницы для новостей по годам-->
+<!--TODO 15 секундная задержка для слайдера -->
 
 
 <html class="no-js">
@@ -22,7 +24,7 @@
   <link rel="icon" type="image/ico" href="favicon.ico">
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -40,20 +42,27 @@
   <div class="navbar navbar-default navbar-fixed-top nl_nav" role="navigation">
     <div class="container">
       <ul class="nav navbar-nav">
-        <li ng-class="{active : location() === '/news2015'}"><a href="#/news2015">Новости проекта</a></li>
+        <li ng-class="{active : location() === '/news2015'}"><a href="#/news2015">Новости
+          проекта</a></li>
         <!--TODO add dropdown for 2014, 2015, 2016-->
         <li ng-class="{active : location() === '/about'}"><a ng-href="#/about">О проекте</a></li>
         <li ng-class="{active : location() === '/articles'}"><a ng-href="#/articles">Статьи</a></li>
         <li ng-class="{active : location() === '/gratitude'}"><a ng-href="#/gratitude">
           Благодарности</a></li>
-        <li ng-class="{active : location() === '/photos'}"><a ng-href="#/photos">Фотогалерея</a></li>
-        <li ng-class="{active : location() === '/videos'}"><a ng-href="#/videos">Видеогалерея</a></li>
-        <li ng-class="{active : location() === '/contacts'}"><a ng-href="#/contacts">Контакты</a></li>
+        <li ng-class="{active : location() === '/photos'}"><a ng-href="#/photos">Фотогалерея</a>
+        </li>
+        <li ng-class="{active : location() === '/videos'}"><a ng-href="#/videos">Видеогалерея</a>
+        </li>
+        <li ng-class="{active : location() === '/contacts'}"><a ng-href="#/contacts">Контакты</a>
+        </li>
       </ul>
     </div>
   </div>
+  <!--<div class="nl_vishivanka container text-center">-->
+  <!--<img src="images/vishivankaSmall.png" alt="ptica">-->
+  <!--</div>-->
   <div class="container nl_grad_vertical">
-    <div class="nl_carousel " >
+    <div class="nl_carousel ">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -63,44 +72,46 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
+          <!--<div class="item active">-->
+          <!--<img src="images/slider.png" alt="...">-->
+
+          <!--<div class="carousel-caption">-->
+          <!--<h1>НАША ЛЕПТА</h1>-->
+          <!--<h1>ДЕТЯМ</h1>-->
+          <!--<br/>-->
+          <!--<a href="#/requisites" role="button" ng-show="location() != '/requisites'"-->
+          <!--class="btn btn-primary btn-xs" style="padding:-->
+          <!--1px 150px">-->
+          <!--<h4>Внести свою лепту  <img src="images/ptica.png" alt="ptica" height="30px"></h4>-->
+          <!--</a>-->
+          <!--<a href="#/" role="button" ng-show="location() === '/requisites'"-->
+          <!--class="btn btn-primary btn-xs"-->
+          <!--style="padding: 1px 150px">-->
+          <!--<h4>Спасибо за Ваше участие!<img src="images/ptica.png" alt="ptica"-->
+          <!--height="30px"></h4>-->
+          <!--</a>-->
+
+          <!--</div>-->
+          <!--</div>-->
           <div class="item active">
             <img src="images/slider.png" alt="...">
 
             <div class="carousel-caption">
-              <h1>НАША ЛЕПТА</h1>
-              <h1>ДЕТЯМ</h1>
-              <br/>
-              <a href="#/requisites" role="button" ng-show="location() != '/requisites'"
-                 class="btn btn-primary btn-xs" style="padding:
-               1px 150px">
-                <h4>Внести свою лепту  <img src="images/ptica.png" alt="ptica" height="30px"></h4>
-              </a>
-              <a href="#/" role="button" ng-show="location() === '/requisites'"
-                 class="btn btn-primary btn-xs"
-                 style="padding: 1px 150px">
-                <h4>Спасибо за Ваше участие!<img src="images/ptica.png" alt="ptica"
-                                                 height="30px"></h4>
-              </a>
+              <h1 style="font-size: 60px">НАША ЛЕПТА</h1>
 
+              <h1 style="font-size: 100px">ДЕТЯМ</h1>
+
+              <!--<a href="#/requisites" role="button" ng-show="location() != '/requisites'"-->
+              <!--class="btn btn-primary btn-xs"-->
+              <!--style="padding: 1px 120px">-->
+              <!--<h4>Внести свою лепту  <img src="images/ptica.png" alt="ptica" height="30px"></h4>-->
+              <!--</a>-->
+              <!--<a href="#/" role="button" ng-show="location() === '/requisites'"-->
+              <!--class="btn btn-primary btn-xs"-->
+              <!--style="padding: 1px 120px">-->
+              <!--<h4>Спасибо за Ваше участие!<img src="images/ptica.png" alt="ptica" height="30px"></h4>-->
+              <!--</a>-->
             </div>
-          </div>
-          <div class="item">
-          <img src="images/slider.png" alt="...">
-
-          <div class="carousel-caption">
-            <h1>НАША ЛЕПТА</h1>
-            <h1>ДЕТЯМ</h1>
-            <a href="#/requisites" role="button" ng-show="location() != '/requisites'"
-               class="btn btn-primary btn-xs"
-               style="padding: 1px 120px">
-              <h4>Внести свою лепту  <img src="images/ptica.png" alt="ptica" height="30px"></h4>
-            </a>
-            <a href="#/" role="button" ng-show="location() === '/requisites'"
-               class="btn btn-primary btn-xs"
-               style="padding: 1px 120px">
-              <h4>Спасибо за Ваше участие!<img src="images/ptica.png" alt="ptica" height="30px"></h4>
-            </a>
-          </div>
           </div>
         </div>
 
@@ -125,6 +136,47 @@
       <div ng-view="" class="col-md-8 "></div>
       <!--<div class="col-md-1"></div>-->
       <div class="col-md-4">
+
+        <div class="nl_routes" ng-controller="AdminRoutesCtrl" ng-show="auth.user">
+          <h4>Список доступных страниц</h4>
+
+          <div ng-repeat="route in routes " ng-show="$index % 2 === 0">
+            <a ng-href="#{{route.originalPath}}">{{route.originalPath}}</a>
+          </div>
+
+        </div>
+        <div class="main-button">
+          <div class="text-right">
+            <img src="images/ptica.png" alt="ptica" height="100px">
+          </div>
+          <a href="#/requisites" role="button" ng-show="location() != '/requisites'"
+             class="btn btn-primary btn-block">
+            <h3>Внести свою лепту</h3>
+          </a>
+          <a href="#/" role="button" ng-show="location() === '/requisites'"
+             class="btn btn-primary btn-block">
+            <h3>Спасибо за Ваше участие!</h3>
+          </a>
+
+          <form method="POST" accept-charset="utf-8"
+                action="https://www.liqpay.com/api/checkout">
+            <input type="hidden" name="data" value="eyJ2ZXJzaW9uIjozLCJwdWJsaWNfa2V5IjoiaTI3OTQ4OTQ5OTk0IiwiYW1vdW50IjoiNTAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0J/QvtC20LXRgNGC0LLQvtCy0LDQvdC40LUg0LIg0LHQu9Cw0LPQvtGC0LLQvtGA0LjRgtC10LvRjNC90YvQuSDRhNC+0L3QtCDQndCw0YjQsCDQm9C10L/RgtCwIiwidHlwZSI6ImRvbmF0ZSIsImxhbmd1YWdlIjoicnUiLCJwYXlfd2F5IjoiY2FyZCxsaXFwYXksZGVsYXllZCxpbnZvaWNlLHByaXZhdDI0In0="/>
+            <input type="hidden" name="signature" value="WuAroUxfEFYfC+krkg+87F8bGtI="/>
+            <button class="btn btn-primary" type="submit">
+              <h3>Внести</h3>
+            </button>
+          </form>
+          requisites
+        </div>
+
+        <div class="gallery">
+          <div class="picasa-gallery"
+               picasa-carousel="https://picasaweb.google.com/data/feed/base/user/111442129617636727768/albumid/6100601476767132305"
+               thumbwidth="360">
+          </div>
+          <h4 class="text-center">Благотворительный аукцион</h4>
+          <h4 class="text-center">27.12.2014</h4>
+        </div>
         <div id="auth" ng-controller="AuthCtrl">
           <div class="form-group clearfix">
             <button class="btn btn-link pull-right " ng-click="showLogin()">
@@ -152,22 +204,6 @@
             </button>
           </span>
           </form>
-        </div>
-        <div class="nl_routes" ng-controller="AdminRoutesCtrl" ng-show="auth.user">
-          <h4>Список доступных страниц</h4>
-
-          <div ng-repeat="route in routes " ng-show="$index % 2 === 0">
-            <a ng-href="#{{route.originalPath}}">{{route.originalPath}}</a>
-          </div>
-
-        </div>
-
-        <div class="gallery">
-          <h4 class="text-center">Благотворительный аукцион</h4>
-          <h4 class="text-center">27.12.2014</h4>
-          <div class="picasa-gallery"
-               picasa-carousel="https://picasaweb.google.com/data/feed/base/user/111442129617636727768/albumid/6100601476767132305" thumbwidth="360">
-          </div>
         </div>
       </div>
     </div>
