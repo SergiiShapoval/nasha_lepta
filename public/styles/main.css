@@ -50,6 +50,13 @@ h1, h2, h3, h4, h5 {
 .footer {
   padding-left: 0.9375em;
   padding-right: 0.9375em;
+  padding-top: 1.1875em;
+  color: #59E144;
+  /*border-top: 1px solid #e5e5e5;*/
+  text-align: center;
+  background-color: #64D352;
+  height: 4em;
+  /*min-width: 100%;*/
 }
 
 /* Custom page header */
@@ -66,15 +73,6 @@ h1, h2, h3, h4, h5 {
   padding-bottom: 1.1875em;
 }
 
-.footer {
-  padding-top: 1.1875em;
-  color: #9ADDD6;
-  /*border-top: 1px solid #e5e5e5;*/
-  text-align: center;
-  background-color: #3D9E94;
-  height: 4em;
-  /*min-width: 100%;*/
-}
 /* Custom page footer */
 .container-narrow > hr {
   margin: 1.875em 0;

@@ -26,3 +26,5 @@ picasa - github.com/scottnath/angular-picasa-album
 override bootstrap default colors - stylebootstrap.info/
 
 angular-ui.github.io/bootstrap/ carousel for ng repeaet and picasa
+
+paletton.com/#uid=45A150kjCvXg+vZhK-wnjysmhER
