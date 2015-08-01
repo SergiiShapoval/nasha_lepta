@@ -3,19 +3,19 @@ html {
 }
 
 .browsehappy {
-  margin: 0.2em 0;
   background: #ccc;
   color: #000;
+  margin: 0.2em 0;
   padding: 0.2em 0;
 }
 
 body {
-  padding: 0;
-  height: 100%;
+  color: #333;
   font-family: Georgia, Times, serif;
   font-size: 16px;
+  height: 100%;
   line-height: 1.42857143;
-  color: #333;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5 {
@@ -48,14 +48,14 @@ h1, h2, h3, h4, h5 {
 .header,
 .marketing,
 .footer {
+  background-color: #70C539;
+  color: #284514;
+  height: 4em;
   padding-left: 0.9375em;
+  /*border-top: 1px solid #e5e5e5;*/
   padding-right: 0.9375em;
   padding-top: 1.1875em;
-  color: #284514;
-  /*border-top: 1px solid #e5e5e5;*/
   text-align: center;
-  background-color: #70C539;
-  height: 4em;
   /*min-width: 100%;*/
 }
 
@@ -67,9 +67,9 @@ h1, h2, h3, h4, h5 {
 
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
   line-height: 2.500em;
+  margin-bottom: 0;
+  margin-top: 0;
   padding-bottom: 1.1875em;
 }
 
@@ -80,8 +80,8 @@ h1, h2, h3, h4, h5 {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  text-align: center;
 }
 
 .jumbotron .btn {
@@ -107,20 +107,37 @@ h1, h2, h3, h4, h5 {
 }
 
 .wrapper {
-  min-height: 100%;
   height: auto !important;
-  /* This line and the next line are not necessary unless you need IE6 support */
   height: 100%;
+  /* This line and the next line are not necessary unless you need IE6 support */
   margin: 51px auto 0 auto;
+  min-height: 100%;
   /* the bottom margin is the negative value of the footer's height */
 }
 
-.margin-05 { margin: 0.5em 0; }
-.margin-10 { margin: 1.0em 0; }
-.margin-15 { margin: 1.5em 0; }
-.margin-20 { margin: 2.0em 0; }
-.margin-25 { margin: 2.5em 0; }
-.margin-30 { margin: 3.0em 0; }
+.margin-05 {
+  margin: 0.5em 0;
+}
+
+.margin-10 {
+  margin: 1.0em 0;
+}
+
+.margin-15 {
+  margin: 1.5em 0;
+}
+
+.margin-20 {
+  margin: 2.0em 0;
+}
+
+.margin-25 {
+  margin: 2.5em 0;
+}
+
+.margin-30 {
+  margin: 3.0em 0;
+}
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   background-color: #DF3B47 !important;
@@ -133,14 +150,16 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 .navbar-default .navbar-nav > li > a {
   color: #FDFBA0;
 }
+
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #D5D366;
   background-color: #DF3B47;
+  color: #D5D366;
 }
+
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background-color: #DF3B47;
   color: #D5D366;
   text-decoration: none;
-  background-color: #DF3B47;
 }
 
 .dropdown-menu > li > a {
@@ -180,15 +199,15 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 }
 
 .btn-primary {
-  color: #FDFBA0;
   background-color: #71D961;
   border-color: #45BD32;
+  color: #FDFBA0;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-  color: #D5D366;
   background-color: #45BD32;
   border-color: #289F16;
+  color: #D5D366;
 }
 
 .gallery {
@@ -196,16 +215,16 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 }
 
 .carousel-caption {
+  bottom: 20px;
+  color: #FDFBA0;
+  left: 15%;
+  padding-bottom: 35px;
+  padding-top: 20px;
   position: absolute;
   right: 15%;
-  bottom: 20px;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 35px;
-  color: #FDFBA0;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  z-index: 10;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -214,11 +233,10 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 @media (min-width: 1200px) {
 
   /*.wrapper {*/
-    /*background: url(../images/vishivanka.png) right repeat-y, url(../images/vishivanka.png) left repeat-y;*/
+  /*background: url(../images/vishivanka.png) right repeat-y, url(../images/vishivanka.png) left repeat-y;*/
   /*}*/
-
   /*.container-fluid {*/
-    /*width: 98%;*/
+  /*width: 98%;*/
   /*}*/
 
   .vishivanka-border{
@@ -252,7 +270,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
 
-  .vishivanka-border{
+  .vishivanka-border {
     border: 17px solid #B1EFA7;
     -moz-border-image-slice: 13 13 13 13;
     -moz-border-image-width: 17px 17px 17px 17px;

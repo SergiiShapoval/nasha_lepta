@@ -24,7 +24,6 @@ builded per requirement ckEditor = - ckeditor.com/builder
 picasa - github.com/scottnath/angular-picasa-album
 
 override bootstrap default colors - stylebootstrap.info/ color.adobe.com 
-use pikock.github.io/bootstrap-magic/app/#!/editor to create diff
 
 angular-ui.github.io/bootstrap/ carousel for ng repeaet and picasa
 
