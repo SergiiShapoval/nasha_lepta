@@ -2,14 +2,8 @@ html {
   height: 100%;
 }
 
-.browsehappy {
-  background: #ccc;
-  color: #000;
-  margin: 0.2em 0;
-  padding: 0.2em 0;
-}
-
 body {
+  background-color: #fdfba0;
   color: #333;
   font-family: Georgia, Times, serif;
   font-size: 16px;
@@ -18,30 +12,108 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
 }
 
-.nl_main {
-  background-color: #FDFBA0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: #814fa3;
 }
 
-.nl_grad_horizontal {
-  background: -webkit-linear-gradient(left, #F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #F8606A, #FDFBA0); /* Standard syntax */
+
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: #fdfba0;
 }
 
-.nl_grad_vertical {
-  background: -webkit-linear-gradient(#F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#F8606A, #FDFBA0); /* Standard syntax */
+
+
+.browsehappy {
+  background: #ccc;
+  color: #000;
+  margin: 0.2em 0;
+  padding: 0.2em 0;
 }
 
-.nl_carousel {
-  margin: 1.250em 0;
+/*BUTTONS start*/
+.btn {
+  background-image: -moz-linear-gradient(top, #71d961, #72d363);
+  background-image: -ms-linear-gradient(top, #71d961, #72d363);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#71d961), to(#72d363));
+  background-image: -webkit-linear-gradient(top, #71d961, #72d363);
+  background-image: -o-linear-gradient(top, #71d961, #72d363);
+  background-image: linear-gradient(top, #71d961, #72d363);
+  color: #fdfba0;
+}
+
+a > h1, button > h1,
+a > h2, button > h2,
+a > h3, button > h3,
+a > h4, button > h4,
+a > h5, button > h5,
+a > h6, button > h6 {
+  color: #fdfba0;
+}
+
+.btn-link {
+  color: #289F16;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  color: #45BD32;
+}
+
+.btn-primary {
+  background-color: #71D961;
+  border-color: #45BD32;
+  color: #FDFBA0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled]
+.open > .dropdown-toggle.btn-primary {
+  background-color: #45BD32;
+  border-color: #289F16;
+  color: #D5D366;
+}
+
+.btn-danger {
+  color: #df3b47;
+}
+/*BUTTONS end*/
+
+
+
+.gallery {
+  margin: 20px 0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -73,20 +145,20 @@ h1, h2, h3, h4, h5 {
   padding-bottom: 1.1875em;
 }
 
-/* Custom page footer */
-.container-narrow > hr {
-  margin: 1.875em 0;
-}
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  border-bottom: 1px solid #e5e5e5;
+
+/*CAROUSEL start*/
+.carousel-caption {
+  bottom: 20px;
+  color: #FDFBA0;
+  left: 15%;
+  padding-bottom: 35px;
+  padding-top: 20px;
+  position: absolute;
+  right: 15%;
   text-align: center;
-}
-
-.jumbotron .btn {
-  font-size: 1.3125em;
-  padding: 0.875em 1.500em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  z-index: 10;
 }
 
 .carousel-control.right.nl_carousel {
@@ -97,6 +169,64 @@ h1, h2, h3, h4, h5 {
   background-image: none;
 }
 
+.carousel-indicators li {
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: transparent;
+}
+
+.nl_carousel {
+  margin: 1.250em 0;
+}
+
+/*CAROUSEL end*/
+
+/* Custom page footer */
+.container-narrow > hr {
+  margin: 1.875em 0;
+}
+
+/*DROPDOWN start*/
+
+.dropdown-menu {
+  background-color: #F8606A;
+  border: 1px solid #DF3B47;
+
+}
+
+.dropdown-menu > li > a {
+  color: #FDFBA0;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background-color: #DF3B47;
+  color: #D5D366;
+  text-decoration: none;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: #DF3B47;
+}
+
+/*DROPDOWN end*/
+
+.jumbotron {
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.jumbotron .btn {
+  font-size: 1.3125em;
+  padding: 0.875em 1.500em;
+}
+
+
+
+
+
+/* Main marketing message and sign up button */
 /* Supporting marketing content */
 .marketing {
   margin: 2.500em 0;
@@ -106,15 +236,7 @@ h1, h2, h3, h4, h5 {
   margin-top: 1.750em;
 }
 
-.wrapper {
-  height: auto !important;
-  height: 100%;
-  /* This line and the next line are not necessary unless you need IE6 support */
-  margin: 51px auto 0 auto;
-  min-height: 100%;
-  /* the bottom margin is the negative value of the footer's height */
-}
-
+/*MARGINS start*/
 .margin-05 {
   margin: 0.5em 0;
 }
@@ -139,6 +261,10 @@ h1, h2, h3, h4, h5 {
   margin: 3.0em 0;
 }
 
+/*MARGINS end*/
+
+
+/*NAVBAR start*/
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   background-color: #DF3B47 !important;
 }
@@ -156,79 +282,86 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   color: #D5D366;
 }
 
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-  background-color: #DF3B47;
-  color: #D5D366;
-  text-decoration: none;
-}
-
-.dropdown-menu > li > a {
-  color: #FDFBA0;
-}
-
-.carousel-indicators li {
-  border: none;
-}
-
-.carousel-indicators .active {
-
-  background-color: transparent;
-}
-
 .nl_nav {
   background-color: #F8606A;
   font-size: 16px !important;
   font-weight: bold;
 }
 
-.dropdown-menu {
-  background-color: #F8606A;
-  border: 1px solid #DF3B47;
+
+.navbar-inner {
+  background-image: -moz-linear-gradient(top, #f8606a, #df3b47);
+  background-image: -ms-linear-gradient(top, #f8606a, #df3b47);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8606a), to(#df3b47));
+  background-image: -webkit-linear-gradient(top, #f8606a, #df3b47);
+  background-image: -o-linear-gradient(top, #f8606a, #df3b47);
+  background-image: linear-gradient(top, #f8606a, #df3b47);
 }
 
-.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-  background-color: #DF3B47;
+.navbar .brand {
+  color: #fdfba0;
+  font-size: 20px;
+  padding: 8px 20px 12px;
 }
 
-.btn-link {
-  color: #289F16;
+.navbar .divider-vertical {
+  background-color: #fa4c59;
+  border-right: 1px solid #f94451;
+  height: 41px;
 }
 
-.btn-link:hover, .btn-link:focus {
-  color: #45BD32;
+.navbar .nav > li > a {
+  color: #fff174;
+  font-size: 16px;
+  padding: 10px 10px 11px;
 }
 
-.btn-primary {
-  background-color: #71D961;
-  border-color: #45BD32;
-  color: #FDFBA0;
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color: #f3e569;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-  background-color: #45BD32;
-  border-color: #289F16;
-  color: #D5D366;
+.navbar-nav li > .dropdown-menu
+{
+  font-size: 16px;
 }
 
-.gallery {
-  margin: 20px 0;
+/*NAVBAR end*/
+
+.nl_main {
+  background-color: #FDFBA0;
 }
 
-.carousel-caption {
-  bottom: 20px;
-  color: #FDFBA0;
-  left: 15%;
-  padding-bottom: 35px;
-  padding-top: 20px;
-  position: absolute;
-  right: 15%;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-  z-index: 10;
+.nl_grad_horizontal {
+  background: -webkit-linear-gradient(left, #F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #F8606A, #FDFBA0); /* Standard syntax */
 }
+
+.nl_grad_vertical {
+  background: -webkit-linear-gradient(#F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#F8606A, #FDFBA0); /* Standard syntax */
+}
+
+
+
+
+
+.wrapper {
+  height: auto !important;
+  height: 100%;
+  /* This line and the next line are not necessary unless you need IE6 support */
+  margin: 51px auto 0 auto;
+  min-height: 100%;
+  /* the bottom margin is the negative value of the footer's height */
+}
+
 
 /* Responsive: Portrait tablets and up */
-
 /* Large desktop */
 @media (min-width: 1200px) {
 
@@ -238,8 +371,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   /*.container-fluid {*/
   /*width: 98%;*/
   /*}*/
-
-  .vishivanka-border{
+  .vishivanka-border {
     border: 17px solid #B1EFA7;
     -moz-border-image-slice: 13 13 13 13;
     -moz-border-image-width: 17px 17px 17px 17px;
@@ -300,7 +432,18 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff174;
+  }
 
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-color: transparent;
+    color: #f3e569;
+  }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    background-color: #df3b47;
+  }
 }
 
 /* Landscape phones and down */
