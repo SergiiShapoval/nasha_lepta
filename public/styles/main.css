@@ -41,6 +41,33 @@ h1, h2, h3, h4, h5 {
   background: linear-gradient(#F8606A, #FDFBA0); /* Standard syntax */
 }
 
+.vishivanka-border{
+  border: 17px solid #B1EFA7;
+  -moz-border-image-slice: 13 13 13 13;
+  -moz-border-image-width: 17px 17px 17px 17px;
+  -moz-border-image-outset: 0px 0px 0px 0px;
+  -moz-border-image-repeat: round repeat;
+  -moz-border-image-source: url(../images/vishivanka_border.png);
+
+  -webkit-border-image-slice: 13 13 13 13;
+  -webkit-border-image-width: 17px 17px 17px 17px;
+  -webkit-border-image-outset: 0px 0px 0px 0px;
+  -webkit-border-image-repeat: round repeat;
+  -webkit-border-image-source: url(../images/vishivanka_border.png);
+
+  -o-border-image-slice: 13 13 13 13;
+  -o-border-image-width: 17px 17px 17px 17px;
+  -o-border-image-outset: 0px 0px 0px 0px;
+  -o-border-image-repeat: round repeat;
+  -o-border-image-source: url(../images/vishivanka_border.png);
+
+  border-image-slice: 13 13 13 13;
+  border-image-width: 17px 17px 17px 17px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: round repeat;
+  border-image-source: url(../images/vishivanka_border.png);
+}
+
 .nl_carousel {
   margin: 1.250em 0;
 }
@@ -120,8 +147,7 @@ h1, h2, h3, h4, h5 {
   height: auto !important;
   /* This line and the next line are not necessary unless you need IE6 support */
   height: 100%;
-  padding-top: 51px;
-  margin: 0 auto -4em;
+  margin: 54px auto 0 auto;
   /* the bottom margin is the negative value of the footer's height */
 }
 
@@ -220,18 +246,19 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
 /* Large desktop */
 @media (min-width: 1200px) {
-  body {
-    /*background: url(../images/bgimage.png) no-repeat center center fixed;*/
-    /*background-size:100% auto;*/
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
-    /*-o-background-size: cover;*/
-    /*background-size: cover;*/
+
+  .wrapper {
+    /*background: url(../images/vishivanka.png) right repeat-y, url(../images/vishivanka.png) left repeat-y;*/
   }
 
-  .container-fluid {
-    width: 83%;
-  }
+
+
+
+
+
+  /*.container-fluid {*/
+    /*width: 98%;*/
+  /*}*/
 }
 
 /* Portrait tablet to landscape and desktop */
