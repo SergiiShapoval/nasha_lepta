@@ -34,7 +34,7 @@ angular.module('nashaLeptaApp')
       return $window.innerWidth > 940;
     }
     $scope.contacts= function(){
-      console.log($window.innerWidth);
+      //console.log($window.innerWidth);
       //return true;
       return $window.innerWidth > 1018;
     }

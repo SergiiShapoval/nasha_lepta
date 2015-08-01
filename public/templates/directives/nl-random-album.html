@@ -1,7 +1,6 @@
-<div class="gallery">
-  <h4 class="text-center">Благотворительный аукцион</h4>
-  <h4 class="text-center">27.12.2014</h4>
-  <div class="picasa-gallery"
-       picasa-carousel="https://picasaweb.google.com/data/feed/base/user/111442129617636727768/albumid/6100601476767132305">
+<div class="gallery" ng-show="currentRandom %2 === number">
+  <h4 class="text-center">{{title}}</h4>
+  <h4 class="text-center">{{date}}</h4>
+  <div class="picasa-gallery" picasa-carousel="{{link}}">
   </div>
 </div>
