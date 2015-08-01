@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5 {
   height: auto !important;
   /* This line and the next line are not necessary unless you need IE6 support */
   height: 100%;
-  margin: 54px auto 0 auto;
+  margin: 51px auto 0 auto;
   /* the bottom margin is the negative value of the footer's height */
 }
 

@@ -1,5 +1,4 @@
 <!doctype html>
-<!--TODO перекрасить footer -->
 <!--TODO Переделать стили bootstrap-->
 <!--TODO Добавить рендомный выбор альбома-->
 <!--TODO переделать видео представление-->
@@ -221,6 +220,18 @@
     <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> Наша лепта 2015
     </p>
   </div>
+  <a id="toTop" style="
+  display: block;
+  border:0 !important;
+         position: fixed;
+         bottom: 3%;
+         right: 3%;
+
+  ">
+    <button class="btn btn-link btn-danger">
+      <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true" style="font-size: 2em;"></span>
+    </button>
+  </a>
 </div>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -262,6 +273,7 @@
 <script src="scripts/services/editoroptions.js"></script>
 <script src="scripts/controllers/adminroutes.js"></script>
 <script src="scripts/vendor/angularPicasa.js"></script>
+<script src="scripts/vendor/toTop.js"></script>
 <script src="scripts/directives/compile.js"></script>
 <script src="scripts/controllers/carousel.js"></script>
 <script src="scripts/controllers/buttonshow.js"></script>
