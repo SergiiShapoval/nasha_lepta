@@ -5,7 +5,6 @@
 <!--TODO переделать видео представление-->
 <!--TODO 15 секундная задержка для слайдера -->
 <!--TODO отключить on resize-->
-<!--добавить сверху снизу вишиванка-->
 <!--храм + потом добавить баннеры -->
 <!--вставить карту-->
 <!--добавить кнопку вверх-->
@@ -77,9 +76,15 @@
           <a ng-href="#/contacts">Контакты</a>
         </li>
 
+        <li ng-hide="news2015()">
+        </li>
         <li ng-hide="contacts()">
+
           <a href="#/" data-target="#" class="nl-nav" data-toggle="dropdown">
-            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            <span ng-hide="news2015()">Меню</span>
+
+            <span class="glyphicon glyphicon-menu-hamburger"
+                                    aria-hidden="true"></span>
           </a>
           <ul class="dropdown-menu">
             <li ng-hide="news2015()" ng-class="{active : location() === '/news2015'}">
@@ -173,12 +178,12 @@
           </div>
 
           <div class="gallery">
+            <h4 class="text-center">Благотворительный аукцион</h4>
+            <h4 class="text-center">27.12.2014</h4>
             <div class="picasa-gallery"
                  picasa-carousel="https://picasaweb.google.com/data/feed/base/user/111442129617636727768/albumid/6100601476767132305"
                  thumbwidth="360">
             </div>
-            <h4 class="text-center">Благотворительный аукцион</h4>
-            <h4 class="text-center">27.12.2014</h4>
           </div>
           <div id="auth" ng-controller="AuthCtrl">
             <div class="form-group clearfix">
@@ -212,7 +217,6 @@
       </div>
     </div>
   </div>
-  <!--<div class="push"></div>-->
   <div class="footer">
     <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> Наша лепта 2015
     </p>

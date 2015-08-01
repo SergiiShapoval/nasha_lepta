@@ -10,26 +10,33 @@
 angular.module('nashaLeptaApp')
   .controller('ResponsiveCtrl', function ($scope, $window) {
     $scope.news2015= function(){
-      return $window.innerWidth > 765;
+      //return true;
+      return $window.innerWidth > 770;
     }
     $scope.about= function(){
-      return $window.innerWidth > 765;
+      //return true;
+      return $window.innerWidth > 770;
     }
     $scope.articles= function(){
-      return $window.innerWidth > 765;
+      //return true;
+      return $window.innerWidth > 770;
     }
     $scope.gratitude= function(){
-      return $window.innerWidth > 765;
+      //return true;
+      return $window.innerWidth > 770;
     }
     $scope.photos= function(){
-      return $window.innerWidth > 938;
+      //return true;
+      return $window.innerWidth > 790;
     }
     $scope.videos= function(){
-      return $window.innerWidth > 1335;
+      //return true;
+      return $window.innerWidth > 940;
     }
     $scope.contacts= function(){
-      //console.log($window.innerWidth);
-      return $window.innerWidth > 1440;
+      console.log($window.innerWidth);
+      //return true;
+      return $window.innerWidth > 1018;
     }
 
     $window.onresize = function () {

@@ -1,6 +1,5 @@
 html {
   height: 100%;
-
 }
 
 .browsehappy {
@@ -41,33 +40,6 @@ h1, h2, h3, h4, h5 {
   background: linear-gradient(#F8606A, #FDFBA0); /* Standard syntax */
 }
 
-.vishivanka-border{
-  border: 17px solid #B1EFA7;
-  -moz-border-image-slice: 13 13 13 13;
-  -moz-border-image-width: 17px 17px 17px 17px;
-  -moz-border-image-outset: 0px 0px 0px 0px;
-  -moz-border-image-repeat: round repeat;
-  -moz-border-image-source: url(../images/vishivanka_border.png);
-
-  -webkit-border-image-slice: 13 13 13 13;
-  -webkit-border-image-width: 17px 17px 17px 17px;
-  -webkit-border-image-outset: 0px 0px 0px 0px;
-  -webkit-border-image-repeat: round repeat;
-  -webkit-border-image-source: url(../images/vishivanka_border.png);
-
-  -o-border-image-slice: 13 13 13 13;
-  -o-border-image-width: 17px 17px 17px 17px;
-  -o-border-image-outset: 0px 0px 0px 0px;
-  -o-border-image-repeat: round repeat;
-  -o-border-image-source: url(../images/vishivanka_border.png);
-
-  border-image-slice: 13 13 13 13;
-  border-image-width: 17px 17px 17px 17px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: round repeat;
-  border-image-source: url(../images/vishivanka_border.png);
-}
-
 .nl_carousel {
   margin: 1.250em 0;
 }
@@ -100,16 +72,10 @@ h1, h2, h3, h4, h5 {
   /*border-top: 1px solid #e5e5e5;*/
   text-align: center;
   background-color: #3D9E94;
+  height: 4em;
   /*min-width: 100%;*/
 }
-
-.footer, .push {
-  height: 4em;
-  /*.push must be the same height as .footer*/
-}
-
 /* Custom page footer */
-
 .container-narrow > hr {
   margin: 1.875em 0;
 }
@@ -151,11 +117,6 @@ h1, h2, h3, h4, h5 {
   /* the bottom margin is the negative value of the footer's height */
 }
 
-.nl_donate {
-  background-color: #289F16;
-  color: #B1EFA7;
-}
-
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   background-color: #DF3B47 !important;
 }
@@ -192,7 +153,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
 .nl_nav {
   background-color: #F8606A;
-  font-size: 20px !important;
+  font-size: 16px !important;
   font-weight: bold;
 }
 
@@ -247,24 +208,71 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 /* Large desktop */
 @media (min-width: 1200px) {
 
-  .wrapper {
+  /*.wrapper {*/
     /*background: url(../images/vishivanka.png) right repeat-y, url(../images/vishivanka.png) left repeat-y;*/
-  }
-
-
-
-
-
+  /*}*/
 
   /*.container-fluid {*/
     /*width: 98%;*/
   /*}*/
+
+  .vishivanka-border{
+    border: 17px solid #B1EFA7;
+    -moz-border-image-slice: 13 13 13 13;
+    -moz-border-image-width: 17px 17px 17px 17px;
+    -moz-border-image-outset: 0px 0px 0px 0px;
+    -moz-border-image-repeat: round repeat;
+    -moz-border-image-source: url(../images/vishivanka_border.png);
+
+    -webkit-border-image-slice: 13 13 13 13;
+    -webkit-border-image-width: 17px 17px 17px 17px;
+    -webkit-border-image-outset: 0px 0px 0px 0px;
+    -webkit-border-image-repeat: round repeat;
+    -webkit-border-image-source: url(../images/vishivanka_border.png);
+
+    -o-border-image-slice: 13 13 13 13;
+    -o-border-image-width: 17px 17px 17px 17px;
+    -o-border-image-outset: 0px 0px 0px 0px;
+    -o-border-image-repeat: round repeat;
+    -o-border-image-source: url(../images/vishivanka_border.png);
+
+    border-image-slice: 13 13 13 13;
+    border-image-width: 17px 17px 17px 17px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round repeat;
+    border-image-source: url(../images/vishivanka_border.png);
+  }
 }
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
 
+  .vishivanka-border{
+    border: 17px solid #B1EFA7;
+    -moz-border-image-slice: 13 13 13 13;
+    -moz-border-image-width: 17px 17px 17px 17px;
+    -moz-border-image-outset: 0px 0px 0px 0px;
+    -moz-border-image-repeat: round repeat;
+    -moz-border-image-source: url(../images/vishivanka_border.png);
 
+    -webkit-border-image-slice: 13 13 13 13;
+    -webkit-border-image-width: 17px 17px 17px 17px;
+    -webkit-border-image-outset: 0px 0px 0px 0px;
+    -webkit-border-image-repeat: round repeat;
+    -webkit-border-image-source: url(../images/vishivanka_border.png);
+
+    -o-border-image-slice: 13 13 13 13;
+    -o-border-image-width: 17px 17px 17px 17px;
+    -o-border-image-outset: 0px 0px 0px 0px;
+    -o-border-image-repeat: round repeat;
+    -o-border-image-source: url(../images/vishivanka_border.png);
+
+    border-image-slice: 13 13 13 13;
+    border-image-width: 17px 17px 17px 17px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round repeat;
+    border-image-source: url(../images/vishivanka_border.png);
+  }
 }
 
 /* Landscape phone to portrait tablet */
