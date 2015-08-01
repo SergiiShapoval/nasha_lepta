@@ -9,8 +9,9 @@
  */
 angular.module('nashaLeptaApp')
   .controller('AuthCtrl', [
-    '$scope', '$rootScope', '$firebaseAuth', function($scope, $rootScope, $firebaseAuth) {
-      var ref = new Firebase('https://boiling-fire-9518.firebaseio.com/');
+    '$scope', '$rootScope', '$firebaseAuth', 'FirebaseLink',
+    function($scope, $rootScope, $firebaseAuth, FirebaseLink) {
+      var ref = new Firebase(FirebaseLink);
       $rootScope.auth = $firebaseAuth(ref);
       $scope.isShowLogin =false;
 

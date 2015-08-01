@@ -7,16 +7,17 @@
  * # nlArticle
  */
 angular.module('nashaLeptaApp')
-  .directive('nlArticle', ["$firebaseObject", "$sce", function ($firebaseObject, $sce) {
+  .directive('nlArticle', ["$firebaseObject", "$sce", "FirebaseLink",
+    function ($firebaseObject, $sce, FirebaseLink) {
     return {
-      templateUrl: 'templates/directives/nlarticle.html',
+      templateUrl: 'templates/directives/nl-article.html',
       restrict: 'E',
       scope :{
         data : '@',
         auth : '='
       },
       link: function postLink(scope, element, attrs) {
-        var ref = new Firebase('https://boiling-fire-9518.firebaseio.com/'+ attrs.data);
+        var ref = new Firebase(FirebaseLink+'/'+ attrs.data);
         var receivedValue = $firebaseObject(ref);
 
         receivedValue.$loaded()
