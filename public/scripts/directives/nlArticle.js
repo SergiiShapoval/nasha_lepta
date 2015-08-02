@@ -23,7 +23,7 @@ angular.module('nashaLeptaApp')
         receivedValue.$loaded()
           .then(function(data) {
             /*special case for picasa album*/
-            if(data.$value.indexOf('picasa=') < 0){
+            if(data.$value.indexOf('picasa') < 0){
               scope.toShow =
                 $sce.trustAsHtml(
                   data.$value
