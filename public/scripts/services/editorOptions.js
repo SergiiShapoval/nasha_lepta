@@ -15,7 +15,7 @@ angular.module('nashaLeptaApp')
     extraPlugins:'image2,youtube,justify,font,embed,find,iframe,' +
     'table,tableresize,tabletools,' +
     'clipboard,liststyle,selectall,uicolor,colorbutton,' +
-    'lineutils,showblocks',
+    'lineutils,showblocks,autolink',
     toolbar: 'full',
     toolbar_full: [
       { name: 'base',
