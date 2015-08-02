@@ -1,11 +1,9 @@
 <!doctype html>
-  <!--TODO добавить страницы с альбомами-->
-<!--TODO переделать видео представление-->
 <!--TODO 15 секундная задержка для слайдера -->
 <!--TODO отключить on resize-->
 <!--вставить карту-->
 <!--TODO посмотреть проблему с сылками-->
-<!--TODO добавить страницу со всеми представлениями-->
+<!--TODO добавить страницу со всеми элементами -->
 
 <html class="no-js">
 <head>
@@ -109,7 +107,7 @@
   <div class="wrapper vishivanka-border">
     <div class="nl_grad_vertical container-fluid">
       <div class="nl_carousel ">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div id="carousel-example-generic" class="carousel slide" ng-controller="MainCarouselCtrl" >
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -119,8 +117,15 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
 
-            <div class="item active">
+            <div class="item " ng-class="{active : isSliderShown}">
               <img src="images/slider.png" alt="...">
+            </div>
+            <div class="item " ng-class="{active : !isSliderShown}">
+              <img class="img-responsive"
+                src="https://lh3.googleusercontent.com/-KEsXTMWED1w/Vb2m7WyQ3ZI/AAAAAAAAJYM/lNDa2k1xars/s1200-Ic42/slider-anons.png" alt="...">
+              <!--<div class="carousel-caption">-->
+                <!--<h3>Next Slide</h3>-->
+              <!--</div>-->
             </div>
           </div>
 
@@ -294,6 +299,7 @@
 <script src="scripts/directives/nlRandomGroup.js"></script>
 <script src="scripts/services/firebaseLink.js"></script>
 <script src="scripts/directives/nlRandomAlbum.js"></script>
+<script src="scripts/controllers/maincarousel.js"></script>
 <!-- endbuild -->
 <script src="scripts/ckeditor/ckeditor.js"></script>
 
