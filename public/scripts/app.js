@@ -15,7 +15,8 @@ angular
     'firebase',
     'ngCkeditor',
     'angularPicasa',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'uiGmapgoogle-maps'
   ])
   .config(function ($routeProvider) {
     for (var template in appRoutes.views){
@@ -35,8 +36,18 @@ angular
       //  template: '<h1>Should Be filled</h1>',
       //  controller : 'FillCtrl'
       //})
+      .when('/contacts', {
+          templateUrl: 'templates/directives/contacts.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
 
+  })
+  .config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+      //    key: 'your api key',
+      v: '3.17',
+      libraries: 'weather,geometry,visualization'
+    });
   });

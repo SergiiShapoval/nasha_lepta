@@ -28,3 +28,6 @@ override bootstrap default colors - stylebootstrap.info/ color.adobe.com
 angular-ui.github.io/bootstrap/ carousel for ng repeaet and picasa
 
 paletton.com/#uid=45A150kjCvXg+vZhK-wnjysmhER
+
+
+google map = wpdevkvk.wordpress.com/2014/12/26/quickly-add-google-maps-into-your-angular-js-app/
