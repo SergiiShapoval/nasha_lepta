@@ -51,6 +51,18 @@ var appRoutes = {
 		"article8Data": {
 			"url": "article8"
 		},
+		"article9Data": {
+			"url": "article9"
+		},
+		"article10Data": {
+			"url": "article10"
+		},
+		"article11Data": {
+			"url": "article11"
+		},
+		"article12Data": {
+			"url": "article12"
+		},
 		"photo-den-pamatiData": {
 			"url": "photo-den-pamati"
 		},
