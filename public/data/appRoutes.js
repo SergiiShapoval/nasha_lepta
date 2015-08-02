@@ -51,6 +51,15 @@ var appRoutes = {
 		"article8Data": {
 			"url": "article8"
 		},
+		"photo-den-pamatiData": {
+			"url": "photo-den-pamati"
+		},
+		"photo-auctionData": {
+			"url": "photo-auction"
+		},
+		"photo-nasha-leptaData": {
+			"url": "photo-nasha-lepta"
+		},
 		"requisitesData": {
 			"url": "requisites"
 		}
