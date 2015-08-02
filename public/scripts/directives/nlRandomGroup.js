@@ -17,14 +17,26 @@ angular.module('nashaLeptaApp')
 
       },
       controller: function($scope){
-        $scope.counter = 0;
+        var counter = 0;
         this.assignNumber=function(){
-          console.log($scope.counter++);
-          return $scope.counter;
+          return counter++;
         };
 
-        $scope.currentRandom = Math.floor((Math.random()*1000)+1);
-        console.log('currentRandom: ' + $scope.currentRandom);
+        var currentRandom = Math.floor((Math.random()*1000)+1);
+        console.log('currentRandom: ' + currentRandom);
+
+        this.getCounter = function(){
+          return counter;
+        };
+        this.getCurrentRandom = function(){
+          return currentRandom;
+        };
+
+
+        $scope.$on('$routeChangeStart', function(next, current) {
+          currentRandom++;
+          console.log('currentRandom: ' + currentRandom);
+        });
       }
     };
   });

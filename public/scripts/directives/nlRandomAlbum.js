@@ -19,14 +19,16 @@ angular.module('nashaLeptaApp')
         currentRandom:'@'
       },
       link: function postLink(scope, element, attrs, nlRandomGroupCtrl) {
-        scope.number = nlRandomGroupCtrl.assignNumber();
-        console.log(attrs.currentRandom);
+        var number = nlRandomGroupCtrl.assignNumber();
+        scope.isActive = function(){
+          var toShow = (nlRandomGroupCtrl.getCurrentRandom() % nlRandomGroupCtrl.getCounter()) === number;
+          //console.log( 'number:' + number +
+          //' nlRandomGroupCtrl.getCurrentRandom(): ' + nlRandomGroupCtrl.getCurrentRandom()+
+          //' nlRandomGroupCtrl.getCounter():' + nlRandomGroupCtrl.getCounter()+
+          //  toShow);
+          return toShow;
+        }
       },
-      require : '^nlRandomGroup',
-      controller: function($scope){
-        //var number = function
-        //console.log($scope.currentRandom %2 ===$scope.number);
-        //console.log($scope.currentRandom %2 ===$scope.number);
-      }
+      require : '^nlRandomGroup'
     };
   });
