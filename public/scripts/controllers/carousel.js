@@ -10,6 +10,6 @@
 angular.module('nashaLeptaApp')
   .controller('CarouselCtrl', function ($scope) {
     $scope.myInterval = 5000;
-    $scope.noWrapSlides = true;
+    $scope.noWrapSlides = false;
 
   });

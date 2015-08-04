@@ -2,23 +2,22 @@
 
 /**
  * @ngdoc function
- * @name nashaLeptaApp.controller:ButtonShowCtrl
+ * @name nashaLeptaApp.controller:MainCtrl
  * @description
- * # ButtonShowCtrl
+ * # MainCtrl
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('ButtonShowCtrl',['$scope', '$location', 'uiGmapGoogleMapApi',
-    function($scope, $location, uiGmapGoogleMapApi) {
+  .controller('MainCtrl', ['$scope', '$location', 'uiGmapGoogleMapApi',
+    function ($scope, $location, uiGmapGoogleMapApi) {
 
-      $scope.location = function(){
+      //return current location to find out which button to show
+      $scope.location = function () {
         return $location.path();
       };
 
       // for the map
-
-      uiGmapGoogleMapApi.then(function(maps) {
-
+      uiGmapGoogleMapApi.then(function (maps) {
       });
 
       $scope.map = {
@@ -59,6 +58,5 @@ angular.module('nashaLeptaApp')
         }
       };
 
-      //50.454456, 30.362693
 
     }]);
