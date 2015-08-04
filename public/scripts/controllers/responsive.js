@@ -39,13 +39,13 @@ angular.module('nashaLeptaApp')
       return $window.innerWidth > 1018;
     }
 
-    $window.onresize = function () {
-      $scope.news2015();
-      $scope.about();
-      $scope.articles();
-      $scope.gratitude();
-      $scope.photos();
-      $scope.videos();
-      $scope.contacts();
-    }
+    //$window.onresize = function () {
+    //  $scope.news2015();
+    //  $scope.about();
+    //  $scope.articles();
+    //  $scope.gratitude();
+    //  $scope.photos();
+    //  $scope.videos();
+    //  $scope.contacts();
+    //}
   });

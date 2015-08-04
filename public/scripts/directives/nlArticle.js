@@ -26,8 +26,8 @@ angular.module('nashaLeptaApp')
             //console.log(data.$value);
             if(
               (data.$value.indexOf('picasa=') > 0)
-              //||
-              //(data.$value.indexOf('google') > 0)
+              ||
+              (data.$value.indexOf('moimir') > 0)
             ){
               scope.toShow=null;
               scope.toShowCompile=data.$value;
