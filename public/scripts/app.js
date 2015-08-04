@@ -16,7 +16,8 @@ angular
     'ngCkeditor',
     'angularPicasa',
     'ui.bootstrap',
-    'uiGmapgoogle-maps'
+    'uiGmapgoogle-maps',
+    'ngSocial'
   ])
   .config(function ($routeProvider) {
     for (var template in appRoutes.views){

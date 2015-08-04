@@ -27,7 +27,7 @@ angular.module('nashaLeptaApp')
             if(
               (data.$value.indexOf('picasa=') > 0)
               ||
-              (data.$value.indexOf('moimir') > 0)
+              (data.$value.indexOf('ng-social-odnoklassniki') > 0)
             ){
               scope.toShow=null;
               scope.toShowCompile=data.$value;
