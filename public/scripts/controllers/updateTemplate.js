@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('UpdateTemplateCtrl', function ($scope, editorOptions, $sce) {
+  .controller('UpdateTemplateCtrl', function ($scope, editorOptions, $sce, Lightbox) {
     $scope.editorOptions = editorOptions;
 
     $scope.edit = function () {
@@ -35,6 +35,12 @@ angular.module('nashaLeptaApp')
       $scope.isEdit = false;
     };
 
+    $scope.openLightboxModal = function (url) {
+      var array = [url];
+      console.log(array);
+      Lightbox.keyboardNavEnabled=false;
+      Lightbox.openModal(array, 0);
+    };
 
 
   });
