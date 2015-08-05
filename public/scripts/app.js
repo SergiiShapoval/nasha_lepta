@@ -54,13 +54,13 @@ angular
     });
   })
   .config(function (LightboxProvider) {
-    LightboxProvider.getImageUrl = function (imageUrl) {
-      console.log('typeof imageUrl === String' + (typeof imageUrl === 'string'));
-      if(typeof imageUrl === 'string'){
-        return imageUrl;
-      }
-      console.log(imageUrl);
-      return imageUrl.url;
-    };
+    //LightboxProvider.getImageUrl = function (imageUrl) {
+    //  console.log('typeof imageUrl === String' + (typeof imageUrl === 'string'));
+    //  if(typeof imageUrl === 'string'){
+    //    return imageUrl;
+    //  }
+    //  console.log(imageUrl);
+    //  return imageUrl.url;
+    //};
     LightboxProvider.templateUrl = 'templates/vendor/lightbox/pop-up-template.html';
   });
