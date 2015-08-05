@@ -347,7 +347,8 @@ module.exports = function (grunt) {
             'templates/**/*',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*',
-            'scripts/ckeditor/**/*'
+            'scripts/ckeditor/**/*',
+            'CNAME'
           ]
         }, {
           expand: true,
