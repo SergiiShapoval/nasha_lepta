@@ -31,3 +31,5 @@ paletton.com/#uid=45A150kjCvXg+vZhK-wnjysmhER
 
 
 google map = wpdevkvk.wordpress.com/2014/12/26/quickly-add-google-maps-into-your-angular-js-app/
+
+modal popup github.com/compact/angular-bootstrap-lightbox

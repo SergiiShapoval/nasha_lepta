@@ -14,8 +14,10 @@
   <link rel="icon" type="image/ico" href="favicon.ico">
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/angular-social/angular-social.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="bower_components/angular-social/angular-social.css"/>
+  <link rel="stylesheet"
+        href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css"/>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -34,7 +36,7 @@
     <div class="container-fluid">
       <ul class="nav navbar-nav ">
         <li ng-show="news2015()"
-          ng-class="{active : location() === '/news2015' || location() === '/news2014'}">
+            ng-class="{active : location() === '/news2015' || location() === '/news2014'}">
           <a href="#/" data-target="#" class="navbar-nav " data-toggle="dropdown">
             Новости проекта <span class="caret"></span>
           </a>
@@ -71,7 +73,7 @@
             <span ng-hide="news2015()">Меню</span>
 
             <span class="glyphicon glyphicon-menu-hamburger"
-                                    aria-hidden="true"></span>
+                  aria-hidden="true"></span>
           </a>
           <ul class="dropdown-menu">
             <li ng-hide="news2015()" ng-class="{active : location() === '/news2015'}">
@@ -105,7 +107,7 @@
   <div class="wrapper vishivanka-border">
     <div class="nl_grad_vertical container-fluid">
       <div class="nl_carousel ">
-        <div id="carousel-example-generic" class="carousel slide" ng-controller="MainCarouselCtrl" >
+        <div id="carousel-example-generic" class="carousel slide" ng-controller="MainCarouselCtrl">
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -120,9 +122,10 @@
             </div>
             <div class="item " ng-class="{active : !isSliderShown}">
               <img class="img-responsive"
-                src="https://lh3.googleusercontent.com/-KEsXTMWED1w/Vb2m7WyQ3ZI/AAAAAAAAJYM/lNDa2k1xars/s1200-Ic42/slider-anons.png" alt="...">
+                   src="https://lh3.googleusercontent.com/-KEsXTMWED1w/Vb2m7WyQ3ZI/AAAAAAAAJYM/lNDa2k1xars/s1200-Ic42/slider-anons.png"
+                   alt="...">
               <!--<div class="carousel-caption">-->
-                <!--<h3>Next Slide</h3>-->
+              <!--<h3>Next Slide</h3>-->
               <!--</div>-->
             </div>
           </div>
@@ -158,7 +161,9 @@
           </div>
           <div class="main-button">
             <div class="text-right">
-              <img src="images/ptica.png" alt="ptica" height="100px">
+              <a ng-click="openLightboxModal('images/ptica.png')">
+                <img src="images/ptica.png" alt="ptica" height="100px" ng-click="">
+              </a>
             </div>
             <a href="#/requisites" role="button" ng-show="location() != '/requisites'"
                class="btn btn-primary btn-block">
@@ -211,21 +216,22 @@
                  class="jcepopup thumbnail">
                 <img class="img-responsive"
                      src="http://sv-nikolay.kiev.ua/images/stories/hram_1.jpg"
-                     alt="hram 1" />
+                     alt="hram 1"/>
               </a>
             </div>
             <div class="col-md-2"></div>
           </div>
           <div class="nl-links">
             <h4 class="text-center">Ссылки</h4>
+
             <div class="row text-center margin-05">
               <a href="http://orthodoxy.org.ua/" target="_blank" class="center-block">
-                <img src="http://churches.kiev.ua/images/banners/orthodoxy_88x31.gif" />
+                <img src="http://churches.kiev.ua/images/banners/orthodoxy_88x31.gif"/>
               </a>
             </div>
             <div class="row text-center margin-05">
               <a href="http://mitropolia.kiev.ua/" class="center-block">
-                <img src="images/links/mitropolia.png" alt="mitropolia"  />
+                <img src="images/links/mitropolia.png" alt="mitropolia"/>
               </a>
             </div>
           </div>
@@ -246,7 +252,8 @@
 
   ">
     <button class="btn btn-link btn-danger">
-      <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true" style="font-size: 2em;"></span>
+      <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"
+            style="font-size: 2em;"></span>
     </button>
   </a>
 </div>
@@ -278,6 +285,8 @@
 <script src="bower_components/lodash/lodash.js"></script>
 <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <script src="bower_components/angular-social/angular-social.js"></script>
+<script
+  src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -302,6 +311,7 @@
 <script src="scripts/services/firebaseLink.js"></script>
 <script src="scripts/directives/nlRandomAlbum.js"></script>
 <script src="scripts/controllers/maincarousel.js"></script>
+<script src="scripts/controllers/gallerylightbox.js"></script>
 <!-- endbuild -->
 <script src="scripts/ckeditor/ckeditor.js"></script>
 

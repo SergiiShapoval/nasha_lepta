@@ -17,7 +17,8 @@ angular
     'angularPicasa',
     'ui.bootstrap',
     'uiGmapgoogle-maps',
-    'ngSocial'
+    'ngSocial',
+    'bootstrapLightbox'
   ])
   .config(function ($routeProvider) {
     for (var template in appRoutes.views){
@@ -51,4 +52,15 @@ angular
       v: '3.17',
       libraries: 'weather,geometry,visualization'
     });
+  })
+  .config(function (LightboxProvider) {
+    LightboxProvider.getImageUrl = function (imageUrl) {
+      console.log('typeof imageUrl === String' + (typeof imageUrl === 'string'));
+      if(typeof imageUrl === 'string'){
+        return imageUrl;
+      }
+      console.log(imageUrl);
+      return imageUrl.url;
+    };
+    LightboxProvider.templateUrl = 'templates/vendor/lightbox/pop-up-template.html';
   });

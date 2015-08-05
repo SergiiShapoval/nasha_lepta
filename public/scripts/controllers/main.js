@@ -8,8 +8,8 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('MainCtrl', ['$scope', '$location', 'uiGmapGoogleMapApi',
-    function ($scope, $location, uiGmapGoogleMapApi) {
+  .controller('MainCtrl', ['$scope', '$location', 'uiGmapGoogleMapApi', 'Lightbox',
+    function ($scope, $location, uiGmapGoogleMapApi, Lightbox) {
 
       //return current location to find out which button to show
       $scope.location = function () {
@@ -59,4 +59,12 @@ angular.module('nashaLeptaApp')
       };
 
 
+    //  lightbox configuration
+
+      $scope.openLightboxModal = function (url) {
+        var array = [url];
+        console.log(array);
+        Lightbox.keyboardNavEnabled=false;
+        Lightbox.openModal(array, 0);
+      };
     }]);

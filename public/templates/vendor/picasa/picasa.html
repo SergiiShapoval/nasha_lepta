@@ -5,7 +5,9 @@
 <div ng-show="ready" class="text-center">
   <ul class="list-inline">
     <li ng-repeat="photo in photoObjects | orderBy:'thumbheight'" class="col-md-4">
-      <img class="img-thumbnail img-responsive" src="{{photo.thumb}}">
+      <a ng-click="openLightboxModal($index)">
+        <img class="img-thumbnail img-responsive" src="{{photo.thumb}}">
+      </a>
     </li>
   </ul>
 </div>

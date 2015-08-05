@@ -65,8 +65,11 @@ angular.module('angularPicasa', [])
               thumbDiv.scrollLeft += delta;
           }
 
-        }
-      }
+        };
+
+
+      },
+      controller :'GalleryLightboxCtrl'
     };
   }])
   .directive('picasaCarousel', ['picasaService', function(picasaService) {
