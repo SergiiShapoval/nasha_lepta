@@ -188,6 +188,13 @@ a > h6, button > h6 {
   margin: 1.875em 0;
 }
 
+/*divider*/
+.divider{
+/*background: url("../images/vishivanka.png") repeat-x;*/
+  background-image:url(../images/vishivanka.png);
+  background-repeat:repeat-x;
+}
+
 /*DROPDOWN start*/
 
 .dropdown-menu {
@@ -304,7 +311,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   padding: 8px 20px 12px;
 }
 
-.navbar .divider-vertical {
+.navbar {
   background-color: #fa4c59;
   border-right: 1px solid #f94451;
   height: 41px;

@@ -72,6 +72,9 @@ var appRoutes = {
 		"photo-nasha-leptaData": {
 			"url": "photo-nasha-lepta"
 		},
+		"tutorialData": {
+			"url": "tutorial"
+		},
 		"requisitesData": {
 			"url": "requisites"
 		}
