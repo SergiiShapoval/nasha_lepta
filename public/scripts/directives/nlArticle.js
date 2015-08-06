@@ -28,6 +28,8 @@ angular.module('nashaLeptaApp')
               (data.$value.indexOf('picasa=') > 0)
               ||
               (data.$value.indexOf('ng-') > 0)
+              ||
+              (data.$value.indexOf('pop-up') > 0)
             ){
               scope.toShow=null;
               scope.toShowCompile=data.$value;
