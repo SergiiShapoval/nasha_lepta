@@ -1,37 +1,42 @@
 # nasha-lepta
 
 Project is hosted here - 
-###- sergiishapoval.github.io/nasha_lepta
+###- sergiishapoval.github.io/nasha_lepta OR nasha-lepta.com.ua
 
 Used resources:
-- github.com/yeoman/generator-angular
-- yeoman.io/learning/deployment.html
+- github.com/yeoman/generator-angular = yo scaffolding 
+GitHub Pages:
+- yeoman.io/learning/deployment.html 
 - curtisblackwell.com/blog/my-deploy-method-brings-most-of-the-boys-to-the-yard
+State persisting:
 - www.firebase.com/docs/web/libraries/angular/guide/user-auth.html
 - www.firebase.com/docs/web/guide/understanding-security.html
-- github.com/codeschool/NoteWrangler/tree/master/app/js
 - www.firebase.com/docs/web/libraries/angular/api.htmlangularfire-users-and-authentication
+Main training example:
+- github.com/codeschool/NoteWrangler/tree/master/app/js
+
+Editor:
 - github.com/angular-ui/ui-tinymce
 AND
 - www.tinymce.com/tryit/full.php
 OR
 - github.com/lemonde/angular-ckeditor,
-
-- github.com/esvit/ng-ckeditor
-CkEditor config - - www.onehippo.org/library/concepts/document-types/html-fields/ckeditor-toolbar-items.html
+CkEditor config - www.onehippo.org/library/concepts/document-types/html-fields/ckeditor-toolbar-items.html
 builded per requirement ckEditor = - ckeditor.com/builder
 
+Photo gallery storage:
 picasa - github.com/scottnath/angular-picasa-album
 
-override bootstrap default colors - stylebootstrap.info/ color.adobe.com 
+Color scheme:
+find correct colors: paletton.com/#uid=45A150kjCvXg+vZhK-wnjysmhER
+override bootstrap default colors: stylebootstrap.info/ color.adobe.com 
 
+
+Carousel (in gallery, and on the main screen):
 angular-ui.github.io/bootstrap/ carousel for ng repeaet and picasa
 
-paletton.com/#uid=45A150kjCvXg+vZhK-wnjysmhER
+Google Map = wpdevkvk.wordpress.com/2014/12/26/quickly-add-google-maps-into-your-angular-js-app/
 
-
-google map = wpdevkvk.wordpress.com/2014/12/26/quickly-add-google-maps-into-your-angular-js-app/
-
-modal popup github.com/compact/angular-bootstrap-lightbox
-
+Modal popup window: 
+github.com/compact/angular-bootstrap-lightbox
 http://angular-ui.github.io/bootstrap/#/modal
