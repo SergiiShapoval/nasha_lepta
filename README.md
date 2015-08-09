@@ -1,44 +1,50 @@
 # nasha-lepta
 
 Project is hosted here - 
-http://sergiishapoval.github.io/nasha_lepta
+##http://sergiishapoval.github.io/nasha_lepta
 OR 
-http://nasha-lepta.com.ua/
+##http://nasha-lepta.com.ua/
 
 ###Used resources:
 - yo scaffolding : https://github.com/yeoman/generator-angular
-##GitHub Pages:
+
+GitHub Pages:
 - http://yeoman.io/learning/deployment.html
 - http://curtisblackwell.com/blog/my-deploy-method-brings-most-of-the-boys-to-the-yard
-##State persisting:
+State persisting:
 - www.firebase.com/docs/web/libraries/angular/guide/user-auth.html
 - www.firebase.com/docs/web/guide/understanding-security.html
 - www.firebase.com/docs/web/libraries/angular/api.htmlangularfire-users-and-authentication
-##Main training example:
-- github.com/codeschool/NoteWrangler/tree/master/app/js
+Main training example:
+- https://github.com/codeschool/NoteWrangler/tree/master/app/js
 
-##Editor:
-- github.com/angular-ui/ui-tinymce
+Editor:
+- https://github.com/angular-ui/ui-tinymce
 AND
 - www.tinymce.com/tryit/full.php
 OR
-- github.com/lemonde/angular-ckeditor,
-CkEditor config - www.onehippo.org/library/concepts/document-types/html-fields/ckeditor-toolbar-items.html
-builded per requirement ckEditor = - ckeditor.com/builder
+- https://github.com/lemonde/angular-ckeditor,
 
-##Photo gallery storage:
-picasa - github.com/scottnath/angular-picasa-album
+CkEditor config - 
+http://www.onehippo.org/library/concepts/document-types/html-fields/ckeditor-toolbar-items.html
 
-##Color scheme:
-find correct colors: paletton.com/#uid=45A150kjCvXg+vZhK-wnjysmhER
-override bootstrap default colors: stylebootstrap.info/ color.adobe.com 
+Builded per requirement ckEditor
+http://ckeditor.com/builder
+
+Photo gallery storage:
+picasa - https://github.com/scottnath/angular-picasa-album
+
+Color scheme:
+find correct colors: http://paletton.com/#uid=45A150kjCvXg+vZhK-wnjysmhER
+override bootstrap default colors: http://paletton.com/#uid=45A150kjCvXg+vZhK-wnjysmhER
 
 
-##Carousel (in gallery, and on the main screen):
-angular-ui.github.io/bootstrap/ carousel for ng repeaet and picasa
+Carousel (in gallery, and on the main screen):
+http://angular-ui.github.io/bootstrap/   carousel for ng repeaet and picasa
 
-##Google Map = wpdevkvk.wordpress.com/2014/12/26/quickly-add-google-maps-into-your-angular-js-app/
+Google Map 
+http://wpdevkvk.wordpress.com/2014/12/26/quickly-add-google-maps-into-your-angular-js-app/
 
-##Modal popup window: 
-github.com/compact/angular-bootstrap-lightbox
+Modal popup window: 
+https://github.com/compact/angular-bootstrap-lightbox
 http://angular-ui.github.io/bootstrap/#/modal
