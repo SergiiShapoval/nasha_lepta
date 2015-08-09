@@ -1,13 +1,15 @@
 # nasha-lepta
 
 Project is hosted here - 
-###- sergiishapoval.github.io/nasha_lepta OR nasha-lepta.com.ua
+http://sergiishapoval.github.io/nasha_lepta
+OR 
+http://nasha-lepta.com.ua/
 
 ###Used resources:
-- github.com/yeoman/generator-angular = yo scaffolding 
+- yo scaffolding : https://github.com/yeoman/generator-angular
 ##GitHub Pages:
-- yeoman.io/learning/deployment.html 
-- curtisblackwell.com/blog/my-deploy-method-brings-most-of-the-boys-to-the-yard
+- http://yeoman.io/learning/deployment.html
+- http://curtisblackwell.com/blog/my-deploy-method-brings-most-of-the-boys-to-the-yard
 ##State persisting:
 - www.firebase.com/docs/web/libraries/angular/guide/user-auth.html
 - www.firebase.com/docs/web/guide/understanding-security.html
