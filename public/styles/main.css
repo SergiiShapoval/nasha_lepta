@@ -145,6 +145,14 @@ a > h6, button > h6 {
   padding-bottom: 1.1875em;
 }
 
+.hram-link{
+   padding: 0;
+   margin-bottom: 0;
+   line-height: 1.1;
+   background-color: transparent;
+   border: 0;
+}
+
 
 
 /*CAROUSEL start*/
@@ -189,9 +197,9 @@ a > h6, button > h6 {
 }
 
 /*divider*/
-.divider{
+.nl-divider{
 /*background: url("../images/vishivanka.png") repeat-x;*/
-  background-image:url(../images/vishivanka.png);
+  background-image:url(../images/divider.png);
   background-repeat:repeat-x;
 }
 
@@ -231,7 +239,10 @@ a > h6, button > h6 {
 
 
 
-
+.main-button{
+  text-shadow: 1px 1px 3px #000;
+  box-shadow: 2px 2px 5px #000;
+}
 
 /* Main marketing message and sign up button */
 /* Supporting marketing content */
@@ -379,27 +390,27 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   /*width: 98%;*/
   /*}*/
   .vishivanka-border {
-    border: 17px solid #B1EFA7;
-    -moz-border-image-slice: 13 13 13 13;
-    -moz-border-image-width: 17px 17px 17px 17px;
+    border: 6px solid #B1EFA7;
+    -moz-border-image-slice: 6 6 6 6;
+    -moz-border-image-width: 6px 6px 6px 6px;
     -moz-border-image-outset: 0px 0px 0px 0px;
     -moz-border-image-repeat: round repeat;
     -moz-border-image-source: url(../images/vishivanka_border.png);
 
-    -webkit-border-image-slice: 13 13 13 13;
-    -webkit-border-image-width: 17px 17px 17px 17px;
+    -webkit-border-image-slice: 6 6 6 6;
+    -webkit-border-image-width: 6px 6px 6px 6px;
     -webkit-border-image-outset: 0px 0px 0px 0px;
     -webkit-border-image-repeat: round repeat;
     -webkit-border-image-source: url(../images/vishivanka_border.png);
 
-    -o-border-image-slice: 13 13 13 13;
-    -o-border-image-width: 17px 17px 17px 17px;
+    -o-border-image-slice: 6 6 6 6;
+    -o-border-image-width: 6px 6px 6px 6px;
     -o-border-image-outset: 0px 0px 0px 0px;
     -o-border-image-repeat: round repeat;
     -o-border-image-source: url(../images/vishivanka_border.png);
 
-    border-image-slice: 13 13 13 13;
-    border-image-width: 17px 17px 17px 17px;
+    border-image-slice: 6 6 6 6;
+    border-image-width: 6px 6px 6px 6px;
     border-image-outset: 0px 0px 0px 0px;
     border-image-repeat: round repeat;
     border-image-source: url(../images/vishivanka_border.png);
@@ -410,27 +421,27 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 @media (min-width: 768px) and (max-width: 979px) {
 
   .vishivanka-border {
-    border: 17px solid #B1EFA7;
-    -moz-border-image-slice: 13 13 13 13;
-    -moz-border-image-width: 17px 17px 17px 17px;
+    border: 12px solid #B1EFA7;
+    -moz-border-image-slice: 6 6 6 6;
+    -moz-border-image-width: 6px 6px 6px 6px;
     -moz-border-image-outset: 0px 0px 0px 0px;
     -moz-border-image-repeat: round repeat;
     -moz-border-image-source: url(../images/vishivanka_border.png);
 
-    -webkit-border-image-slice: 13 13 13 13;
-    -webkit-border-image-width: 17px 17px 17px 17px;
+    -webkit-border-image-slice: 6 6 6 6;
+    -webkit-border-image-width: 6px 6px 6px 6px;
     -webkit-border-image-outset: 0px 0px 0px 0px;
     -webkit-border-image-repeat: round repeat;
     -webkit-border-image-source: url(../images/vishivanka_border.png);
 
-    -o-border-image-slice: 13 13 13 13;
-    -o-border-image-width: 17px 17px 17px 17px;
+    -o-border-image-slice: 6 6 6 6;
+    -o-border-image-width: 6px 6px 6px 6px;
     -o-border-image-outset: 0px 0px 0px 0px;
     -o-border-image-repeat: round repeat;
     -o-border-image-source: url(../images/vishivanka_border.png);
 
-    border-image-slice: 13 13 13 13;
-    border-image-width: 17px 17px 17px 17px;
+    border-image-slice: 6 6 6 6;
+    border-image-width: 6px 6px 6px 6px;
     border-image-outset: 0px 0px 0px 0px;
     border-image-repeat: round repeat;
     border-image-source: url(../images/vishivanka_border.png);

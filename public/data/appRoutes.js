@@ -75,6 +75,9 @@ var appRoutes = {
 		"tutorialData": {
 			"url": "tutorial"
 		},
+		"akciiData": {
+			"url": "akcii"
+		},
 		"requisitesData": {
 			"url": "requisites"
 		}
