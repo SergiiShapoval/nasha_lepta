@@ -6,7 +6,7 @@ body {
   background-color: #fdfba0;
   color: #333;
   font-family: Georgia, Times, serif;
-  font-size: 16px;
+  font-size: 14px;
   height: 100%;
   line-height: 1.42857143;
   padding: 0;
@@ -21,10 +21,25 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6{
+  color: #fdfba0;
+  text-shadow: 1px 1px 3px #000;
+  /*box-shadow: 2px 2px 5px #000;*/
+  min-height: 20px;
+  margin-bottom: 20px;
+  background-color: #FA9D7F;
+  border: 1px solid #e3e3e3;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+  padding: 9px;
+  border-radius: 3px;
+}
+
 a {
   color: #814fa3;
 }
+
+
 
 
 
@@ -242,6 +257,7 @@ a > h6, button > h6 {
 .main-button{
   text-shadow: 1px 1px 3px #000;
   box-shadow: 2px 2px 5px #000;
+  font-size: 24px;
 }
 
 /* Main marketing message and sign up button */

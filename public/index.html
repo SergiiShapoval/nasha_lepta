@@ -1,6 +1,6 @@
 <!doctype html>
 <!--добавить баннеры-->
-  <!--ссылки: http://blago.church.ua/category/bez-rubriki/, http://pravlife.org/, http://cpg.in.ua/, http://miloserdie-mission.org/,-->
+<!--ссылки: http://blago.church.ua/category/bez-rubriki/, http://pravlife.org/, http://cpg.in.ua/, http://miloserdie-mission.org/,-->
 <html class="no-js">
 <head>
   <meta charset="utf-8">
@@ -13,9 +13,10 @@
   <link rel="icon" type="image/ico" href="favicon.ico">
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/angular-social/angular-social.css" />
-  <link rel="stylesheet" href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="bower_components/angular-social/angular-social.css"/>
+  <link rel="stylesheet"
+        href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css"/>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -108,7 +109,8 @@
   </div>
   <div class="wrapper vishivanka-border">
     <div class="nl_grad_vertical container-fluid">
-      <div class="nl_carousel ">
+      <div class="col-md-1"></div>
+      <div class="nl_carousel col-md-10">
         <div id="carousel-example-generic" class="carousel slide" ng-controller="MainCarouselCtrl">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -147,13 +149,22 @@
           <!--</a>-->
         </div>
       </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="nl-divider col-md-10">&nbsp;</div>
+      <div class="col-md-1"></div>
+
     </div>
     <div class="nl_main container-fluid">
 
       <div class="row">
-        <div ng-view="" class="col-md-8 "></div>
+        <div class="col-md-1"></div>
+        <div ng-view="" class="col-md-6 "></div>
         <!--<div class="col-md-1"></div>-->
-        <div class="col-md-4">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
 
           <div class="nl_routes" ng-controller="AdminRoutesCtrl" ng-show="auth.user">
             <h4>Список доступных страниц</h4>
@@ -164,27 +175,22 @@
 
           </div>
           <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-              <div class="nl-main-button">
-                <div class="text-right">
-                  <img src="images/ptica.png" alt="ptica" height="100px" ng-click="">
-                </div>
-                <a href="#/requisites" role="button" ng-show="location() != '/requisites'"
-                   class="btn btn-primary btn-block main-button">
-                  <h2>Внести свою лепту</h2>
-                </a>
-                <a href="#/" role="button" ng-show="location() === '/requisites'"
-                   class="btn btn-primary btn-block main-button">
-                  <h3>Спасибо за Ваше участие!</h3>
-                </a>
-
-
-              </div>
-
+            <div class="text-right">
+              <img src="images/ptica.png" alt="ptica" height="70px" ng-click="">
             </div>
-            <div class="col-md-1"></div>
+            <a href="#/requisites" role="button" ng-show="location() != '/requisites'"
+               class="btn btn-primary btn-block main-button">
+              Внести свою лепту
+            </a>
+            <a href="#/" role="button" ng-show="location() === '/requisites'"
+               class="btn btn-primary btn-block main-button main-button">
+              Спасибо за Ваше участие!
+            </a>
           </div>
+
+
+
+
 
           <nl-random-group></nl-random-group>
           <div id="auth" ng-controller="AuthCtrl">
@@ -216,74 +222,69 @@
             </form>
           </div>
 
-          <div class="row hram">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-              <h3 class="text-center">
-                <a href="http://sv-nikolay.kiev.ua"
-                   class="jcepopup thumbnail hram-link">
-                  Храм святителя
-                </a>
-              </h3>
-              <h3 class="text-center hram-link">
-                <a href="http://sv-nikolay.kiev.ua"
-                   class="jcepopup thumbnail img-responsive hram-link">
-                Николая Чудотворца
-                  </a>
-              </h3>
 
+          <a href="http://sv-nikolay.kiev.ua">
+            <h4 class="text-center ">
 
-                <img class="img-responsive pop-up"
-                     src="http://sv-nikolay.kiev.ua/images/stories/hram_1.jpg"
-                     alt="hram 1" style="padding-top:10px"/>
+              Храм святителя Николая Чудотворца
+            </h4>
 
-            </div>
-            <div class="col-md-2"></div>
+          </a>
+          <div class="thumbnail">
+            <img class="img-responsive pop-up"
+                 src="http://sv-nikolay.kiev.ua/images/stories/hram_1.jpg"
+                 alt="hram 1"/>
           </div>
-
 
 
           <div class="nl-links">
             <!--<h3 class="text-center">Ссылки</h3>-->
 
             <div class="row text-center margin-05" style="padding-top:10px">
-              <a href="http://orthodoxy.org.ua/" target="_blank" class="center-block">
-                <img src="http://churches.kiev.ua/images/banners/orthodoxy_88x31.gif"/>
-              </a>
+              <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
+                <a href="http://orthodoxy.org.ua/" target="_blank" >
+                  <img src="http://churches.kiev.ua/images/banners/orthodoxy_88x31.gif"
+                       class="img-responsive"/>
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
+                <a href="http://mitropolia.kiev.ua/" target="_blank" >
+                  <img src="images/links/mitropolia.png" alt="mitropolia" class="img-responsive"/>
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
+                <a href="http://pravlife.org" target="_blank" >
+                  <img src="images/links/PravLife.png" alt="pravlife" class="img-responsive"/>
+                </a>
+              </div>
             </div>
+
             <div class="row text-center margin-05">
-              <a href="http://mitropolia.kiev.ua/" class="center-block">
-                <img src="images/links/mitropolia.png" alt="mitropolia"/>
-              </a>
+              <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
+                <a href="http://cpg.in.ua/" target="_blank" >
+                  <img src="images/links/cerkPravGazeta.png" alt="cerkPravGazeta" width="88" class="img-responsive"/>
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
+                <a href="http://blago.church.ua/category/bez-rubriki/" target="_blank">
+                  <img src="images/links/sinodDepart.png" alt="sinodDepart" width="88" class="img-responsive"/>
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
+                <a href="http://miloserdie-mission.org/"  target="_blank">
+                  <img src="images/links/miloserdie.png" alt="miloserdie" width="88" class="img-responsive"/>
+                </a>
+              </div>
             </div>
-            <div class="row text-center margin-05">
-              <a href="http://pravlife.org" class="center-block">
-                <img src="images/links/PravLife.png" alt="pravlife"/>
-              </a>
-            </div>
-            <div class="row text-center margin-05">
-              <a href="http://cpg.in.ua/" class="center-block">
-                <img src="images/links/cerkPravGazeta.png" alt="cerkPravGazeta" width="88"/>
-              </a>
-            </div>
-            <div class="row text-center margin-05">
-              <a href="http://blago.church.ua/category/bez-rubriki/" class="center-block">
-                <img src="images/links/sinodDepart.png" alt="sinodDepart" width="88"/>
-              </a>
-            </div>
-            <div class="row text-center margin-05">
-              <a href="http://miloserdie-mission.org/" class="center-block">
-                <img src="images/links/miloserdie.png" alt="miloserdie" width="88"/>
-              </a>
-            </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="footer">
-    <h4><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> Наша лепта 2015
-    </h4>
+    <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> Наша лепта 2015
+
   </div>
   <a id="toTop" style="
   display: block;
@@ -327,7 +328,8 @@
 <script src="bower_components/lodash/lodash.js"></script>
 <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <script src="bower_components/angular-social/angular-social.js"></script>
-<script src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+<script
+  src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
