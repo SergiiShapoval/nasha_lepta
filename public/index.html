@@ -1,6 +1,5 @@
 <!doctype html>
-<!--добавить баннеры-->
-<!--ссылки: http://blago.church.ua/category/bez-rubriki/, http://pravlife.org/, http://cpg.in.ua/, http://miloserdie-mission.org/,-->
+<!--добавить стиль меню на малом экране, добавить стили колонок для большого экрана-->
 <html class="no-js">
 <head>
   <meta charset="utf-8">
@@ -32,84 +31,87 @@
   <!-- Add your site or application content here -->
   <div class=" navbar navbar-default navbar-fixed-top nl_nav" role="navigation">
     <div class="container-fluid">
-      <ul class="nav navbar-nav ">
-        <li ng-show="news2015()"
-            ng-class="{active : location() === '/news2015' || location() === '/news2014'}">
-          <a href="#/" data-target="#" class="navbar-nav " data-toggle="dropdown">
-            Новости проекта <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li ng-class="{active : location() === '/news2015'}">
-              <a href="#/news2015" class="navbar-nav-block">2015</a>
-            </li>
-            <li ng-class="{active : location() === '/news2014'}">
-              <a href="#/news2014" class="navbar-nav-block">2014</a>
-            </li>
-          </ul>
-        </li>
-        <li ng-show="about()" ng-class="{active : location() === '/about'}">
-          <a ng-href="#/about">О проекте</a></li>
-        <li ng-show="about()" ng-class="{active : location() === '/akcii'}">
-          <a ng-href="#/akcii">Акции</a></li>
-        <li ng-show="articles()" ng-class="{active : location() === '/articles'}">
-          <a ng-href="#/articles">Статьи</a></li>
-        <li ng-show="gratitude()" ng-class="{active : location() === '/gratitude'}">
-          <a ng-href="#/gratitude">Благодарности</a></li>
-        <li ng-show="photos()" ng-class="{active : location() === '/photos'}">
-          <a ng-href="#/photos">Фотогалерея</a>
-        </li>
-        <li ng-show="videos()" ng-class="{active : location() === '/videos'}">
-          <a ng-href="#/videos">Видеогалерея</a>
-        </li>
-        <li ng-show="contacts()" ng-class="{active : location() === '/contacts'}">
-          <a ng-href="#/contacts">Контакты</a>
-        </li>
+      <div class="row">
+        <div class="col-md-1 col-xl-2"></div>
+        <ul class="nav navbar-nav col-md-10 col-xl-8">
+          <li ng-show="news2015()"
+              ng-class="{active : location() === '/news2015' || location() === '/news2014'}">
+            <a href="#/" data-target="#" class="navbar-nav " data-toggle="dropdown">
+              Новости проекта <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li ng-class="{active : location() === '/news2015'}">
+                <a href="#/news2015" class="navbar-nav-block">2015</a>
+              </li>
+              <li ng-class="{active : location() === '/news2014'}">
+                <a href="#/news2014" class="navbar-nav-block">2014</a>
+              </li>
+            </ul>
+          </li>
+          <li ng-show="about()" ng-class="{active : location() === '/about'}">
+            <a ng-href="#/about">О проекте</a></li>
+          <li ng-show="about()" ng-class="{active : location() === '/akcii'}">
+            <a ng-href="#/akcii">Акции</a></li>
+          <li ng-show="articles()" ng-class="{active : location() === '/articles'}">
+            <a ng-href="#/articles">Статьи</a></li>
+          <li ng-show="gratitude()" ng-class="{active : location() === '/gratitude'}">
+            <a ng-href="#/gratitude">Благодарности</a></li>
+          <li ng-show="photos()" ng-class="{active : location() === '/photos'}">
+            <a ng-href="#/photos">Фотогалерея</a>
+          </li>
+          <li ng-show="videos()" ng-class="{active : location() === '/videos'}">
+            <a ng-href="#/videos">Видеогалерея</a>
+          </li>
+          <li ng-show="contacts()" ng-class="{active : location() === '/contacts'}">
+            <a ng-href="#/contacts">Контакты</a>
+          </li>
 
-        <li ng-hide="news2015()">
-        </li>
-        <li ng-hide="contacts()">
+          <li ng-hide="news2015()">
+          </li>
+          <li ng-hide="contacts()">
 
-          <a href="#/" data-target="#" class="nl-nav" data-toggle="dropdown">
-            <span ng-hide="news2015()">Меню</span>
+            <a href="#/" data-target="#" class="nl-nav" data-toggle="dropdown">
+              <span ng-hide="news2015()">Меню</span>
 
             <span class="glyphicon glyphicon-menu-hamburger"
                   aria-hidden="true"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li ng-hide="news2015()" ng-class="{active : location() === '/news2015'}">
-              <a href="#/news2015" class="navbar-nav-block">Новости 2015</a>
-            </li>
-            <li ng-hide="news2015()" ng-class="{active : location() === '/news2014'}">
-              <a href="#/news2014" class="navbar-nav-block">Новости 2014</a>
-            </li>
-            <li class="divider"></li>
-            <li ng-hide="about()" ng-class="{active : location() === '/about'}">
-              <a ng-href="#/about">О проекте</a></li>
-            <li ng-hide="about()" ng-class="{active : location() === '/akcii'}">
-              <a ng-href="#/akcii">Акции</a></li>
-            <li ng-hide="articles()" ng-class="{active : location() === '/articles'}">
-              <a ng-href="#/articles">Статьи</a></li>
-            <li ng-hide="gratitude()" ng-class="{active : location() === '/gratitude'}">
-              <a ng-href="#/gratitude">Благодарности</a></li>
-            <li ng-hide="photos()" ng-class="{active : location() === '/photos'}">
-              <a ng-href="#/photos">Фотогалерея</a>
-            </li>
-            <li ng-hide="videos()" ng-class="{active : location() === '/videos'}">
-              <a ng-href="#/videos">Видеогалерея</a>
-            </li>
-            <li ng-hide="contacts()" ng-class="{active : location() === '/contacts'}">
-              <a ng-href="#/contacts">Контакты</a>
-            </li>
+            </a>
+            <ul class="dropdown-menu">
+              <li ng-hide="news2015()" ng-class="{active : location() === '/news2015'}">
+                <a href="#/news2015" class="navbar-nav-block">Новости 2015</a>
+              </li>
+              <li ng-hide="news2015()" ng-class="{active : location() === '/news2014'}">
+                <a href="#/news2014" class="navbar-nav-block">Новости 2014</a>
+              </li>
+              <li class="divider"></li>
+              <li ng-hide="about()" ng-class="{active : location() === '/about'}">
+                <a ng-href="#/about">О проекте</a></li>
+              <li ng-hide="about()" ng-class="{active : location() === '/akcii'}">
+                <a ng-href="#/akcii">Акции</a></li>
+              <li ng-hide="articles()" ng-class="{active : location() === '/articles'}">
+                <a ng-href="#/articles">Статьи</a></li>
+              <li ng-hide="gratitude()" ng-class="{active : location() === '/gratitude'}">
+                <a ng-href="#/gratitude">Благодарности</a></li>
+              <li ng-hide="photos()" ng-class="{active : location() === '/photos'}">
+                <a ng-href="#/photos">Фотогалерея</a>
+              </li>
+              <li ng-hide="videos()" ng-class="{active : location() === '/videos'}">
+                <a ng-href="#/videos">Видеогалерея</a>
+              </li>
+              <li ng-hide="contacts()" ng-class="{active : location() === '/contacts'}">
+                <a ng-href="#/contacts">Контакты</a>
+              </li>
 
-          </ul>
-        </li>
-      </ul>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="wrapper vishivanka-border">
-    <div class="nl_grad_vertical container-fluid">
-      <div class="col-md-1"></div>
-      <div class="nl_carousel col-md-10">
+    <div class="nl_grad_vertical container-fluid row">
+      <div class="col-md-1 col-xl-2"></div>
+      <div class="nl_carousel col-md-10 col-xl-8">
         <div id="carousel-example-generic" class="carousel slide" ng-controller="MainCarouselCtrl">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -148,22 +150,20 @@
           <!--</a>-->
         </div>
       </div>
-      <div class="col-md-1"></div>
+      <div class="col-md-1 col-xl-2"></div>
     </div>
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="nl-divider col-md-10">&nbsp;</div>
-      <div class="col-md-1"></div>
-
+      <div class="col-md-1 col-xl-2"></div>
+      <div class="nl-divider col-md-10 col-xl-8">&nbsp;</div>
+      <div class="col-md-1 col-xl-2"></div>
     </div>
     <div class="nl_main container-fluid">
 
       <div class="row">
-        <div class="col-md-1"></div>
-        <div ng-view="" class="col-md-6 "></div>
-        <!--<div class="col-md-1"></div>-->
-        <div class="col-md-1"></div>
-        <div class="col-md-3">
+        <div class="col-md-1 col-xl-2"></div>
+        <div ng-view="" class="col-md-6 col-xl-4"></div>
+        <div class="col-md-1 col-xl-1"></div>
+        <div class="col-md-3 col-xl-3">
 
           <div class="nl_routes" ng-controller="AdminRoutesCtrl" ng-show="auth.user">
             <h4>Список доступных страниц</h4>
@@ -242,7 +242,7 @@
             <div class="row text-center margin-05" style="padding-top:10px">
               <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
                 <a href="http://orthodoxy.org.ua/" target="_blank" >
-                  <img src="http://churches.kiev.ua/images/banners/orthodoxy_88x31.gif"
+                  <img src="http://churches.kiev.ua/images/banners/orthodox_uoc_88_31.jpg"
                        class="img-responsive"/>
                 </a>
               </div>
@@ -278,6 +278,7 @@
 
           </div>
         </div>
+        <div class="col-md-1 col-xl-2"></div>
       </div>
     </div>
   </div>
