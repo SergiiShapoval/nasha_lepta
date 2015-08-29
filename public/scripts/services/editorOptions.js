@@ -17,10 +17,6 @@ angular.module('nashaLeptaApp')
     'clipboard,liststyle,selectall,uicolor,colorbutton,dialogui,dialog,' +
     'lineutils,showblocks,autolink,widget,widgetbootstrap,widgettemplatemenu',
 
-    //allowedContent: 'p a div span h2 h3 h4 h5 h6 section article iframe object embed strong b i em cite pre blockquote small,' +
-    //'sub sup code ul ol li dl dt dd table thead tbody th tr td img caption mediawrapper br[href,src,target,width,height,colspan,' +
-    //'span,alt,name,title,class,id,data-options]{text-align,float,margin}(*);',
-
     toolbar: 'full',
     toolbar_full: [
       { name: 'base',
