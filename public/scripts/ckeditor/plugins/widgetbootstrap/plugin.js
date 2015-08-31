@@ -11,7 +11,7 @@ CKEDITOR.config.widgetbootstrapAlert_alertTypes = {
 CKEDITOR.plugins.add( 'widgetbootstrap', {
     requires: 'widget',
 
-    icons: 'widgetbootstrapLeftCol,widgetbootstrapRightCol,widgetbootstrapTwoCol,widgetbootstrapThreeCol,widgetbootstrapAlert',
+    icons: 'widgetbootstrapLeftCol,widgetbootstrapRightCol,widgetbootstrapTwoCol,widgetbootstrapThreeCol,widgetbootstrapAlert,widgetbootstrapVideoMiddle',
 
     /*defaults : {
         name: 'accordion',
@@ -91,6 +91,38 @@ CKEDITOR.plugins.add( 'widgetbootstrap', {
 
             upcast: function( element ) {
                 return element.name == 'div' && element.hasClass( 'two-col-right' );
+            }
+
+        } );
+
+        editor.widgets.add( 'widgetbootstrapVideoMiddle', {
+
+            button: showButtons ? 'Add Video Middle box' : undefined,
+
+            template:
+                '<div class="row three-col">'+
+                  '<div class="col-md-1 col-1">&nbsp;</div>'+
+                  '<div class="col-md-10 col-2">'+
+                      '<div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen="" class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/YduSWVgj5ck"></iframe></div>'+
+                  '</div>'+
+                  '<div class="col-md-1 col-3">&nbsp;</div>'+
+                '</div>',
+
+            editables: {
+                col1: {
+                    selector: '.col-sidebar',
+                    allowedContent: allowedWidget
+                },
+                col2: {
+                    selector: '.col-main',
+                    allowedContent: allowedWidget
+                }
+            },
+
+            allowedContent: allowedFull,
+
+            upcast: function( element ) {
+              return element.name == 'div' && element.hasClass( 'three-col' );
             }
 
         } );

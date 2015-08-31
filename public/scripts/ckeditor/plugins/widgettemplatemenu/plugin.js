@@ -9,7 +9,7 @@ CKEDITOR.plugins.add( 'widgettemplatemenu', {
     },
 
     init: function( editor ) {
-        
+
         // Set the default button info based on installed plugins
         var buttonData = {};
         // @todo: make these if statement work
@@ -19,6 +19,7 @@ CKEDITOR.plugins.add( 'widgettemplatemenu', {
         }
         if (editor.plugins.widgetbootstrap != undefined) {
             buttonData.widgetbootstrapLeftCol = 'Insert left column template';
+            buttonData.widgetbootstrapVideoMiddle = 'Insert video middle template';
             buttonData.widgetbootstrapRightCol = 'Insert right column template';
             buttonData.widgetbootstrapTwoCol = 'Insert two column template';
             buttonData.widgetbootstrapThreeCol = 'Insert three column template';
@@ -45,7 +46,7 @@ CKEDITOR.plugins.add( 'widgettemplatemenu', {
         else {
             var buttons = buttonData;
         }
-        
+
         // Build the list of menu items
         var items =  {};
         for(var key in buttons) {
@@ -72,6 +73,7 @@ CKEDITOR.plugins.add( 'widgettemplatemenu', {
                     widgetcommonQuotebox: editor.commands.widgetcommonQuotebox == undefined ? false : editor.commands.widgetbootstrapLeftCol.state,
                     widgetbootstrapLeftCol: editor.commands.widgetbootstrapLeftCol == undefined ? false : editor.commands.widgetbootstrapLeftCol.state,
                     widgetbootstrapRightCol: editor.commands.widgetbootstrapRightCol == undefined ? false : editor.commands.widgetbootstrapRightCol.state,
+                    widgetbootstrapVideoMiddle: editor.commands.widgetbootstrapVideoMiddle == undefined ? false : editor.commands.widgetbootstrapVideoMiddle.state,
                     widgetbootstrapTwoCol: editor.commands.widgetbootstrapTwoCol == undefined ? false : editor.commands.widgetbootstrapTwoCol.state,
                     widgetbootstrapThreeCol: editor.commands.widgetbootstrapThreeCol == undefined ? false : editor.commands.widgetbootstrapThreeCol.state,
                     widgetbootstrapAlert: editor.commands.widgetbootstrapAlert == undefined ? false : editor.commands.widgetbootstrapAlert.state,
@@ -83,7 +85,7 @@ CKEDITOR.plugins.add( 'widgettemplatemenu', {
                 };
             }
         } );
-        
+
     }
 
 
