@@ -18,11 +18,18 @@ CKEDITOR.plugins.add( 'widgettemplatemenu', {
             buttonData.widgetcommonQuotebox = 'Insert quote box';
         }
         if (editor.plugins.widgetbootstrap != undefined) {
-            buttonData.widgetbootstrapLeftCol = 'Insert left column template';
-            buttonData.widgetbootstrapVideoMiddle = 'Insert video middle template';
-            buttonData.widgetbootstrapRightCol = 'Insert right column template';
-            buttonData.widgetbootstrapTwoCol = 'Insert two column template';
-            buttonData.widgetbootstrapThreeCol = 'Insert three column template';
+            buttonData.widgetbootstrapLeftCol3 = '3-9 Фото слева';
+            buttonData.widgetbootstrapLeftCol4 = '4-8 Фото слева';
+            buttonData.widgetbootstrapLeftCol5 = '5-7 Фото слева';
+            buttonData.widgetbootstrapVideoMiddle10 = '1-10-1 Видео по центру';
+            buttonData.widgetbootstrapVideoMiddle8 = '2-8-2 Видео по центру ';
+            buttonData.widgetbootstrapBigPhoto6 = '3-6-3 Фото по центру ';
+            buttonData.widgetbootstrapBigPhoto8 = '2-8-2 Фото по центру ';
+            buttonData.widgetbootstrapRightCol3 = '9-3 Фото справа';
+            buttonData.widgetbootstrapRightCol4 = '8-4 Фото справа';
+            buttonData.widgetbootstrapRightCol5 = '7-5 Фото справа';
+            buttonData.widgetbootstrapTwoCol = 'Две колонки с фото';
+            buttonData.widgetbootstrapThreeCol = 'Три колонки с фото';
             buttonData.widgetbootstrapAlert = 'Insert Alert box';
         }
         if (editor.commands.oembed != undefined) {
@@ -70,10 +77,17 @@ CKEDITOR.plugins.add( 'widgettemplatemenu', {
                 // the menu is opened.
                 return {
                     widgetcommonBox: editor.commands.widgetcommonBox == undefined ? false : editor.commands.widgetcommonBox.state,
-                    widgetcommonQuotebox: editor.commands.widgetcommonQuotebox == undefined ? false : editor.commands.widgetbootstrapLeftCol.state,
-                    widgetbootstrapLeftCol: editor.commands.widgetbootstrapLeftCol == undefined ? false : editor.commands.widgetbootstrapLeftCol.state,
-                    widgetbootstrapRightCol: editor.commands.widgetbootstrapRightCol == undefined ? false : editor.commands.widgetbootstrapRightCol.state,
-                    widgetbootstrapVideoMiddle: editor.commands.widgetbootstrapVideoMiddle == undefined ? false : editor.commands.widgetbootstrapVideoMiddle.state,
+                    widgetcommonQuotebox: editor.commands.widgetcommonQuotebox == undefined ? false : editor.commands.widgetbootstrapLeftCol3.state,
+                    widgetbootstrapLeftCol3: editor.commands.widgetbootstrapLeftCol3 == undefined ? false : editor.commands.widgetbootstrapLeftCol3.state,
+                    widgetbootstrapLeftCol4: editor.commands.widgetbootstrapLeftCol4 == undefined ? false : editor.commands.widgetbootstrapLeftCol4.state,
+                    widgetbootstrapLeftCol5: editor.commands.widgetbootstrapLeftCol5 == undefined ? false : editor.commands.widgetbootstrapLeftCol5.state,
+                    widgetbootstrapRightCol3: editor.commands.widgetbootstrapRightCol3 == undefined ? false : editor.commands.widgetbootstrapRightCol3.state,
+                    widgetbootstrapRightCol4: editor.commands.widgetbootstrapRightCol4 == undefined ? false : editor.commands.widgetbootstrapRightCol4.state,
+                    widgetbootstrapRightCol5: editor.commands.widgetbootstrapRightCol5 == undefined ? false : editor.commands.widgetbootstrapRightCol5.state,
+                    widgetbootstrapVideoMiddle10: editor.commands.widgetbootstrapVideoMiddle10 == undefined ? false : editor.commands.widgetbootstrapVideoMiddle10.state,
+                    widgetbootstrapVideoMiddle8: editor.commands.widgetbootstrapVideoMiddle8 == undefined ? false : editor.commands.widgetbootstrapVideoMiddle8.state,
+                    widgetbootstrapBigPhoto6: editor.commands.widgetbootstrapBigPhoto6 == undefined ? false : editor.commands.widgetbootstrapBigPhoto6.state,
+                    widgetbootstrapBigPhoto8: editor.commands.widgetbootstrapBigPhoto8 == undefined ? false : editor.commands.widgetbootstrapBigPhoto8.state,
                     widgetbootstrapTwoCol: editor.commands.widgetbootstrapTwoCol == undefined ? false : editor.commands.widgetbootstrapTwoCol.state,
                     widgetbootstrapThreeCol: editor.commands.widgetbootstrapThreeCol == undefined ? false : editor.commands.widgetbootstrapThreeCol.state,
                     widgetbootstrapAlert: editor.commands.widgetbootstrapAlert == undefined ? false : editor.commands.widgetbootstrapAlert.state,

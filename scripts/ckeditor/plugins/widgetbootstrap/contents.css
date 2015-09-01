@@ -85,10 +85,23 @@
 }
 .two-col .col-md-6,
 .two-col-left .col-md-3,
+.two-col-left .col-md-4,
+.two-col-left .col-md-5,
 .two-col-left .col-md-9,
+.two-col-left .col-md-8,
+.two-col-left .col-md-7,
 .two-col-right .col-md-3,
+.two-col-right .col-md-4,
+.two-col-right .col-md-5,
 .two-col-right .col-md-9,
+.two-col-right .col-md-8,
+.two-col-right .col-md-7,
 .three-col .col-md-4,
+.three-col .col-md-1,
+.three-col .col-md-2,
+.three-col .col-md-3,
+.three-col .col-md-8,
+.three-col .col-md-10,
 .accordion dd .content,
 .accordion dd.accordion-navigation>a {
 	box-shadow: 0 1px 1px #ddd inset;

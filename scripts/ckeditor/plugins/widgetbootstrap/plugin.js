@@ -11,7 +11,11 @@ CKEDITOR.config.widgetbootstrapAlert_alertTypes = {
 CKEDITOR.plugins.add( 'widgetbootstrap', {
     requires: 'widget',
 
-    icons: 'widgetbootstrapLeftCol,widgetbootstrapRightCol,widgetbootstrapTwoCol,widgetbootstrapThreeCol,widgetbootstrapAlert,widgetbootstrapVideoMiddle',
+    icons: 'widgetbootstrapLeftCol3,widgetbootstrapRightCol3,widgetbootstrapTwoCol,' +
+    'widgetbootstrapThreeCol,widgetbootstrapAlert,' +
+    'widgetbootstrapVideoMiddle10,widgetbootstrapVideoMiddle8,widgetbootstrapBigPhoto6,' +
+    'widgetbootstrapBigPhoto8,widgetbootstrapRightCol5,widgetbootstrapRightCol4,' +
+    'widgetbootstrapLeftCol4,widgetbootstrapLeftCol5',
 
     /*defaults : {
         name: 'accordion',
@@ -37,13 +41,14 @@ CKEDITOR.plugins.add( 'widgetbootstrap', {
         var showButtons = editor.config.widgetbootstrapShowButtons != undefined ? editor.config.widgetbootstrapShowButtons : true;
 
         // Define the widgets
-        editor.widgets.add( 'widgetbootstrapLeftCol', {
+
+        editor.widgets.add( 'widgetbootstrapLeftCol3', {
 
             button: showButtons ? 'Add left column box' : undefined,
 
             template:
                 '<div class="row two-col-left">' +
-                    '<div class="col-md-3 col-sidebar"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/300x250&text=Image" /></p></div>' +
+                    '<div class="col-md-3 col-sidebar"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/1200x350&text=Image" /></p></div>' +
                     '<div class="col-md-9 col-main"><p>Content</p></div>' +
                 '</div>',
 
@@ -66,14 +71,72 @@ CKEDITOR.plugins.add( 'widgetbootstrap', {
 
         } );
 
-        editor.widgets.add( 'widgetbootstrapRightCol', {
+        editor.widgets.add( 'widgetbootstrapLeftCol4', {
+
+            button: showButtons ? 'Add left column box' : undefined,
+
+            template:
+                '<div class="row two-col-left">' +
+                    '<div class="col-md-4 col-sidebar"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/1200x350&text=Image" /></p></div>' +
+                    '<div class="col-md-8 col-main"><p>Content</p></div>' +
+                '</div>',
+
+            editables: {
+                col1: {
+                    selector: '.col-sidebar',
+                    allowedContent: allowedWidget
+                },
+                col2: {
+                    selector: '.col-main',
+                    allowedContent: allowedWidget
+                }
+            },
+
+            allowedContent: allowedFull,
+
+            upcast: function( element ) {
+                return element.name == 'div' && element.hasClass( 'two-col-right-left' );
+            }
+
+        } );
+
+        editor.widgets.add( 'widgetbootstrapLeftCol5', {
+
+            button: showButtons ? 'Add left column box' : undefined,
+
+            template:
+                '<div class="row two-col-left">' +
+                    '<div class="col-md-5 col-sidebar"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/1200x350&text=Image" /></p></div>' +
+                    '<div class="col-md-7 col-main"><p>Content</p></div>' +
+                '</div>',
+
+            editables: {
+                col1: {
+                    selector: '.col-sidebar',
+                    allowedContent: allowedWidget
+                },
+                col2: {
+                    selector: '.col-main',
+                    allowedContent: allowedWidget
+                }
+            },
+
+            allowedContent: allowedFull,
+
+            upcast: function( element ) {
+                return element.name == 'div' && element.hasClass( 'two-col-right-left' );
+            }
+
+        } );
+
+        editor.widgets.add( 'widgetbootstrapRightCol3', {
 
             button: showButtons ? 'Add right column box' : undefined,
 
             template:
                 '<div class="row two-col-right">' +
                     '<div class="col-md-9 col-main"><p>Content</p></div>' +
-                    '<div class="col-md-3 col-sidebar"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/300x250&text=Image" /></p></div>' +
+                    '<div class="col-md-3 col-sidebar"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/1200x350&text=Image" /></p></div>' +
                 '</div>',
 
             editables: {
@@ -95,17 +158,14 @@ CKEDITOR.plugins.add( 'widgetbootstrap', {
 
         } );
 
-        editor.widgets.add( 'widgetbootstrapVideoMiddle', {
+        editor.widgets.add( 'widgetbootstrapRightCol4', {
 
-            button: showButtons ? 'Add Video Middle box' : undefined,
+            button: showButtons ? 'Add right column box' : undefined,
 
             template:
-                '<div class="row three-col">'+
-                  '<div class="col-md-1 col-1">&nbsp;</div>'+
-                  '<div class="col-md-10 col-2">'+
-                      '<div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen="" class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/YduSWVgj5ck"></iframe></div>'+
-                  '</div>'+
-                  '<div class="col-md-1 col-3">&nbsp;</div>'+
+                '<div class="row two-col-right">' +
+                    '<div class="col-md-8 col-main"><p>Content</p></div>' +
+                    '<div class="col-md-4 col-sidebar"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/1200x350&text=Image" /></p></div>' +
                 '</div>',
 
             editables: {
@@ -118,6 +178,101 @@ CKEDITOR.plugins.add( 'widgetbootstrap', {
                     allowedContent: allowedWidget
                 }
             },
+
+            allowedContent: allowedFull,
+
+            upcast: function( element ) {
+                return element.name == 'div' && element.hasClass( 'two-col-right' );
+            }
+
+        } );
+
+        editor.widgets.add( 'widgetbootstrapRightCol5', {
+
+            button: showButtons ? 'Add right column box' : undefined,
+
+            template:
+                '<div class="row two-col-right">' +
+                    '<div class="col-md-7 col-main"><p>Content</p></div>' +
+                    '<div class="col-md-5 col-sidebar"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/1200x350&text=Image" /></p></div>' +
+                '</div>',
+
+            editables: {
+                col1: {
+                    selector: '.col-sidebar',
+                    allowedContent: allowedWidget
+                },
+                col2: {
+                    selector: '.col-main',
+                    allowedContent: allowedWidget
+                }
+            },
+
+            allowedContent: allowedFull,
+
+            upcast: function( element ) {
+                return element.name == 'div' && element.hasClass( 'two-col-right' );
+            }
+
+        } );
+
+        editor.widgets.add( 'widgetbootstrapVideoMiddle10', {
+
+            button: showButtons ? 'Add Video Middle box 1-10-1' : undefined,
+
+            template:
+                '<div class="row three-col">'+
+                  '<div class="col-md-1 col-1">&nbsp;</div>'+
+                  '<div class="col-md-10 col-2">'+
+                      '<div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen="" class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/YduSWVgj5ck"></iframe></div>'+
+                  '</div>'+
+                  '<div class="col-md-1 col-3">&nbsp;</div>'+
+                '</div>',
+
+            editables: {
+              col1: {
+                selector: '.col-1',
+                allowedContent: allowedWidget
+              },
+
+              col3: {
+                selector: '.col-3',
+                allowedContent: allowedWidget
+              }
+            },
+
+            allowedContent: allowedFull,
+
+            upcast: function( element ) {
+              return element.name == 'div' && element.hasClass( 'three-col' );
+            }
+
+        } );
+
+        editor.widgets.add( 'widgetbootstrapVideoMiddle8', {
+
+            button: showButtons ? 'Add Video Middle box 2-8-2' : undefined,
+
+            template:
+                '<div class="row three-col">'+
+                  '<div class="col-md-2 col-1">&nbsp;</div>'+
+                  '<div class="col-md-8 col-2">'+
+                      '<div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen="" class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/YduSWVgj5ck"></iframe></div>'+
+                  '</div>'+
+                  '<div class="col-md-2 col-3">&nbsp;</div>'+
+                '</div>',
+
+          editables: {
+            col1: {
+              selector: '.col-1',
+              allowedContent: allowedWidget
+            },
+
+            col3: {
+              selector: '.col-3',
+              allowedContent: allowedWidget
+            }
+          },
 
             allowedContent: allowedFull,
 
@@ -165,6 +320,74 @@ CKEDITOR.plugins.add( 'widgetbootstrap', {
                     '<div class="col-md-4 col-1"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/400x225&text=Image" /></p><p>Text below</p></div>' +
                     '<div class="col-md-4 col-2"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/400x225&text=Image" /></p><p>Text below</p></div>' +
                     '<div class="col-md-4 col-3"><p><img class="pop-up img-responsive thumbnail" src="http://placehold.it/400x225&text=Image" /></p><p>Text below</p></div>' +
+                '</div>',
+
+            editables: {
+                col1: {
+                    selector: '.col-1',
+                    allowedContent: allowedWidget
+                },
+                col2: {
+                    selector: '.col-2',
+                    allowedContent: allowedWidget
+                },
+                col3: {
+                    selector: '.col-3',
+                    allowedContent: allowedWidget
+                }
+            },
+
+            allowedContent: allowedFull,
+
+            upcast: function( element ) {
+                return element.name == 'div' && element.hasClass( 'three-col' );
+            }
+
+        } );
+
+        editor.widgets.add( 'widgetbootstrapBigPhoto8', {
+
+            button: showButtons ? 'Add big photo 2-8-2' : undefined,
+
+            template:
+                '<div class="row three-col">' +
+                    '<div class="col-md-2 col-1">&nbsp;</div>' +
+                    '<div class="col-md-8 col-2"><p><img alt="" class="pop-up img-responsive thumbnail" src="http://placehold.it/1200x350&text=Image" /></p></div>' +
+                    '<div class="col-md-2 col-3">&nbsp;</div>' +
+                '</div>',
+
+            editables: {
+                col1: {
+                    selector: '.col-1',
+                    allowedContent: allowedWidget
+                },
+                col2: {
+                    selector: '.col-2',
+                    allowedContent: allowedWidget
+                },
+                col3: {
+                    selector: '.col-3',
+                    allowedContent: allowedWidget
+                }
+            },
+
+            allowedContent: allowedFull,
+
+            upcast: function( element ) {
+                return element.name == 'div' && element.hasClass( 'three-col' );
+            }
+
+        } );
+
+        editor.widgets.add( 'widgetbootstrapBigPhoto6', {
+
+            button: showButtons ? 'Add big photo 3-6-3' : undefined,
+
+            template:
+                '<div class="row three-col">' +
+                    '<div class="col-md-3 col-1">&nbsp;</div>' +
+                    '<div class="col-md-6 col-2"><p><img alt="" class="pop-up img-responsive thumbnail" src="http://placehold.it/1200x350&text=Image" /></p></div>' +
+                    '<div class="col-md-3 col-3">&nbsp;</div>' +
                 '</div>',
 
             editables: {
