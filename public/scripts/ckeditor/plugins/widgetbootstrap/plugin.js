@@ -234,7 +234,10 @@ CKEDITOR.plugins.add( 'widgetbootstrap', {
                 selector: '.col-1',
                 allowedContent: allowedWidget
               },
-
+              col2: {
+                selector: '.col-2',
+                allowedContent: allowedWidget
+              },
               col3: {
                 selector: '.col-3',
                 allowedContent: allowedWidget
@@ -267,7 +270,10 @@ CKEDITOR.plugins.add( 'widgetbootstrap', {
               selector: '.col-1',
               allowedContent: allowedWidget
             },
-
+            col2: {
+              selector: '.col-2',
+              allowedContent: allowedWidget
+            },
             col3: {
               selector: '.col-3',
               allowedContent: allowedWidget
