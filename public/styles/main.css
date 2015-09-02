@@ -326,6 +326,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #E0C400;
+  ;
   color: #0E3E95;
 }
 
@@ -361,6 +362,8 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   color: #FFDF00;
   font-size: 16px;
   padding: 10px 10px 11px;
+  border-left: 1px solid #E0C400;
+  border-right: 1px solid #E0C400
 }
 
 .navbar .nav > .active > a,
