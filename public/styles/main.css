@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #fdfba0;
+  background-color: #F1DD8A;
   color: #333;
   font-family: Georgia, Times, serif;
   font-size: 14px;
@@ -19,11 +19,11 @@ h1, h2, h3, h4, h5, h6 {
 h1,
 h4
 {
-  color: #fdfba0;
+  color: #F1DD8A;
   text-shadow: 1px 1px 3px #000;
   min-height: 20px;
   margin-bottom: 20px;
-  background-color: #FA9D7F;
+  background-color: #E6023B;
   border: 1px solid #e3e3e3;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
@@ -35,7 +35,7 @@ h6{
   font-size: 20px;
   color: #333;
   margin-bottom: 20px;
-  background-color: #FA9D7F;
+  background-color: #E6023B;
   border: 1px solid #e3e3e3;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
@@ -68,7 +68,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  background-color: #fdfba0;
+  background-color: #F1DD8A;
 }
 
 
@@ -88,7 +88,7 @@ input[type="color"],
   background-image: -webkit-linear-gradient(top, #71d961, #72d363);
   background-image: -o-linear-gradient(top, #71d961, #72d363);
   background-image: linear-gradient(top, #71d961, #72d363);
-  color: #fdfba0;
+  color: #F1DD8A;
 }
 
 a > h1, button > h1,
@@ -97,7 +97,7 @@ a > h3, button > h3,
 a > h4, button > h4,
 a > h5, button > h5,
 a > h6, button > h6 {
-  color: #fdfba0;
+  color: #F1DD8A;
 }
 
 .btn-link {
@@ -112,7 +112,7 @@ a > h6, button > h6 {
 .btn-primary {
   background-color: #71D961;
   border-color: #45BD32;
-  color: #FDFBA0;
+  color: #F1DD8A;
 }
 
 .btn-primary:hover,
@@ -125,11 +125,11 @@ a > h6, button > h6 {
 .open > .dropdown-toggle.btn-primary {
   background-color: #45BD32;
   border-color: #289F16;
-  color: #D5D366;
+  color: #0E3E95;
 }
 
 .btn-danger {
-  color: #df3b47;
+  color: #E0C400;
 }
 /*BUTTONS end*/
 
@@ -181,7 +181,7 @@ a > h6, button > h6 {
 /*CAROUSEL start*/
 .carousel-caption {
   bottom: 20px;
-  color: #FDFBA0;
+  color: #F1DD8A;
   left: 15%;
   padding-bottom: 35px;
   padding-top: 20px;
@@ -208,6 +208,11 @@ a > h6, button > h6 {
   background-color: transparent;
 }
 
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
 .nl_carousel {
   margin: 1.250em 0;
 }
@@ -229,23 +234,23 @@ a > h6, button > h6 {
 /*DROPDOWN start*/
 
 .dropdown-menu {
-  background-color: #F8606A;
-  border: 1px solid #DF3B47;
+  background-color: #cc0033;
+  border: 1px solid #E0C400;
 
 }
 
 .dropdown-menu > li > a {
-  color: #FDFBA0;
+  color: #F1DD8A;
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-  background-color: #DF3B47;
-  color: #D5D366;
+  background-color: #E0C400;
+  color: #0E3E95;
   text-decoration: none;
 }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-  background-color: #DF3B47;
+  background-color: #E0C400;
 }
 
 /*DROPDOWN end*/
@@ -308,52 +313,52 @@ a > h6, button > h6 {
 
 /*NAVBAR start*/
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  background-color: #DF3B47 !important;
+  background-color: #E0C400 !important;
 }
 
 ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #D5D366 !important;
+  color: #0E3E95 !important;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #FDFBA0;
+  color: #F1DD8A;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #DF3B47;
-  color: #D5D366;
+  background-color: #E0C400;
+  color: #0E3E95;
 }
 
 .nl_nav {
-  background-color: #F8606A;
+  background-color: #cc0033;
   font-size: 16px !important;
   font-weight: bold;
 }
 
 
 .navbar-inner {
-  background-image: -moz-linear-gradient(top, #f8606a, #df3b47);
-  background-image: -ms-linear-gradient(top, #f8606a, #df3b47);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8606a), to(#df3b47));
-  background-image: -webkit-linear-gradient(top, #f8606a, #df3b47);
-  background-image: -o-linear-gradient(top, #f8606a, #df3b47);
-  background-image: linear-gradient(top, #f8606a, #df3b47);
+  background-image: -moz-linear-gradient(top, #cc0033, #E0C400);
+  background-image: -ms-linear-gradient(top, #cc0033, #E0C400);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cc0033), to(#E0C400));
+  background-image: -webkit-linear-gradient(top, #cc0033, #E0C400);
+  background-image: -o-linear-gradient(top, #cc0033, #E0C400);
+  background-image: linear-gradient(top, #cc0033, #E0C400);
 }
 
 .navbar .brand {
-  color: #fdfba0;
+  color: #F1DD8A;
   font-size: 20px;
   padding: 8px 20px 12px;
 }
 
 .navbar {
-  background-color: #fa4c59;
+  background-color: #cc0033;
   border-right: 1px solid #f94451;
   height: 41px;
 }
 
 .navbar .nav > li > a {
-  color: #fff174;
+  color: #FFDF00;
   font-size: 16px;
   padding: 10px 10px 11px;
 }
@@ -361,7 +366,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
-  color: #f3e569;
+  color: #E0C400;
 }
 
 .navbar-nav li > .dropdown-menu
@@ -372,21 +377,21 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 /*NAVBAR end*/
 
 .nl_main {
-  background-color: #FDFBA0;
+  background-color: #F1DD8A;
 }
 
 .nl_grad_horizontal {
-  background: -webkit-linear-gradient(left, #F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #F8606A, #FDFBA0); /* Standard syntax */
+  background: -webkit-linear-gradient(left, #cc0033, #F1DD8A); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #cc0033, #F1DD8A); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #cc0033, #F1DD8A); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #cc0033, #F1DD8A); /* Standard syntax */
 }
 
 .nl_grad_vertical {
-  background: -webkit-linear-gradient(#F8606A, #FDFBA0); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#F8606A, #FDFBA0); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#F8606A, #FDFBA0); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#F8606A, #FDFBA0); /* Standard syntax */
+  background: -webkit-linear-gradient(to bottom, #cc0033 0%,#cc0033 20%, #F1DD8A 100%); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(to bottom, #cc0033 0%,#cc0033 20%, #F1DD8A 100%); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(to bottom, #cc0033 0%,#cc0033 20%, #F1DD8A 100%); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #cc0033 0%,#cc0033 20%, #F1DD8A 100%); /* Standard syntax */
 }
 
 
@@ -679,30 +684,30 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   /*width: 98%;*/
   /*}*/
   .vishivanka-border {
-    border: 6px solid #B1EFA7;
-    -moz-border-image-slice: 6 6 6 6;
-    -moz-border-image-width: 6px 6px 6px 6px;
-    -moz-border-image-outset: 0px 0px 0px 0px;
-    -moz-border-image-repeat: round repeat;
-    -moz-border-image-source: url(../images/vishivanka_border.png);
+    /*border: 6px solid #71D961;*/
+    /*-moz-border-image-slice: 6 6 6 6;*/
+    /*-moz-border-image-width: 6px 6px 6px 6px;*/
+    /*-moz-border-image-outset: 0px 0px 0px 0px;*/
+    /*-moz-border-image-repeat: round repeat;*/
+    /*-moz-border-image-source: url(../images/vishivanka_border.png);*/
 
-    -webkit-border-image-slice: 6 6 6 6;
-    -webkit-border-image-width: 6px 6px 6px 6px;
-    -webkit-border-image-outset: 0px 0px 0px 0px;
-    -webkit-border-image-repeat: round repeat;
-    -webkit-border-image-source: url(../images/vishivanka_border.png);
+    /*-webkit-border-image-slice: 6 6 6 6;*/
+    /*-webkit-border-image-width: 6px 6px 6px 6px;*/
+    /*-webkit-border-image-outset: 0px 0px 0px 0px;*/
+    /*-webkit-border-image-repeat: round repeat;*/
+    /*-webkit-border-image-source: url(../images/vishivanka_border.png);*/
 
-    -o-border-image-slice: 6 6 6 6;
-    -o-border-image-width: 6px 6px 6px 6px;
-    -o-border-image-outset: 0px 0px 0px 0px;
-    -o-border-image-repeat: round repeat;
-    -o-border-image-source: url(../images/vishivanka_border.png);
+    /*-o-border-image-slice: 6 6 6 6;*/
+    /*-o-border-image-width: 6px 6px 6px 6px;*/
+    /*-o-border-image-outset: 0px 0px 0px 0px;*/
+    /*-o-border-image-repeat: round repeat;*/
+    /*-o-border-image-source: url(../images/vishivanka_border.png);*/
 
-    border-image-slice: 6 6 6 6;
-    border-image-width: 6px 6px 6px 6px;
-    border-image-outset: 0px 0px 0px 0px;
-    border-image-repeat: round repeat;
-    border-image-source: url(../images/vishivanka_border.png);
+    /*border-image-slice: 6 6 6 6;*/
+    /*border-image-width: 6px 6px 6px 6px;*/
+    /*border-image-outset: 0px 0px 0px 0px;*/
+    /*border-image-repeat: round repeat;*/
+    /*border-image-source: url(../images/vishivanka_border.png);*/
   }
 }
 
@@ -710,63 +715,63 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 @media (min-width: 768px) and (max-width: 979px) {
 
   .vishivanka-border {
-    border: 12px solid #B1EFA7;
-    -moz-border-image-slice: 6 6 6 6;
-    -moz-border-image-width: 6px 6px 6px 6px;
-    -moz-border-image-outset: 0px 0px 0px 0px;
-    -moz-border-image-repeat: round repeat;
-    -moz-border-image-source: url(../images/vishivanka_border.png);
+    /*border: 12px solid #71D961;*/
+    /*-moz-border-image-slice: 6 6 6 6;*/
+    /*-moz-border-image-width: 6px 6px 6px 6px;*/
+    /*-moz-border-image-outset: 0px 0px 0px 0px;*/
+    /*-moz-border-image-repeat: round repeat;*/
+    /*-moz-border-image-source: url(../images/vishivanka_border.png);*/
 
-    -webkit-border-image-slice: 6 6 6 6;
-    -webkit-border-image-width: 6px 6px 6px 6px;
-    -webkit-border-image-outset: 0px 0px 0px 0px;
-    -webkit-border-image-repeat: round repeat;
-    -webkit-border-image-source: url(../images/vishivanka_border.png);
+    /*-webkit-border-image-slice: 6 6 6 6;*/
+    /*-webkit-border-image-width: 6px 6px 6px 6px;*/
+    /*-webkit-border-image-outset: 0px 0px 0px 0px;*/
+    /*-webkit-border-image-repeat: round repeat;*/
+    /*-webkit-border-image-source: url(../images/vishivanka_border.png);*/
 
-    -o-border-image-slice: 6 6 6 6;
-    -o-border-image-width: 6px 6px 6px 6px;
-    -o-border-image-outset: 0px 0px 0px 0px;
-    -o-border-image-repeat: round repeat;
-    -o-border-image-source: url(../images/vishivanka_border.png);
+    /*-o-border-image-slice: 6 6 6 6;*/
+    /*-o-border-image-width: 6px 6px 6px 6px;*/
+    /*-o-border-image-outset: 0px 0px 0px 0px;*/
+    /*-o-border-image-repeat: round repeat;*/
+    /*-o-border-image-source: url(../images/vishivanka_border.png);*/
 
-    border-image-slice: 6 6 6 6;
-    border-image-width: 6px 6px 6px 6px;
-    border-image-outset: 0px 0px 0px 0px;
-    border-image-repeat: round repeat;
-    border-image-source: url(../images/vishivanka_border.png);
+    /*border-image-slice: 6 6 6 6;*/
+    /*border-image-width: 6px 6px 6px 6px;*/
+    /*border-image-outset: 0px 0px 0px 0px;*/
+    /*border-image-repeat: round repeat;*/
+    /*border-image-source: url(../images/vishivanka_border.png);*/
   }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #fff174;
-    background-color: #F8606A;
+    color: #FFDF00;
+    background-color: #cc0033;
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-color: #F8606A;
-    color: #f3e569;
+    background-color: #cc0033;
+    color: #E0C400;
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    background-color: #df3b47;
+    background-color: #E0C400;
   }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #fff174;
-    background-color: #F8606A;
+    color: #FFDF00;
+    background-color: #cc0033;
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-color: #F8606A;
-    color: #f3e569;
+    background-color: #cc0033;
+    color: #E0C400;
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    background-color: #df3b47;
+    background-color: #E0C400;
   }
 }
