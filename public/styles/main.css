@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 h1,
 h4
 {
-  color: #ffff99;
+  color: #FFCC00;
   text-shadow: 1px 1px 3px #000;
   min-height: 20px;
   margin-bottom: 20px;
@@ -92,13 +92,13 @@ input[type="color"],
 
 /*BUTTONS start*/
 .btn {
-  background-image: -moz-linear-gradient(top, #00F846, #00AB31);
-  background-image: -ms-linear-gradient(top, #00F846, #00AB31);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00F846), to(#00AB31));
-  background-image: -webkit-linear-gradient(top, #00F846, #00AB31);
-  background-image: -o-linear-gradient(top, #00F846, #00AB31);
-  background-image: linear-gradient(top, #00F846, #00AB31);
-  color: #ffff99;
+  background-image: -moz-linear-gradient(top, #63CF0B, #4B9C08);
+  background-image: -ms-linear-gradient(top, #63CF0B, #4B9C08);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#63CF0B), to(#4B9C08));
+  background-image: -webkit-linear-gradient(top, #63CF0B, #4B9C08);
+  background-image: -o-linear-gradient(top, #63CF0B, #4B9C08);
+  background-image: linear-gradient(top, #63CF0B, #4B9C08);
+  color: #FFCC00;
 }
 
 a > h1, button > h1,
@@ -107,7 +107,7 @@ a > h3, button > h3,
 a > h4, button > h4,
 a > h5, button > h5,
 a > h6, button > h6 {
-  color: #ffff99;
+  color: #FFCC00;
 }
 
 .btn-link {
@@ -120,9 +120,9 @@ a > h6, button > h6 {
 }
 
 .btn-primary {
-  background-color: #00F846;
+  background-color: #63CF0B;
   border-color: #45BD32;
-  color: #ffff99;
+  color: #FFCC00;
 }
 
 .btn-primary:hover,
@@ -378,7 +378,7 @@ a > h6, button > h6 {
 
 /*NAVBAR start*/
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  background-color: #F9F619 !important;
+  background-color: #FFCC00 !important;
 }
 
 ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
@@ -386,11 +386,11 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #ffff99;
+  color: #FFCC00;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #F9F619;
+  background-color: #FFCC00;
 ;
   color: #00B233;
 }
@@ -402,16 +402,16 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
 
 .navbar-inner {
-  background-image: -moz-linear-gradient(top, #ff0000, #F9F619);
-  background-image: -ms-linear-gradient(top, #ff0000, #F9F619);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff0000), to(#F9F619));
-  background-image: -webkit-linear-gradient(top, #ff0000, #F9F619);
-  background-image: -o-linear-gradient(top, #ff0000, #F9F619);
-  background-image: linear-gradient(top, #ff0000, #F9F619);
+  background-image: -moz-linear-gradient(top, #ff0000, #FFCC00);
+  background-image: -ms-linear-gradient(top, #ff0000, #FFCC00);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff0000), to(#FFCC00));
+  background-image: -webkit-linear-gradient(top, #ff0000, #FFCC00);
+  background-image: -o-linear-gradient(top, #ff0000, #FFCC00);
+  background-image: linear-gradient(top, #ff0000, #FFCC00);
 }
 
 .navbar .brand {
-  color: #ffff99;
+  color: #FFCC00;
   font-size: 20px;
   padding: 8px 20px 12px;
 }
@@ -423,17 +423,17 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 }
 
 .navbar .nav > li > a {
-  color: #F9F619;
+  color: #FFCC00;
   font-size: 1.167em;
   padding: 10px 10px 11px;
-  border-left: 1px solid #F9F619;
-  border-right: 1px solid #F9F619
+  border-left: 1px solid #FFCC00;
+  border-right: 1px solid #FFCC00
 }
 
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
-  color: #F9F619;
+  color: #FFCC00;
 }
 
 .navbar-nav li > .dropdown-menu
@@ -463,10 +463,10 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 }
 
 .nl_grad_vertical {
-  background: -webkit-linear-gradient(to bottom, #ff0000 0%,#ff0000 20%, #ffff99 100%); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(to bottom, #ff0000 0%,#ff0000 20%, #ffff99 100%); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(to bottom, #ff0000 0%,#ff0000 20%, #ffff99 100%); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, #ff0000 0%,#ff0000 20%, #ffff99 100%); /* Standard syntax */
+  background: -webkit-linear-gradient(to bottom, #ff0000 0%,#ff0000 70%, #ffff99 100%); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(to bottom, #ff0000 0%,#ff0000 70%, #ffff99 100%); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(to bottom, #ff0000 0%,#ff0000 70%, #ffff99 100%); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #ff0000 0%,#ff0000 70%, #ffff99 100%); /* Standard syntax */
 }
 
 .nl_grad_vertical_reverse {
@@ -484,7 +484,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   height: auto !important;
   height: 100%;
   /* This line and the next line are not necessary unless you need IE6 support */
-  margin: 51px auto -50px auto;
+  margin: 50px auto -50px auto;
   min-height: 100%;
   /* the bottom margin is the negative value of the footer's height */
 }
@@ -520,7 +520,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
 
   .green-border{
-    border: 4px solid #00F846;
+    border: 4px solid #63CF0B;
   }
 
 
@@ -775,7 +775,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   }
 
   .green-border{
-    border: 4px solid #00F846;
+    border: 4px solid #63CF0B;
   }
 }
 
@@ -800,12 +800,12 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   /*}*/
 
   .green-border{
-    border: 4px solid #00F846;
+    border: 4px solid #63CF0B;
   }
 
 
   .vishivanka-border {
-    /*border: 6px solid #00F846;*/
+    /*border: 6px solid #63CF0B;*/
     /*-moz-border-image-slice: 6 6 6 6;*/
     /*-moz-border-image-width: 6px 6px 6px 6px;*/
     /*-moz-border-image-outset: 0px 0px 0px 0px;*/
@@ -836,12 +836,12 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 @media (min-width: 768px) and (max-width: 979px) {
 
   .green-border{
-    border: 4px solid #00F846;
+    border: 4px solid #63CF0B;
   }
 
 
   .vishivanka-border {
-    /*border: 12px solid #00F846;*/
+    /*border: 12px solid #63CF0B;*/
     /*-moz-border-image-slice: 6 6 6 6;*/
     /*-moz-border-image-width: 6px 6px 6px 6px;*/
     /*-moz-border-image-outset: 0px 0px 0px 0px;*/
@@ -871,33 +871,33 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #F9F619;
+    color: #FFCC00;
     background-color: #ff0000;
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     background-color: #ff0000;
-    color: #F9F619;
+    color: #FFCC00;
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    background-color: #F9F619;
+    background-color: #FFCC00;
   }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #F9F619;
+    color: #FFCC00;
     background-color: #ff0000;
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     background-color: #ff0000;
-    color: #F9F619;
+    color: #FFCC00;
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    background-color: #F9F619;
+    background-color: #FFCC00;
   }
 }
