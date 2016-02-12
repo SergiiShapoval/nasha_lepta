@@ -34,18 +34,18 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files: ['<%= yeoman.app %>/scripts/**/*.js'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
       },
       jsTest: {
-        files: ['test/spec/{,*/}*.js'],
+        files: ['test/spec/**/*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+        files: ['<%= yeoman.app %>/styles/**/*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
@@ -56,8 +56,8 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.html',
-          '.tmp/styles/{,*/}*.css',
+          '<%= yeoman.app %>/**/*.html',
+          '.tmp/styles/**/*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -180,7 +180,12 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app
     wiredep: {
       app: {
-        src: ['<%= yeoman.app %>/index.html'],
+        src: [
+          '<%= yeoman.app %>/index.html',
+          '<%= yeoman.app %>/nikolsky_evenings/index.html',
+          '<%= yeoman.app %>/requests/index.html',
+          '<%= yeoman.app %>/exposition/index.html'
+        ],
         ignorePath:  /\.\.\//
       },
       test: {
@@ -205,9 +210,9 @@ module.exports = function (grunt) {
     filerev: {
       dist: {
         src: [
-          '<%= yeoman.dist %>/scripts/{,*/}*.js',
+          '<%= yeoman.dist %>/scripts/**/*.js',
           '!<%= yeoman.dist %>/scripts/ckeditor/**/*',
-          '<%= yeoman.dist %>/styles/{,*/}*.css',
+          '<%= yeoman.dist %>/styles/**/*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
@@ -235,14 +240,25 @@ module.exports = function (grunt) {
 
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
+      html: ['<%= yeoman.dist %>/**/*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+      js: '<%= yeoman.dist %>/scripts/{,*/}*.js',
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>',
           '<%= yeoman.dist %>/images',
-          '<%= yeoman.dist %>/styles'
+          '<%= yeoman.dist %>/styles',
+          '<%= yeoman.dist %>/scripts'
         ]
+        ,
+        blockReplacements: {
+          css: function (block) {
+            return '<link rel="stylesheet" href="../' + block.dest + '"/>';
+          },
+          js: function (block) {
+            return '<script src="../' + block.dest + '"></script>';
+          }
+        }
       }
     },
 
@@ -306,7 +322,13 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: ['*.html', 'views/{,*/}*.html'],
+          src: [
+            '*.html',
+            'views/{,*/}*.html',
+            'nikolsky_evenings/{,*/}*.html',
+            'requests/{,*/}*.html',
+            'exposition/{,*/}*.html'
+          ],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -328,7 +350,12 @@ module.exports = function (grunt) {
     // Replace Google CDN references
     cdnify: {
       dist: {
-        html: ['<%= yeoman.dist %>/*.html']
+        html: [
+          '<%= yeoman.dist %>/*.html',
+          '<%= yeoman.dist %>/nikolsky_evenings/*.html',
+          '<%= yeoman.dist %>/requests/*.html',
+          '<%= yeoman.dist %>/exposition/*.html'
+        ]
       }
     },
 
@@ -345,6 +372,9 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'templates/**/*',
+            'nikolsky_evenings/**/*',
+            'requests/**/*',
+            'exposition/**/*',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*',
             'scripts/ckeditor/**/*',

@@ -48,3 +48,9 @@ http://wpdevkvk.wordpress.com/2014/12/26/quickly-add-google-maps-into-your-angul
 Modal popup window: 
 https://github.com/compact/angular-bootstrap-lightbox
 http://angular-ui.github.io/bootstrap/#/modal
+
+
+use 
+	grunt serve - to work with local copy
+	grunt build to prepare dist for publishing to github pages
+	grunt buildcontrol-pages - to push to github-pages last version of done work

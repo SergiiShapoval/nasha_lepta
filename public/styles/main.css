@@ -220,6 +220,18 @@ a > h6, button > h6 {
   z-index: 10;
 }
 
+.carousel-title{
+  color: #FFCC00;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.carousel-text{
+  color: #333;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 .carousel-control.right.nl_carousel {
   background-image: none;
 }
