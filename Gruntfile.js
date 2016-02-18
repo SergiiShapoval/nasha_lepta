@@ -443,21 +443,21 @@ module.exports = function (grunt) {
         files: [{
           dest: '.tmp\\concat\\scripts\\appExpositionScript.js',
           src: [
-            '{.tmp,public}\\data\\appRoutes.js',
+            '{.tmp,public}\\data\\appExpositionRoutes.js',
             '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
             '{.tmp,public}\\scripts\\appExposition.js']
         },
           {
             dest: '.tmp\\concat\\scripts\\appEveningsScript.js',
             src: [
-              '{.tmp,public}\\data\\appRoutes.js',
+              '{.tmp,public}\\data\\appEveningsRoutes.js',
               '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
               '{.tmp,public}\\scripts\\appEvenings.js']
           },
           {
             dest: '.tmp\\concat\\scripts\\appRequestsScript.js',
             src: [
-              '{.tmp,public}\\data\\appRoutes.js',
+              '{.tmp,public}\\data\\appRequestsRoutes.js',
               '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
               '{.tmp,public}\\scripts\\appRequests.js']
           }
