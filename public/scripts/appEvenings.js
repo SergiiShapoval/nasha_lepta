@@ -21,37 +21,22 @@ angular
     'bootstrapLightbox'
   ])
   .config(function ($routeProvider) {
-    for (var template in appRoutes.views){
+    for (var template in appEveningsRoutes.views){
       $routeProvider
         .when(
-        '/' + appRoutes.views[template].url, {
-          template: '<nl-article data="'+appRoutes.views[template].url+'" auth="auth"></nl-article>'
+        '/' + appEveningsRoutes.views[template].url, {
+          template: '<nl-article data="'+appEveningsRoutes.views[template].url+'" auth="auth"></nl-article>'
         }
       );
     }
     $routeProvider
       .when('/', {
-        redirectTo: '/news2015'
-      })
-      //.when('/fillFireBase', {
-      //  // redirect to the notes index
-      //  template: '<h1>Should Be filled</h1>',
-      //  controller : 'FillCtrl'
-      //})
-      .when('/contacts', {
-          templateUrl: 'templates/directives/contacts.html'
+        redirectTo: '/next-meeting-news'
       })
       .otherwise({
         redirectTo: '/'
       });
 
-  })
-  .config(function(uiGmapGoogleMapApiProvider) {
-    uiGmapGoogleMapApiProvider.configure({
-      //    key: 'your api key',
-      v: '3.17',
-      libraries: 'weather,geometry,visualization'
-    });
   })
   .config(function (LightboxProvider) {
     LightboxProvider.getImageUrl = function (imageUrl) {

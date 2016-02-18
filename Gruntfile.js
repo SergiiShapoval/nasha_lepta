@@ -436,7 +436,52 @@ module.exports = function (grunt) {
           branch: 'gh-pages'
         }
       }
+    },
+    //additional configuration created as useminPrepare can work correctly only with one file
+    concat: {
+      dist: {
+        files: [{
+          dest: '.tmp\\concat\\scripts\\appExpositionScript.js',
+          src: [
+            '{.tmp,public}\\data\\appRoutes.js',
+            '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
+            '{.tmp,public}\\scripts\\appExposition.js']
+        },
+          {
+            dest: '.tmp\\concat\\scripts\\appEveningsScript.js',
+            src: [
+              '{.tmp,public}\\data\\appRoutes.js',
+              '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
+              '{.tmp,public}\\scripts\\appEvenings.js']
+          },
+          {
+            dest: '.tmp\\concat\\scripts\\appRequestsScript.js',
+            src: [
+              '{.tmp,public}\\data\\appRoutes.js',
+              '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
+              '{.tmp,public}\\scripts\\appRequests.js']
+          }
+        ]
+      }
+    },
+    //additional configuration created as useminPrepare can work correctly only with one file
+    uglify: {
+      dist: {
+        files: [{
+          dest: 'dist\\scripts\\appRequestsScript.js',
+          src: ['.tmp\\concat\\scripts\\appRequestsScript.js']
+        },
+          {
+            dest: 'dist\\scripts\\appEveningsScript.js',
+            src: ['.tmp\\concat\\scripts\\appEveningsScript.js']
+          },
+          {
+            dest: 'dist\\scripts\\appExpositionScript.js',
+            src: ['.tmp\\concat\\scripts\\appExpositionScript.js']
+          }]
+      }
     }
+
   });
 
 

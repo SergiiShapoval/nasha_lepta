@@ -29,84 +29,20 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class=" navbar navbar-default navbar-fixed-top nl_nav col-centered" role="navigation">
+  <div class=" navbar navbar-default navbar-fixed-top nl_nav" role="navigation">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-offset-1 col-xl-offset-1 col-md-10  col-xl-10 ">
-
-          <ul class="nav navbar-nav col-centered">
-            <li ng-show="news2015()"
-                ng-class="{active : location() === '/news2015' || location() === '/news2014'}">
-              <a href="#/" data-target="#" class="navbar-nav " data-toggle="dropdown">
-                Новости проекта <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li ng-class="{active : location() === '/news2015'}">
-                  <a href="#/news2015" class="navbar-nav-block">2015</a>
-                </li>
-                <li ng-class="{active : location() === '/news2014'}">
-                  <a href="#/news2014" class="navbar-nav-block">2014</a>
-                </li>
-              </ul>
+          <ul class="nav navbar-nav">
+            <li ng-class="{active : location() === '/requests-window'}">
+              <a ng-href="#/requests-window">Послать заявку о помощи</a></li>
+            <li ng-class="{active : location() === '/requests-feedback'}">
+              <a ng-href="#/requests-feedback">Обратная связь</a>
             </li>
-            <li ng-show="about()" ng-class="{active : location() === '/about'}">
-              <a ng-href="#/about">О проекте</a></li>
-            <li ng-show="about()" ng-class="{active : location() === '/akcii'}">
-              <a ng-href="#/akcii">Акции</a></li>
-            <li ng-show="articles()" ng-class="{active : location() === '/articles'}">
-              <a ng-href="#/articles">Статьи</a></li>
-            <li ng-show="gratitude()" ng-class="{active : location() === '/gratitude'}">
-              <a ng-href="#/gratitude">Благодарности</a></li>
-            <li ng-show="photos()" ng-class="{active : location() === '/photos'}">
-              <a ng-href="#/photos">Фотогалерея</a>
-            </li>
-            <li ng-show="videos()" ng-class="{active : location() === '/videos'}">
-              <a ng-href="#/videos">Видеогалерея</a>
-            </li>
-            <li ng-show="contacts()" ng-class="{active : location() === '/contacts'}">
-              <a ng-href="#/contacts">Контакты</a>
-            </li>
-
-            <li ng-hide="news2015()">
-            </li>
-            <li ng-hide="contacts()">
-
-              <a href="#/" data-target="#" class="nl-nav" data-toggle="dropdown">
-                <span ng-hide="news2015()">Меню</span>
-
-                <span class="glyphicon glyphicon-menu-hamburger"
-                      aria-hidden="true"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li ng-hide="news2015()" ng-class="{active : location() === '/news2015'}">
-                  <a href="#/news2015" class="navbar-nav-block">Новости 2015</a>
-                </li>
-                <li ng-hide="news2015()" ng-class="{active : location() === '/news2014'}">
-                  <a href="#/news2014" class="navbar-nav-block">Новости 2014</a>
-                </li>
-                <li class="divider"></li>
-                <li ng-hide="about()" ng-class="{active : location() === '/about'}">
-                  <a ng-href="#/about">О проекте</a></li>
-                <li ng-hide="about()" ng-class="{active : location() === '/akcii'}">
-                  <a ng-href="#/akcii">Акции</a></li>
-                <li ng-hide="articles()" ng-class="{active : location() === '/articles'}">
-                  <a ng-href="#/articles">Статьи</a></li>
-                <li ng-hide="gratitude()" ng-class="{active : location() === '/gratitude'}">
-                  <a ng-href="#/gratitude">Благодарности</a></li>
-                <li ng-hide="photos()" ng-class="{active : location() === '/photos'}">
-                  <a ng-href="#/photos">Фотогалерея</a>
-                </li>
-                <li ng-hide="videos()" ng-class="{active : location() === '/videos'}">
-                  <a ng-href="#/videos">Видеогалерея</a>
-                </li>
-                <li ng-hide="contacts()" ng-class="{active : location() === '/contacts'}">
-                  <a ng-href="#/contacts">Контакты</a>
-                </li>
-
-              </ul>
+            <li ng-class="{active : location() === '/requests-accounting'}">
+              <a ng-href="#/requests-accounting">Отчётность</a>
             </li>
           </ul>
-
         </div>
       </div>
     </div>
@@ -358,18 +294,17 @@
 <!-- endbower -->
 <!-- endbuild -->
 
+<!-- build:js({.tmp,public}) scripts/appRequestsScript.js -->
+<script src="../data/appRequestsRoutes.js"></script>
+<script src="../scripts/vendor/angularPicasa.js"></script>
+<script src="../scripts/appRequests.js"></script>
+<!-- endbuild -->
 <!-- build:js({.tmp,public}) scripts/scripts.js -->
-<script src="../data/appRoutes.js"></script>
-<script src="../data/appTemplatesByUrl.js"></script>
-<script src="../scripts/app.js"></script>
-<!--<script src="../scripts/services/fillFirebase.js"></script>-->
-<script src="../scripts/controllers/fill.js"></script>
 <script src="../scripts/directives/nlArticle.js"></script>
 <script src="../scripts/controllers/auth.js"></script>
 <script src="../scripts/controllers/updateTemplate.js"></script>
 <script src="../scripts/services/editorOptions.js"></script>
 <script src="../scripts/controllers/adminRoutes.js"></script>
-<script src="../scripts/vendor/angularPicasa.js"></script>
 <script src="../scripts/vendor/toTop.js"></script>
 <script src="../scripts/directives/compile.js"></script>
 <script src="../scripts/controllers/carousel.js"></script>
@@ -378,7 +313,7 @@
 <script src="../scripts/directives/nlRandomGroup.js"></script>
 <script src="../scripts/services/firebaseLink.js"></script>
 <script src="../scripts/directives/nlRandomAlbum.js"></script>
-<script src="../scripts/controllers/maincarousel.js"></script>
+<script src="../scripts/controllers/mainCarousel.js"></script>
 <script src="../scripts/controllers/gallerylightbox.js"></script>
 <script src="../scripts/directives/popUp.js"></script>
 <!-- endbuild -->

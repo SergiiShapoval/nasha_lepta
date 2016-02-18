@@ -1,4 +1,4 @@
-var appRoutes = {
+var appRootRoutes = {
 	"views": {
     "news2015Data": {
       "url": "news2015"
@@ -81,6 +81,5 @@ var appRoutes = {
 		"requisitesData": {
 			"url": "requisites"
 		}
-
 	}
 };
