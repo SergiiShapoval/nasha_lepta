@@ -1,14 +1,5 @@
 <!doctype html>
 
-<!--Меню по центру-->
-<!--Разделители Оранжевые-->
-<!--поменять заливку шапки-->
-<!--активная кнопка меню оранжевая-->
-<!--каемку на зелённую в цвет кнопки-->
-<!--поле между колонками уменьшить в половину-->
-<!--приглушить жёлтый цвет меню-->
-<!--подобрать цвет блока текста-->
-
 <html class="no-js">
 <head>
   <meta charset="utf-8">
@@ -37,19 +28,21 @@
     href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
   <div class=" navbar navbar-default navbar-fixed-top nl_nav col-centered" role="navigation">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-offset-1 col-xl-offset-1 col-md-10  col-xl-10 ">
 
           <ul class="nav navbar-nav col-centered">
-            <li ng-show="news2015()"
-                ng-class="{active : location() === '/news2015' || location() === '/news2014'}">
+            <li ng-show="news2016()"
+                ng-class="{active : location() === '/news2016' || location() === '/news2015' || location() === '/news2014'}">
               <a href="#/" data-target="#" class="navbar-nav " data-toggle="dropdown">
                 Новости проекта <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
+                <li ng-class="{active : location() === '/news2016'}">
+                  <a href="#/news2016" class="navbar-nav-block">2016</a>
+                </li>
                 <li ng-class="{active : location() === '/news2015'}">
                   <a href="#/news2015" class="navbar-nav-block">2015</a>
                 </li>
@@ -122,15 +115,10 @@
   </div>
   <div class="wrapper">
     <div class=" all-page nl_grad_vertical_reverse">
-      <div class="col-md-1 col-xl-1"></div>
-      <div class="col-md-10 col-xl-10 middle-without-borders ">
+      <div class="col-md-push-1 col-xl-push-1 col-md-10 col-xl-10 middle-without-borders col-md-pull-1 col-xl-push-1">
         <div class=" green-border">
           <div class="nl_grad_vertical container-fluid main-carousel">
-            <div class="nl_carousel
-              col-md-10
-              col-xl-10
-              col-md-push-1 col-md-pull-1
-              col-xl-push-1 col-xl-pull-1">
+            <div class="col-md-push-1 col-xl-push-1 nl_carousel col-md-10 col-xl-10 col-md-pull-1 col-xl-pull-1">
               <div id="carousel-example-generic" class="carousel slide"
                    ng-controller="MainCarouselCtrl">
                 <!-- Indicators -->
@@ -170,7 +158,7 @@
                 <!--</a>-->
               </div>
             </div>
-            <div class="nl_carousel sub_projects" ng-show="location() == '/news2015'">
+            <div class="nl_carousel sub_projects" ng-show="location() == '/news2016'">
               <a href="nikolsky_evenings">
                 <div id="carousel-sub-project-nikolsky_evenings"
                      class="carousel slide col-md-4 col-xl-4"
@@ -188,10 +176,10 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
 
-                    <div class="item active">
+                    <div class="item active thumbnail">
                       <!--ng-class="{active : isSliderShown}"-->
 
-                      <img
+                      <img class="img-responsive"
                         src="https://lh3.googleusercontent.com/-0ZUtpWCbNXY/VqPr_tMNMZI/AAAAAAAAKnc/nnglduvy1gQ/s912-Ic42/DSCN4170.JPG"
                         alt="...">
                     </div>
@@ -237,10 +225,10 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
 
-                    <div class="item active">
+                    <div class="item active thumbnail">
                       <!--ng-class="{active : isSliderShown}"-->
 
-                      <img
+                      <img class="img-responsive"
                         src="http://www.pravlife.org/sites/default/files/field/image/vystavka1.jpg"
                         alt="...">
                     </div>
@@ -288,10 +276,10 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
 
-                    <div class="item active">
+                    <div class="item active thumbnail">
                       <!--ng-class="{active : isSliderShown}"-->
 
-                      <img
+                      <img class="img-responsive"
                         src="https://lh3.googleusercontent.com/-8RXTHb223KM/VKmxFItzHTI/AAAAAAAAHJ0/OryVqnqbeW8/s912/NCH_5488.jpg"
                         alt="...">
                     </div>
@@ -319,8 +307,6 @@
                   </div>
                 </div>
               </a>
-
-
             </div>
           </div>
 
@@ -336,8 +322,7 @@
               </div>
               <div class="col-md-3 col-xl-3 support_info_container ">
 
-                <div class="col-md-1 col-xl-1 "></div>
-                <div class="col-md-11 col-xl-11">
+                <div class="col-md-push-1 col-xl-push-1 col-md-11 col-xl-11">
 
                   <div class="nl_routes" ng-controller="AdminRoutesCtrl" ng-show="auth.user">
                     <h4>Список доступных страниц</h4>
@@ -458,13 +443,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-1 col-xl-2"></div>
+              <div class="col-md-1 col-xl-1"></div>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="col-md-1 col-xl-1"></div>
     </div>
     <div class="push"></div>
   </div>

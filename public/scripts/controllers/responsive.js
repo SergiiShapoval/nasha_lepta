@@ -9,7 +9,7 @@
  */
 angular.module('nashaLeptaApp')
   .controller('ResponsiveCtrl', function ($scope, $window) {
-    $scope.news2015= function(){
+    $scope.news2016= function(){
       //return true;
       return $window.innerWidth > 770;
     }
@@ -40,7 +40,7 @@ angular.module('nashaLeptaApp')
     }
 
     //$window.onresize = function () {
-    //  $scope.news2015();
+    //  $scope.news2016();
     //  $scope.about();
     //  $scope.articles();
     //  $scope.gratitude();

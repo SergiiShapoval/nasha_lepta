@@ -31,13 +31,8 @@ angular
     }
     $routeProvider
       .when('/', {
-        redirectTo: '/news2015'
+        redirectTo: '/news2016'
       })
-      //.when('/fillFireBase', {
-      //  // redirect to the notes index
-      //  template: '<h1>Should Be filled</h1>',
-      //  controller : 'FillCtrl'
-      //})
       .when('/contacts', {
           templateUrl: 'templates/directives/contacts.html'
       })
