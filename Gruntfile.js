@@ -253,10 +253,10 @@ module.exports = function (grunt) {
         ,
         blockReplacements: {
           css: function (block) {
-            return '<link rel="stylesheet" href="../' + block.dest + '"/>';
+            return '<link rel="stylesheet" href="' + block.dest + '"/>';
           },
           js: function (block) {
-            return '<script src="../' + block.dest + '"></script>';
+            return '<script src="' + block.dest + '"></script>';
           }
         }
       }
