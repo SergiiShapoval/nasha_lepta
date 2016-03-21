@@ -12,7 +12,7 @@ angular
   .module('nashaLeptaApp', [
     'ngResource',
     'ngRoute',
-
+    'firebase',
     'ngCkeditor',
     'angularPicasa',
     'ui.bootstrap',
