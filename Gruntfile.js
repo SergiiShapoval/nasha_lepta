@@ -530,7 +530,23 @@ module.exports = function (grunt) {
     'usemin',
     'htmlmin'
   ]);
-
+ grunt.registerTask('bildProject',[
+   'clean:dist',
+   'wiredep',
+   'useminPrepare',
+   'concurrent:dist',
+   'autoprefixer',
+   'concat',
+   'ngAnnotate',
+   'copy:dist',
+   'cdnify',
+   'cssmin',
+   'uglify',
+   'filerev',
+   'usemin',
+   'htmlmin',
+   'buildcontrol'
+ ])
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
