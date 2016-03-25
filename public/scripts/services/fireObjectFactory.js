@@ -16,7 +16,6 @@ angular.module('nashaLeptaApp')
       return {
         all: function(models) {
           var ref = new Firebase(FirebaseLink+"/"+models+"/");
-
           return $firebaseArray(ref);
         },
         find: function(models, id){
