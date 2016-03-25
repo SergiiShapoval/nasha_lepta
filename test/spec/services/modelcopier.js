@@ -13,8 +13,13 @@ describe('Factory: ModelCopier', function () {
 
   it('should do something', function () {
     expect(!!ModelCopier).toBe(true);
-
-
+    var modelFrom = {
+      url : 'first_url',
+      body : 'firstBody'
+    };
+    var modelTo = {};
+    ModelCopier(modelFrom, modelTo);
+    expect(modelFrom).toEqual(modelTo);
   });
 
 });
