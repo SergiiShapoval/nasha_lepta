@@ -18,6 +18,7 @@ angular.module('nashaLeptaApp')
 
     $scope.preview = function(){
       $scope.isPreview = true;
+      //TODO create a logic with toShowCompile
       $scope.toShow =
         $sce.trustAsHtml(
           $scope.toEdit.$value

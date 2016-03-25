@@ -1,5 +1,4 @@
 // Karma configuration
-// http://karma-runner.github.io/0.12/config/configuration-file.html
 // Generated on 2015-07-10 using
 // generator-karma 0.9.0
 
@@ -12,6 +11,8 @@ module.exports = function(config) {
 
     // base path, that will be used to resolve files and exclude
     basePath: '../',
+
+    browserNoActivityTimeout: 60000,
 
     // testing framework to use (jasmine/mocha/qunit/...)
     frameworks: ['jasmine'],
@@ -34,8 +35,14 @@ module.exports = function(config) {
       'bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
-      'app/scripts/**/*.js',
-      'test/mock/**/*.js',
+      'public/scripts/appRoot.js',
+      'public/data/*.js',
+      'public/scripts/ckeditor/*.js',
+      'public/scripts/services/*.js',
+      'public/scripts/directives/*.js',
+      'public/scripts/controllers/*.js',
+      'public/scripts/vendor/*.js',
+      //'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
 
@@ -44,7 +51,7 @@ module.exports = function(config) {
     ],
 
     // web server port
-    port: 8080,
+    //port: 8080,
 
     // Start these browsers, currently available:
     // - Chrome
@@ -66,13 +73,13 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false,
+    singleRun: true,
 
     colors: true,
 
     // level of logging
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG
 
     // Uncomment the following lines if you are using grunt's server to run the tests
     // proxies: {

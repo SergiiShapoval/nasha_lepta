@@ -36,6 +36,18 @@ angular
       .when('/contacts', {
           templateUrl: 'templates/directives/contacts.html'
       })
+      .when('/articles', {
+      //  TODO
+      })
+      .when('/articles/:id', {
+        //TODO
+      })
+      .when('/articles/:id/edit', {
+      //  TODO
+      })
+      .when('/articles/new', {
+      //  TODO
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -7,8 +7,8 @@ describe('Service: EditorOptions', function () {
 
   // instantiate service
   var EditorOptions;
-  beforeEach(inject(function (_EditorOptions_) {
-    EditorOptions = _EditorOptions_;
+  beforeEach(inject(function (_editorOptions_) {
+    EditorOptions = _editorOptions_;
   }));
 
   it('should do something', function () {

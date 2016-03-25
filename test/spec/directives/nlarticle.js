@@ -15,6 +15,6 @@ describe('Directive: nlArticle', function () {
   it('should make hidden element visible', inject(function ($compile) {
     element = angular.element('<nl-article></nl-article>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the nlArticle directive');
+    expect(element.text()).toBe('');
   }));
 });
