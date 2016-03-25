@@ -16,6 +16,7 @@ angular.module('nashaLeptaApp')
         data : '@',
         auth : '='
       },
+      //used as DOM manipulation should be done after directive compilation
       link: function postLink(scope, element, attrs) {
         var ref = new Firebase(FirebaseLink+'/'+ attrs.data);
         var receivedValue = $firebaseObject(ref);

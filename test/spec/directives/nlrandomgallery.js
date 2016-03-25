@@ -15,6 +15,6 @@ describe('Directive: nlRandomGallery', function () {
   it('should make hidden element visible', inject(function ($compile) {
     element = angular.element('<nl-random-gallery></nl-random-gallery>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the nlRandomGallery directive');
+    expect(element.text()).toBe('');
   }));
 });

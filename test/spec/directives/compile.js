@@ -15,6 +15,6 @@ describe('Directive: compile', function () {
   it('should make hidden element visible', inject(function ($compile) {
     element = angular.element('<compile></compile>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the compile directive');
+    expect(element.text()).toBe('');
   }));
 });
