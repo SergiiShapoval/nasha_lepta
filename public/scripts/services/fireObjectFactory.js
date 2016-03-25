@@ -15,12 +15,12 @@ angular.module('nashaLeptaApp')
     function FireObjectsFactory(FirebaseLink, $firebaseArray, $firebaseObject) {
       return {
         all: function(models) {
-          var ref = new Firebase(URL+"/"+models+"/");
+          var ref = new Firebase(FirebaseLink+"/"+models+"/");
 
           return $firebaseArray(ref);
         },
         find: function(models, id){
-          var ref = new Firebase(URL+"/"+models+"/" + id);
+          var ref = new Firebase(FirebaseLink+"/"+models+"/" + id);
           return $firebaseObject(ref);
         },
         update: function(model) {
@@ -28,7 +28,7 @@ angular.module('nashaLeptaApp')
           'Details on https://www.firebase.com/docs/web/libraries/angular/api.html#angularfire-firebaseobject-save');
         },
         create: function(models, id) {
-          var ref = new Firebase(URL+"/"+models+"/" + id);
+          var ref = new Firebase(FirebaseLink+"/"+models+"/" + id);
           return $firebaseObject(ref);
         }
       };

@@ -13,6 +13,10 @@ describe('Service: FireObjects', function () {
 
   it('should do something', function () {
     expect(!!FireObjects).toBe(true);
+    expect(FireObjects.all).toBeDefined()
+    expect(FireObjects.find).toBeDefined()
+    expect(FireObjects.update).toBeDefined()
+    expect(FireObjects.create).toBeDefined()
   });
 
 });
