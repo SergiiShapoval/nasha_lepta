@@ -37,10 +37,12 @@ angular
           templateUrl: 'templates/directives/contacts.html'
       })
       .when('/articles', {
-      //  TODO
+        templateUrl: 'templates/pages/articles/list.html',
+        controller: 'ArticlesListCtrl'
       })
       .when('/articles/:id', {
-        //TODO
+        templateUrl: 'templates/pages/articles/show.html',
+        controller: 'ArticlesShowCtrl'
       })
       .when('/articles/:id/edit', {
       //  TODO
