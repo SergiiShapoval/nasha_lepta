@@ -12,6 +12,10 @@ module.exports = function(config) {
     // base path, that will be used to resolve files and exclude
     basePath: '../',
 
+    preprocessors: {
+      'public/templates/directives/*.html': ['ng-html2js']
+    },
+
     browserNoActivityTimeout: 60000,
 
     // testing framework to use (jasmine/mocha/qunit/...)
@@ -44,8 +48,18 @@ module.exports = function(config) {
       'public/scripts/controllers/**/*.js',
       'public/scripts/vendor/*.js',
       //'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/spec/**/*.js',
+    //  load templates for testing
+      'public/templates/directives/*.html'
     ],
+
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'public/',
+      //prependPrefix: 'public/',
+      // setting this option will create only a single module that contains templates
+      // from all the files, so you can load them all with module('templates')
+      moduleName: 'templates'
+    },
 
     // list of files / patterns to exclude
     exclude: [
@@ -69,7 +83,8 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-ng-html2js-preprocessor'
     ],
 
     // Continuous Integration mode
