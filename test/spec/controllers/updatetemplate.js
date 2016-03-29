@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: UpdateTemplateCtrl', function () {
+xdescribe('Controller: UpdateTemplateCtrl', function () {
 
   // load the controller's module
   beforeEach(module('nashaLeptaApp'));
