@@ -9,9 +9,8 @@
 angular.module('nashaLeptaApp')
   .directive('nlEditor', function () {
       return {
-        //templateUrl: 'templates/directives/nl-editor.html',
+        templateUrl: 'templates/directives/nl-editor.html',
         controller : 'UpdateTemplateCtrl',
-        template: '',
         restrict: 'E',
         scope :{
           data : '@'

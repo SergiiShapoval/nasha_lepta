@@ -5,18 +5,20 @@ describe('Directive: nlEditor', function () {
   //load needed template to one by one
   //beforeEach(module("templates/directives/nl-editor.html"));
   //or all templates at once
-  //beforeEach(angular.mock.module("templates"));
+  beforeEach(angular.mock.module("templates"));
 
   // load the directive's module
   beforeEach(module('nashaLeptaApp'));
 
   var element,
     scope,
-    UpdateTemplateCtrl;
+    UpdateTemplateCtrl,
+    modelToPassValue ="some/link";
 
   beforeEach(inject(function ($rootScope, $compile) {
     scope = $rootScope.$new();
-    element = angular.element('<nl-editor data="1"></nl-editor>');
+    scope.data = modelToPassValue;
+    element = angular.element('<nl-editor data="{{data}}"></nl-editor>');
     element = $compile(element)(scope);
     scope.$digest();
     UpdateTemplateCtrl = element.controller;
@@ -25,7 +27,9 @@ describe('Directive: nlEditor', function () {
   it('should make hidden element visible', inject(function () {
 
     expect(UpdateTemplateCtrl).toBeDefined();
-    expect(scope.edit).toBeDefined();
-    //expect(element.text()).toContain('fake');
+    //added isolated scope for correct testing
+    expect(element.isolateScope().edit).toBeDefined();
+    expect(element.isolateScope().data).toBeDefined();
+    expect(element.isolateScope().data).toEqual(modelToPassValue);
   }));
 });
