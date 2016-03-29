@@ -12,7 +12,7 @@ describe('Directive: nlEditor', function () {
 
   var element,
     scope,
-    UpdateTemplateCtrl,
+    directiveCtrl,
     modelToPassValue ="some/link";
 
   beforeEach(inject(function ($rootScope, $compile) {
@@ -21,12 +21,12 @@ describe('Directive: nlEditor', function () {
     element = angular.element('<nl-editor data="{{data}}"></nl-editor>');
     element = $compile(element)(scope);
     scope.$digest();
-    UpdateTemplateCtrl = element.controller;
+    directiveCtrl = element.controller;
   }));
 
   it('should make hidden element visible', inject(function () {
 
-    expect(UpdateTemplateCtrl).toBeDefined();
+    expect(directiveCtrl).toBeDefined();
     //added isolated scope for correct testing
     expect(element.isolateScope().edit).toBeDefined();
     expect(element.isolateScope().data).toBeDefined();

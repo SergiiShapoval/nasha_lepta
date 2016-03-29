@@ -8,11 +8,11 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('MainCtrl', ['$scope', '$location', 'uiGmapGoogleMapApi', 'Lightbox',
-    function ($scope, $location, uiGmapGoogleMapApi, Lightbox) {
+  .controller('MainCtrl', ['$rootScope', '$location', 'uiGmapGoogleMapApi', 'Lightbox',
+    function ($rootScope, $location, uiGmapGoogleMapApi, Lightbox) {
 
       //return current location to find out which button to show
-      $scope.location = function () {
+      $rootScope.location = function () {
         return $location.path();
       };
 
@@ -20,7 +20,7 @@ angular.module('nashaLeptaApp')
       uiGmapGoogleMapApi.then(function (maps) {
       });
 
-      $scope.map = {
+      $rootScope.map = {
         center: {
           latitude: 50.443780,
           longitude: 30.469639
@@ -29,11 +29,11 @@ angular.module('nashaLeptaApp')
         zoom: 12
       };
 // map options
-      $scope.options = {
+      $rootScope.options = {
         scrollwheel: true
       };
 
-      $scope.marker1 = {
+      $rootScope.marker1 = {
         id: 0,
         coords: {
           latitude: 50.427852,
@@ -45,7 +45,7 @@ angular.module('nashaLeptaApp')
           animation: 1 // 1: BOUNCE, 2: DROP
         }
       };
-      $scope.marker2 = {
+      $rootScope.marker2 = {
         id: 1,
         coords: {
           latitude: 50.454456,
@@ -60,8 +60,7 @@ angular.module('nashaLeptaApp')
 
 
     //  lightbox configuration
-
-      $scope.openLightboxModal = function (url) {
+      $rootScope.openLightboxModal = function (url) {
         var array = [url];
         console.log(array);
         Lightbox.keyboardNavEnabled=false;

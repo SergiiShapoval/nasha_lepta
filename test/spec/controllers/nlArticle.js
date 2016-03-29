@@ -1,18 +1,18 @@
 'use strict';
 
-xdescribe('Controller: UpdateTemplateCtrl', function () {
+xdescribe('Controller: NlArticleCtrl', function () {
 
   // load the controller's module
   beforeEach(module('nashaLeptaApp'));
 
-  var UpdateTemplateCtrl,
+  var NlArticleCtrl,
     scope;
 
-  var createUpdatetemplateCtrl;
+  var createNlArticleCtrl;
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($rootScope, $controller ) {
     scope = $rootScope.$new();
-    UpdateTemplateCtrl = $controller('UpdateTemplateCtrl', {
+    NlArticleCtrl = $controller('NlArticleCtrl', {
       $scope: scope
       // place here mocked dependencies
     });
