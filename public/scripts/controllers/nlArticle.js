@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('NlArticleCtrl', function ($scope, editorOptions, $sce, Lightbox, IsNeedToCompileFurther, FirebaseLink, $firebaseObject) {
+  .controller('NlArticleCtrl', function ($scope, editorOptions, $sce, IsNeedToCompileFurther, FirebaseLink, $firebaseObject) {
 
     $scope.editorOptions = editorOptions;
 

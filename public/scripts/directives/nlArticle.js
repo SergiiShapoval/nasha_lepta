@@ -15,6 +15,6 @@ angular.module('nashaLeptaApp')
           data : '@',
           auth : '='
         },
-        controller : 'UpdateTemplateCtrl'
+        controller : 'NlArticleCtrl'
       };
     });
