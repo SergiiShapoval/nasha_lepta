@@ -6,10 +6,22 @@
  * @description
  * # NlEditorCtrl
  * Controller of the nashaLeptaApp
+ * receive html value, can update and show it, can save any changes,
+ * parent scope is responsible for saving
  */
 angular.module('nashaLeptaApp')
-  .controller('NlEditorCtrl', function ($scope, editorOptions, $sce) {
+  .controller('NlEditorCtrl', function ($scope, editorOptions, $sce, IsNeedToCompileFurther) {
     $scope.editorOptions = editorOptions;
+
+    var value = $scope.data;
+    //Check if we need to compile further or directly inject html
+    if(IsNeedToCompileFurther(value)){
+      $scope.toShow=null;
+      $scope.toShowCompile=value;
+    }else{
+      $scope.toShow = $sce.trustAsHtml(value);
+      $scope.toShowCompile=null;
+    }
 
     $scope.edit = function () {
       $scope.isEdit = true;
@@ -18,13 +30,14 @@ angular.module('nashaLeptaApp')
 
     $scope.preview = function(){
       $scope.isPreview = true;
-      //TODO create a logic with toShowCompile
-      $scope.toShow =$sce.trustAsHtml($scope.toEdit.$value);
-    };
-
-    $scope.save = function(){
-      $scope.toEdit.$save();
-      $scope.toShow =$sce.trustAsHtml($scope.toEdit.$value);
-      $scope.isEdit = false;
+      var value = $scope.data;
+      //Check if we need to compile further or directly inject html
+      if(IsNeedToCompileFurther(value)){
+        $scope.toShow=null;
+        $scope.toShowCompile=value;
+      }else{
+        $scope.toShow = $sce.trustAsHtml(value);
+        $scope.toShowCompile=null;
+      }
     };
   });

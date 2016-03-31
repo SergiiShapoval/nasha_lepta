@@ -8,12 +8,9 @@
   <button type="button" class="btn btn-primary" ng-click="edit()" ng-show="isPreview">
     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
   </button>
-  <button type="button" class="btn btn-danger" ng-click="save()">
-    <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
-  </button>
 </div>
 <div ng-show="isEdit&&!isPreview">
-  <textarea ckeditor="editorOptions" ng-model="toEdit"></textarea>
+  <textarea ckeditor="editorOptions" ng-model="data"></textarea>
 </div>
 <div compile="toShowCompile" ng-show="!isEdit&&isPreview"></div>
 <div ng-bind-html="toShow" ng-show="!isEdit&&isPreview"></div>
