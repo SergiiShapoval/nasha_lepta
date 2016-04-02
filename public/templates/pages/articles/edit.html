@@ -1,36 +1,29 @@
-<div class="new-article">
+<div class="new-article" ng-show="auth.user" >
   <div class="new-article-container">
     <ul class='errors' ng-if="errors">
       <li ng-repeat="error in errors">{{error}}</li>
     </ul>
 
-    <form class="form">
-      <fieldset class="form-field">
-        <label class="form-label" for="title">URL концовка (одно слова на английском)</label>
-        <input class="form-input" id="title" name="title" ng-model="article.id" />
+    <a type="button" class="btn btn-success" ng-href="#/articles/{{article.id}}" ng-show="article.status">
+      {{article.status}} <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+    </a>
+    <form role="form" name="articleValidation">
+      <!--add danger class if field is invalid-->
+      <fieldset class="form-group"  ng-class="{ 'has-error': articleValidation.id.$invalid }">
+        <label class="control-label" for="id">URL концовка (одно слово на английском)</label>
+        <input class="form-control"
+               id="id"
+               name="id"
+               ng-model="article.id"
+               ng-pattern="/^[A-z,0-9,\-,_]+$/" />
       </fieldset>
-      <button type="button" class="btn btn-primary" ng-click="edit()" ng-hide="isEdit">
-        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+      <nl-editor data="article.body"></nl-editor>
+      <!--disable button when saving or invalid data-->
+      <button type="submit" class="btn btn-danger"
+              ng-class="{ 'disabled': articleValidation.$invalid }"
+              ng-click="updateArticle(article)"
+              ng-disabled="article.updating">{{article.updating ? 'Saving...' : 'Save'}}
       </button>
-      <div class="btn-group" role="group" aria-label="..." ng-show="isEdit" >
-        <button type="button" class="btn btn-success" ng-click="preview()" ng-hide="isPreview">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="btn btn-primary" ng-click="edit()" ng-show="isPreview">
-          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="btn btn-danger" ng-click="save()">
-          <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
-        </button>
-      </div>
-      <div ng-show="isEdit&&!isPreview">
-        <textarea ckeditor="editorOptions" ng-model="toEdit" ></textarea>
-      </div>
-
-
-
-
-      <button class="btn" ng-click="updateNote(article)" ng-disabled="updating">{{updating ? 'Saving...' : 'Save'}}</button>
     </form>
   </div>
 </div>

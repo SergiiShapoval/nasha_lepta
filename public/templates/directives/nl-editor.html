@@ -1,7 +1,4 @@
-<button type="button" class="btn btn-primary" ng-click="edit()" ng-hide="isEdit">
-  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-</button>
-<div class="btn-group" role="group" aria-label="..." ng-show="isEdit">
+<div class="btn-group" role="group" aria-label="...">
   <button type="button" class="btn btn-success" ng-click="preview()" ng-hide="isPreview">
     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
   </button>
@@ -9,8 +6,8 @@
     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
   </button>
 </div>
-<div ng-show="isEdit&&!isPreview">
+<div ng-hide="isPreview">
   <textarea ckeditor="editorOptions" ng-model="data"></textarea>
 </div>
-<div compile="toShowCompile" ng-show="!isEdit&&isPreview"></div>
-<div ng-bind-html="toShow" ng-show="!isEdit&&isPreview"></div>
+<div compile="toShowCompile" ng-show="isPreview"></div>
+<div ng-bind-html="toShow" ng-show="isPreview"></div>

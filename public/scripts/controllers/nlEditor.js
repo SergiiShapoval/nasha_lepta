@@ -12,10 +12,12 @@
 angular.module('nashaLeptaApp')
   .controller('NlEditorCtrl', function ($scope, editorOptions, $sce, IsNeedToCompileFurther) {
     $scope.editorOptions = editorOptions;
+    //we will use it only on edit pages, isolated scope
+    $scope.isPreview = false;
 
     var value = $scope.data;
-    //Check if we need to compile further or directly inject html
-    if(IsNeedToCompileFurther(value)){
+    //Check if we need to compile further or directly inject html if we have non-null value
+    if(value && IsNeedToCompileFurther(value)){
       $scope.toShow=null;
       $scope.toShowCompile=value;
     }else{
@@ -24,7 +26,6 @@ angular.module('nashaLeptaApp')
     }
 
     $scope.edit = function () {
-      $scope.isEdit = true;
       $scope.isPreview = false;
     };
 
