@@ -6,7 +6,7 @@ describe('Factory: FireObjects', function () {
   beforeEach(angular.mock.module("nashaLeptaApp"));
   beforeEach(angular.mock.module("nashaLeptaApp", function ($provide) {
     //Attempt to override the FirebaseLink value that gets passed to config
-    $provide.constant("FirebaseLink", "https://vivid-fire-8580.firebaseio.com/");
+    $provide.constant("FirebaseLink", "https://vivid-fire-8580.firebaseio.com");
   }));
   // instantiate service
   var FireObjects, FirebaseLink, ModelCopier;
@@ -27,7 +27,7 @@ describe('Factory: FireObjects', function () {
     expect(!!FireObjects).toBe(true);
     expect(!!FirebaseLink).toBe(true);
     expect(!!ModelCopier).toBe(true);
-    expect(FirebaseLink).toEqual("https://vivid-fire-8580.firebaseio.com/");
+    expect(FirebaseLink).toEqual("https://vivid-fire-8580.firebaseio.com");
 
   });
   it('FireObjects methods are defined', function () {

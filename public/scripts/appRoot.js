@@ -37,17 +37,22 @@ angular
           templateUrl: 'templates/directives/contacts.html'
       })
       .when('/articles', {
-      //  TODO
-      })
-      .when('/articles/:id', {
-        //TODO
-      })
-      .when('/articles/:id/edit', {
-      //  TODO
+        templateUrl: 'templates/pages/articles/list.html',
+        controller: 'ArticlesListCtrl'
       })
       .when('/articles/new', {
-      //  TODO
+        templateUrl: 'templates/pages/articles/edit.html',
+        controller: 'ArticlesCreateCtrl'
       })
+      .when('/articles/:id', {
+        templateUrl: 'templates/pages/articles/show.html',
+        controller: 'ArticlesShowCtrl'
+      })
+      .when('/articles/:id/edit', {
+        templateUrl: 'templates/pages/articles/edit.html',
+        controller: 'ArticlesUpdateCtrl'
+      })
+
       .otherwise({
         redirectTo: '/'
       });
