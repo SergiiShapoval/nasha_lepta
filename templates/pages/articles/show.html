@@ -1,0 +1,5 @@
+<a type="button" class="btn btn-primary" ng-href="#/articles/{{article.id}}/edit" ng-show="auth.user">
+  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+</a>
+<div compile="toShowCompile"></div>
+<div ng-bind-html="toShow"></div>
