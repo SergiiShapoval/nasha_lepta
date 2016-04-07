@@ -34,7 +34,11 @@ angular
         redirectTo: '/news2016'
       })
       .when('/contacts', {
-          templateUrl: 'templates/directives/contacts.html'
+          templateUrl: 'templates/pages/contacts.html'
+      })
+      .when('/auth', {
+        templateUrl: 'templates/pages/auth.html',
+        controller: 'AuthCtrl'
       })
       .when('/articles', {
         templateUrl: 'templates/pages/articles/list.html',
