@@ -2,14 +2,7 @@
 
   <div class="col-md-push-1 col-xl-push-1 col-md-11 col-xl-11">
 
-    <div class="nl_routes" ng-controller="AdminRoutesCtrl" ng-show="auth.user">
-      <h4>Список доступных страниц</h4>
 
-      <div ng-repeat="route in routes " ng-show="$index % 2 === 0">
-        <a ng-href="#{{route.originalPath}}">{{route.originalPath}}</a>
-      </div>
-
-    </div>
     <div class="row">
       <div class="text-right">
         <img src="images/ptica.png" alt="ptica" height="70px" ng-click="">
@@ -26,36 +19,6 @@
 
 
     <nl-random-group></nl-random-group>
-    <div id="auth" ng-controller="AuthCtrl">
-      <div class="form-group clearfix">
-        <button class="btn btn-link pull-right " ng-click="showLogin()">
-          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-        </button>
-      </div>
-      <form ng-show="isShowLogin">
-        <fieldset ng-hide="auth.user">
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="email"
-                   ng-model="email"/>
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" placeholder="password"
-                   ng-model="password"/>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary" ng-click="signIn()">
-              <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-            </button>
-          </div>
-        </fieldset>
-              <span ng-show="auth.user">
-                {{auth.user.email}}
-                <button type="submit" class="btn btn-default" ng-click="logOut()">
-                  <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-                </button>
-              </span>
-      </form>
-    </div>
 
 
     <a href="http://sv-nikolay.kiev.ua">

@@ -36,8 +36,9 @@ angular
       .when('/contacts', {
           templateUrl: 'templates/pages/contacts.html'
       })
-      .when('/login', {
-          templateUrl: 'templates/pages/login.html'
+      .when('/auth', {
+        templateUrl: 'templates/pages/auth.html',
+        controller: 'AuthCtrl'
       })
       .when('/articles', {
         templateUrl: 'templates/pages/articles/list.html',
