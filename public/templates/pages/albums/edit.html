@@ -1,6 +1,7 @@
-<div class="new-album">
-  <!--ng-show="auth.user"-->
+<div class="new-album" ng-show="auth.user">
   <div class="new-album-container">
+
+
     <ul class='errors' ng-if="errors">
       <li ng-repeat="error in errors">{{error}}</li>
     </ul>
@@ -8,6 +9,7 @@
     <a type="button" class="btn btn-success" ng-href="#/albums/{{album.id}}" ng-show="album.status">
       {{album.status}} <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
     </a>
+
     <form role="form" name="albumValidation">
       <!--add error class if field is invalid-->
       <fieldset class="form-group"  ng-class="{ 'has-error': albumValidation.id.$invalid }">
@@ -75,8 +77,14 @@
       <button type="submit" class="btn btn-danger"
               ng-class="{ 'disabled': albumValidation.$invalid }"
               ng-click="updateAlbum(album)"
-              ng-disabled="album.updating">{{album.updating ? 'Saving...' : 'Save'}}
+              ng-disabled="album.updating">{{album.updating ? 'Saving...' : 'Save'}}  <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
+      </button>
+      <button type="submit" class="btn btn-danger"
+              ng-click="removeAlbum()"
+              ng-disabled="album.removing">{{album.removing ? 'Deleting...' : 'Delete'}}  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
     </form>
+
+
   </div>
 </div>

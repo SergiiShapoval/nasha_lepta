@@ -36,4 +36,28 @@ angular.module('nashaLeptaApp')
           $scope.errors = [error];
         });
     };
+
+
+    $scope.removeAlbum = function() {
+      $scope.album.removing = true;
+      $scope.album.$remove()
+        .then(function(fireAlbum) {
+          $scope.album.removing = null;
+          $scope.changeRoute('#/albums');
+        }, function(error) {
+          $scope.album.removing = null;
+          console.log('AlbumsUpdateCtrl#removeAlbum: ' + error);
+        });
+    };
+
+
+    $scope.changeRoute = function(url, forceReload) {
+      $scope = $scope || angular.element(document).scope();
+      if(forceReload || $scope.$$phase) { // that's right TWO dollar signs: $$phase
+        window.location = url;
+      } else {
+        $location.path(url);
+        $scope.$apply();
+      }
+    };
   });
