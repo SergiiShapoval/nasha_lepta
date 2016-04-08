@@ -47,12 +47,5 @@ describe('Controller: AlbumsListCtrl', function () {
     //console.log("scope.albums[0].date: " + scope.albums[0].date);
 
     expect(scope.albums[0].date).toEqual(jasmine.any(Date));
-    //scope.albums.sort(function(a,b){
-    //  // Turn your strings into dates, and then subtract them
-    //  // to get a value that is either negative, positive, or zero.
-    //  return a.date - b.date;
-    //});
-
-    expect(scope.albums[0].id).toEqual('album2');
   });
 });

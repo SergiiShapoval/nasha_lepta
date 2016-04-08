@@ -7,7 +7,7 @@
   </div>
   <p ng-show="album">Статей пока нет</p>
 </div>
-<div class="col-md-4 photo-with-caption-container" ng-repeat="album in albums" >
+<div class="col-md-4 photo-with-caption-container" ng-repeat="album in albums | orderBy:'-date'" >
     <figure class="album-thumbnail">
       <a ng-href="#/albums/{{album.id}}">
         <img ng-src="{{album.cover}}" class="img-responsive">
