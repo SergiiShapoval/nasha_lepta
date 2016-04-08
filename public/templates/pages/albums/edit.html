@@ -38,9 +38,21 @@
                type="url"
                ng-required />
       </fieldset>
-      <img ng-src="{{album.cover}}" class="img-responsive">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 photo-with-caption-container">
+          <figure class="album-thumbnail">
+            <img ng-src="{{album.cover}}" class="img-responsive">
+            <figcaption class="photo-caption text-center">
+              {{album.title}}
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
 
-      <fieldset class="form-group"  ng-class="{ 'has-error': albumValidation.date.$invalid }">
+
+      <fieldset class="form-group "  ng-class="{ 'has-error': albumValidation.date.$invalid }">
         <label class="control-label" for="date">Дата фото</label>
         <input class="form-control"
                id="date"

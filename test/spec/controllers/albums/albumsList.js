@@ -16,7 +16,7 @@ describe('Controller: AlbumsListCtrl', function () {
     id : "album2",
     title : "Заглавие альбома",
     cover : "https://lh3.googleusercontent.com/-Tpmm-JpPCH0/VKmwumMSD1I/AAAAAAAAHJ0/54lfCYAfR6Y1Pit_Q8S_SY74uo-DQ6HJQCHM/s912/NCH_5461.jpg",
-    date : new Date().getTime(),
+    date : new Date('2015-06-01').getTime(),
     picasaLink: "https://picasaweb.google.com/data/feed/base/user/111442129617636727768/albumid/6100601476767132305"
 
   }];
@@ -45,6 +45,14 @@ describe('Controller: AlbumsListCtrl', function () {
     expect(FireObjects.all).toHaveBeenCalled();
     expect(scope.albums.length).toBe(2);
     //console.log("scope.albums[0].date: " + scope.albums[0].date);
+
     expect(scope.albums[0].date).toEqual(jasmine.any(Date));
+    //scope.albums.sort(function(a,b){
+    //  // Turn your strings into dates, and then subtract them
+    //  // to get a value that is either negative, positive, or zero.
+    //  return a.date - b.date;
+    //});
+
+    expect(scope.albums[0].id).toEqual('album2');
   });
 });

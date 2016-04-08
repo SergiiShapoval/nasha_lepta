@@ -9,7 +9,11 @@
  */
 angular.module('nashaLeptaApp')
   .controller('AlbumsListCtrl', function ($scope, FireObjects) {
-    $scope.albums = FireObjects.all('albums');
+    $scope.albums = FireObjects.all('albums').sort(function(a,b){
+      // Turn your strings into dates, and then subtract them
+      // to get a value that is either negative, positive, or zero.
+      return new Date(a.date) - new Date(b.date);
+    });
 
     //convert back date from persistent
     $scope.albums.forEach(function(album, index, array){

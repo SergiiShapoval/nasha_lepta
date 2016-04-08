@@ -7,11 +7,13 @@
   </div>
   <p ng-show="album">Статей пока нет</p>
 </div>
-<div class="album-thumbnail text-center col-md-4" ng-repeat="album in albums">
-  <a ng-href="#/albums/{{album.id}}">
-    <img ng-src="{{album.cover}}" class="img-responsive ">
-  </a>
-  <div class="album-caption">
-    {{album.title}}
-  </div>
+<div class="col-md-4 photo-with-caption-container" ng-repeat="album in albums" >
+    <figure class="album-thumbnail">
+      <a ng-href="#/albums/{{album.id}}">
+        <img ng-src="{{album.cover}}" class="img-responsive">
+        <figcaption class="photo-caption text-center">
+          {{album.title}}
+        </figcaption>
+      </a>
+    </figure>
 </div>
