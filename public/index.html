@@ -57,7 +57,7 @@
               <a ng-href="#/articles">Статьи</a></li>
             <li ng-show="gratitude()" ng-class="{active : location() === '/gratitude'}">
               <a ng-href="#/gratitude">Благодарности</a></li>
-            <li ng-show="photos()" ng-class="{active : location() === '/photos'}">
+            <li ng-show="photos()" ng-class="{active : location() === '/albums'}">
               <a ng-href="#/albums">Фотогалерея</a>
             </li>
             <li ng-show="videos()" ng-class="{active : location() === '/videos'}">
@@ -401,6 +401,10 @@
 <script src="scripts/services/isNeedToCompileFurther.js"></script>
 <script src="scripts/directives/nlEditor.js"></script>
 <script src="scripts/controllers/nlEditor.js"></script>
+<script src="scripts/controllers/albums/albumsList.js"></script>
+<script src="scripts/controllers/albums/albumsCreate.js"></script>
+<script src="scripts/controllers/albums/albumsShow.js"></script>
+<script src="scripts/controllers/albums/albumsUpdate.js"></script>
 <!-- endbuild -->
 <script src="scripts/ckeditor/ckeditor.js"></script>
 

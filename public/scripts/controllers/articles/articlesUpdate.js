@@ -32,4 +32,28 @@ angular.module('nashaLeptaApp')
           $scope.errors = [error];
         });
     };
+
+
+    $scope.removeArticle = function() {
+      $scope.article.removing = true;
+      $scope.article.$remove()
+        .then(function(fireArticle) {
+          $scope.article.removing = null;
+          $scope.changeRoute('#/articles');
+        }, function(error) {
+          $scope.article.removing = null;
+          console.log('ArticlesUpdateCtrl#removeArticle: ' + error);
+        });
+    };
+
+
+    $scope.changeRoute = function(url, forceReload) {
+      $scope = $scope || angular.element(document).scope();
+      if(forceReload || $scope.$$phase) { // that's right TWO dollar signs: $$phase
+        window.location = url;
+      } else {
+        $location.path(url);
+        $scope.$apply();
+      }
+    };
   });

@@ -205,6 +205,31 @@ a > h6, button > h6 {
 }
 
 
+/*Album carousel start*/
+.photo-caption {
+  color: #fff;
+  width:100%;
+  bottom: .0rem;
+  position: absolute;
+  background:rgba(115, 16, 36, 0.69);
+  padding: 0.5em 0;
+}
+
+.photo-with-caption-container {
+  padding-top: 3em;
+  margin: 0;
+}
+
+.photo-thumbnail {
+  margin: .1em;
+  position: relative;
+}
+
+.photo-thumbnail img:hover{
+  outline: 0.2em solid #cc0033;
+}
+/*Album carousel end*/
+
 
 /*CAROUSEL start*/
 .carousel-caption {
