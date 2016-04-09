@@ -72,6 +72,22 @@ angular
         templateUrl: 'templates/pages/albums/edit.html',
         controller: 'AlbumsUpdateCtrl'
       })
+      .when('/news', {
+        templateUrl: 'templates/pages/news/list.html',
+        controller: 'NewsListCtrl'
+      })
+      .when('/news/new', {
+        templateUrl: 'templates/pages/news/edit.html',
+        controller: 'NewsCreateCtrl'
+      })
+      .when('/news/:id', {
+        templateUrl: 'templates/pages/news/show.html',
+        controller: 'NewsShowCtrl'
+      })
+      .when('/news/:id/edit', {
+        templateUrl: 'templates/pages/news/edit.html',
+        controller: 'NewsUpdateCtrl'
+      })
 
       .otherwise({
         redirectTo: '/'
