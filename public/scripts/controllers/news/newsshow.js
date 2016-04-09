@@ -8,12 +8,18 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('NewsShowCtrl', function ($scope, $routeParams, FireObjects) {
+  .controller('NewsShowCtrl', function ($scope, $routeParams, FireObjects, IsNeedToCompileFurther, $sce) {
     FireObjects.find('news', $routeParams.id).$loaded()
       .then(function(novelty) {
+        var result = novelty.body;
+        if(IsNeedToCompileFurther(result)){
+          $scope.toShow=null;
+          $scope.toShowCompile=result;
+        }else{
+          $scope.toShow = $sce.trustAsHtml(result);
+          $scope.toShowCompile=null;
+        }
         $scope.novelty = novelty;
-        //convert back date from persistent
-        $scope.novelty.date= new Date(novelty.date);
       }, function(error) {
         console.error("NewsShowCtrl Error:", error);
       })
