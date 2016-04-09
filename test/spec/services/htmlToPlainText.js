@@ -17,6 +17,7 @@ describe('Service: htmlToPlainText', function () {
     expect(htmlToPlainText('<div class="any-class">text inside div</div>')).toContain('text inside div');
     expect(htmlToPlainText('<div class="any-class">2</div><div class="any-class">divs</div>')).toContain(' divs');
     expect(htmlToPlainText('<div class="any-class">2</div><div class="any-class">divs</div>')).toContain('2');
+    expect(htmlToPlainText('&nbsp;')).toEqual('');
   });
 
 });
