@@ -44,8 +44,5 @@ describe('Controller: AlbumsListCtrl', function () {
     expect(FireObjects).toBeDefined();
     expect(FireObjects.all).toHaveBeenCalled();
     expect(scope.albums.length).toBe(2);
-    //console.log("scope.albums[0].date: " + scope.albums[0].date);
-
-    expect(scope.albums[0].date).toEqual(jasmine.any(Date));
   });
 });
