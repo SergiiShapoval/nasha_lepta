@@ -20,6 +20,15 @@
                ng-required />
       </fieldset>
 
+      <fieldset class="form-group"  ng-class="{ 'has-error': noveltyValidation.title.$invalid }">
+        <label class="control-label" for="title">Заглавие новости</label>
+        <input class="form-control"
+               id="title"
+               name="title"
+               ng-model="novelty.title"
+               ng-required />
+      </fieldset>
+
       <fieldset class="form-group"  ng-class="{ 'has-error': noveltyValidation.summary.$invalid }">
         <label class="control-label" for="summary">Краткое содержание новости</label>
         <input class="form-control"

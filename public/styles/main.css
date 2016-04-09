@@ -20,22 +20,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
 }
 
-h1,
-h4
-{
-  color: #FFCC00;
-  text-shadow: 1px 1px 3px #000;
-  min-height: 20px;
-  margin-bottom: 20px;
-  background-color: #FF3736;
-  border: 1px solid #e3e3e3;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-  padding: 9px;
-  border-radius: 3px;
-  font-size: 1.167em;
-}
-
 h6{
   font-size: 20px;
   color: #333;
@@ -525,6 +509,21 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   min-height: 100%;
   /* the bottom margin is the negative value of the footer's height */
 }
+
+
+/*Novelty css starts*/
+.novelty-link-date {
+  background-color: white;
+  padding: 0.5em 1em;
+}
+.novelty-link-date a {
+  color: black;
+}
+
+.novelty-summary-view{
+  padding: 1em 0;
+}
+/*Novelty css ends*/
 
 
 /* Responsive: Portrait tablets and up */
