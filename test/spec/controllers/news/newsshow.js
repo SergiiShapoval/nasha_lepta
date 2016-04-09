@@ -6,7 +6,14 @@ describe('Controller: NewsShowCtrl', function () {
   beforeEach(module('nashaLeptaApp'));
 
   var NewsShowCtrl,
-    scope;
+    scope,
+    FireObjects;
+
+  beforeEach(inject(function (_FireObjects_) {
+    FireObjects = _FireObjects_;
+    spyOn(FireObjects, "find").and.callThrough();
+  }));
+
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
@@ -18,6 +25,6 @@ describe('Controller: NewsShowCtrl', function () {
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(NewsShowCtrl.awesomeThings.length).toBe(3);
+    expect(FireObjects.find).toHaveBeenCalled();
   });
 });

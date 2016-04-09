@@ -18,6 +18,8 @@ describe('Controller: NewsUpdateCtrl', function () {
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(NewsUpdateCtrl.awesomeThings.length).toBe(3);
+    expect(scope.updateNovelty).toBeDefined();
+    expect(scope.removeNovelty).toBeDefined();
+    expect(scope.changeRoute).toBeDefined();
   });
 });

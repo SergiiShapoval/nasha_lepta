@@ -8,10 +8,12 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('NewsListCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('NewsListCtrl', function ($scope, FireObjects) {
+    $scope.news = FireObjects.all('news')
+
+    //convert back date from persistent
+    $scope.news.forEach(function(novelty, index, array){
+      //console.log("novelty.date: " + novelty.date);
+      novelty.date = new Date(novelty.date);
+    })
   });

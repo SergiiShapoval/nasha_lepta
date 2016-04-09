@@ -21,7 +21,7 @@ describe('Controller: AlbumsCreateCtrl', function () {
     expect(scope.album.id).toEqual("fill-me");
     expect(scope.album.title).toEqual("Заглавие альбома");
     expect(scope.album.cover).toEqual("https://lh3.googleusercontent.com/-Tpmm-JpPCH0/VKmwumMSD1I/AAAAAAAAHJ0/54lfCYAfR6Y1Pit_Q8S_SY74uo-DQ6HJQCHM/s912/NCH_5461.jpg");
-    expect(scope.album.date.getTime()).toBeLessThan(new Date().getTime());
+    expect(scope.album.date.getTime()).toBeLessThan(new Date().getTime()+10);
     expect(scope.album.date.getTime()).toBeGreaterThan(new Date("2016-01-01").getTime());
     expect(scope.album.picasaLink).toEqual("https://picasaweb.google.com/data/feed/base/user/111442129617636727768/albumid/6100601476767132305");
   });
