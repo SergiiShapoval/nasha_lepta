@@ -1,0 +1,28 @@
+<div class="novelty-header" ng-show='auth.user'>
+  <div class="news-header">
+    <h1 title="news">Новости</h1>
+    <a class="btn btn-default" href='#/news/new'>
+      Создать новость <span class="glyphicon glyphicon-plus-sign"></span>
+    </a>
+  </div>
+  <p ng-show="novelty">Новостей пока нет</p>
+</div>
+<div ng-repeat="novelty in news | orderBy:'-date'" >
+  <div class="row novelty-summary-view">
+    <div class="col-md-3">
+      <img ng-src="{{novelty.cover}}" class="img-responsive">
+    </div>
+    <div class="col-md-9">
+      <h1>{{novelty.title}}</h1>
+      <p>{{novelty.summary}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="novelty-link-date">
+        {{novelty.date | date : "dd.MM.yyyy"}}
+        <a ng-href="#/news/{{novelty.id}}" class="pull-right">подробнее</a>
+      </div>
+    </div>
+  </div>
+</div>
