@@ -1,0 +1,19 @@
+<div class="album-header" ng-show='auth.user'>
+  <div class="albums-header">
+    <h1 title="albums">Альбомы</h1>
+    <a class="btn btn-default" href='#/albums/new'>
+      Создать альбом <span class="glyphicon glyphicon-plus-sign"></span>
+    </a>
+  </div>
+  <p ng-show="album">Альбомов пока нет</p>
+</div>
+<div class="col-md-4 photo-with-caption-container" ng-repeat="album in albums | orderBy:'-date'" >
+    <figure class="photo-thumbnail">
+      <a ng-href="#/albums/{{album.id}}">
+        <img ng-src="{{album.cover}}" class="img-responsive">
+        <figcaption class="photo-caption text-center">
+          {{album.title}}
+        </figcaption>
+      </a>
+    </figure>
+</div>
