@@ -1,0 +1,21 @@
+<div ng-repeat="group in groupedNews">
+  <span ng-repeat="novelty in group">
+    {{novelty.id}}
+  </span>
+</div>
+
+
+<carousel interval="3000" class="photo-with-caption-container">
+  <slide ng-repeat="group in groupedNews" active="group.active"  >
+    <div class="col-md-4" ng-repeat="novelty in group">
+      <figure class="photo-thumbnail">
+        <a ng-href="#/news/{{novelty.id}}">
+          <img ng-src="{{novelty.cover}}" class="img-responsive">
+          <figcaption class="photo-caption text-center">
+            {{novelty.title}}
+          </figcaption>
+        </a>
+      </figure>
+    </div>
+  </slide>
+</carousel>

@@ -31,7 +31,8 @@ angular
     }
     $routeProvider
       .when('/', {
-        redirectTo: '/news2016'
+        templateUrl: 'templates/pages/landing.html',
+        controller: 'LandingCtrl'
       })
       .when('/contacts', {
           templateUrl: 'templates/pages/contacts.html'

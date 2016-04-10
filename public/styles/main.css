@@ -200,8 +200,7 @@ a > h6, button > h6 {
 }
 
 .photo-with-caption-container {
-  padding-top: 3em;
-  margin: 0;
+  margin: 3em 0 0 0;
 }
 
 .photo-thumbnail {
