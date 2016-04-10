@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('NewsCreateCtrl', function ($scope, FireObjects, ModelCopier) {
+  .controller('NewsCreateCtrl', function ($scope, FireObjects, ModelCopier, htmlToPlainText) {
     $scope.novelty ={
       id : "fill-me",
       summary : "краткое содержание новости",
@@ -38,4 +38,8 @@ angular.module('nashaLeptaApp')
           $scope.novelty.status = "Error";
         });
     };
+
+    $scope.createSummaryFromBody = function(){
+      $scope.novelty.summary = htmlToPlainText($scope.novelty.body)
+    }
   });
