@@ -1,0 +1,17 @@
+<a href="#/slides"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span></a>
+
+<a type="button" class="btn btn-primary" ng-href="#/slides/{{slide.id}}/edit" ng-show="auth.user">
+  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+</a>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 photo-with-caption-container">
+    <figure class="photo-thumbnail">
+      <img ng-src="{{slide.cover}}" class="img-responsive">
+      <figcaption class="photo-caption text-center">
+        {{slide.title}}
+      </figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4"></div>
+</div>

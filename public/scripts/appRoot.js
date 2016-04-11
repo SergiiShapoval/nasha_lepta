@@ -57,6 +57,22 @@ angular
         templateUrl: 'templates/pages/articles/edit.html',
         controller: 'ArticlesUpdateCtrl'
       })
+      .when('/slides', {
+        templateUrl: 'templates/pages/slides/list.html',
+        controller: 'SlidesListCtrl'
+      })
+      .when('/slides/new', {
+        templateUrl: 'templates/pages/slides/edit.html',
+        controller: 'SlidesCreateCtrl'
+      })
+      .when('/slides/:id', {
+        templateUrl: 'templates/pages/slides/show.html',
+        controller: 'SlidesShowCtrl'
+      })
+      .when('/slides/:id/edit', {
+        templateUrl: 'templates/pages/slides/edit.html',
+        controller: 'SlidesUpdateCtrl'
+      })
       .when('/albums', {
         templateUrl: 'templates/pages/albums/list.html',
         controller: 'AlbumsListCtrl'
