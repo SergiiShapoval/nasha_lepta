@@ -199,6 +199,19 @@ a > h6, button > h6 {
   padding: 0.5em 0;
 }
 
+
+.slide-caption {
+  text-align: left;
+  color: #fff;
+  width:50%;
+  bottom: 10%;
+  position: absolute;
+  background:rgba(29, 29, 31, 0.74);
+  padding: 3% 0 0 5%;
+}
+
+
+
 .photo-with-caption-container {
   margin: 3em 0 0 0;
 }

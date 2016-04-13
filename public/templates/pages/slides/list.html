@@ -1,19 +1,25 @@
 <div class="slide-header" ng-show='auth.user'>
   <div class="slides-header">
-    <h1 title="slides">Альбомы</h1>
+    <h1 title="slides">Слайды</h1>
     <a class="btn btn-default" href='#/slides/new'>
-      Создать альбом <span class="glyphicon glyphicon-plus-sign"></span>
+      Создать слайд<span class="glyphicon glyphicon-plus-sign"></span>
     </a>
   </div>
-  <p ng-show="slide">Альбомов пока нет</p>
+  <p ng-show="slide">Слайдов пока нет</p>
 </div>
-<div class="col-md-4 photo-with-caption-container" ng-repeat="slide in slides | orderBy:'-date'" >
-    <figure class="photo-thumbnail">
-      <a ng-href="#/slides/{{slide.id}}">
+<carousel interval="3000" class="photo-with-caption-container">
+  <slide ng-repeat="slide in slides" active="slide.active"  >
+    <div class="col-md-8 photo-with-caption-container">
+      <figure class="photo-thumbnail">
         <img ng-src="{{slide.cover}}" class="img-responsive">
-        <figcaption class="photo-caption text-center">
-          {{slide.title}}
+        <figcaption class="slide-caption text-center">
+          <h3>{{slide.title}}</h3>
+          <p>
+            {{slide.description}}
+          </p>
+          <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-danger">{{slide.buttonName}}</a>
         </figcaption>
-      </a>
-    </figure>
-</div>
+      </figure>
+    </div>
+  </slide>
+</carousel>

@@ -59,16 +59,20 @@
                ng-required />
       </fieldset>
       <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 photo-with-caption-container">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 photo-with-caption-container">
           <figure class="photo-thumbnail">
             <img ng-src="{{slide.cover}}" class="img-responsive">
-            <figcaption class="photo-caption text-center">
-              {{slide.title}}
+            <figcaption class="slide-caption text-center">
+
+              <h3>{{slide.title}}</h3>
+              <p>
+                {{slide.description}}
+              </p>
+              <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-danger">{{slide.buttonName}}</a>
             </figcaption>
           </figure>
         </div>
-        <div class="col-md-4"></div>
       </div>
 
       <fieldset class="form-group"  ng-class="{ 'has-error': slideValidation.detailsLink.$invalid }">

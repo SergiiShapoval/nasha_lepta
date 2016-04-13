@@ -15,7 +15,7 @@ angular.module('nashaLeptaApp')
       description : "Описание слайда",
       buttonName : "Надпись на кнопке",
       cover : "http://mitropolia.kiev.ua/wp-content/uploads/2016/03/DSC_03591.jpg",
-      detailsLink: "/#/news"
+      detailsLink: "#/news"
     };
 
     $scope.updateSlide = function(slide) {
