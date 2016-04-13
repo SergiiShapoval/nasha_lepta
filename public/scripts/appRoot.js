@@ -105,6 +105,14 @@ angular
         templateUrl: 'templates/pages/news/edit.html',
         controller: 'NewsUpdateCtrl'
       })
+      .when('/video-gallery', {
+        templateUrl: 'templates/pages/video-gallery/list.html',
+        controller: 'VideoGalleryListCtrl'
+      })
+      .when('/video-gallery/edit', {
+        templateUrl: 'templates/pages/video-gallery/edit.html',
+        controller: 'VideoGalleryUpdateCtrl'
+      })
 
       .otherwise({
         redirectTo: '/'
