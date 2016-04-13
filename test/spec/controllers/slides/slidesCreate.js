@@ -23,8 +23,8 @@ describe('Controller: SlidesCreateCtrl', function () {
     expect(scope.slide.title).toEqual("Заглавие слайда");
     expect(scope.slide.description).toEqual("Описание слайда");
     expect(scope.slide.buttonName).toEqual("Надпись на кнопке");
-    expect(scope.slide.cover).toEqual("https://lh3.googleusercontent.com/-Tpmm-JpPCH0/VKmwumMSD1I/AAAAAAAAHJ0/54lfCYAfR6Y1Pit_Q8S_SY74uo-DQ6HJQCHM/s912/NCH_5461.jpg");
-    expect(scope.slide.detailsLink).toEqual("https://picasaweb.google.com/data/feed/base/user/111442129617636727768/slideid/6100601476767132305");
+    expect(scope.slide.cover).toEqual("http://mitropolia.kiev.ua/wp-content/uploads/2016/03/DSC_03591.jpg");
+    expect(scope.slide.detailsLink).toEqual("#/news");
   });
   it('check services are set correctly', function () {
     expect(scope.updateSlide).toBeDefined();
