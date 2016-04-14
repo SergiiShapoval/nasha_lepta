@@ -24,7 +24,7 @@ describe('Directive: nlEditor', function () {
     directiveCtrl = element.controller;
   }));
 
-  xit('contain visible text', inject(function () {
+  it('contain visible text', inject(function () {
 
     expect(directiveCtrl).toBeDefined();
     //added isolated scope for correct testing

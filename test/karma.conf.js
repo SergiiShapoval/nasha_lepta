@@ -49,7 +49,7 @@ module.exports = function(config) {
       'public/scripts/controllers/**/*.js',
       'public/scripts/vendor/*.js',
       //special mock services
-      'test/service/ngMockHttp.js',
+      //'test/service/ngMockHttp.js',
       //'test/mock/**/*.js',
       'test/spec/**/*.js',
     //  load templates for testing
