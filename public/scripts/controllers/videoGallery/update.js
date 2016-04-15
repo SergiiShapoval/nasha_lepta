@@ -14,12 +14,12 @@ angular.module('nashaLeptaApp')
 
     $scope.fetchYoutubeData = function() {
       $scope.errors = null;
-      $scope.videoGallery.fetching = true;
-      $scope.videoGallery.status = null;
+      $scope.fetching = true;
+      $scope.status = null;
       PlaylistFetcher($scope.videoGallery.playlistId).then(
         function(response){
-          $scope.videoGallery.fetching = null;
-          $scope.videoGallery.status = "Fetched";
+          $scope.fetching = null;
+          $scope.status = "Fetched";
           $scope.videoGallery.data = YoutubeListResponseConverter(response.data);
         },
         function(error){
@@ -28,24 +28,24 @@ angular.module('nashaLeptaApp')
           }else{
             $scope.errors = [error];
           }
-          $scope.videoGallery.fetching = null;
-          $scope.videoGallery.status = "Error";
+          $scope.fetching = null;
+          $scope.status = "Error";
         }
       );
     };
 
     $scope.updateVideoGallery = function() {
       $scope.errors = null;
-      $scope.videoGallery.updating = true;
-      $scope.videoGallery.status = null;
+      $scope.updating = true;
+      $scope.status = null;
       //load
       $scope.videoGallery.$save()
         .then(function(fireVideoGallery) {
-          $scope.videoGallery.updating = null;
-          $scope.videoGallery.status = "Saved";
+          $scope.updating = null;
+          $scope.status = "Saved";
         }, function(error) {
-          $scope.videoGallery.updating = null;
-          $scope.videoGallery.status = "Error";
+          $scope.updating = null;
+          $scope.status = "Error";
           if($scope.errors){
             $scope.errors.push(error);
           }else{
