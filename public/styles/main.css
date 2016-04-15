@@ -226,6 +226,34 @@ a > h6, button > h6 {
 }
 /*Album carousel end*/
 
+/*specific video start*/
+.video:after {
+  content: "\f16a";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  font-size: 5em;
+  color: rgba(0, 0, 0, 0.7);
+  top: 30%;
+  left: 42%;
+  z-index: 1;
+}
+.video:hover:after {
+  content: "\f16a";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  font-size: 5em;
+  color: rgba(203, 23, 29, 1);;
+  top: 30%;
+  left: 42%;
+  z-index: 2;
+}
+/*specific video end*/
 
 /*CAROUSEL start*/
 .carousel-caption {
