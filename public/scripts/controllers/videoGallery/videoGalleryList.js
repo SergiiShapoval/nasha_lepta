@@ -8,10 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('VideoGalleryListCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('VideoGalleryListCtrl', function ($scope, FireObjects) {
+    $scope.videoGallery=FireObjects.findSingle('videoGallery');
+
   });

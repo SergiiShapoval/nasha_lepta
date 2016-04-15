@@ -1,101 +1,40 @@
-<div class="new-video" ng-show="auth.user">
-  <div class="new-video-container">
-
-
+<div class="new-video-gallery" ng-show="auth.user">
+  <div class="new-video-gallery-container">
     <ul class='errors' ng-if="errors">
       <li ng-repeat="error in errors">{{error}}</li>
     </ul>
-
-    <a type="button" class="btn btn-success" ng-href="#/videos/{{video.id}}" ng-show="video.status">
-      {{video.status}} <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+    <a type="button" class="btn btn-success" ng-href="#/video-gallery" ng-show="videoGallery.status">
+      {{videoGallery.status}} <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
     </a>
-
-    <form role="form" name="videoValidation">
+    <form role="form" name="videoGalleryValidation">
       <!--add error class if field is invalid-->
-      <fieldset class="form-group"  ng-class="{ 'has-error': videoValidation.id.$invalid }">
-        <label class="control-label" for="id">URL концовка (одно слово на английском)</label>
+      <fieldset class="form-group"  ng-class="{ 'has-error': videoGalleryValidation.playlistId.$invalid }">
+        <label class="control-label" for="playlistId">ID плейлиста</label>
         <input class="form-control"
-               id="id"
-               name="id"
-               ng-model="video.id"
+               id="playlistId"
+               name="playlistId"
+               ng-model="videoGallery.playlistId"
                ng-pattern="/^[A-z,0-9,\-,_]+$/"
-               ng-required />
-      </fieldset>
-
-      <fieldset class="form-group"  ng-class="{ 'has-error': videoValidation.title.$invalid }">
-        <label class="control-label" for="title">Название слайда</label>
-        <input class="form-control"
-               id="title"
-               name="title"
-               ng-model="video.title"
-               ng-required />
-      </fieldset>
-
-      <fieldset class="form-group"  ng-class="{ 'has-error': videoValidation.description.$invalid }">
-        <label class="control-label" for="description">Название слайда</label>
-        <input class="form-control"
-               id="description"
-               name="description"
-               ng-model="video.description"
-               ng-required />
-      </fieldset>
-
-      <fieldset class="form-group"  ng-class="{ 'has-error': videoValidation.buttonName.$invalid }">
-        <label class="control-label" for="buttonName">Название слайда</label>
-        <input class="form-control"
-               id="buttonName"
-               name="buttonName"
-               ng-model="video.buttonName"
-               ng-required />
-      </fieldset>
-
-      <fieldset class="form-group"  ng-class="{ 'has-error': videoValidation.cover.$invalid }">
-        <label class="control-label" for="cover">Фото слайда</label>
-        <input class="form-control"
-               id="cover"
-               name="cover"
-               ng-model="video.cover"
-               type="url"
-               ng-required />
-      </fieldset>
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 photo-with-caption-container">
-          <figure class="photo-thumbnail">
-            <img ng-src="{{video.cover}}" class="img-responsive">
-            <figcaption class="video-caption text-center">
-
-              <h3>{{video.title}}</h3>
-              <p>
-                {{video.description}}
-              </p>
-              <a ng-href="{{video.detailsLink}}" class="pull-right btn btn-danger">{{video.buttonName}}</a>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <fieldset class="form-group"  ng-class="{ 'has-error': videoValidation.detailsLink.$invalid }">
-        <label class="control-label" for="detailsLink">Ссылка на детали</label>
-        <input class="form-control"
-               id="detailsLink"
-               name="detailsLink"
-               ng-model="video.detailsLink"
-
                ng-required />
       </fieldset>
       <!--disable button when saving or invalid data-->
       <button type="submit" class="btn btn-danger"
-              ng-class="{ 'disabled': videoValidation.$invalid }"
-              ng-click="updateVideo(video)"
-              ng-disabled="video.updating">{{video.updating ? 'Saving...' : 'Save'}}  <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
+              ng-class="{ 'disabled': videoGalleryValidation.$invalid }"
+              ng-click="updateVideoGallery()"
+              ng-disabled="videoGallery.updating">{{videoGallery.updating ? 'Saving...' : 'Save'}}  <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
       </button>
       <button type="submit" class="btn btn-danger"
-              ng-click="removeVideo()"
-              ng-disabled="video.removing">{{video.removing ? 'Deleting...' : 'Delete'}}  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+              ng-click="fetchYoutubeData()"
+              ng-disabled="videoGallery.fetching">{{videoGallery.fetching ? 'Fetching...' : 'Fetch'}}  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
       </button>
     </form>
-
-
+    <div class="col-md-4 photo-with-caption-container" ng-repeat="video in videoGallery.data | orderBy:'-publishedAt'" >
+      <figure class="photo-thumbnail">
+          <img ng-src="{{video.thumbnailUrl}}" class="img-responsive">
+          <figcaption class="photo-caption text-center">
+            {{video.title}}
+          </figcaption>
+      </figure>
+    </div>
   </div>
 </div>
