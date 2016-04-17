@@ -150,8 +150,7 @@ a > h6, button > h6 {
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
-.footer {
+.marketing{
   background-color: #70C539;
   color: #284514;
   padding-left: 0.9375em;
@@ -161,9 +160,29 @@ a > h6, button > h6 {
   text-align: center;
   /*min-width: 100%;*/
 }
-.push, .footer{
-  height: 50px;
+.footer {
+  background-color: #761025;
+  color: #ffffff;
+  padding: 2em 10em;
+  text-align: left;
+  height: 20em;
   clear: both;
+}
+
+.footer p {
+  color: #f8ee91;
+  font-size: 1em;
+  padding:0.5em 0 0 0;
+}
+
+.footer h3 {
+  color: #f8ee91;
+}
+
+.btn-social-icon {
+  color: #ffffff;
+  border-radius: 50%;
+  margin: 10px auto;
 }
 
 /* Custom page header */
