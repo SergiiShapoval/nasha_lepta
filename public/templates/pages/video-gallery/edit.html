@@ -8,13 +8,13 @@
     </a>
     <form role="form" name="videoGalleryValidation">
       <!--add error class if field is invalid-->
-      <fieldset class="form-group"  ng-class="{ 'has-error': videoGalleryValidation.playlistId.$invalid }">
-        <label class="control-label" for="playlistId">ID плейлиста</label>
+      <fieldset class="form-group"  ng-class="{ 'has-error': videoGalleryValidation.playlistUrl.$invalid }">
+        <label class="control-label" for="playlistUrl">Ссылка на желаемый плейлист или видео в плейлисте</label>
         <input class="form-control"
-               id="playlistId"
-               name="playlistId"
-               ng-model="videoGallery.playlistId"
-               ng-pattern="/^[A-z,0-9,\-,_]+$/"
+               id="playlistUrl"
+               name="playlistUrl"
+               ng-model="videoGallery.playlistUrl"
+               type="url"
                ng-required />
       </fieldset>
       <!--disable button when saving or invalid data-->

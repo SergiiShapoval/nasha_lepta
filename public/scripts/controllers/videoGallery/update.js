@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('VideoGalleryUpdateCtrl', function ($scope, PlaylistFetcher, YoutubeListResponseConverter, FireObjects) {
+  .controller('VideoGalleryUpdateCtrl', function ($scope, PlaylistFetcher, YoutubeListResponseConverter, FireObjects, PlayListIdExtractor) {
     //initial state
     $scope.videoGallery=FireObjects.findSingle('videoGallery');
 
@@ -16,22 +16,36 @@ angular.module('nashaLeptaApp')
       $scope.errors = null;
       $scope.fetching = true;
       $scope.status = null;
-      PlaylistFetcher($scope.videoGallery.playlistId).then(
-        function(response){
-          $scope.fetching = null;
-          $scope.status = "Fetched";
-          $scope.videoGallery.data = YoutubeListResponseConverter(response.data);
-        },
-        function(error){
-          if($scope.errors){
-            $scope.errors.push(error);
-          }else{
-            $scope.errors = [error];
-          }
-          $scope.fetching = null;
-          $scope.status = "Error";
+      var playlistId = PlayListIdExtractor($scope.videoGallery.playlistUrl);
+      if (playlistId === 'nope'){
+        if($scope.errors){
+          $scope.errors.push('Incorrect URL of playlist used: ' + $scope.videoGallery.playlistUrl);
+        }else{
+          $scope.errors = ['Incorrect URL of playlist used: ' + $scope.videoGallery.playlistUrl];
         }
-      );
+
+        $scope.fetching = null;
+        $scope.status = 'Fetching error';
+      }else {
+        PlaylistFetcher(playlistId).then(
+          function(response){
+            $scope.fetching = null;
+            $scope.status = "Fetched";
+            $scope.videoGallery.data = YoutubeListResponseConverter(response.data);
+          },
+          function(error){
+            if($scope.errors){
+              $scope.errors.push(error);
+            }else{
+              $scope.errors = [error];
+            }
+            $scope.fetching = null;
+            $scope.status = "Error";
+          }
+        );
+      }
+
+
     };
 
     $scope.updateVideoGallery = function() {
