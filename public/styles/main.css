@@ -1,17 +1,8 @@
-html {
-  height: 100%;
-}
-
 body {
-
-  background: -webkit-linear-gradient(to bottom, #ffff99 0%,#ffff99 40%, #ff0000 70% , #ff0000 100%) fixed; /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(to bottom, #ffff99 0%,#ffff99 40%, #ff0000 70% , #ff0000 100%) fixed; /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(to bottom, #ffff99 0%,#ffff99 40%, #ff0000 70% , #ff0000 100%) fixed; /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, #ffff99 0%,#ffff99 40%, #ff0000 70% , #ff0000 100%) fixed; /* Standard syntax */
+  background-color: #ffff99;
   color: #333;
-  font-family: Georgia, Times, serif;
+  font-family: "Roboto Slab", Roboto;
   font-size: 12px;
-  height: 100%;
   line-height: 1.42857143;
   padding: 0;
 }
@@ -128,54 +119,24 @@ a > h6, button > h6 {
 /*BUTTONS end*/
 
 
-.border-right-gradient {
-  height: 750px;
-  margin: 0!Important;
-  padding: 0!important;
-  background: #ddd;
-  width: 4px!important;
-  background: -moz-linear-gradient(bottom,  #ffff99 0%,#ffff99 40%, #FF4328 70% , #FF4328 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #ffff99), color-stop(40%, #ffff99), color-stop(70%,#FF4328), color-stop(100%,#FF4328)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(bottom,  #ffff99 0%,#ffff99 40%, #FF4328 70% , #FF4328 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(bottom,  #ffff99 0%,#ffff99 40%, #FF4328 70% , #FF4328 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(bottom,  #ffff99 0%,#ffff99 40%, #FF4328 70% , #FF4328 100%); /* IE10+ */
-  background: linear-gradient(to top,  #ffff99 0%,#ffff99 40%, #FF4328 70% , #FF4328 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0064c7ab', endColorstr='#004aa3df',GradientType=0 ); /* IE6-9 */
-}
-
-
 .gallery {
   margin: 20px 0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing{
-  background-color: #70C539;
-  color: #284514;
-  padding-left: 0.9375em;
-  /*border-top: 1px solid #e5e5e5;*/
-  padding-right: 0.9375em;
-  padding-top: 1.1875em;
-  text-align: center;
-  /*min-width: 100%;*/
-}
-.footer {
+.nl-footer {
   background-color: #761025;
   color: #ffffff;
-  padding: 2em 10em;
   text-align: left;
-  height: 20em;
-  clear: both;
 }
 
-.footer p {
+.nl-footer p {
   color: #f8ee91;
   font-size: 1em;
   padding:0.5em 0 0 0;
 }
 
-.footer h3 {
+.nl-footer h3 {
   color: #f8ee91;
 }
 
@@ -184,29 +145,6 @@ a > h6, button > h6 {
   border-radius: 50%;
   margin: 10px auto;
 }
-
-/* Custom page header */
-.header {
-  /*border-bottom: 1px solid #e5e5e5;*/
-  margin-bottom: 0.625em;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  line-height: 2.500em;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-bottom: 1.1875em;
-}
-
-.hram-link{
-  padding: 0;
-  margin-bottom: 0;
-  line-height: 1.1;
-  background-color: transparent;
-  border: 0;
-}
-
 
 /*Album carousel start*/
 .photo-caption {
@@ -228,8 +166,6 @@ a > h6, button > h6 {
   background:rgba(29, 29, 31, 0.74);
   padding: 3% 0 0 5%;
 }
-
-
 
 .photo-with-caption-container {
   margin: 3em 0 0 0;
@@ -300,11 +236,11 @@ a > h6, button > h6 {
   font-weight: bold;
 }
 
-.carousel-control.right.nl_carousel {
+.carousel-control.right {
   background-image: none;
 }
 
-.carousel-control.left.nl_carousel {
+.carousel-control.left {
   background-image: none;
 }
 
@@ -321,90 +257,7 @@ a > h6, button > h6 {
   margin: 0 auto;
   display: block;
 }
-
-.nl_carousel {
-  margin: 1.250em 0;
-}
-
 /*CAROUSEL end*/
-
-/* Custom page footer */
-.container-narrow > hr {
-  margin: 1.875em 0;
-}
-
-/*divider*/
-.nl-divider{
-  /*background: url("../images/vishivanka.png") repeat-x;*/
-  background-image:url(../images/divider.png);
-  background-repeat:repeat-x;
-}
-
-/*DROPDOWN start*/
-
-.dropdown-menu {
-  background-color: #ff0000;
-  border: 1px solid #F9F619;
-
-}
-
-.dropdown-menu > li > a {
-  color: #ffff99;
-}
-
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-  background-color: #F9F619;
-  color: #00B233;
-  text-decoration: none;
-}
-
-.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-  background-color: #F9F619;
-}
-
-/*DROPDOWN end*/
-
-.jumbotron {
-  border-bottom: 1px solid #e5e5e5;
-  text-align: center;
-}
-
-.jumbotron .btn {
-  font-size: 1.3125em;
-  padding: 0.875em 1.500em;
-}
-
-
-
-
-.top-gradient {
-  background: -webkit-linear-gradient(to right, #ffff99 0%,#ffff99 10%, #ff0000 50% , #ffff99 90%, #ffff99 100%); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(to right, #ffff99 0%,#ffff99 10%, #ff0000 50% , #ffff99 90%, #ffff99 100%); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(to right, #ffff99 0%,#ffff99 10%, #ff0000 50% , #ffff99 90%, #ffff99 100%); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #ffff99 0%,#ffff99 10%, #ff0000 50% , #ffff99 90%, #ffff99 100%); /* Standard syntax */
-  line-height: 4px;
-}
-
-
-.main-button{
-  text-shadow: 1px 1px 3px #000;
-  box-shadow: 2px 2px 5px #000;
-  font-size: 1.583em;
-}
-
-.main-button-2{
-  font-size: 1.167em;
-}
-
-/* Main marketing message and sign up button */
-/* Supporting marketing content */
-.marketing {
-  margin: 2.500em 0;
-}
-
-.marketing p + h4 {
-  margin-top: 1.750em;
-}
 
 /*MARGINS start*/
 .margin-05 {
@@ -450,6 +303,10 @@ a > h6, button > h6 {
 
 .margin-top-50 {
   margin-top: 5.0em;
+}
+
+.margin-top-20 {
+  margin-top: 2.0em;
 }
 
 
@@ -529,46 +386,23 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 .navbar-default {
   text-align: center !important;
 }
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #FFCC00;
+  background-color: #ff0000;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  background-color: #ff0000;
+  color: #FFCC00;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  background-color: #FFCC00;
+}
 /*NAVBAR end*/
 
-.nl_main {
-  background-color: #ffff99;
-}
-
-.nl_grad_horizontal {
-  background: -webkit-linear-gradient(left, #ff0000, #ffff99); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #ff0000, #ffff99); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #ff0000, #ffff99); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #ff0000, #ffff99); /* Standard syntax */
-}
-
-.nl_grad_vertical {
-  background: -webkit-linear-gradient(to bottom, #ff0000 0%,#ff0000 70%, #ffff99 100%); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(to bottom, #ff0000 0%,#ff0000 70%, #ffff99 100%); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(to bottom, #ff0000 0%,#ff0000 70%, #ffff99 100%); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, #ff0000 0%,#ff0000 70%, #ffff99 100%); /* Standard syntax */
-}
-
-.nl_grad_vertical_reverse {
-  background: -webkit-linear-gradient(to bottom, #ffff99 0%,#ffff99 40%, #ff0000 100%); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(to bottom, #ffff99 0%,#ffff99 40%, #ff0000 100%); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(to bottom, #ffff99 0%,#ffff99 40%, #ff0000 100%); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, #ffff99 0%,#ffff99 40%, #ff0000 100%); /* Standard syntax */
-}
-
-
 .angular-google-map-container { height: 400px; }
-
-
-.wrapper {
-  height: auto !important;
-  height: 100%;
-  /* This line and the next line are not necessary unless you need IE6 support */
-  margin: 50px auto -50px auto;
-  min-height: 100%;
-  /* the bottom margin is the negative value of the footer's height */
-}
-
 
 /*Novelty css starts*/
 .novelty-link-date {
@@ -594,33 +428,6 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
   body{
     font-size: 16px;
-  }
-
-  /*.main-button{*/
-    /*font-size: 24px;*/
-  /*}*/
-
-  /*.main-button-2{*/
-    /*font-size: 19px;*/
-  /*}*/
-
-  /*.navbar .nav > li > a {*/
-    /*font-size: 16px;*/
-  /*}*/
-
-  /*.navbar-nav li > .dropdown-menu*/
-  /*{*/
-    /*font-size: 16px;*/
-  /*}*/
-
-
-  .green-border{
-    border: 4px solid #63CF0B;
-  }
-
-
-  .container {
-    width: 1570px;
   }
 
   .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
@@ -868,13 +675,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   .hidden-lg {
     display: none !important;
   }
-
-  .green-border{
-    border: 4px solid #63CF0B;
-  }
 }
-
-
 .visible-xl-block,
 .visible-xl-inline,
 .visible-xl-inline-block,
@@ -882,117 +683,18 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
   display: none !important;
 }
 
-
-
 /* Large desktop */
 @media (min-width: 1200px) {
-
-  /*.wrapper {*/
-  /*background: url(../images/vishivanka.png) right repeat-y, url(../images/vishivanka.png) left repeat-y;*/
-  /*}*/
-  /*.container-fluid {*/
-  /*width: 98%;*/
-  /*}*/
-
-  .green-border{
-    border: 4px solid #63CF0B;
-  }
-
-
-  .vishivanka-border {
-    /*border: 6px solid #63CF0B;*/
-    /*-moz-border-image-slice: 6 6 6 6;*/
-    /*-moz-border-image-width: 6px 6px 6px 6px;*/
-    /*-moz-border-image-outset: 0px 0px 0px 0px;*/
-    /*-moz-border-image-repeat: round repeat;*/
-    /*-moz-border-image-source: url(../images/vishivanka_border.png);*/
-
-    /*-webkit-border-image-slice: 6 6 6 6;*/
-    /*-webkit-border-image-width: 6px 6px 6px 6px;*/
-    /*-webkit-border-image-outset: 0px 0px 0px 0px;*/
-    /*-webkit-border-image-repeat: round repeat;*/
-    /*-webkit-border-image-source: url(../images/vishivanka_border.png);*/
-
-    /*-o-border-image-slice: 6 6 6 6;*/
-    /*-o-border-image-width: 6px 6px 6px 6px;*/
-    /*-o-border-image-outset: 0px 0px 0px 0px;*/
-    /*-o-border-image-repeat: round repeat;*/
-    /*-o-border-image-source: url(../images/vishivanka_border.png);*/
-
-    /*border-image-slice: 6 6 6 6;*/
-    /*border-image-width: 6px 6px 6px 6px;*/
-    /*border-image-outset: 0px 0px 0px 0px;*/
-    /*border-image-repeat: round repeat;*/
-    /*border-image-source: url(../images/vishivanka_border.png);*/
-  }
 }
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-
-  .green-border{
-    border: 4px solid #63CF0B;
-  }
-
-
-  .vishivanka-border {
-    /*border: 12px solid #63CF0B;*/
-    /*-moz-border-image-slice: 6 6 6 6;*/
-    /*-moz-border-image-width: 6px 6px 6px 6px;*/
-    /*-moz-border-image-outset: 0px 0px 0px 0px;*/
-    /*-moz-border-image-repeat: round repeat;*/
-    /*-moz-border-image-source: url(../images/vishivanka_border.png);*/
-
-    /*-webkit-border-image-slice: 6 6 6 6;*/
-    /*-webkit-border-image-width: 6px 6px 6px 6px;*/
-    /*-webkit-border-image-outset: 0px 0px 0px 0px;*/
-    /*-webkit-border-image-repeat: round repeat;*/
-    /*-webkit-border-image-source: url(../images/vishivanka_border.png);*/
-
-    /*-o-border-image-slice: 6 6 6 6;*/
-    /*-o-border-image-width: 6px 6px 6px 6px;*/
-    /*-o-border-image-outset: 0px 0px 0px 0px;*/
-    /*-o-border-image-repeat: round repeat;*/
-    /*-o-border-image-source: url(../images/vishivanka_border.png);*/
-
-    /*border-image-slice: 6 6 6 6;*/
-    /*border-image-width: 6px 6px 6px 6px;*/
-    /*border-image-outset: 0px 0px 0px 0px;*/
-    /*border-image-repeat: round repeat;*/
-    /*border-image-source: url(../images/vishivanka_border.png);*/
-  }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #FFCC00;
-    background-color: #ff0000;
-  }
-
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-color: #ff0000;
-    color: #FFCC00;
-  }
-
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    background-color: #FFCC00;
-  }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #FFCC00;
-    background-color: #ff0000;
-  }
-
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-color: #ff0000;
-    color: #FFCC00;
-  }
-
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    background-color: #FFCC00;
-  }
 }
