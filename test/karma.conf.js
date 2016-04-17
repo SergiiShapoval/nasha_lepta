@@ -37,7 +37,10 @@ module.exports = function(config) {
       'bower_components/angular-google-maps/dist/angular-google-maps.js',
       'bower_components/angular-social/angular-social.js',
       'bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js',
+      'bower_components/youtube-iframe-api/youtube.iframe-api.js',
+      'bower_components/angular-youtube-embed/src/angular-youtube-embed.js',
       'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/karma-read-json/karma-read-json.js',
       // endbower
       'public/scripts/appRoot.js',
       'public/data/*.js',
@@ -47,10 +50,13 @@ module.exports = function(config) {
       'public/scripts/controllers/*.js',
       'public/scripts/controllers/**/*.js',
       'public/scripts/vendor/*.js',
+      //special mock services
+      //'test/service/ngMockHttp.js',
       //'test/mock/**/*.js',
       'test/spec/**/*.js',
     //  load templates for testing
-      'public/templates/directives/*.html'
+      'public/templates/directives/*.html',
+      {pattern: 'test/mock/*.json', watched: true, served: true, included: false}
     ],
 
     ngHtml2JsPreprocessor: {

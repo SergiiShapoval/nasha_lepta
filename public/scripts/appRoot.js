@@ -18,7 +18,8 @@ angular
     'ui.bootstrap',
     'uiGmapgoogle-maps',
     'ngSocial',
-    'bootstrapLightbox'
+    'bootstrapLightbox',
+    'youtube-embed'
   ])
   .config(function ($routeProvider) {
     for (var template in appRootRoutes.views){
@@ -31,7 +32,8 @@ angular
     }
     $routeProvider
       .when('/', {
-        redirectTo: '/news2016'
+        templateUrl: 'templates/pages/landing.html',
+        controller: 'LandingCtrl'
       })
       .when('/contacts', {
           templateUrl: 'templates/pages/contacts.html'
@@ -55,6 +57,22 @@ angular
       .when('/articles/:id/edit', {
         templateUrl: 'templates/pages/articles/edit.html',
         controller: 'ArticlesUpdateCtrl'
+      })
+      .when('/slides', {
+        templateUrl: 'templates/pages/slides/list.html',
+        controller: 'SlidesListCtrl'
+      })
+      .when('/slides/new', {
+        templateUrl: 'templates/pages/slides/edit.html',
+        controller: 'SlidesCreateCtrl'
+      })
+      .when('/slides/:id', {
+        templateUrl: 'templates/pages/slides/show.html',
+        controller: 'SlidesShowCtrl'
+      })
+      .when('/slides/:id/edit', {
+        templateUrl: 'templates/pages/slides/edit.html',
+        controller: 'SlidesUpdateCtrl'
       })
       .when('/albums', {
         templateUrl: 'templates/pages/albums/list.html',
@@ -87,6 +105,14 @@ angular
       .when('/news/:id/edit', {
         templateUrl: 'templates/pages/news/edit.html',
         controller: 'NewsUpdateCtrl'
+      })
+      .when('/video-gallery', {
+        templateUrl: 'templates/pages/video-gallery/list.html',
+        controller: 'VideoGalleryListCtrl'
+      })
+      .when('/video-gallery/edit', {
+        templateUrl: 'templates/pages/video-gallery/edit.html',
+        controller: 'VideoGalleryUpdateCtrl'
       })
 
       .otherwise({

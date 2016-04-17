@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('NewsUpdateCtrl', function ($scope,$routeParams, FireObjects) {
+  .controller('NewsUpdateCtrl', function ($scope,$routeParams, FireObjects, htmlToPlainText) {
     FireObjects.find('news', $routeParams.id).$loaded()
       .then(function(fireNovelty) {
         $scope.novelty = fireNovelty;
@@ -60,4 +60,8 @@ angular.module('nashaLeptaApp')
         $scope.$apply();
       }
     };
+
+    $scope.createSummaryFromBody = function(){
+      $scope.novelty.summary = htmlToPlainText($scope.novelty.body)
+    }
   });
