@@ -15,7 +15,15 @@
     "angular-bootstrap-lightbox": "~0.6.1",
     "font-awesome": "fontawesome#^4.6.1",
     "youtube-iframe-api": "^0.0.1",
-    "angular-youtube-embed": "brandly/angular-youtube-embed"
+    "angular-youtube-embed": "brandly/angular-youtube-embed",
+    "bootstrap-social": "^4.12.0"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    }
   },
   "devDependencies": {
     "angular-mocks": "^1.3.0",
@@ -25,6 +33,7 @@
   "moduleName": "nashaLeptaApp",
   "resolutions": {
     "angular": "1.5.3",
-    "angular-bootstrap": "<0.13.0"
+    "angular-bootstrap": "<0.13.0",
+    "font-awesome": "^4.6.1"
   }
 }
