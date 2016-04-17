@@ -18,7 +18,8 @@ angular
     'ui.bootstrap',
     'uiGmapgoogle-maps',
     'ngSocial',
-    'bootstrapLightbox'
+    'bootstrapLightbox',
+    'youtube-embed'
   ])
   .config(function ($routeProvider) {
     for (var template in appRootRoutes.views){

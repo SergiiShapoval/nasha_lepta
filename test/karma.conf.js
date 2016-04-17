@@ -38,7 +38,7 @@ module.exports = function(config) {
       'bower_components/angular-social/angular-social.js',
       'bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js',
       'bower_components/youtube-iframe-api/youtube.iframe-api.js',
-      'bower_components/angular-youtube-embed/dist/angular-youtube-embed.js',
+      'bower_components/angular-youtube-embed/src/angular-youtube-embed.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/karma-read-json/karma-read-json.js',
       // endbower

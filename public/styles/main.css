@@ -221,7 +221,7 @@ a > h6, button > h6 {
   position: relative;
 }
 
-.photo-thumbnail img:hover{
+.photo-thumbnail:hover{
   outline: 0.2em solid #cc0033;
 }
 /*Album carousel end*/
