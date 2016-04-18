@@ -60,16 +60,15 @@
       </fieldset>
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8 photo-with-caption-container">
+        <div class="col-md-8 photo-with-caption-container slider">
           <figure class="photo-thumbnail">
             <img ng-src="{{slide.cover}}" class="img-responsive">
             <figcaption class="slide-caption text-center">
-
-              <h3>{{slide.title}}</h3>
+              <h1 class="text-uppercase">{{slide.title}}</h1>
               <p>
                 {{slide.description}}
               </p>
-              <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-danger">{{slide.buttonName}}</a>
+              <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-default">{{slide.buttonName}}</a>
             </figcaption>
           </figure>
         </div>

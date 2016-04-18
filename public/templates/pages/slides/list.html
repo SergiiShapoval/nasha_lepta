@@ -7,19 +7,19 @@
   </div>
   <p ng-show="slide">Слайдов пока нет</p>
 </div>
-<carousel interval="3000" class="photo-with-caption-container">
-  <slide ng-repeat="slide in slides" active="slide.active"  >
-    <div class="col-md-8 photo-with-caption-container">
+<uib-carousel interval="3000" active="active" class="photo-with-caption-container slider col-md-8">
+  <uib-slide ng-repeat="slide in slides" index="$index" >
+    <div class="photo-with-caption-container slider">
       <figure class="photo-thumbnail">
         <img ng-src="{{slide.cover}}" class="img-responsive">
         <figcaption class="slide-caption text-center">
-          <h3>{{slide.title}}</h3>
+          <h1 class="text-uppercase">{{slide.title}}</h1>
           <p>
             {{slide.description}}
           </p>
-          <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-danger">{{slide.buttonName}}</a>
+          <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-default">{{slide.buttonName}}</a>
         </figcaption>
       </figure>
     </div>
-  </slide>
-</carousel>
+  </uib-slide>
+</uib-carousel>

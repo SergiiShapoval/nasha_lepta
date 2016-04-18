@@ -1,12 +1,5 @@
-<div ng-repeat="group in groupedNews">
-  <span ng-repeat="novelty in group">
-    {{novelty.id}}
-  </span>
-</div>
-
-
-<carousel interval="3000" class="photo-with-caption-container">
-  <slide ng-repeat="group in groupedNews" active="group.active"  >
+<uib-carousel interval="3000" class="photo-with-caption-container" active="active">
+  <uib-slide ng-repeat="group in groupedNews" index="$index"  >
     <div class="col-md-4" ng-repeat="novelty in group">
       <figure class="photo-thumbnail">
         <a ng-href="#/news/{{novelty.id}}">
@@ -17,5 +10,5 @@
         </a>
       </figure>
     </div>
-  </slide>
-</carousel>
+  </uib-slide>
+</uib-carousel>

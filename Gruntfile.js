@@ -15,9 +15,6 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
-  // Logging grunt output and task information to a log file
-  require ('logfile-grunt')(grunt);
-
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
@@ -456,7 +453,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'https://katana-ua:aaf4f1cc86245c752aff5c47e06322feb913fc06@github.com/katana-ua/nasha_lepta.git',
+          remote: 'https://SergiiShapoval:880682ec0bdf06406ebda4e7148cbf70840a1161@github.com/SergiiShapoval/nasha_lepta.git',
           branch: 'gh-pages'
         }
       }
