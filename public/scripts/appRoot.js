@@ -10,6 +10,7 @@
  */
 angular
   .module('nashaLeptaApp', [
+    'ngAnimate',
     'ngResource',
     'ngRoute',
     'firebase',

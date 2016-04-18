@@ -22,7 +22,7 @@ h1{
 
 h2{
   font-size: 2em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h3{
@@ -83,6 +83,23 @@ a:hover, a:focus {
 
 .slider h1{
   font-size: 1.667em;
+  color: #faf092;
+  font-weight: 400;
+}
+
+.slider a{
+  color: #94273e;
+  font-size: 1.5em;
+  padding: 0.5em 2em;
+}
+
+.btn-default {
+  background-color: #faf092;
+  border-color: #faf092;
+}
+
+.slider .right.carousel-control, .slider .left.carousel-control {
+  display: none;
 }
 
 
@@ -206,13 +223,16 @@ a > h6, button > h6 {
   position: absolute;
   background:rgba(115, 16, 36, 0.69);
   padding: 0.5em 0;
+  line-height: 2.5ex;
+  min-height: 7.5ex;
+  margin:auto;
 }
 
 
 .slide-caption {
   text-align: left;
   color: #fff;
-  width:50%;
+  width:46%;
   bottom: 10%;
   position: absolute;
   background:rgba(29, 29, 31, 0.74);
@@ -464,7 +484,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
 
   body{
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
