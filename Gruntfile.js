@@ -148,7 +148,10 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
+      css: {
+         src: [ 'styles/' ]
+      }
     },
 
     // Add vendor prefixed styles
@@ -397,6 +400,24 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      css: {
+         expand: true,
+         cwd: '<%= yeoman.app %>/styles',
+         dest: 'styles/',
+         src: '{,*/}*.css'
+      },
+      newcss: {
+         expand: true,
+         cwd: '<%= yeoman.dist %>/styles',
+         dest: 'styles/',
+         src: '{,*/}*.css'
+      },
+      back: {
+         expand: true,
+         cwd: 'styles/',
+         dest: '<%= yeoman.dist %>/styles',
+         src: 'combined.css'
       }
     },
 
@@ -523,10 +544,14 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
+    'copy:css',
     'cdnify',
     'cssmin',
+    'copy:newcss',
     'uglify',
     'filerev',
+    'copy:back',
+    'clean:css',
     'usemin',
     'htmlmin'
   ]);
