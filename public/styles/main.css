@@ -350,6 +350,17 @@ a > h6, button > h6 {
 .carousel-indicators .active {
   background-color: transparent;
 }
+
+.carousel-control:hover, .carousel-control:focus {
+  color: #92253c;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+  margin-left: -70%;
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+  margin-right: -70%;
+}
 /*changed for grouped carousel end*/
 
 .col-centered{
@@ -773,15 +784,6 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 }
 
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px){
-  .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
-    margin-left: -120px;
-  }
-  .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
-    margin-right: -120px;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 979px) {
 
 }
