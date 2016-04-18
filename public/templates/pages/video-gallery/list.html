@@ -12,7 +12,9 @@
   <figure class="photo-thumbnail video" ng-click="open(video)">
     <img ng-src="{{video.thumbnailUrl}}" class="img-responsive ">
     <figcaption class="photo-caption text-center">
-      {{video.title}}
+      <div class="photo-caption-content">
+        {{video.title}}
+      </div>
     </figcaption>
   </figure>
 </div>

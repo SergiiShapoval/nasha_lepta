@@ -184,10 +184,7 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: [
-          '<%= yeoman.app %>/index.html',
-          '<%= yeoman.app %>/nikolsky_evenings/index.html',
-          '<%= yeoman.app %>/requests/index.html',
-          '<%= yeoman.app %>/exposition/index.html'
+          '<%= yeoman.app %>/index.html'
         ],
         ignorePath:  /\.\.\//
       },
@@ -327,10 +324,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.dist %>',
           src: [
             '*.html',
-            'views/{,*/}*.html',
-            'nikolsky_evenings/{,*/}*.html',
-            'requests/{,*/}*.html',
-            'exposition/{,*/}*.html'
+            'views/{,*/}*.html'
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -354,10 +348,7 @@ module.exports = function (grunt) {
     cdnify: {
       dist: {
         html: [
-          '<%= yeoman.dist %>/*.html',
-          '<%= yeoman.dist %>/nikolsky_evenings/*.html',
-          '<%= yeoman.dist %>/requests/*.html',
-          '<%= yeoman.dist %>/exposition/*.html'
+          '<%= yeoman.dist %>/*.html'
         ]
       }
     },
@@ -375,9 +366,6 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'templates/**/*',
-            'nikolsky_evenings/**/*',
-            'requests/**/*',
-            'exposition/**/*',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*',
             'scripts/ckeditor/**/*',
@@ -461,45 +449,14 @@ module.exports = function (grunt) {
     //additional configuration created as useminPrepare can work correctly only with one file
     concat: {
       dist: {
-        files: [{
-          dest: '.tmp\\concat\\scripts\\appExpositionScript.js',
-          src: [
-            '{.tmp,public}\\data\\appExpositionRoutes.js',
-            '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
-            '{.tmp,public}\\scripts\\appExposition.js']
-        },
-          {
-            dest: '.tmp\\concat\\scripts\\appEveningsScript.js',
-            src: [
-              '{.tmp,public}\\data\\appEveningsRoutes.js',
-              '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
-              '{.tmp,public}\\scripts\\appEvenings.js']
-          },
-          {
-            dest: '.tmp\\concat\\scripts\\appRequestsScript.js',
-            src: [
-              '{.tmp,public}\\data\\appRequestsRoutes.js',
-              '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
-              '{.tmp,public}\\scripts\\appRequests.js']
-          }
+        files: [
         ]
       }
     },
     //additional configuration created as useminPrepare can work correctly only with one file
     uglify: {
       dist: {
-        files: [{
-          dest: 'dist\\scripts\\appRequestsScript.js',
-          src: ['.tmp\\concat\\scripts\\appRequestsScript.js']
-        },
-          {
-            dest: 'dist\\scripts\\appEveningsScript.js',
-            src: ['.tmp\\concat\\scripts\\appEveningsScript.js']
-          },
-          {
-            dest: 'dist\\scripts\\appExpositionScript.js',
-            src: ['.tmp\\concat\\scripts\\appExpositionScript.js']
-          }]
+        files: []
       }
     }
 

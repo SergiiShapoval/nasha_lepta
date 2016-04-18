@@ -237,8 +237,15 @@ a > h6, button > h6 {
   padding: 0.5em 0;
   line-height: 2.5ex;
   min-height: 7.5ex;
+  display: table;
+  table-layout: fixed;
 }
 
+.photo-caption-content{
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
 
 .slide-caption {
   text-align: left;
@@ -257,6 +264,7 @@ a > h6, button > h6 {
 .photo-thumbnail {
   margin: .1em;
   position: relative;
+
 }
 
 .photo-thumbnail:hover{
