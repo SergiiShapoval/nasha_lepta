@@ -93,6 +93,18 @@ a:hover, a:focus {
   padding: 0.5em 2em;
 }
 
+
+.slider .carousel-indicators li {
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+
+
+
+.slider .carousel-indicators .active {
+  background-color: #cb0032;
+}
+
 .btn-default {
   background-color: #faf092;
   border-color: #faf092;
@@ -225,7 +237,6 @@ a > h6, button > h6 {
   padding: 0.5em 0;
   line-height: 2.5ex;
   min-height: 7.5ex;
-  margin:auto;
 }
 
 
