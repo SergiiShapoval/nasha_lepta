@@ -50,17 +50,44 @@ a {
   font-weight: 400;
 }
 
-
 a:hover, a:focus {
   color: #92253c;
 }
 
-.preambula{
-  font-size:1.333em;
+.header{
+  background-color: #761025;
+  color: #fff;
+  text-align: right;
 }
 
-.url{
+.preambula{
+  font-size:1.333em;
+  font-weight: 400;
+  color: #fff;
+}
+
+.bcolor{
+  color: #faf092;
+}
+
+.btn-header{
+  color: #faf092;
+  background-color: transparent;
+  border: 1px solid #faf092;
+  border-radius: 4px;
   font-size: 1.083em;
+}
+.btn-header:hover,.btn-header:focus{
+  color: #fff8b7;
+  background-color: transparent;
+  border: 1px solid #fff8b7;
+  border-radius: 4px;
+}
+
+.vcentered-col{
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
 }
 
 .menu{
@@ -249,7 +276,7 @@ a > h6, button > h6 {
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .footer {
   background-color: #761025;
-  color: #ffffff;
+  color: #fff;
   text-align: left;
 }
 
