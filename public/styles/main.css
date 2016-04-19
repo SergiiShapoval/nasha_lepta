@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1{
   font-size: 3em;
-  font-weight: 700;
+  color: #443f35;
 }
 
 h2{
@@ -84,6 +84,7 @@ a:hover, a:focus {
 }
 
 .banner h1 {
+  color: #fff;
   font-size: 3em;
   font-weight: 400;
 }
