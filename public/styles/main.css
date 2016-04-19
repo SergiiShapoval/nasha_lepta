@@ -193,6 +193,17 @@ a > h6, button > h6 {
   color: #cb0032;
 }
 
+.btn-info{
+  color: #cb0032;
+  background-color: transparent;
+  border: 1px solid #cb0032;
+}
+.btn-info:hover{
+  color: #92253c;
+  background-color: transparent;
+  border: 1px solid #92253c;
+}
+
 .btn-primary {
   background-color: #92253c;
   border-color: #cb0032;
