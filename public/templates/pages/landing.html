@@ -1,5 +1,5 @@
 <div class="row banner-container">
-  <uib-carousel interval="3000" active="active" class="photo-with-caption-container slider">
+  <uib-carousel interval="12000" active="active" class="photo-with-caption-container slider">
     <uib-slide ng-repeat="slide in slides" index="$index" >
       <div class="photo-with-caption-container slider">
         <figure>
@@ -24,11 +24,11 @@
 
 <h1 class="text-uppercase text-center">Мероприятия</h1>
 <h1 class="text-uppercase text-center">Фото блок</h1>
-<uib-carousel interval="3000" class="photo-with-caption-container" active="active">
+<uib-carousel interval="12000" class="photo-with-caption-container" active="active">
   <uib-slide ng-repeat="albumGroup in albumGroups" index="$index"  >
     <div class="col-md-4" ng-repeat="album in albumGroup">
       <figure class="photo-thumbnail">
-        <a ng-href="#/album/{{album.id}}">
+        <a ng-href="#/albums/{{album.id}}">
           <img ng-src="{{album.cover}}" class="img-responsive">
           <figcaption class="photo-caption text-center">
             <div class="photo-caption-content">
@@ -41,7 +41,7 @@
   </uib-slide>
 </uib-carousel>
 <h1 class="text-uppercase text-center">Видео блок</h1>
-<uib-carousel interval="3000" class="photo-with-caption-container" active="active">
+<uib-carousel interval="12000" class="photo-with-caption-container" active="active">
   <uib-slide ng-repeat="videoGroup in videoGroups" index="$index"  >
     <div class="col-md-4" ng-repeat="video in videoGroup">
       <figure class="photo-thumbnail video" ng-click="open(video)">

@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('LandingCtrl', function ($scope, FireObjects, modelGrouper) {
+  .controller('LandingCtrl', function ($scope, FireObjects, modelGrouper, $uibModal) {
 
     $scope.slides = FireObjects.all('slides');
 
