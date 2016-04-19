@@ -67,15 +67,33 @@ a:hover, a:focus {
   font-size: 1.167em;
 }
 
+.banner-container{
+  display: table;
+}
+
 .banner{
-  font-size: 1.750em;
-  font-weight: 400;
+  color: #fff;
+  background-color: #761025;
+  display: table-cell;
+  float: none;
+  vertical-align:middle;
+}
+
+.banner p{
+  font-size: 1.863em;
 }
 
 .banner h1 {
-  font-size: 2.750em;
+  font-size: 3em;
+  font-weight: 400;
 }
 
+.banner a {
+  color: #94273e;
+  font-size: 2em;
+  font-weight: 700;
+  padding: 0.5em 1.5em;
+}
 
 .slider{
   font-weight: 400;
@@ -257,14 +275,9 @@ a > h6, button > h6 {
   padding: 3% 0 0 5%;
 }
 
-.photo-with-caption-container {
-  margin: 3em 0 0 0;
-}
-
 .photo-thumbnail {
   margin: .1em;
   position: relative;
-
 }
 
 .photo-thumbnail:hover{
@@ -393,6 +406,10 @@ a > h6, button > h6 {
 
 .margin-30 {
   margin: 3.0em 0;
+}
+
+.margin-35 {
+  margin: 3.5em 0;
 }
 
 .margin-50 {
