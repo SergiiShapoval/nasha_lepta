@@ -67,6 +67,10 @@ a:hover, a:focus {
   font-size: 1.167em;
 }
 
+.main-carousel{
+  background-color: #fff8b7;
+}
+
 .banner-container{
   display: table;
 }
@@ -80,19 +84,19 @@ a:hover, a:focus {
 }
 
 .banner p{
-  font-size: 1.863em;
+  font-size: 1.750em;
 }
 
 .banner h1 {
   color: #fff;
-  font-size: 3em;
+  font-size: 2.750em;
   font-weight: 400;
 }
 
 .banner a {
   color: #94273e;
-  font-size: 2em;
-  font-weight: 700;
+  font-size: 1.863em;
+  font-weight: 400;
   padding: 0.5em 1.5em;
 }
 
@@ -124,10 +128,7 @@ a:hover, a:focus {
   background-color: #cb0032;
 }
 
-.btn-default {
-  background-color: #faf092;
-  border-color: #faf092;
-}
+
 
 .slider .right.carousel-control, .slider .left.carousel-control {
   display: none;
@@ -182,6 +183,18 @@ a > h4, button > h4,
 a > h5, button > h5,
 a > h6, button > h6 {
   color: #faf092;
+}
+
+.btn-default {
+  background-color: #faf092;
+  border-color: #faf092;
+  color: #cb0032;
+}
+
+.btn-default:hover,.btn-default:focus {
+  background-color: #fff8b7;
+  border-color: #fff8b7;
+  color: #92253c;
 }
 
 .btn-link {
@@ -427,7 +440,9 @@ a > h6, button > h6 {
 .margin-50 {
   margin: 5.0em 0;
 }
-
+.padding-20 {
+  padding: 2.0em 0;
+}
 
 .padding-top-20 {
   padding-top: 2.0em;

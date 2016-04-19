@@ -28,6 +28,36 @@
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
     href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
+
+
+
+  <div ng-controller="SlidesListCtrl" class="main-carousel padding-20" ng-show="location() === '/'">
+    <div class="container">
+      <div class="row banner-container">
+        <uib-carousel interval="12000" active="active" class="photo-with-caption-container slider">
+          <uib-slide ng-repeat="slide in slides" index="$index" >
+            <div class="photo-with-caption-container slider">
+              <figure>
+                <img ng-src="{{slide.cover}}" class="img-responsive">
+                <figcaption class="slide-caption text-center">
+                  <h1 class="text-uppercase">{{slide.title}}</h1>
+                  <p>
+                    {{slide.description}}
+                  </p>
+                  <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-default">{{slide.buttonName}}</a>
+                </figcaption>
+              </figure>
+            </div>
+          </uib-slide>
+        </uib-carousel>
+        <div class="col-md-4 text-center banner">
+          <h1 class="text-uppercase">Внести свою<br>лепту</h1>
+          <p class="margin-35">Вместе<br>Мы сможем больше!</p>
+          <a href="#/requisites" class="btn btn-default">Помочь детям</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div ng-view="" class="row"></div>
 
@@ -53,18 +83,18 @@
         <h2>Мы в соцсетях:</h2>
         <div class="row">
           <div class="col-xs-6 col-md-6">
-            <a class="btn btn-social-icon btn-vk"><span class="fa fa-vk"></span></a> VK
+            <a class="btn btn-social-icon btn-vk" href="https://vk.com/vustavkaua"><span class="fa fa-vk"></span></a> VK
           </div>
           <div class="col-xs-6 col-md-6">
-            <a class="btn btn-social-icon btn-github"><span class="fa fa-github"></span></a> Github
+            <a class="btn btn-social-icon btn-github" href="https://github.com/NashaLeptaChallenge/nasha_lepta/issues"><span class="fa fa-github"></span></a> Github
           </div>
         </div>
         <div class="row">
           <div class="col-xs-6 col-md-6">
-            <a class="btn btn-social-icon btn-google"><span class="fa   fa-youtube"></span></a> Youtube
+            <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UC-yHuGxwtnurOOLgePjqv3w"><span class="fa fa-youtube"></span></a> Youtube
           </div>
           <div class="col-xs-6 col-md-6">
-            <a class="btn btn-social-icon btn-google"><span class="fa fa-google"></span></a> Google
+            <a class="btn btn-social-icon btn-google" href="https://plus.google.com/u/0/111442129617636727768"><span class="fa fa-google"></span></a> Google
           </div>
         </div>
       </div>
