@@ -30,10 +30,12 @@
     </form>
     <div class="col-md-4 photo-with-caption-container" ng-repeat="video in videoGallery.data | orderBy:'-publishedAt'" >
       <figure class="photo-thumbnail">
-          <img ng-src="{{video.thumbnailUrl}}" class="img-responsive">
-          <figcaption class="photo-caption text-center">
+        <img ng-src="{{video.thumbnailUrl}}" class="img-responsive">
+        <figcaption class="photo-caption text-center">
+          <div class="photo-caption-content">
             {{video.title}}
-          </figcaption>
+          </div>
+        </figcaption>
       </figure>
     </div>
   </div>

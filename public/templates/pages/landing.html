@@ -5,7 +5,9 @@
         <a ng-href="#/news/{{novelty.id}}">
           <img ng-src="{{novelty.cover}}" class="img-responsive">
           <figcaption class="photo-caption text-center">
-            {{novelty.title}}
+            <div class="photo-caption-content">
+              {{novelty.title}}
+            </div>
           </figcaption>
         </a>
       </figure>

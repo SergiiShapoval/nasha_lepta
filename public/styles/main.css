@@ -237,8 +237,15 @@ a > h6, button > h6 {
   padding: 0.5em 0;
   line-height: 2.5ex;
   min-height: 7.5ex;
+  display: table;
+  table-layout: fixed;
 }
 
+.photo-caption-content{
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
 
 .slide-caption {
   text-align: left;
@@ -257,6 +264,7 @@ a > h6, button > h6 {
 .photo-thumbnail {
   margin: .1em;
   position: relative;
+
 }
 
 .photo-thumbnail:hover{
@@ -319,6 +327,14 @@ a > h6, button > h6 {
   font-weight: bold;
 }
 
+/*changed for grouped carousel start*/
+.carousel-control {
+  color: #cb0032;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+
 .carousel-control.right {
   background-image: none;
 }
@@ -334,6 +350,18 @@ a > h6, button > h6 {
 .carousel-indicators .active {
   background-color: transparent;
 }
+
+.carousel-control:hover, .carousel-control:focus {
+  color: #92253c;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+  margin-left: -70%;
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+  margin-right: -70%;
+}
+/*changed for grouped carousel end*/
 
 .col-centered{
   float: none;
@@ -757,6 +785,7 @@ ul.nav li.active a, .navbar-default .navbar-nav > li > a:hover, .navbar-default 
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
+
 }
 
 /* Landscape phone to portrait tablet */
