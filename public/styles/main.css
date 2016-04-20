@@ -60,6 +60,12 @@ a:hover, a:focus {
   text-align: right;
 }
 
+.bgimage{
+  background-image: url(/images/bgimage.jpg);
+  background-position: left bottom;
+  background-repeat: repeat;
+}
+
 .preambula{
   font-size:1.333em;
   font-weight: 400;
@@ -104,7 +110,7 @@ a:hover, a:focus {
   color: #fff;
   text-decoration: none;
   background-color: transparent;
-  border-bottom: 5px solid #92253c;
+  box-shadow: 0 5px 0 #80192f;
 }
 
 .main-carousel{
