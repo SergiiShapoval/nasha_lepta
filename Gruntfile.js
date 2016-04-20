@@ -34,18 +34,18 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/**/*.js'],
+        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
       },
       jsTest: {
-        files: ['test/spec/**/*.js'],
+        files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/main.css'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
@@ -56,8 +56,8 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/**/*.html',
-          '.tmp/styles/main.css',
+          '<%= yeoman.app %>/{,*/}*.html',
+          '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -183,9 +183,7 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app
     wiredep: {
       app: {
-        src: [
-          '<%= yeoman.app %>/index.html'
-        ],
+        src: ['<%= yeoman.app %>/index.html'],
         ignorePath:  /\.\.\//
       },
       test: {
@@ -210,9 +208,9 @@ module.exports = function (grunt) {
     filerev: {
       dist: {
         src: [
-          '<%= yeoman.dist %>/scripts/**/*.js',
+          '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '!<%= yeoman.dist %>/scripts/ckeditor/**/*',
-          '<%= yeoman.dist %>/styles/**/*.css',
+          '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
@@ -240,7 +238,7 @@ module.exports = function (grunt) {
 
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
-      html: ['<%= yeoman.dist %>/**/*.html'],
+      html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       js: '<%= yeoman.dist %>/scripts/{,*/}*.js',
       options: {
@@ -250,15 +248,6 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/styles',
           '<%= yeoman.dist %>/scripts'
         ]
-        ,
-        blockReplacements: {
-          css: function (block) {
-            return '<link rel="stylesheet" href="../' + block.dest + '"/>';
-          },
-          js: function (block) {
-            return '<script src="../' + block.dest + '"></script>';
-          }
-        }
       }
     },
 
@@ -324,7 +313,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.dist %>',
           src: [
             '*.html',
-            'views/{,*/}*.html'
+            'templates/{,*/}*.html'
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -459,7 +448,6 @@ module.exports = function (grunt) {
         files: []
       }
     }
-
   });
 
 
