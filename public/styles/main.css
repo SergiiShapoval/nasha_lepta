@@ -61,7 +61,7 @@ a:hover, a:focus {
 }
 
 .bgimage{
-  background-image: url(/images/bgimage.jpg);
+  background-image: url(../images/bgimage.jpg);
   background-position: left bottom;
   background-repeat: repeat;
 }
