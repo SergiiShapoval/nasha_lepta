@@ -90,20 +90,21 @@ a:hover, a:focus {
   float: none;
 }
 
-.menu{
+.nav{
   font-size: 1.167em;
 }
 
-.menu a{
+.nav a{
   font-weight: 700;
   color: #faf092;
-  background-color: #761025;
+  background-color: transparent;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
   color: #fff;
   text-decoration: none;
-  background-color: #761025;
+  background-color: transparent;
+  border-bottom: 5px solid #92253c;
 }
 
 .main-carousel{
@@ -459,11 +460,6 @@ a > h6, button > h6 {
 
 /*MARGINS end*/
 
-
-/*NAVBAR start*/
-
-/*NAVBAR end*/
-
 .angular-google-map-container { height: 400px; }
 
 /*Novelty css starts*/
@@ -486,7 +482,6 @@ a > h6, button > h6 {
 
 /*Extra large desktop*/
 @media (min-width: 1600px) {
-
 
   body{
     font-size: 12px;
