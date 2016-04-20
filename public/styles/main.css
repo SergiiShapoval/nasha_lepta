@@ -94,6 +94,18 @@ a:hover, a:focus {
   font-size: 1.167em;
 }
 
+.menu a{
+  font-weight: 700;
+  color: #faf092;
+  background-color: #761025;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #761025;
+}
+
 .main-carousel{
   background-color: #fff8b7;
 }
