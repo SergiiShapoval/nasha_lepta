@@ -14,12 +14,15 @@ angular.module('nashaLeptaApp')
       body: "Текст для вставки"
     };
 
+    var articleModelsLocation = SubProjectPrefixer('articles');
+    $scope.articleModelsLocation=articleModelsLocation;
+
     $scope.updateArticle = function(article) {
       $scope.errors = null;
       $scope.article.updating = true;
       $scope.article.status = null;
       //load
-      FireObjects.find(SubProjectPrefixer( 'articles'), article.id).$loaded()
+      FireObjects.find(articleModelsLocation, article.id).$loaded()
         .then(function(fireArticle) {
           //resave model from form
           ModelCopier(article, fireArticle);

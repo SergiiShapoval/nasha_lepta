@@ -9,7 +9,9 @@
  */
 angular.module('nashaLeptaApp')
   .controller('SlidesUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer) {
-    FireObjects.find(SubProjectPrefixer( 'slides'), $routeParams.id).$loaded()
+    var slideModelsLocation = SubProjectPrefixer('slides');
+    $scope.slideModelsLocation=slideModelsLocation;
+    FireObjects.find(slideModelsLocation, $routeParams.id).$loaded()
       .then(function(fireSlide) {
         $scope.slide = fireSlide;
         $scope.slide.updating = null;
@@ -38,7 +40,7 @@ angular.module('nashaLeptaApp')
       $scope.slide.$remove()
         .then(function(fireSlide) {
           $scope.slide.removing = null;
-          $scope.changeRoute('#/slides');
+          $scope.changeRoute('#/' + slideModelsLocation);
         }, function(error) {
           $scope.slide.removing = null;
           console.log('SlidesUpdateCtrl#removeSlide: ' + error);

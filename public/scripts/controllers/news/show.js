@@ -9,7 +9,9 @@
  */
 angular.module('nashaLeptaApp')
   .controller('NewsShowCtrl', function ($scope, $routeParams, FireObjects, SubProjectPrefixer, IsNeedToCompileFurther, $sce) {
-    FireObjects.find(SubProjectPrefixer( 'news'), $routeParams.id).$loaded()
+    var noveltyModelsLocation = SubProjectPrefixer('news');
+    $scope.noveltyModelsLocation=noveltyModelsLocation;
+    FireObjects.find(noveltyModelsLocation, $routeParams.id).$loaded()
       .then(function(novelty) {
         var result = novelty.body;
         if(IsNeedToCompileFurther(result)){

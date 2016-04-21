@@ -9,7 +9,9 @@
  */
 angular.module('nashaLeptaApp')
   .controller('SlidesShowCtrl', function ($scope, $routeParams, FireObjects, SubProjectPrefixer) {
-    FireObjects.find(SubProjectPrefixer( 'slides'), $routeParams.id).$loaded()
+    var slideModelsLocation = SubProjectPrefixer('slides');
+    $scope.slideModelsLocation=slideModelsLocation;
+    FireObjects.find(slideModelsLocation, $routeParams.id).$loaded()
       .then(function(slide) {
         $scope.slide = slide;
       }, function(error) {

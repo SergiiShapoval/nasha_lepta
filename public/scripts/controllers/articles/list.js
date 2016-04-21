@@ -9,5 +9,7 @@
  */
 angular.module('nashaLeptaApp')
   .controller('ArticlesListCtrl', function ($scope, FireObjects, SubProjectPrefixer) {
-    $scope.articles = FireObjects.all(SubProjectPrefixer( 'articles'));
+    var articleModelsLocation = SubProjectPrefixer('articles');
+    $scope.articleModelsLocation=articleModelsLocation;
+    $scope.articles = FireObjects.all(articleModelsLocation);
   });

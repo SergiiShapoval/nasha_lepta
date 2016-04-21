@@ -10,7 +10,9 @@
 angular.module('nashaLeptaApp')
   .controller('LandingCtrl', function ($scope, FireObjects, SubProjectPrefixer, modelGrouper, $uibModal) {
 
-    $scope.slides = FireObjects.all(SubProjectPrefixer( 'slides'));
+    var slideModelsLocation = SubProjectPrefixer('slides');
+    $scope.slideModelsLocation=slideModelsLocation;
+    $scope.slides = FireObjects.all(slideModelsLocation);
 
     var albumModelsLocation = SubProjectPrefixer('albums');
     $scope.albumModelsLocation=albumModelsLocation;
@@ -42,6 +44,8 @@ angular.module('nashaLeptaApp')
       });
     };
 
-    $scope.news = FireObjects.all(SubProjectPrefixer( 'news'));
+    var noveltyModelsLocation = SubProjectPrefixer('news');
+    $scope.noveltyModelsLocation=noveltyModelsLocation;
+    $scope.news = FireObjects.all(noveltyModelsLocation);
 
   });
