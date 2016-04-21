@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('NewsCreateCtrl', function ($scope, FireObjects, ModelCopier, htmlToPlainText) {
+  .controller('NewsCreateCtrl', function ($scope, FireObjects, SubProjectPrefixer, ModelCopier, htmlToPlainText) {
     $scope.novelty ={
       id : "fill-me",
       summary : "краткое содержание новости",
@@ -17,12 +17,15 @@ angular.module('nashaLeptaApp')
       body: "Текст новости"
     };
 
+    var noveltyModelsLocation = SubProjectPrefixer('news');
+    $scope.noveltyModelsLocation=noveltyModelsLocation;
+
     $scope.updateNovelty = function(novelty) {
       $scope.errors = null;
       $scope.novelty.updating = true;
       $scope.novelty.status = null;
       //load
-      FireObjects.find('news', novelty.id).$loaded()
+      FireObjects.find(noveltyModelsLocation, novelty.id).$loaded()
         .then(function(fireNovelty) {
           //resave model from form
           ModelCopier(novelty, fireNovelty);

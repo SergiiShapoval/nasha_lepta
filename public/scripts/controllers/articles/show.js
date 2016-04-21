@@ -8,9 +8,12 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('ArticlesShowCtrl', function ($scope, $routeParams, FireObjects, IsNeedToCompileFurther, $sce) {
+  .controller('ArticlesShowCtrl', function ($scope, $routeParams, FireObjects, SubProjectPrefixer, IsNeedToCompileFurther, $sce) {
 
-    FireObjects.find('articles', $routeParams.id).$loaded()
+
+    var articleModelsLocation = SubProjectPrefixer('articles');
+    $scope.articleModelsLocation=articleModelsLocation;
+    FireObjects.find(articleModelsLocation, $routeParams.id).$loaded()
       .then(function(article) {
         //create one object for better understanding
         var result = article.body;

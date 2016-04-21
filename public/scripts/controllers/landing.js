@@ -8,17 +8,22 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('LandingCtrl', function ($scope, FireObjects, modelGrouper, $uibModal) {
+  .controller('LandingCtrl', function ($scope, FireObjects, SubProjectPrefixer, modelGrouper, $uibModal) {
 
-    $scope.slides = FireObjects.all('slides');
+    var slideModelsLocation = SubProjectPrefixer('slides');
+    $scope.slideModelsLocation=slideModelsLocation;
+    $scope.slides = FireObjects.all(slideModelsLocation);
 
-    $scope.albums = FireObjects.all('albums');
+    var albumModelsLocation = SubProjectPrefixer('albums');
+    $scope.albumModelsLocation=albumModelsLocation;
+    $scope.albums = FireObjects.all(albumModelsLocation);
 
     $scope.$watch('albums', function(models){
       $scope.albumGroups = modelGrouper(models, 3);
     }, true);
 
-    $scope.videoGallery=FireObjects.findSingle('videoGallery');
+    var videoModelsLocation = SubProjectPrefixer('video-gallery');
+    $scope.videoGallery=FireObjects.findSingle(videoModelsLocation);
 
     $scope.$watch('videoGallery', function(videoGallery){
       $scope.videoGroups = modelGrouper(videoGallery.data, 3);
@@ -39,6 +44,8 @@ angular.module('nashaLeptaApp')
       });
     };
 
-    $scope.news = FireObjects.all('news');
+    var noveltyModelsLocation = SubProjectPrefixer('news');
+    $scope.noveltyModelsLocation=noveltyModelsLocation;
+    $scope.news = FireObjects.all(noveltyModelsLocation);
 
   });

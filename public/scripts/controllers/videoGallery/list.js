@@ -8,8 +8,10 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('VideoGalleryListCtrl', function ($scope, FireObjects, $uibModal) {
-    $scope.videoGallery=FireObjects.findSingle('videoGallery');
+  .controller('VideoGalleryListCtrl', function ($scope, FireObjects, SubProjectPrefixer, $uibModal) {
+    var videoModelsLocation = SubProjectPrefixer('video-gallery');
+    $scope.videoModelsLocation = videoModelsLocation;
+    $scope.videoGallery=FireObjects.findSingle(videoModelsLocation);
 
     $scope.open = function (video) {
       var modalInstance = $uibModal.open({
