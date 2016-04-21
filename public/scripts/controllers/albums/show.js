@@ -8,8 +8,8 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('AlbumsShowCtrl', function ($scope, $routeParams, FireObjects) {
-    FireObjects.find('albums', $routeParams.id).$loaded()
+  .controller('AlbumsShowCtrl', function ($scope, $routeParams, FireObjects, SubProjectPrefixer, $location) {
+    FireObjects.find(SubProjectPrefixer($location.path(), 'albums'), $routeParams.id).$loaded()
       .then(function(album) {
         $scope.album = album;
         //convert back date from persistent

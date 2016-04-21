@@ -8,17 +8,17 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('LandingCtrl', function ($scope, FireObjects, modelGrouper, $uibModal) {
+  .controller('LandingCtrl', function ($scope, FireObjects, SubProjectPrefixer, $location, modelGrouper, $uibModal) {
 
-    $scope.slides = FireObjects.all('slides');
+    $scope.slides = FireObjects.all(SubProjectPrefixer($location.path(), 'slides'));
 
-    $scope.albums = FireObjects.all('albums');
+    $scope.albums = FireObjects.all(SubProjectPrefixer($location.path(), 'albums'));
 
     $scope.$watch('albums', function(models){
       $scope.albumGroups = modelGrouper(models, 3);
     }, true);
 
-    $scope.videoGallery=FireObjects.findSingle('videoGallery');
+    $scope.videoGallery=FireObjects.findSingle(SubProjectPrefixer($location.path(), 'videoGallery'));
 
     $scope.$watch('videoGallery', function(videoGallery){
       $scope.videoGroups = modelGrouper(videoGallery.data, 3);
@@ -39,6 +39,6 @@ angular.module('nashaLeptaApp')
       });
     };
 
-    $scope.news = FireObjects.all('news');
+    $scope.news = FireObjects.all(SubProjectPrefixer($location.path(), 'news'));
 
   });

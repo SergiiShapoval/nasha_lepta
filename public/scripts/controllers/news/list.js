@@ -8,6 +8,6 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('NewsListCtrl', function ($scope, FireObjects) {
-    $scope.news = FireObjects.all('news')
+  .controller('NewsListCtrl', function ($scope, FireObjects, SubProjectPrefixer, $location) {
+    $scope.news = FireObjects.all(SubProjectPrefixer($location.path(), 'news'))
   });

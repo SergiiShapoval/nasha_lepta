@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('ArticlesCreateCtrl', function ($scope, FireObjects, ModelCopier) {
+  .controller('ArticlesCreateCtrl', function ($scope, FireObjects, SubProjectPrefixer, $location, ModelCopier) {
     $scope.article ={
       id : "fill-me",
       body: "Текст для вставки"
@@ -19,7 +19,7 @@ angular.module('nashaLeptaApp')
       $scope.article.updating = true;
       $scope.article.status = null;
       //load
-      FireObjects.find('articles', article.id).$loaded()
+      FireObjects.find(SubProjectPrefixer($location.path(), 'articles'), article.id).$loaded()
         .then(function(fireArticle) {
           //resave model from form
           ModelCopier(article, fireArticle);

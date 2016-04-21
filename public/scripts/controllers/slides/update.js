@@ -8,8 +8,8 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('SlidesUpdateCtrl', function ($scope,$routeParams, FireObjects) {
-    FireObjects.find('slides', $routeParams.id).$loaded()
+  .controller('SlidesUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer, $location) {
+    FireObjects.find(SubProjectPrefixer($location.path(), 'slides'), $routeParams.id).$loaded()
       .then(function(fireSlide) {
         $scope.slide = fireSlide;
         $scope.slide.updating = null;

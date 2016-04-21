@@ -8,9 +8,9 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('VideoGalleryUpdateCtrl', function ($scope, PlaylistFetcher, YoutubeListResponseConverter, FireObjects, PlayListIdExtractor) {
+  .controller('VideoGalleryUpdateCtrl', function ($scope, PlaylistFetcher, YoutubeListResponseConverter, FireObjects, SubProjectPrefixer, $location, PlayListIdExtractor) {
     //initial state
-    $scope.videoGallery=FireObjects.findSingle('videoGallery');
+    $scope.videoGallery=FireObjects.findSingle(SubProjectPrefixer($location.path(), 'videoGallery'));
 
     $scope.fetchYoutubeData = function() {
       $scope.errors = null;

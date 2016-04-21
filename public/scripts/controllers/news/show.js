@@ -8,8 +8,8 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('NewsShowCtrl', function ($scope, $routeParams, FireObjects, IsNeedToCompileFurther, $sce) {
-    FireObjects.find('news', $routeParams.id).$loaded()
+  .controller('NewsShowCtrl', function ($scope, $routeParams, FireObjects, SubProjectPrefixer, $location, IsNeedToCompileFurther, $sce) {
+    FireObjects.find(SubProjectPrefixer($location.path(), 'news'), $routeParams.id).$loaded()
       .then(function(novelty) {
         var result = novelty.body;
         if(IsNeedToCompileFurther(result)){
