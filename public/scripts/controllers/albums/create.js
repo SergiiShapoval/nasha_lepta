@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('AlbumsCreateCtrl', function ($scope, FireObjects, SubProjectPrefixer, $location, ModelCopier) {
+  .controller('AlbumsCreateCtrl', function ($scope, FireObjects, SubProjectPrefixer, ModelCopier) {
     $scope.album ={
       id : "fill-me",
       title : "Заглавие альбома",
@@ -22,7 +22,7 @@ angular.module('nashaLeptaApp')
       $scope.album.updating = true;
       $scope.album.status = null;
       //load
-      FireObjects.find(SubProjectPrefixer($location.path(), 'albums'), album.id).$loaded()
+      FireObjects.find(SubProjectPrefixer( 'albums'), album.id).$loaded()
         .then(function(fireAlbum) {
           //resave model from form
           ModelCopier(album, fireAlbum);

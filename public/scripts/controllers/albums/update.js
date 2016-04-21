@@ -8,8 +8,8 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('AlbumsUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer, $location ) {
-    FireObjects.find(SubProjectPrefixer($location.path(), 'albums'), $routeParams.id).$loaded()
+  .controller('AlbumsUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer ) {
+    FireObjects.find(SubProjectPrefixer( 'albums'), $routeParams.id).$loaded()
       .then(function(fireAlbum) {
         $scope.album = fireAlbum;
         $scope.album.updating = null;

@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('SlidesCreateCtrl', function ($scope, FireObjects, SubProjectPrefixer, $location, ModelCopier) {
+  .controller('SlidesCreateCtrl', function ($scope, FireObjects, SubProjectPrefixer, ModelCopier) {
     $scope.slide ={
       id : "fill-me",
       title : "Заглавие слайда",
@@ -23,7 +23,7 @@ angular.module('nashaLeptaApp')
       $scope.slide.updating = true;
       $scope.slide.status = null;
       //load
-      FireObjects.find(SubProjectPrefixer($location.path(), 'slides'), slide.id).$loaded()
+      FireObjects.find(SubProjectPrefixer( 'slides'), slide.id).$loaded()
         .then(function(fireSlide) {
           //resave model from form
           ModelCopier(slide, fireSlide);

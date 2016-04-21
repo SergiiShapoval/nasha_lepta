@@ -8,8 +8,8 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('NewsUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer, $location, htmlToPlainText) {
-    FireObjects.find(SubProjectPrefixer($location.path(), 'news'), $routeParams.id).$loaded()
+  .controller('NewsUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer, htmlToPlainText) {
+    FireObjects.find(SubProjectPrefixer( 'news'), $routeParams.id).$loaded()
       .then(function(fireNovelty) {
         $scope.novelty = fireNovelty;
         $scope.novelty.updating = null;

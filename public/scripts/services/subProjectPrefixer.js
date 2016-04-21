@@ -8,12 +8,11 @@
  * Factory in the nashaLeptaApp.
  */
 angular.module('nashaLeptaApp')
-  .factory('SubProjectPrefixer', function () {
+  .factory('SubProjectPrefixer', function ($location) {
     var subProjects = ['exposition', 'evenings', 'accounting'];
 
-
-
-    return function(location, models){
+    return function(models){
+      var location = $location.path();
 
       var i;
       for(i in subProjects){
