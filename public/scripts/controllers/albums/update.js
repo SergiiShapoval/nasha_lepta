@@ -9,7 +9,9 @@
  */
 angular.module('nashaLeptaApp')
   .controller('AlbumsUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer ) {
-    FireObjects.find(SubProjectPrefixer( 'albums'), $routeParams.id).$loaded()
+    var albumModelsLocation = SubProjectPrefixer('albums');
+    $scope.albumModelsLocation = albumModelsLocation;
+    FireObjects.find(albumModelsLocation, $routeParams.id).$loaded()
       .then(function(fireAlbum) {
         $scope.album = fireAlbum;
         $scope.album.updating = null;
@@ -43,7 +45,7 @@ angular.module('nashaLeptaApp')
       $scope.album.$remove()
         .then(function(fireAlbum) {
           $scope.album.removing = null;
-          $scope.changeRoute('#/albums');
+          $scope.changeRoute('#/' + albumModelsLocation);
         }, function(error) {
           $scope.album.removing = null;
           console.log('AlbumsUpdateCtrl#removeAlbum: ' + error);

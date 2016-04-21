@@ -10,7 +10,9 @@
 angular.module('nashaLeptaApp')
   .controller('VideoGalleryUpdateCtrl', function ($scope, PlaylistFetcher, YoutubeListResponseConverter, FireObjects, SubProjectPrefixer, PlayListIdExtractor) {
     //initial state
-    $scope.videoGallery=FireObjects.findSingle(SubProjectPrefixer( 'videoGallery'));
+    var videoModelsLocation = SubProjectPrefixer('video-gallery');
+    $scope.videoModelsLocation=videoModelsLocation;
+    $scope.videoGallery=FireObjects.findSingle(videoModelsLocation);
 
     $scope.fetchYoutubeData = function() {
       $scope.errors = null;

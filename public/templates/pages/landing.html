@@ -5,7 +5,7 @@
   <uib-slide ng-repeat="albumGroup in albumGroups" index="$index"  >
     <div class="col-md-4" ng-repeat="album in albumGroup">
       <figure class="photo-thumbnail">
-        <a ng-href="#/albums/{{album.id}}">
+        <a ng-href="#/{{albumModelsLocation}}/{{album.id}}">
           <img ng-src="{{album.cover}}" class="img-responsive">
           <figcaption class="photo-caption text-center">
             <div class="photo-caption-content">

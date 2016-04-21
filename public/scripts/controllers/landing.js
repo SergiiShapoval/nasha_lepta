@@ -12,13 +12,16 @@ angular.module('nashaLeptaApp')
 
     $scope.slides = FireObjects.all(SubProjectPrefixer( 'slides'));
 
-    $scope.albums = FireObjects.all(SubProjectPrefixer( 'albums'));
+    var albumModelsLocation = SubProjectPrefixer('albums');
+    $scope.albumModelsLocation=albumModelsLocation;
+    $scope.albums = FireObjects.all(albumModelsLocation);
 
     $scope.$watch('albums', function(models){
       $scope.albumGroups = modelGrouper(models, 3);
     }, true);
 
-    $scope.videoGallery=FireObjects.findSingle(SubProjectPrefixer( 'videoGallery'));
+    var videoModelsLocation = SubProjectPrefixer('video-gallery');
+    $scope.videoGallery=FireObjects.findSingle(videoModelsLocation);
 
     $scope.$watch('videoGallery', function(videoGallery){
       $scope.videoGroups = modelGrouper(videoGallery.data, 3);
