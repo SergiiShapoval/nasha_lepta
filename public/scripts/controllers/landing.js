@@ -8,7 +8,7 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('LandingCtrl', function ($scope, FireObjects, SubProjectPrefixer, modelGrouper, $uibModal) {
+  .controller('LandingCtrl', function ($scope, FireObjects, SubProjectPrefixer, modelGrouper, $uibModal, $filter, $log) {
 
     var slideModelsLocation = SubProjectPrefixer('slides');
     $scope.slideModelsLocation=slideModelsLocation;
@@ -46,6 +46,16 @@ angular.module('nashaLeptaApp')
 
     var noveltyModelsLocation = SubProjectPrefixer('news');
     $scope.noveltyModelsLocation=noveltyModelsLocation;
-    $scope.news = FireObjects.all(noveltyModelsLocation);
+    $scope.news = [];
+
+    FireObjects.all(noveltyModelsLocation).$loaded().then(
+      function(fireNews){
+        fireNews = $filter('orderBy')(fireNews, '-date');
+        $scope.news = fireNews.slice(0,3);
+      },
+      function(error){
+        $log.error('LandingCtrl#FireObjects.all(news): ' + error)
+      }
+    );
 
   });
