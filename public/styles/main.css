@@ -482,6 +482,13 @@ a > h6, button > h6 {
 }
 /*Novelty css ends*/
 
+#toTop{
+  display: block;
+  border:0 !important;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}
 
 /* Responsive: Portrait tablets and up */
 
