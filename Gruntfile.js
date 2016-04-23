@@ -430,7 +430,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'https://SergiiShapoval:cf4527185e75225f01d807339a88d105e2b2f9f6@github.com/SergiiShapoval/nasha_lepta.git',
+          remote: 'https://SergiiShapoval:58c1d6724256e91be860096fc3a9f03ba904bf49@github.com/SergiiShapoval/nasha_lepta.git',
           branch: 'gh-pages'
         }
       }

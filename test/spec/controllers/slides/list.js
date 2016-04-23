@@ -29,9 +29,7 @@ describe('Controller: SlidesListCtrl', function () {
 
   beforeEach(inject(function (_FireObjects_) {
     FireObjects = _FireObjects_;
-    spyOn(FireObjects, "all").and.callFake(function(models) {
-      return slideFixtures;
-    });
+    spyOn(FireObjects, "all").and.callThrough();
   }));
 
   // Initialize the controller and a mock scope
@@ -46,7 +44,7 @@ describe('Controller: SlidesListCtrl', function () {
   it('should attach a list of awesomeThings to the scope', function () {
     expect(FireObjects).toBeDefined();
     expect(FireObjects.all).toHaveBeenCalled();
-    expect(scope.slides.length).toBe(2);
+    expect(scope.slides.length).toBe(1);
 
   });
 });
