@@ -251,32 +251,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // The following *-min tasks will produce minified files in the dist folder
-    // By default, your `index.html`'s <!-- Usemin block --> will take care of
-    // minification. These next options are pre-configured if you do not wish
-    // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
-
     imagemin: {
       dist: {
         files: [{
@@ -382,24 +356,6 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
-      },
-      css: {
-         expand: true,
-         cwd: '<%= yeoman.app %>/styles',
-         dest: 'styles/',
-         src: '{,*/}*.css'
-      },
-      newcss: {
-         expand: true,
-         cwd: '<%= yeoman.dist %>/styles',
-         dest: 'styles/',
-         src: '{,*/}*.css'
-      },
-      back: {
-         expand: true,
-         cwd: 'styles/',
-         dest: '<%= yeoman.dist %>/styles',
-         src: 'combined.css'
       }
     },
 
@@ -438,19 +394,6 @@ module.exports = function (grunt) {
           remote: 'https://SergiiShapoval:58c1d6724256e91be860096fc3a9f03ba904bf49@github.com/SergiiShapoval/nasha_lepta.git',
           branch: 'gh-pages'
         }
-      }
-    },
-    //additional configuration created as useminPrepare can work correctly only with one file
-    concat: {
-      dist: {
-        files: [
-        ]
-      }
-    },
-    //additional configuration created as useminPrepare can work correctly only with one file
-    uglify: {
-      dist: {
-        files: []
       }
     }
   });
@@ -494,14 +437,10 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'copy:css',
     'cdnify',
     'cssmin',
-    'copy:newcss',
     'uglify',
     'filerev',
-    'copy:back',
-    'clean:css',
     'usemin',
     'htmlmin'
   ]);
