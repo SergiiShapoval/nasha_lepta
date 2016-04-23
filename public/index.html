@@ -129,6 +129,17 @@
       </button>
     </a>
   </div>
+
+  <div class="map container" ng-controller="GoogleMapCtrl" ng-show="location() === '/contacts'">
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="map.options">
+      <ui-gmap-marker ng-repeat="marker in gMapMarkers"  coords="marker.coords" options="marker.options"
+                      idkey="marker.id">
+        <ui-gmap-window isIconVisibleOnClick="true">
+          {{marker.options.title}}
+        </ui-gmap-window>
+      </ui-gmap-marker>
+    </ui-gmap-google-map>
+  </div>
   <div class="footer bgimage row padding-top-20 margin-top-20">
     <div class="container">
       <div class="col-xs-12 col-md-4">
@@ -239,13 +250,14 @@
 <script src="bower_components/angularfire/dist/angularfire.js"></script>
 <script src="bower_components/ng-ckeditor/ng-ckeditor.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<script src="bower_components/lodash/lodash.js"></script>
-<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <script src="bower_components/angular-social/angular-social.js"></script>
 <script src="bower_components/youtube-iframe-api/youtube.iframe-api.js"></script>
 <script src="bower_components/angular-youtube-embed/src/angular-youtube-embed.js"></script>
 <script src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -303,6 +315,7 @@
 <script src="scripts/controllers/modalInstance.js"></script>
 <script src="scripts/services/playListIdExtractor.js"></script>
 <script src="scripts/services/subProjectPrefixer.js"></script>
+<script src="scripts/controllers/googleMap.js"></script>
 <!-- endbuild -->
 <script src="scripts/ckeditor/ckeditor.js"></script>
 

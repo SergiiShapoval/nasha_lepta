@@ -48,9 +48,6 @@ angular
         templateUrl: 'templates/pages/landing.html',
         controller: 'LandingCtrl'
       })
-      .when('/contacts', {
-          templateUrl: 'templates/pages/contacts.html'
-      })
       .when('/auth', {
         templateUrl: 'templates/pages/auth.html',
         controller: 'AuthCtrl'
