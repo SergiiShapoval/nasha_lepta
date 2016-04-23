@@ -228,7 +228,7 @@ module.exports = function (grunt) {
           html: {
             steps: {
               js: ['concat', 'uglifyjs'],
-              css: ['cssmin']
+              css: ['concat','cssmin']
             },
             post: {}
           }
@@ -248,6 +248,14 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/styles',
           '<%= yeoman.dist %>/scripts'
         ]
+      }
+    },
+
+    cssmin: {
+      combine: {
+        files: {
+          '<%= yeoman.dist %>/styles/combined.css': ['.tmp/concat/styles/*.css']
+        }
       }
     },
 
@@ -442,7 +450,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'cssmin:combine'
   ]);
 
   grunt.registerTask('default', [
