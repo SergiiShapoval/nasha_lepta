@@ -254,7 +254,7 @@ module.exports = function (grunt) {
     cssmin: {
       combine: {
         files: {
-          '<%= yeoman.dist %>/styles/combined.css': ['.tmp/concat/styles/*.css']
+          '<%= yeoman.dist %>/styles/combined.css': ['.tmp/concat/styles/vendor.css', '.tmp/concat/styles/main.css']
         }
       }
     },
