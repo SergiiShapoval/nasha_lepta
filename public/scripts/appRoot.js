@@ -22,6 +22,13 @@ angular
     'bootstrapLightbox',
     'youtube-embed'
   ])
+  .config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+      //    key: 'your api key',
+      v: '3.22',
+      libraries: 'weather,geometry,visualization'
+    });
+  })
   .config(function ($routeProvider) {
     for (var template in appRootRoutes.views){
       $routeProvider
@@ -351,13 +358,6 @@ angular
         redirectTo: '/'
       });
 
-  })
-  .config(function(uiGmapGoogleMapApiProvider) {
-    uiGmapGoogleMapApiProvider.configure({
-      //    key: 'your api key',
-      v: '3.17',
-      libraries: 'weather,geometry,visualization'
-    });
   })
   .config(function (LightboxProvider) {
     LightboxProvider.getImageUrl = function (imageUrl) {
