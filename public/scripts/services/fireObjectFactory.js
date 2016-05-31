@@ -29,6 +29,10 @@ angular.module('nashaLeptaApp')
         create: function(models, id) {
           var ref = new Firebase(FirebaseLink+"/"+models+"/" + id);
           return $firebaseObject(ref);
+        },
+        findSingle:function(id){
+          var ref = new Firebase(FirebaseLink+"/"+ id);
+          return $firebaseObject(ref);
         }
       };
     }]);

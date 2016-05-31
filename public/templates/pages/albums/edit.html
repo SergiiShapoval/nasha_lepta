@@ -1,0 +1,92 @@
+<div class="new-album" ng-show="auth.user">
+  <div class="new-album-container">
+
+
+    <ul class='errors' ng-if="errors">
+      <li ng-repeat="error in errors">{{error}}</li>
+    </ul>
+
+    <a type="button" class="btn btn-success" ng-href="#/{{albumModelsLocation}}/{{album.id}}" ng-show="album.status">
+      {{album.status}} <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+    </a>
+
+    <form role="form" name="albumValidation">
+      <!--add error class if field is invalid-->
+      <fieldset class="form-group"  ng-class="{ 'has-error': albumValidation.id.$invalid }">
+        <label class="control-label" for="id">URL концовка (одно слово на английском)</label>
+        <input class="form-control"
+               id="id"
+               name="id"
+               ng-model="album.id"
+               ng-pattern="/^[A-z,0-9,\-,_]+$/"
+               ng-required />
+      </fieldset>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': albumValidation.title.$invalid }">
+        <label class="control-label" for="title">Название альбома</label>
+        <input class="form-control"
+               id="title"
+               name="title"
+               ng-model="album.title"
+               ng-required />
+      </fieldset>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': albumValidation.cover.$invalid }">
+        <label class="control-label" for="cover">Обложка альбома</label>
+        <input class="form-control"
+               id="cover"
+               name="cover"
+               ng-model="album.cover"
+               type="url"
+               ng-required />
+      </fieldset>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 photo-with-caption-container">
+          <figure class="photo-thumbnail">
+            <img ng-src="{{album.cover}}" class="img-responsive">
+            <figcaption class="photo-caption text-center">
+              <div class="photo-caption-content">
+                {{album.title}}
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+
+
+      <fieldset class="form-group "  ng-class="{ 'has-error': albumValidation.date.$invalid }">
+        <label class="control-label" for="date">Дата фото</label>
+        <input class="form-control"
+               id="date"
+               name="date"
+               ng-model="album.date"
+               type="date"
+               ng-required />
+      </fieldset>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': albumValidation.picasaLink.$invalid }">
+        <label class="control-label" for="picasaLink">Ссылка на альбом picasa</label>
+        <input class="form-control"
+               id="picasaLink"
+               name="picasaLink"
+               ng-model="album.picasaLink"
+               type="url"
+               ng-required />
+      </fieldset>
+      <!--disable button when saving or invalid data-->
+      <button type="submit" class="btn btn-danger"
+              ng-class="{ 'disabled': albumValidation.$invalid }"
+              ng-click="updateAlbum(album)"
+              ng-disabled="album.updating">{{album.updating ? 'Saving...' : 'Save'}}  <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
+      </button>
+      <button type="submit" class="btn btn-danger"
+              ng-click="removeAlbum()"
+              ng-disabled="album.removing">{{album.removing ? 'Deleting...' : 'Delete'}}  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+    </form>
+
+
+  </div>
+</div>

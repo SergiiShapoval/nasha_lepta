@@ -1,0 +1,42 @@
+<div class="new-video-gallery" ng-show="auth.user">
+  <div class="new-video-gallery-container">
+    <ul class='errors' ng-if="errors">
+      <li ng-repeat="error in errors">{{error}}</li>
+    </ul>
+    <a type="button" class="btn btn-success" ng-href="#/{{videoModelsLocation}}" ng-show="status">
+      {{status}} <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+    </a>
+    <form role="form" name="videoGalleryValidation">
+      <!--add error class if field is invalid-->
+      <fieldset class="form-group"  ng-class="{ 'has-error': videoGalleryValidation.playlistUrl.$invalid }">
+        <label class="control-label" for="playlistUrl">Ссылка на желаемый плейлист или видео в плейлисте</label>
+        <input class="form-control"
+               id="playlistUrl"
+               name="playlistUrl"
+               ng-model="videoGallery.playlistUrl"
+               type="url"
+               ng-required />
+      </fieldset>
+      <!--disable button when saving or invalid data-->
+      <button type="submit" class="btn btn-danger"
+              ng-class="{ 'disabled': videoGalleryValidation.$invalid }"
+              ng-click="updateVideoGallery()"
+              ng-disabled="updating">{{updating ? 'Saving...' : 'Save'}}  <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
+      </button>
+      <button type="submit" class="btn btn-danger"
+              ng-click="fetchYoutubeData()"
+              ng-disabled="fetching">{{fetching ? 'Fetching...' : 'Fetch'}}  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+      </button>
+    </form>
+    <div class="col-md-4 photo-with-caption-container" ng-repeat="video in videoGallery.data | orderBy:'-publishedAt'" >
+      <figure class="photo-thumbnail">
+        <img ng-src="{{video.thumbnailUrl}}" class="img-responsive">
+        <figcaption class="photo-caption text-center">
+          <div class="photo-caption-content">
+            {{video.title}}
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="new-article" ng-show="auth.user" >
+  <div class="new-article-container">
+    <ul class='errors' ng-if="errors">
+      <li ng-repeat="error in errors">{{error}}</li>
+    </ul>
+
+    <a type="button" class="btn btn-success" ng-href="#/{{articleModelsLocation}}/{{article.id}}" ng-show="article.status">
+      {{article.status}} <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+    </a>
+    <form role="form" name="articleValidation">
+      <!--add error class if field is invalid-->
+      <fieldset class="form-group"  ng-class="{ 'has-error': articleValidation.id.$invalid }">
+        <label class="control-label" for="id">URL концовка (одно слово на английском)</label>
+        <input class="form-control"
+               id="id"
+               name="id"
+               ng-model="article.id"
+               ng-pattern="/^[A-z,0-9,\-,_]+$/"
+               ng-required/>
+      </fieldset>
+      <nl-editor data="article.body"></nl-editor>
+      <!--disable button when saving or invalid data-->
+      <button type="submit" class="btn btn-danger"
+              ng-class="{ 'disabled': articleValidation.$invalid }"
+              ng-click="updateArticle(article)"
+              ng-disabled="article.updating">{{article.updating ? 'Saving...' : 'Save'}}
+      </button>
+      <button type="submit" class="btn btn-danger"
+              ng-click="removeArticle()"
+              ng-disabled="article.removing">{{article.removing ? 'Deleting...' : 'Delete'}}  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+
+    </form>
+  </div>
+</div>

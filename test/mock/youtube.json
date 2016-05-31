@@ -1,0 +1,360 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "\"dcqYJX7VLF4yxRrCehaDvw0InzY/kBAHwHqXzB29IdoyYmH-UfXbnw4\"",
+  "pageInfo": {
+    "totalResults": 8,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"dcqYJX7VLF4yxRrCehaDvw0InzY/0oC_cawfaLCbRoltOAmZZgPIv70\"",
+      "id": "UEwycXRaRVlyYjBwS1IzN0pwRnIxM1NScUdvaWNwSEVJVC41NkI0NEY2RDEwNTU3Q0M2",
+      "snippet": {
+        "publishedAt": "2016-03-11T19:22:07.000Z",
+        "channelId": "UCQ5z_v7v5GzRkmWbFGkwQ-w",
+        "title": "grunt bower yo install",
+        "description": "NLCH-0003 Готовим проект к локальной работе \nустановка билдеров",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Mwee70dr0V4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Mwee70dr0V4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Mwee70dr0V4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Mwee70dr0V4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Mwee70dr0V4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Sergio Shapoval",
+        "playlistId": "PL2qtZEYrb0pKR37JpFr13SRqGoicpHEIT",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Mwee70dr0V4"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"dcqYJX7VLF4yxRrCehaDvw0InzY/7X3j8jLMsCb3eRuWTIuBKtO908c\"",
+      "id": "UEwycXRaRVlyYjBwS1IzN0pwRnIxM1NScUdvaWNwSEVJVC4yODlGNEE0NkRGMEEzMEQy",
+      "snippet": {
+        "publishedAt": "2016-03-11T19:34:04.000Z",
+        "channelId": "UCQ5z_v7v5GzRkmWbFGkwQ-w",
+        "title": "prepare dependencies",
+        "description": "NLCH-0003 Готовим проект к локальной работе \n\nnpm install, bower install, grunt build validation",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/g-rmh4nzLzU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/g-rmh4nzLzU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/g-rmh4nzLzU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/g-rmh4nzLzU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/g-rmh4nzLzU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Sergio Shapoval",
+        "playlistId": "PL2qtZEYrb0pKR37JpFr13SRqGoicpHEIT",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "g-rmh4nzLzU"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"dcqYJX7VLF4yxRrCehaDvw0InzY/uJJrDjwbyxmjKuiv16aCnP_Cwww\"",
+      "id": "UEwycXRaRVlyYjBwS1IzN0pwRnIxM1NScUdvaWNwSEVJVC4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2016-03-11T19:37:33.000Z",
+        "channelId": "UCQ5z_v7v5GzRkmWbFGkwQ-w",
+        "title": "webstorm commiting",
+        "description": "github integration in Webstorm explained",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Hu_UFMKoKYs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Hu_UFMKoKYs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Hu_UFMKoKYs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Hu_UFMKoKYs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Hu_UFMKoKYs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Sergio Shapoval",
+        "playlistId": "PL2qtZEYrb0pKR37JpFr13SRqGoicpHEIT",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Hu_UFMKoKYs"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"dcqYJX7VLF4yxRrCehaDvw0InzY/S3AJ28j_qzsqTMhLMeWF86LnLQs\"",
+      "id": "UEwycXRaRVlyYjBwS1IzN0pwRnIxM1NScUdvaWNwSEVJVC41MjE1MkI0OTQ2QzJGNzNG",
+      "snippet": {
+        "publishedAt": "2016-03-11T20:03:34.000Z",
+        "channelId": "UCQ5z_v7v5GzRkmWbFGkwQ-w",
+        "title": "grunt github pages",
+        "description": "Adding you build content to github pages from grunt task",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SY4uoSh_oP8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SY4uoSh_oP8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SY4uoSh_oP8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Sergio Shapoval",
+        "playlistId": "PL2qtZEYrb0pKR37JpFr13SRqGoicpHEIT",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "SY4uoSh_oP8"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"dcqYJX7VLF4yxRrCehaDvw0InzY/tJ-jrmh558qJyrousHJDtO_BIss\"",
+      "id": "UEwycXRaRVlyYjBwS1IzN0pwRnIxM1NScUdvaWNwSEVJVC4wOTA3OTZBNzVEMTUzOTMy",
+      "snippet": {
+        "publishedAt": "2016-03-12T05:04:50.000Z",
+        "channelId": "UCQ5z_v7v5GzRkmWbFGkwQ-w",
+        "title": "Easily debug js from webstorm",
+        "description": "https://github.com/NashaLeptaChallenge/nasha_lepta/issues/6\nNLCH-0005 Дебажим JavaScript код.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GzFyl2Ccjrw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GzFyl2Ccjrw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GzFyl2Ccjrw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/GzFyl2Ccjrw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/GzFyl2Ccjrw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Sergio Shapoval",
+        "playlistId": "PL2qtZEYrb0pKR37JpFr13SRqGoicpHEIT",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "GzFyl2Ccjrw"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"dcqYJX7VLF4yxRrCehaDvw0InzY/jIM_5InTYi--ShTeCzRI-beXB2E\"",
+      "id": "UEwycXRaRVlyYjBwS1IzN0pwRnIxM1NScUdvaWNwSEVJVC4xMkVGQjNCMUM1N0RFNEUx",
+      "snippet": {
+        "publishedAt": "2016-03-12T08:50:15.000Z",
+        "channelId": "UCQ5z_v7v5GzRkmWbFGkwQ-w",
+        "title": "Working with git branches in WebStorm",
+        "description": "https://github.com/NashaLeptaChallenge/nasha_lepta/issues/7\n\nNLCH-0006 Изучаем историю проекта",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/F14RTiO3bc0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/F14RTiO3bc0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/F14RTiO3bc0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/F14RTiO3bc0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/F14RTiO3bc0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Sergio Shapoval",
+        "playlistId": "PL2qtZEYrb0pKR37JpFr13SRqGoicpHEIT",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "F14RTiO3bc0"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"dcqYJX7VLF4yxRrCehaDvw0InzY/hoJY8fZqPEthOZx-EZAS1GVZ9K4\"",
+      "id": "UEwycXRaRVlyYjBwS1IzN0pwRnIxM1NScUdvaWNwSEVJVC41MzJCQjBCNDIyRkJDN0VD",
+      "snippet": {
+        "publishedAt": "2016-03-12T08:53:51.000Z",
+        "channelId": "UCQ5z_v7v5GzRkmWbFGkwQ-w",
+        "title": "Working with git branches in WebStorm",
+        "description": "https://github.com/NashaLeptaChallenge/nasha_lepta/issues/7\n\nNLCH-0006 Изучаем историю проекта",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/F14RTiO3bc0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/F14RTiO3bc0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/F14RTiO3bc0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/F14RTiO3bc0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/F14RTiO3bc0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Sergio Shapoval",
+        "playlistId": "PL2qtZEYrb0pKR37JpFr13SRqGoicpHEIT",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "F14RTiO3bc0"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"dcqYJX7VLF4yxRrCehaDvw0InzY/5nK52OUZEwbGoDifOOFiEPU0Fdg\"",
+      "id": "UEwycXRaRVlyYjBwS1IzN0pwRnIxM1NScUdvaWNwSEVJVC5DQUNERDQ2NkIzRUQxNTY1",
+      "snippet": {
+        "publishedAt": "2016-03-21T18:07:28.000Z",
+        "channelId": "UCQ5z_v7v5GzRkmWbFGkwQ-w",
+        "title": "Pull Request обновляем репозиторий наработками другого разработчика",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QFTerFRaxvY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QFTerFRaxvY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QFTerFRaxvY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QFTerFRaxvY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QFTerFRaxvY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Sergio Shapoval",
+        "playlistId": "PL2qtZEYrb0pKR37JpFr13SRqGoicpHEIT",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "QFTerFRaxvY"
+        }
+      }
+    }
+  ]
+}

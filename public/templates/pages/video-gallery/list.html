@@ -1,0 +1,20 @@
+<h1 title="videos" class="text-center">Видео галлерея</h1>
+<div class="video-header" ng-show='auth.user'>
+  <div class="videos-header">
+    <a class="btn btn-default" href='#/{{videoModelsLocation}}/edit' >
+      Выбрать другой список youtube<span class="glyphicon glyphicon-plus-sign"></span>
+    </a>
+  </div>
+  <p ng-show="video">Видео галлерея пока не добавлена</p>
+</div>
+
+<div class="col-md-4 photo-with-caption-container" ng-repeat="video in videoGallery.data | orderBy:'-publishedAt'" >
+  <figure class="photo-thumbnail video" ng-click="open(video)">
+    <img ng-src="{{video.thumbnailUrl}}" class="img-responsive ">
+    <figcaption class="photo-caption text-center">
+      <div class="photo-caption-content">
+        {{video.title}}
+      </div>
+    </figcaption>
+  </figure>
+</div>

@@ -1,0 +1,98 @@
+<div class="new-novelty" ng-show="auth.user">
+  <div class="new-novelty-container">
+    <ul class='errors' ng-if="errors">
+      <li ng-repeat="error in errors">{{error}}</li>
+    </ul>
+
+    <a type="button" class="btn btn-success" ng-href="#/{{noveltyModelsLocation}}/{{novelty.id}}" ng-show="novelty.status">
+      {{novelty.status}} <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+    </a>
+
+    <form role="form" name="noveltyValidation">
+      <!--add error class if field is invalid-->
+      <fieldset class="form-group"  ng-class="{ 'has-error': noveltyValidation.id.$invalid }">
+        <label class="control-label" for="id">URL концовка (одно слово на английском)</label>
+        <input class="form-control"
+               id="id"
+               name="id"
+               ng-model="novelty.id"
+               ng-pattern="/^[A-z,0-9,\-,_]+$/"
+               ng-required />
+      </fieldset>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': noveltyValidation.title.$invalid }">
+        <label class="control-label" for="title">Заглавие новости</label>
+        <input class="form-control"
+               id="title"
+               name="title"
+               ng-model="novelty.title"
+               ng-required />
+      </fieldset>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': noveltyValidation.summary.$invalid }">
+        <label class="control-label" for="summary">Краткое содержание новости</label>
+        <input class="form-control"
+               id="summary"
+               name="summary"
+               ng-model="novelty.summary"
+               ng-required />
+        <button type="submit" class="btn btn-warning" ng-click="createSummaryFromBody()">
+          Copy summary from body<span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+        </button>
+      </fieldset>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': noveltyValidation.cover.$invalid }">
+        <label class="control-label" for="cover">Обложка альбома</label>
+        <input class="form-control"
+               id="cover"
+               name="cover"
+               ng-model="novelty.cover"
+               type="url"
+               ng-required />
+      </fieldset>
+
+      <div class="row novelty-summary-view">
+        <div class="col-md-3">
+          <img ng-src="{{novelty.cover}}" class="img-responsive">
+        </div>
+        <div class="col-md-9">
+          <h2>{{novelty.title}}</h2>
+          <p>{{novelty.summary}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="novelty-link-date">
+            <small>{{novelty.date | date : "dd.MM.yyyy"}}</small>
+            <a ng-href="#/{{noveltyModelsLocation}}/{{novelty.id}}" class="pull-right"><small>подробнее</small></a>
+          </div>
+        </div>
+      </div>
+
+
+      <fieldset class="form-group "  ng-class="{ 'has-error': noveltyValidation.date.$invalid }">
+        <label class="control-label" for="date">Дата новости</label>
+        <input class="form-control"
+               id="date"
+               name="date"
+               ng-model="novelty.date"
+               type="date"
+               ng-required />
+      </fieldset>
+
+      <nl-editor data="novelty.body"></nl-editor>
+      <!--disable button when saving or invalid data-->
+      <button type="submit" class="btn btn-danger"
+              ng-class="{ 'disabled': noveltyValidation.$invalid }"
+              ng-click="updateNovelty(novelty)"
+              ng-disabled="novelty.updating">{{novelty.updating ? 'Saving...' : 'Save'}}  <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
+      </button>
+      <button type="submit" class="btn btn-danger"
+              ng-click="removeNovelty()"
+              ng-disabled="novelty.removing">{{novelty.removing ? 'Deleting...' : 'Delete'}}  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+    </form>
+
+
+  </div>
+</div>
