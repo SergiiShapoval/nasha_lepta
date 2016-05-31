@@ -3,7 +3,7 @@
 <a type="button" class="btn btn-primary" ng-href="#/{{slideModelsLocation}}/{{slide.id}}/edit" ng-show="auth.user">
   <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
 </a>
-<div class="row">
+<div class="row" ng-hide="slide.id == null">
   <div class="col-md-2"></div>
   <div class="col-md-8 photo-with-caption-container slider">
     <figure class="photo-thumbnail">
@@ -17,4 +17,8 @@
       </figcaption>
     </figure>
   </div>
+</div>
+
+<div class="row alert-danger text-center" ng-show="slide.id == null">
+Первый слайд не редактируется из админ панели
 </div>
