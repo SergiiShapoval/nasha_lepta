@@ -8,12 +8,14 @@
   <p ng-show="album">Альбомов пока нет</p>
 </div>
 <div class="col-md-4 photo-with-caption-container" ng-repeat="album in albums | orderBy:'-date'" >
-    <figure class="photo-thumbnail">
-      <a ng-href="#/albums/{{album.id}}">
-        <img ng-src="{{album.cover}}" class="img-responsive">
-        <figcaption class="photo-caption text-center">
+  <figure class="photo-thumbnail">
+    <a ng-href="#/albums/{{album.id}}">
+      <img ng-src="{{album.cover}}" class="img-responsive">
+      <figcaption class="photo-caption text-center">
+        <div class="photo-caption-content">
           {{album.title}}
-        </figcaption>
-      </a>
-    </figure>
+        </div>
+      </figcaption>
+    </a>
+  </figure>
 </div>

@@ -1,0 +1,25 @@
+<div class="slide-header" ng-show='auth.user'>
+  <div class="slides-header">
+    <h1 title="slides">Слайды</h1>
+    <a class="btn btn-default" href='#/slides/new'>
+      Создать слайд<span class="glyphicon glyphicon-plus-sign"></span>
+    </a>
+  </div>
+  <p ng-show="slide">Слайдов пока нет</p>
+</div>
+<uib-carousel interval="3000" active="active" class="photo-with-caption-container slider col-md-8">
+  <uib-slide ng-repeat="slide in slides" index="$index" >
+    <div class="photo-with-caption-container slider">
+      <figure class="photo-thumbnail">
+        <img ng-src="{{slide.cover}}" class="img-responsive">
+        <figcaption class="slide-caption text-center">
+          <h1 class="text-uppercase">{{slide.title}}</h1>
+          <p>
+            {{slide.description}}
+          </p>
+          <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-default">{{slide.buttonName}}</a>
+        </figcaption>
+      </figure>
+    </div>
+  </uib-slide>
+</uib-carousel>

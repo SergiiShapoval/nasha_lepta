@@ -1,0 +1,16 @@
+<uib-carousel interval="3000" class="photo-with-caption-container" active="active">
+  <uib-slide ng-repeat="group in groupedNews" index="$index"  >
+    <div class="col-md-4" ng-repeat="novelty in group">
+      <figure class="photo-thumbnail">
+        <a ng-href="#/news/{{novelty.id}}">
+          <img ng-src="{{novelty.cover}}" class="img-responsive">
+          <figcaption class="photo-caption text-center">
+            <div class="photo-caption-content">
+              {{novelty.title}}
+            </div>
+          </figcaption>
+        </a>
+      </figure>
+    </div>
+  </uib-slide>
+</uib-carousel>
