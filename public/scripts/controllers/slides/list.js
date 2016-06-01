@@ -11,7 +11,7 @@ angular.module('nashaLeptaApp')
   .controller('SlidesListCtrl', function ($scope, FireObjects, SubProjectPrefixer, $log) {
     $scope.slides = [{
       buttonName: "Подробнее...",
-      cover: "images/slides/gratitude_in_mitropoli.jpg",
+      cover: "images/slides/gratitude_in_mitropoli.3e9e815b.jpg",
       description: "Проектом переданы средства на завершение строительства дома для сирот в Хмельницкой области.",
       detailsLink: "#/news",
       id: "0",
