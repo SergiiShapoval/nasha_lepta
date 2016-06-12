@@ -23,7 +23,7 @@ describe('Controller: SlidesCreateCtrl', function () {
     expect(scope.slide.title).toEqual("Заглавие слайда");
     expect(scope.slide.description).toEqual("Описание слайда");
     expect(scope.slide.buttonName).toEqual("Надпись на кнопке");
-    expect(scope.slide.cover).toEqual("http://mitropolia.kiev.ua/wp-content/uploads/2016/03/DSC_03591.jpg");
+    expect(scope.slide.cover).toEqual("images/slides/children_day.f1eca941.jpg");
     expect(scope.slide.detailsLink).toEqual("#/news");
   });
   it('check services are set correctly', function () {
