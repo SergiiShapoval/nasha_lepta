@@ -5,7 +5,7 @@ var reformalOptions = {
         tab_indent: "50%",
         tab_bg_color: "#F05A00",
         tab_border_color: "#FFFFFF",
-        tab_image_url: "http://tab.reformal.ru/0JjQtNC10Lgg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/cc80218e3bc37332f1821af78c238ad8/left/1/tab.png",
+        tab_image_url: "https://tab.reformal.ru/0JjQtNC10Lgg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/cc80218e3bc37332f1821af78c238ad8/left/1/tab.png",
         tab_border_width: 2
     };
 
