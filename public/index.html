@@ -119,9 +119,10 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container main-text">
     <div ng-view="" class="row padding-top-10"></div>
 
+    <img src="images/map.jpg" class="img-responsive" ng-click="openMap()" ng-show="location() === '/contacts'">
     <a id="toTop">
       <button class="btn btn-link btn-danger">
           <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"
@@ -130,16 +131,6 @@
     </a>
   </div>
 
-  <div class="map container" ng-controller="GoogleMapCtrl" ng-show="location() === '/contacts'">
-    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="map.options">
-      <ui-gmap-marker ng-repeat="marker in gMapMarkers"  coords="marker.coords" options="marker.options"
-                      idkey="marker.id">
-        <ui-gmap-window isIconVisibleOnClick="true">
-          {{marker.options.title}}
-        </ui-gmap-window>
-      </ui-gmap-marker>
-    </ui-gmap-google-map>
-  </div>
   <div class="footer bgimage row padding-top-20 margin-top-20">
     <div class="container">
       <div class="col-xs-12 col-md-4">
@@ -239,6 +230,7 @@
   ga('send', 'pageview');
 </script>
 
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -257,6 +249,11 @@
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
 <script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/markerclustererplus/src/markerclusterer.js"></script>
+<script src="bower_components/google-maps-utility-library-v3-markerwithlabel/dist/markerwithlabel.js"></script>
+<script src="bower_components/google-maps-utility-library-v3-infobox/dist/infobox.js"></script>
+<script src="bower_components/google-maps-utility-library-v3-keydragzoom/dist/keydragzoom.js"></script>
+<script src="bower_components/js-rich-marker/src/richmarker.js"></script>
 <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
@@ -316,6 +313,7 @@
 <script src="scripts/services/playListIdExtractor.js"></script>
 <script src="scripts/services/subProjectPrefixer.js"></script>
 <script src="scripts/controllers/googleMap.js"></script>
+<script src="scripts/services/groupQtyResizer.js"></script>
 <!-- endbuild -->
 <script src="scripts/ckeditor/ckeditor.js"></script>
 

@@ -10,12 +10,12 @@
 angular.module('nashaLeptaApp')
   .controller('SlidesListCtrl', function ($scope, FireObjects, SubProjectPrefixer, $log) {
     $scope.slides = [{
-      buttonName: "Узнать больше",
-      cover: "http://mitropolia.kiev.ua/wp-content/uploads/2016/03/DSC_03591.jpg",
-      description: "Діє з благословення Блаженнішого Митрополита Київського і всієї України Онуфрія та створений на базі храму святителя Миколая",
+      buttonName: "Подробнее...",
+      cover: "images/slides/gratitude_in_mitropoli.3e9e815b.jpg",
+      description: "Проектом переданы средства на завершение строительства дома для сирот в Хмельницкой области.",
       detailsLink: "#/news",
       id: "0",
-      title: "Благодійний проект «Наша Лепта»"
+      title: "АКЦИЯ"
     }];
 
     var slideModelsLocation = SubProjectPrefixer('slides');
