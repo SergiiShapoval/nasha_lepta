@@ -10,7 +10,7 @@
 <div ng-repeat="novelty in news | orderBy:'-date'" >
   <div class="row novelty-summary-view">
     <div class="col-md-3">
-      <img ng-src="{{novelty.cover}}" class="img-responsive">
+      <image-or-video-modal data="{{novelty.cover}}"></image-or-video-modal>
     </div>
     <div class="col-md-9">
       <h2>{{novelty.title}}</h2>

@@ -25,5 +25,6 @@ describe('Service: PlayListIdExtractor', function () {
     expect(PlayListIdExtractor('https://www.youtube.com/playlist?list=PLWhoXtydVpprnYSH5Jb26w-Q5ZlfzSMu8')).toEqual('PLWhoXtydVpprnYSH5Jb26w-Q5ZlfzSMu8');
 
     expect(youtubeEmbedUtils.getIdFromURL('https://www.youtube.com/watch?v=NyK5q0AvI0U')).toEqual('NyK5q0AvI0U');
+    expect("Big world".indexOf("world") > -1).toEqual(true);
   });
 });
