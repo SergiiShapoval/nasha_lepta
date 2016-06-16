@@ -123,6 +123,18 @@ angular
         templateUrl: 'templates/pages/news/edit.html',
         controller: 'NewsUpdateCtrl'
       })
+      .when('/externals', {
+        templateUrl: 'templates/pages/externals/list.html',
+        controller: 'ExternalsListCtrl'
+      })
+      .when('/externals/new', {
+        templateUrl: 'templates/pages/externals/edit.html',
+        controller: 'ExternalsCreateCtrl'
+      })
+      .when('/externals/:id/edit', {
+        templateUrl: 'templates/pages/externals/edit.html',
+        controller: 'ExternalsUpdateCtrl'
+      })
       .when('/video-gallery', {
         templateUrl: 'templates/pages/video-gallery/list.html',
         controller: 'VideoGalleryListCtrl'
