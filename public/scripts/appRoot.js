@@ -109,19 +109,75 @@ angular
       })
       .when('/news', {
         templateUrl: 'templates/pages/news/list.html',
-        controller: 'NewsListCtrl'
+        controller: 'NewsListCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/news/new', {
         templateUrl: 'templates/pages/news/edit.html',
-        controller: 'NewsCreateCtrl'
+        controller: 'NewsCreateCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/news/:id', {
         templateUrl: 'templates/pages/news/show.html',
-        controller: 'NewsShowCtrl'
+        controller: 'NewsShowCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/news/:id/edit', {
         templateUrl: 'templates/pages/news/edit.html',
-        controller: 'NewsUpdateCtrl'
+        controller: 'NewsUpdateCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
+      })
+      .when('/actions', {
+        templateUrl: 'templates/pages/news/list.html',
+        controller: 'NewsListCtrl',
+        resolve: {
+          model: function () {
+            return "actions";
+          }
+        }
+      })
+      .when('/actions/new', {
+        templateUrl: 'templates/pages/news/edit.html',
+        controller: 'NewsCreateCtrl',
+        resolve: {
+          model: function () {
+            return "actions";
+          }
+        }
+      })
+      .when('/actions/:id', {
+        templateUrl: 'templates/pages/news/show.html',
+        controller: 'NewsShowCtrl',
+        resolve: {
+          model: function () {
+            return "actions";
+          }
+        }
+      })
+      .when('/actions/:id/edit', {
+        templateUrl: 'templates/pages/news/edit.html',
+        controller: 'NewsUpdateCtrl',
+        resolve: {
+          model: function () {
+            return "actions";
+          }
+        }
       })
       .when('/externals', {
         templateUrl: 'templates/pages/externals/list.html',
@@ -195,19 +251,39 @@ angular
       })
       .when('/exposition/news', {
         templateUrl: 'templates/pages/news/list.html',
-        controller: 'NewsListCtrl'
+        controller: 'NewsListCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/exposition/news/new', {
         templateUrl: 'templates/pages/news/edit.html',
-        controller: 'NewsCreateCtrl'
+        controller: 'NewsCreateCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/exposition/news/:id', {
         templateUrl: 'templates/pages/news/show.html',
-        controller: 'NewsShowCtrl'
+        controller: 'NewsShowCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/exposition/news/:id/edit', {
         templateUrl: 'templates/pages/news/edit.html',
-        controller: 'NewsUpdateCtrl'
+        controller: 'NewsUpdateCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/exposition/video-gallery', {
         templateUrl: 'templates/pages/video-gallery/list.html',
@@ -269,19 +345,39 @@ angular
       })
       .when('/evenings/news', {
         templateUrl: 'templates/pages/news/list.html',
-        controller: 'NewsListCtrl'
+        controller: 'NewsListCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/evenings/news/new', {
         templateUrl: 'templates/pages/news/edit.html',
-        controller: 'NewsCreateCtrl'
+        controller: 'NewsCreateCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/evenings/news/:id', {
         templateUrl: 'templates/pages/news/show.html',
-        controller: 'NewsShowCtrl'
+        controller: 'NewsShowCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/evenings/news/:id/edit', {
         templateUrl: 'templates/pages/news/edit.html',
-        controller: 'NewsUpdateCtrl'
+        controller: 'NewsUpdateCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/evenings/video-gallery', {
         templateUrl: 'templates/pages/video-gallery/list.html',
@@ -343,19 +439,39 @@ angular
       })
       .when('/accounting/news', {
         templateUrl: 'templates/pages/news/list.html',
-        controller: 'NewsListCtrl'
+        controller: 'NewsListCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/accounting/news/new', {
         templateUrl: 'templates/pages/news/edit.html',
-        controller: 'NewsCreateCtrl'
+        controller: 'NewsCreateCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/accounting/news/:id', {
         templateUrl: 'templates/pages/news/show.html',
-        controller: 'NewsShowCtrl'
+        controller: 'NewsShowCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/accounting/news/:id/edit', {
         templateUrl: 'templates/pages/news/edit.html',
-        controller: 'NewsUpdateCtrl'
+        controller: 'NewsUpdateCtrl',
+        resolve: {
+          model: function () {
+            return "news";
+          }
+        }
       })
       .when('/accounting/video-gallery', {
         templateUrl: 'templates/pages/video-gallery/list.html',
