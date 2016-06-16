@@ -42,7 +42,7 @@
       </fieldset>
 
       <fieldset class="form-group"  ng-class="{ 'has-error': noveltyValidation.cover.$invalid }">
-        <label class="control-label" for="cover">Обложка альбома</label>
+        <label class="control-label" for="cover">Картинка или youtube видео новости</label>
         <input class="form-control"
                id="cover"
                name="cover"
@@ -53,7 +53,7 @@
 
       <div class="row novelty-summary-view">
         <div class="col-md-3">
-          <img ng-src="{{novelty.cover}}" class="img-responsive">
+          <image-or-video-modal data="{{novelty.cover}}"></image-or-video-modal>
         </div>
         <div class="col-md-9">
           <h2>{{novelty.title}}</h2>

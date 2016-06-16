@@ -1,16 +1,16 @@
 <div class="novelty-header" ng-show='auth.user'>
   <div class="news-header">
-    <h1 title="news">Новости</h1>
+    <h1 title="news">{{noveltyModelsLocation.indexOf("news") > -1 ? 'Новости' : 'Акции'}}</h1>
     <a class="btn btn-default" href='#/{{noveltyModelsLocation}}/new'>
       Создать новость <span class="glyphicon glyphicon-plus-sign"></span>
     </a>
   </div>
-  <p ng-show="novelty">Новостей пока нет</p>
+  <p ng-show="novelty">{{noveltyModelsLocation.indexOf("news") > -1 ? 'Новостей' : 'Акций'}} пока нет</p>
 </div>
 <div ng-repeat="novelty in news | orderBy:'-date'" >
   <div class="row novelty-summary-view">
     <div class="col-md-3">
-      <img ng-src="{{novelty.cover}}" class="img-responsive">
+      <image-or-video-modal data="{{novelty.cover}}"></image-or-video-modal>
     </div>
     <div class="col-md-9">
       <h2>{{novelty.title}}</h2>
