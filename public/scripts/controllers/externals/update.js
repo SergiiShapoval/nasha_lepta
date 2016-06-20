@@ -8,7 +8,9 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('ExternalsUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer, htmlToPlainText) {
+  .controller('ExternalsUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer, htmlToPlainText, youtubeEmbedUtils) {
+    $scope.youtubeEmbedUtils = youtubeEmbedUtils;
+
     var externalModelsLocation = SubProjectPrefixer('externals');
     $scope.externalModelsLocation=externalModelsLocation;
     FireObjects.find(externalModelsLocation, $routeParams.id).$loaded()

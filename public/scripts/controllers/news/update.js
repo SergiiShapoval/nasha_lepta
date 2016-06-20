@@ -8,7 +8,10 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('NewsUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer, htmlToPlainText, model) {
+  .controller('NewsUpdateCtrl', function ($scope,$routeParams, FireObjects, SubProjectPrefixer, htmlToPlainText, model, youtubeEmbedUtils) {
+
+    $scope.youtubeEmbedUtils = youtubeEmbedUtils;
+
     var noveltyModelsLocation = SubProjectPrefixer(model);
     $scope.noveltyModelsLocation=noveltyModelsLocation;
     FireObjects.find(noveltyModelsLocation, $routeParams.id).$loaded()

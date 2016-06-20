@@ -8,7 +8,10 @@
  * Controller of the nashaLeptaApp
  */
 angular.module('nashaLeptaApp')
-  .controller('ExternalsCreateCtrl', function ($scope, FireObjects, SubProjectPrefixer, ModelCopier, htmlToPlainText) {
+  .controller('ExternalsCreateCtrl', function ($scope, FireObjects, SubProjectPrefixer, ModelCopier, youtubeEmbedUtils) {
+
+    $scope.youtubeEmbedUtils = youtubeEmbedUtils;
+    
     $scope.external ={
       id : "fill-me",
       summary : "краткое содержание в сми",
