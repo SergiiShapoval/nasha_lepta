@@ -53,7 +53,8 @@
 
       <div class="row external-summary-view">
         <div class="col-md-3">
-          <image-or-video-modal data="{{external.cover}}"></image-or-video-modal>
+          <img ng-src="{{external.cover}}" class="img-responsive">
+          <img ng-src="{{'https://i.ytimg.com/vi/'+youtubeEmbedUtils.getIdFromURL(external.cover) + '/hqdefault.jpg'}}" class="img-responsive">
         </div>
         <div class="col-md-9">
           <h2>{{external.title}}</h2>

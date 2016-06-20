@@ -21,6 +21,7 @@
     <div class="col-md-12">
       <div class="external-link-date">
         <small>{{external.date | date : "dd.MM.yyyy"}}</small>
+        <a ng-href="#/{{externalModelsLocation}}/{{external.id}}/edit" class="btn btn-warning" ng-show='auth.user'>редактировать</a>
         <a ng-href="{{external.reference}}" class="pull-right"><small>подробнее</small></a>
       </div>
     </div>

@@ -53,7 +53,8 @@
 
       <div class="row novelty-summary-view">
         <div class="col-md-3">
-          <image-or-video-modal data="{{novelty.cover}}"></image-or-video-modal>
+          <img ng-src="{{novelty.cover}}" class="img-responsive">
+          <img ng-src="{{'https://i.ytimg.com/vi/'+youtubeEmbedUtils.getIdFromURL(novelty.cover) + '/hqdefault.jpg'}}" class="img-responsive">
         </div>
         <div class="col-md-9">
           <h2>{{novelty.title}}</h2>
