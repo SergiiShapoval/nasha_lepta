@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc service
- * @name nashaLeptaApp.flickrAlbumIdExtractor
+ * @name nashaLeptaApp.FlickrAlbumIdExtractor
  * @description
- * # flickrAlbumIdExtractor
+ * # FlickrAlbumIdExtractor
  * Service in the nashaLeptaApp.
  */
 angular.module('nashaLeptaApp')
-  .service('flickrAlbumIdExtractor', function () {
+  .service('FlickrAlbumIdExtractor', function () {
     return function(flickrAlbumUrl) {
       var reg =  /\/albums\/(\d+)/;
       var match = reg.exec(flickrAlbumUrl);
