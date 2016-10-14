@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc service
- * @name nashaLeptaApp.flickrJsonToUrlConverter
+ * @name nashaLeptaApp.FlickrJsonToUrlConverter
  * @description
- * # flickrJsonToUrlConverter
+ * # FlickrJsonToUrlConverter
  * Service in the nashaLeptaApp.
  */
 angular.module('nashaLeptaApp')
-  .service('flickrJsonToUrlConverter', function () {
+  .service('FlickrJsonToUrlConverter', function () {
     return function(flickrJson){
       return flickrJson.photoset.photo.map(function(item){
         var url = 'https://farm' + item.farm + '.staticflickr.com/'
