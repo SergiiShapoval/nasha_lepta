@@ -20,7 +20,7 @@ describe('Service: flickrJsonToUrlConverter', function () {
   });
 
   it('should convert json correctly', function () {
-    expect(flickrJsonToUrlConverter(flickrJson)[0]).toEqual("https://farm9.staticflickr.com/8851/28259548663_11a075c77f_z.jpg");
+    expect(flickrJsonToUrlConverter(flickrJson)[0].thumb).toEqual("https://farm9.staticflickr.com/8851/28259548663_11a075c77f_z.jpg");
   });
 
 });
