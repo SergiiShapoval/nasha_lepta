@@ -15,11 +15,11 @@ angular.module('nashaLeptaApp')
 
     $scope.map = {
       center: {
-        latitude: 50.443780,
-        longitude: 30.469639
+        latitude: 50.427852,
+        longitude: 30.527468
       },
       draggable: true,
-      zoom: 12,
+      zoom: 15,
       options : {
         scrollwheel: true
       }
@@ -36,18 +36,6 @@ angular.module('nashaLeptaApp')
         options: {
           draggable: false,
           title: 'Церква святителя Миколая Чудотворця',
-          animation: 1 // 1: BOUNCE, 2: DROP
-        }
-      },
-      {
-        id: 1,
-        coords: {
-          latitude: 50.454456,
-          longitude: 30.362693
-        },
-        options: {
-          draggable: false,
-          title: 'Церква на честь Казанської ікони Божої Матері',
           animation: 1 // 1: BOUNCE, 2: DROP
         }
       }

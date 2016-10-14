@@ -72,13 +72,13 @@
                 </a>
               </li>
               <li>
-                <a href="#/video-gallery">
-                  Видео Галлерея
+                <a href="#/externals">
+                  СМИ о проекте
                 </a>
               </li>
               <li>
-                <a href="#/albums">
-                  Фото Галлерея
+                <a href="#/actions">
+                  Акции
                 </a>
               </li>
               <li>
@@ -95,7 +95,7 @@
   <div ng-controller="SlidesListCtrl" class="main-carousel padding-20" ng-show="location() === '/' && slides.length > 0">
     <div class="container">
       <div class="row banner-container">
-        <uib-carousel interval="12000" active="active" class="photo-with-caption-container slider">
+        <uib-carousel interval="12000" active="active" class="photo-with-caption-container slider" no-wrap="true">
           <uib-slide ng-repeat="slide in slides" index="$index" >
             <div class="photo-with-caption-container slider">
               <figure>
@@ -122,6 +122,7 @@
   <div class="container main-text">
     <div ng-view="" class="row padding-top-10"></div>
 
+    <img src="images/map.jpg" class="img-responsive" ng-click="openMap()" ng-show="location() === '/contacts'">
     <a id="toTop">
       <button class="btn btn-link btn-danger">
           <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"
@@ -130,17 +131,6 @@
     </a>
   </div>
 
-  <div class="map container " ng-controller="GoogleMapCtrl" ng-show="location() === '/contacts' || location() === '/'">
-    <h1 class="text-uppercase text-center" ng-show="location() !== '/contacts'">Контакты</h1>
-    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="map.options" class="padding-20">
-      <ui-gmap-marker ng-repeat="marker in gMapMarkers"  coords="marker.coords" options="marker.options"
-                      idkey="marker.id">
-        <ui-gmap-window isIconVisibleOnClick="true">
-          {{marker.options.title}}
-        </ui-gmap-window>
-      </ui-gmap-marker>
-    </ui-gmap-google-map>
-  </div>
   <div class="footer bgimage row padding-top-20 margin-top-20">
     <div class="container">
       <div class="col-xs-12 col-md-4">
@@ -302,6 +292,9 @@
 <script src="scripts/controllers/news/create.js"></script>
 <script src="scripts/controllers/news/show.js"></script>
 <script src="scripts/controllers/news/update.js"></script>
+<script src="scripts/controllers/externals/list.js"></script>
+<script src="scripts/controllers/externals/create.js"></script>
+<script src="scripts/controllers/externals/update.js"></script>
 <script src="scripts/services/htmlToPlainText.js"></script>
 <script src="scripts/services/modelGrouper.js"></script>
 <script src="scripts/controllers/landing.js"></script>
@@ -318,6 +311,9 @@
 <script src="scripts/services/playListIdExtractor.js"></script>
 <script src="scripts/services/subProjectPrefixer.js"></script>
 <script src="scripts/controllers/googleMap.js"></script>
+<script src="scripts/services/groupQtyResizer.js"></script>
+<script src="scripts/directives/imageOrVideoModal.js"></script>
+<script src="scripts/controllers/imageOrVideoModal.js"></script>
 <!-- endbuild -->
 <script src="scripts/ckeditor/ckeditor.js"></script>
 
