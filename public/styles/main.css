@@ -504,7 +504,20 @@ a > h6, button > h6 {
 .novelty-summary-view, .external-summary-view{
   padding: 1em 0;
 }
+
+.novelty-summary-view p, .external-summary-view p{
+  font-size: 1.5em;
+}
+
 /*Novelty, external css ends*/
+
+.nl-description{
+  font-size: 1.5em;
+}
+
+.nl-description h6{
+  font-size: 2em;
+}
 
 #toTop{
   display: block;
