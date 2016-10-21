@@ -519,6 +519,10 @@ a > h6, button > h6 {
   font-size: 2em;
 }
 
+.main-button{
+  font-size: 2em;
+}
+
 #toTop{
   display: block;
   border:0 !important;
