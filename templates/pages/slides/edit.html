@@ -32,7 +32,7 @@
       </fieldset>
 
       <fieldset class="form-group"  ng-class="{ 'has-error': slideValidation.description.$invalid }">
-        <label class="control-label" for="description">Название слайда</label>
+        <label class="control-label" for="description">Описание слайда</label>
         <input class="form-control"
                id="description"
                name="description"
@@ -41,7 +41,7 @@
       </fieldset>
 
       <fieldset class="form-group"  ng-class="{ 'has-error': slideValidation.buttonName.$invalid }">
-        <label class="control-label" for="buttonName">Название слайда</label>
+        <label class="control-label" for="buttonName">Надпись на кнопке</label>
         <input class="form-control"
                id="buttonName"
                name="buttonName"
@@ -55,7 +55,6 @@
                id="cover"
                name="cover"
                ng-model="slide.cover"
-               type="url"
                ng-required />
       </fieldset>
       <div class="row">
