@@ -805,12 +805,18 @@ a > h6, button > h6 {
   .container {
     width: 970px;
   }
+  .hidden-md {
+    display: none !important;
+  }
 }
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
   .container {
     width: 750px;
+  }
+  .banner{
+    display: block;
   }
 }
 
@@ -821,6 +827,9 @@ a > h6, button > h6 {
   }
   .hidden-sm {
     display: none !important;
+  }
+  .banner{
+    display: block;
   }
 }
 
