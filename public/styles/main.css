@@ -819,11 +819,17 @@ a > h6, button > h6 {
   .container {
     width: 100%;
   }
+  .hidden-sm {
+    display: none !important;
+  }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
   .container {
     width: 100%;
+  }
+  .hidden-xs {
+    display: none !important;
   }
 }
