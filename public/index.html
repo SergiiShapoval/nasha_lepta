@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html class="no-js">
 <head>
   <meta charset="utf-8">
@@ -10,10 +9,13 @@
   <link rel="apple-touch-icon"
         href="apple-touch-icon.png">
   <link rel="icon" type="image/ico" href="favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700,400,300&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="bower_components/angular-social/angular-social.css" />
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css" />
   <link rel="stylesheet" href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css" />
   <!-- endbower -->
   <!-- endbuild -->
@@ -22,455 +24,199 @@
   <!-- endbuild -->
 </head>
 <body ng-app="nashaLeptaApp" ng-controller="MainCtrl">
-<div ng-controller="ResponsiveCtrl">
   <!--[if lt IE 7]>
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
     href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div class=" navbar navbar-default navbar-fixed-top nl_nav col-centered" role="navigation">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-offset-1 col-xl-offset-1 col-md-10  col-xl-10 ">
 
-          <ul class="nav navbar-nav col-centered">
-            <li ng-show="news2016()"
-                ng-class="{active : location() === '/news2016' || location() === '/news2015' || location() === '/news2014'}">
-              <a href="#/" data-target="#" class="navbar-nav " data-toggle="dropdown">
-                Новости проекта <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li ng-class="{active : location() === '/news2016'}">
-                  <a href="#/news2016" class="navbar-nav-block">2016</a>
-                </li>
-                <li ng-class="{active : location() === '/news2015'}">
-                  <a href="#/news2015" class="navbar-nav-block">2015</a>
-                </li>
-                <li ng-class="{active : location() === '/news2014'}">
-                  <a href="#/news2014" class="navbar-nav-block">2014</a>
-                </li>
-              </ul>
-            </li>
-            <li ng-show="about()" ng-class="{active : location() === '/about'}">
-              <a ng-href="#/about">О проекте</a></li>
-            <li ng-show="about()" ng-class="{active : location() === '/akcii'}">
-              <a ng-href="#/akcii">Акции</a></li>
-            <li ng-show="articles()" ng-class="{active : location() === '/articles'}">
-              <a ng-href="#/articles">Статьи</a></li>
-            <li ng-show="gratitude()" ng-class="{active : location() === '/gratitude'}">
-              <a ng-href="#/gratitude">Благодарности</a></li>
-            <li ng-show="photos()" ng-class="{active : location() === '/photos'}">
-              <a ng-href="#/photos">Фотогалерея</a>
-            </li>
-            <li ng-show="videos()" ng-class="{active : location() === '/videos'}">
-              <a ng-href="#/videos">Видеогалерея</a>
-            </li>
-            <li ng-show="contacts()" ng-class="{active : location() === '/contacts'}">
-              <a ng-href="#/contacts">Контакты</a>
-            </li>
-
-            <li ng-hide="news2015()">
-            </li>
-            <li ng-hide="contacts()">
-
-              <a href="#/" data-target="#" class="nl-nav" data-toggle="dropdown">
-                <span ng-hide="news2015()">Меню</span>
-
-                <span class="glyphicon glyphicon-menu-hamburger"
-                      aria-hidden="true"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li ng-hide="news2015()" ng-class="{active : location() === '/news2015'}">
-                  <a href="#/news2015" class="navbar-nav-block">Новости 2015</a>
-                </li>
-                <li ng-hide="news2015()" ng-class="{active : location() === '/news2014'}">
-                  <a href="#/news2014" class="navbar-nav-block">Новости 2014</a>
-                </li>
-                <li class="divider"></li>
-                <li ng-hide="about()" ng-class="{active : location() === '/about'}">
-                  <a ng-href="#/about">О проекте</a></li>
-                <li ng-hide="about()" ng-class="{active : location() === '/akcii'}">
-                  <a ng-href="#/akcii">Акции</a></li>
-                <li ng-hide="articles()" ng-class="{active : location() === '/articles'}">
-                  <a ng-href="#/articles">Статьи</a></li>
-                <li ng-hide="gratitude()" ng-class="{active : location() === '/gratitude'}">
-                  <a ng-href="#/gratitude">Благодарности</a></li>
-                <li ng-hide="photos()" ng-class="{active : location() === '/photos'}">
-                  <a ng-href="#/photos">Фотогалерея</a>
-                </li>
-                <li ng-hide="videos()" ng-class="{active : location() === '/videos'}">
-                  <a ng-href="#/videos">Видеогалерея</a>
-                </li>
-                <li ng-hide="contacts()" ng-class="{active : location() === '/contacts'}">
-                  <a ng-href="#/contacts">Контакты</a>
-                </li>
-
-              </ul>
-            </li>
-          </ul>
-
+  <div class="header bgimage row">
+    <div class="container ">
+      <div class="row ">
+        <div class="vcentered-col">
+          <img src="images/logo.png" alt="logo" class="img-responsive col-centered"/>
+        </div>
+        <div class="col-md-10 vcentered-col ">
+          <div class="row">
+            <div class="col-md-9 text-center preambula">
+              <p>По благословению Предстоятеля Украинской Православной Церкви<br>
+              Блаженнейшего Митрополита Онуфрия
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1">&nbsp;</div>
+            <div class="col-md-7"><img src="images/lenta.png" alt="lenta" class="img-responsive col-centered" /></div>
+            <div class="col-md-4 "><a class="btn btn-header margin-05 pull-left" href="http://sv-nikolay.kiev.ua/">www.sv-nikolay.kiev.ua</a></div>
+          </div>
+          <div class="row">
+            <div class="col-md-9 text-center preambula bcolor">
+              Благотворительный проект
+            </div>
+          </div>
+          <div class="row">
+            <ul class="nav text-uppercase navbar-right navbar-nav">
+              <li>
+                <a href="#/">
+                  Главная
+                </a>
+              </li>
+              <li>
+                <a href="#/about">
+                  О проекте
+                </a>
+              </li>
+              <li>
+                <a href="#/gratitude">
+                  Благодарности
+                </a>
+              </li>
+              <li>
+                <a href="#/articles/smi">
+                  СМИ о проекте
+                </a>
+              </li>
+              <li>
+                <a href="#/articles/actions">
+                  Акции
+                </a>
+              </li>
+              <li>
+                <a href="#/contacts">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="wrapper">
-    <div class=" all-page nl_grad_vertical_reverse">
-      <div class="col-md-push-1 col-xl-push-1 col-md-10 col-xl-10 middle-without-borders col-md-pull-1 col-xl-push-1">
-        <div class=" green-border">
-          <div class="nl_grad_vertical container-fluid main-carousel">
-            <div class="col-md-push-1 col-xl-push-1 nl_carousel col-md-10 col-xl-10 col-md-pull-1 col-xl-pull-1">
-              <div id="carousel-example-generic" class="carousel slide"
-                   ng-controller="MainCarouselCtrl">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-
-                  <div class="item active">
-                    <!--ng-class="{active : isSliderShown}"-->
-
-                    <img src="images/slider.png" alt="...">
-                  </div>
-                  <!--<div class="item " ng-class="{active : !isSliderShown}">-->
-                  <!--<img class="img-responsive"-->
-                  <!--src="https://lh3.googleusercontent.com/-KEsXTMWED1w/Vb2m7WyQ3ZI/AAAAAAAAJYM/lNDa2k1xars/s1200-Ic42/slider-anons.png"-->
-                  <!--alt="...">-->
-                  <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
-                  <!--&lt;!&ndash;<h3>Next Slide</h3>&ndash;&gt;-->
-                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                  <!--</div>-->
-                </div>
-
-                <!-- Controls -->
-                <!--<a class="left carousel-control nl_carousel" href="#carousel-example-generic" role="button"-->
-                <!--data-slide="prev">-->
-                <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                <!--<span class="sr-only">Previous</span>-->
-                <!--</a>-->
-                <!--<a class="right carousel-control nl_carousel" href="#carousel-example-generic" role="button"-->
-                <!--data-slide="next">-->
-                <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                <!--<span class="sr-only">Next</span>-->
-                <!--</a>-->
-              </div>
+  <div ng-controller="SlidesListCtrl" class="main-carousel padding-20" ng-show="location() === '/' && slides.length > 0">
+    <div class="container">
+      <div class="row banner-container">
+        <uib-carousel interval="12000" active="active" class="photo-with-caption-container slider">
+          <uib-slide ng-repeat="slide in slides" index="$index" >
+            <div class="photo-with-caption-container slider">
+              <figure>
+                <img ng-src="{{slide.cover}}" class="img-responsive">
+                <figcaption class="slide-caption text-center">
+                  <h1 class="text-uppercase">{{slide.title}}</h1>
+                  <p>
+                    {{slide.description}}
+                  </p>
+                  <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-default">{{slide.buttonName}}</a>
+                </figcaption>
+              </figure>
             </div>
-            <div class="nl_carousel sub_projects" ng-show="location() == '/news2016'">
-              <a href="nikolsky_evenings">
-                <div id="carousel-sub-project-nikolsky_evenings"
-                     class="carousel slide col-md-4 col-xl-4"
-                     ng-controller="MainCarouselCtrl">
-                  <div class="carousel-title">
-                    Никольские вечера
-                  </div>
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-sub-projects-1" data-slide-to="0"
-                        class="active"></li>
-                    <li data-target="#carousel-sub-projects-1" data-slide-to="1"></li>
-                  </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-
-                    <div class="item active thumbnail">
-                      <!--ng-class="{active : isSliderShown}"-->
-
-                      <img class="img-responsive"
-                        src="https://lh3.googleusercontent.com/-0ZUtpWCbNXY/VqPr_tMNMZI/AAAAAAAAKnc/nnglduvy1gQ/s912-Ic42/DSCN4170.JPG"
-                        alt="...">
-                    </div>
-                    <!--<div class="item " ng-class="{active : !isSliderShown}">-->
-                    <!--<img class="img-responsive"-->
-                    <!--src="https://lh3.googleusercontent.com/-KEsXTMWED1w/Vb2m7WyQ3ZI/AAAAAAAAJYM/lNDa2k1xars/s1200-Ic42/slider-anons.png"-->
-                    <!--alt="...">-->
-                    <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<h3>Next Slide</h3>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--</div>-->
-                  </div>
-
-                  <!-- Controls -->
-                  <!--<a class="left carousel-control nl_carousel" href="#carousel-sub-projects-1" role="button"-->
-                  <!--data-slide="prev">-->
-                  <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                  <!--<span class="sr-only">Previous</span>-->
-                  <!--</a>-->
-                  <!--<a class="right carousel-control nl_carousel" href="#carousel-sub-projects-1" role="button"-->
-                  <!--data-slide="next">-->
-                  <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                  <!--<span class="sr-only">Next</span>-->
-                  <!--</a>-->
-                  <div class="carousel-text">
-                    Анонс встреч, архив видеозаписей, Ваши вопросы и заявки по темам
-                  </div>
-                </div>
-              </a>
-              <a href="exposition">
-                <div id="carousel-sub-project-exposition" class="carousel slide col-md-4 col-xl-4"
-                     ng-controller="MainCarouselCtrl">
-                  <div class="carousel-title">
-                    Выставка икон
-                  </div>
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-sub-projects-2" data-slide-to="0"
-                        class="active"></li>
-                    <li data-target="#carousel-sub-projects-2" data-slide-to="1"></li>
-                  </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-
-                    <div class="item active thumbnail">
-                      <!--ng-class="{active : isSliderShown}"-->
-
-                      <img class="img-responsive"
-                        src="http://www.pravlife.org/sites/default/files/field/image/vystavka1.jpg"
-                        alt="...">
-                    </div>
-                    <!--<div class="item " ng-class="{active : !isSliderShown}">-->
-                    <!--<img class="img-responsive"-->
-                    <!--src="https://lh3.googleusercontent.com/-KEsXTMWED1w/Vb2m7WyQ3ZI/AAAAAAAAJYM/lNDa2k1xars/s1200-Ic42/slider-anons.png"-->
-                    <!--alt="...">-->
-                    <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<h3>Next Slide</h3>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--</div>-->
-                  </div>
-
-                  <!-- Controls -->
-                  <!--<a class="left carousel-control nl_carousel" href="#carousel-sub-projects-2" role="button"-->
-                  <!--data-slide="prev">-->
-                  <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                  <!--<span class="sr-only">Previous</span>-->
-                  <!--</a>-->
-                  <!--<a class="right carousel-control nl_carousel" href="#carousel-sub-projects-2" role="button"-->
-                  <!--data-slide="next">-->
-                  <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                  <!--<span class="sr-only">Next</span>-->
-                  <!--</a>-->
-                  <div class="carousel-text">
-                    Информация о благотворительной выставке «Украина – дом Пресвятой Богородицы»
-                  </div>
-                </div>
-              </a>
-              <a href="requests">
-                <div id="carousel-sub-project-requests" class="carousel slide col-md-4 col-xl-4"
-                     ng-controller="MainCarouselCtrl">
-                  <div class="carousel-title">
-                    Окно помощи
-                  </div>
-
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-sub-projects-3" data-slide-to="0"
-                        class="active"></li>
-                    <li data-target="#carousel-sub-projects-3" data-slide-to="1"></li>
-                  </ol>
-
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-
-                    <div class="item active thumbnail">
-                      <!--ng-class="{active : isSliderShown}"-->
-
-                      <img class="img-responsive"
-                        src="https://lh3.googleusercontent.com/-8RXTHb223KM/VKmxFItzHTI/AAAAAAAAHJ0/OryVqnqbeW8/s912/NCH_5488.jpg"
-                        alt="...">
-                    </div>
-                    <!--<div class="item " ng-class="{active : !isSliderShown}">-->
-                    <!--<img class="img-responsive"-->
-                    <!--src="https://lh3.googleusercontent.com/-KEsXTMWED1w/Vb2m7WyQ3ZI/AAAAAAAAJYM/lNDa2k1xars/s1200-Ic42/slider-anons.png"-->
-                    <!--alt="...">-->
-
-                    <!--</div>-->
-                  </div>
-
-                  <!-- Controls -->
-                  <!--<a class="left carousel-control nl_carousel" href="#carousel-sub-projects-3" role="button"-->
-                  <!--data-slide="prev">-->
-                  <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                  <!--<span class="sr-only">Previous</span>-->
-                  <!--</a>-->
-                  <!--<a class="right carousel-control nl_carousel" href="#carousel-sub-projects-3" role="button"-->
-                  <!--data-slide="next">-->
-                  <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                  <!--<span class="sr-only">Next</span>-->
-                  <!--</a>-->
-                  <div class="carousel-text">
-                    Оставьте заявку о помощи, узнайте статус или ответ по заявке
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="top-gradient">&nbsp;</div>
-          <div class="nl_main all_other_text container-fluid ">
-
-            <div class="row">
-              <div class="col-md-1 col-xl-1"></div>
-              <div class="col-md-7 col-xl-7  view_container">
-                <div ng-view="" class="col-md-10 col-xl-10 padding-top-25"></div>
-                <div class="col-md-1 col-xl-1 "></div>
-                <div class="col-md-1 col-xl-1  border-right-gradient"></div>
-              </div>
-              <div class="col-md-3 col-xl-3 support_info_container ">
-
-                <div class="col-md-push-1 col-xl-push-1 col-md-11 col-xl-11">
-
-                  <div class="nl_routes" ng-controller="AdminRoutesCtrl" ng-show="auth.user">
-                    <h4>Список доступных страниц</h4>
-
-                    <div ng-repeat="route in routes " ng-show="$index % 2 === 0">
-                      <a ng-href="#{{route.originalPath}}">{{route.originalPath}}</a>
-                    </div>
-
-                  </div>
-                  <div class="row">
-                    <div class="text-right">
-                      <img src="images/ptica.png" alt="ptica" height="70px" ng-click="">
-                    </div>
-                    <a href="#/requisites" role="button" ng-show="location() != '/requisites'"
-                       class="btn btn-primary btn-block main-button">
-                      Внести свою лепту
-                    </a>
-                    <a href="#/" role="button" ng-show="location() === '/requisites'"
-                       class="btn btn-primary btn-block main-button main-button-2">
-                      Спасибо за Ваше участие!
-                    </a>
-                  </div>
-
-
-                  <nl-random-group></nl-random-group>
-                  <div id="auth" ng-controller="AuthCtrl">
-                    <div class="form-group clearfix">
-                      <button class="btn btn-link pull-right " ng-click="showLogin()">
-                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                      </button>
-                    </div>
-                    <form ng-show="isShowLogin">
-                      <fieldset ng-hide="auth.user">
-                        <div class="form-group">
-                          <input type="email" class="form-control" placeholder="email"
-                                 ng-model="email"/>
-                        </div>
-                        <div class="form-group">
-                          <input type="password" class="form-control" placeholder="password"
-                                 ng-model="password"/>
-                        </div>
-                        <div class="form-group">
-                          <button type="submit" class="btn btn-primary" ng-click="signIn()">
-                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-                          </button>
-                        </div>
-                      </fieldset>
-              <span ng-show="auth.user">
-                {{auth.user.email}}
-                <button type="submit" class="btn btn-default" ng-click="logOut()">
-                  <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-                </button>
-              </span>
-                    </form>
-                  </div>
-
-
-                  <a href="http://sv-nikolay.kiev.ua">
-                    <h4 class="text-center ">
-
-                      Храм святителя Николая Чудотворца
-                    </h4>
-
-                  </a>
-
-                  <div class="thumbnail">
-                    <img class="img-responsive pop-up"
-                         src="http://sv-nikolay.kiev.ua/images/stories/hram_1.jpg"
-                         alt="hram 1"/>
-                  </div>
-
-
-                  <div class="nl-links margin-top-50">
-                    <!--<h3 class="text-center">Ссылки</h3>-->
-
-                    <div class="row text-center">
-                      <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
-                        <a href="http://orthodoxy.org.ua/" target="_blank">
-                          <img src="http://churches.kiev.ua/images/banners/orthodox_uoc_88_31.jpg"
-                               class="img-responsive"/>
-                        </a>
-                      </div>
-                      <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
-                        <a href="http://mitropolia.kiev.ua/" target="_blank">
-                          <img src="images/links/mitropolia.png" alt="mitropolia"
-                               class="img-responsive"/>
-                        </a>
-                      </div>
-                      <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
-                        <a href="http://pravlife.org" target="_blank">
-                          <img src="images/links/PravLife.png" alt="pravlife"
-                               class="img-responsive"/>
-                        </a>
-                      </div>
-                    </div>
-
-                    <div class="row text-center">
-                      <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
-                        <a href="http://cpg.in.ua/" target="_blank">
-                          <img src="images/links/cerkPravGazeta.png" alt="cerkPravGazeta" width="88"
-                               class="img-responsive"/>
-                        </a>
-                      </div>
-                      <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
-                        <a href="http://blago.church.ua/category/bez-rubriki/" target="_blank">
-                          <img src="images/links/sinodDepart.png" alt="sinodDepart" width="88"
-                               class="img-responsive"/>
-                        </a>
-                      </div>
-                      <div class="col-md-4 col-sm-4 col-xs-4 thumbnail">
-                        <a href="http://miloserdie-mission.org/" target="_blank">
-                          <img src="images/links/miloserdie.png" alt="miloserdie" width="88"
-                               class="img-responsive"/>
-                        </a>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-1 col-xl-1"></div>
-            </div>
-          </div>
+          </uib-slide>
+        </uib-carousel>
+        <div class="col-md-4 text-center banner bgimage">
+          <h1 class="text-uppercase">Внести свою<br>лепту</h1>
+          <p class="margin-35">Вместе<br>Мы сможем больше!</p>
+          <a href="#/requisites" class="btn btn-default">Помочь детям</a>
         </div>
-
       </div>
     </div>
-    <div class="push"></div>
   </div>
-  <div class="footer">
-    <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> Наша лепта 2015
+  <div class="container main-text">
+    <div ng-view="" class="row padding-top-10"></div>
 
-  </div>
-  <a id="toTop" style="
-      display: block;
-      border:0 !important;
-             position: fixed;
-             bottom: 2%;
-             right: 2%;
-
-      ">
-    <button class="btn btn-link btn-danger">
+    <img src="images/map.jpg" class="img-responsive" ng-click="openMap()" ng-show="location() === '/contacts'">
+    <a id="toTop">
+      <button class="btn btn-link btn-danger">
           <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"
                 style="font-size: 2em;"></span>
-    </button>
-  </a>
-</div>
+      </button>
+    </a>
+  </div>
 
+  <div class="footer bgimage row padding-top-20 margin-top-20">
+    <div class="container">
+      <div class="col-xs-12 col-md-4">
+        <br>
+        <br>
+        <h2>Мы в соцсетях:</h2>
+        <div class="row">
+          <div class="col-xs-6 col-md-6">
+            <a class="btn btn-social-icon btn-vk" href="https://vk.com/vustavkaua"><span class="fa fa-vk"></span></a> VK
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <a class="btn btn-social-icon btn-github" href="https://github.com/NashaLeptaChallenge/nasha_lepta/issues"><span class="fa fa-github"></span></a> Github
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-md-6">
+            <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UC-yHuGxwtnurOOLgePjqv3w"><span class="fa fa-youtube"></span></a> Youtube
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <a class="btn btn-social-icon btn-google" href="https://plus.google.com/u/0/111442129617636727768"><span class="fa fa-google"></span></a> Google
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4 text-center">
+        <div class="row">
+          <img src="images/lenta.png" alt="lenta" class="img-responsive col-centered" />
+        </div>
+        <br>
+        <div class="row">
+          <img src="images/logo.png" alt="logo" class="img-responsive col-centered"/>
+        </div>
+        <div class="row">
+          <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> Наша лепта 2015&ndash;<span id="currentYear"></span></p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <br>
+        <br>
+        <h2>Партнёры:</h2>
+        <div class="nl-links margin-top-20">
+          <!--<h3 class="text-center">Ссылки</h3>-->
+          <div class="row text-center">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <a href="http://orthodoxy.org.ua/" target="_blank">
+                <img src="http://churches.kiev.ua/images/banners/orthodox_uoc_88_31.jpg"
+                     class="img-responsive"/>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <a href="http://mitropolia.kiev.ua/" target="_blank">
+                <img src="images/links/mitropolia.png" alt="mitropolia"
+                     class="img-responsive"/>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <a href="http://pravlife.org" target="_blank">
+                <img src="images/links/PravLife.png" alt="pravlife"
+                     class="img-responsive"/>
+              </a>
+            </div>
+          </div>
+          <div class="row"><br></div>
+          <div class="row text-center">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <a href="http://cpg.in.ua/" target="_blank">
+                <img src="images/links/cerkPravGazeta.png" width="88" alt="cerkPravGazeta"
+                     class="img-responsive"/>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <a href="http://blago.church.ua/category/bez-rubriki/" target="_blank">
+                <img src="images/links/sinodDepart.png" width="88" alt="sinodDepart"
+                     class="img-responsive"/>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <a href="http://miloserdie-mission.org/" target="_blank">
+                <img src="images/links/miloserdie.png" width="88" alt="miloserdie"
+                     class="img-responsive"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
   !function (A, n, g, u, l, a, r) {
@@ -484,6 +230,7 @@
   ga('send', 'pageview');
 </script>
 
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -495,10 +242,19 @@
 <script src="bower_components/angularfire/dist/angularfire.js"></script>
 <script src="bower_components/ng-ckeditor/ng-ckeditor.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<script src="bower_components/lodash/lodash.js"></script>
-<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <script src="bower_components/angular-social/angular-social.js"></script>
+<script src="bower_components/youtube-iframe-api/youtube.iframe-api.js"></script>
+<script src="bower_components/angular-youtube-embed/src/angular-youtube-embed.js"></script>
 <script src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/markerclustererplus/src/markerclusterer.js"></script>
+<script src="bower_components/google-maps-utility-library-v3-markerwithlabel/dist/markerwithlabel.js"></script>
+<script src="bower_components/google-maps-utility-library-v3-infobox/dist/infobox.js"></script>
+<script src="bower_components/google-maps-utility-library-v3-keydragzoom/dist/keydragzoom.js"></script>
+<script src="bower_components/js-rich-marker/src/richmarker.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -510,20 +266,54 @@
 <!-- build:js({.tmp,public}) scripts/scripts.js -->
 <script src="scripts/directives/nlArticle.js"></script>
 <script src="scripts/controllers/auth.js"></script>
-<script src="scripts/controllers/updateTemplate.js"></script>
+<script src="scripts/controllers/nlArticle.js"></script>
 <script src="scripts/services/editorOptions.js"></script>
 <script src="scripts/controllers/adminRoutes.js"></script>
 <script src="scripts/vendor/toTop.js"></script>
+<script src="scripts/currentYear.js"></script>
 <script src="scripts/directives/compile.js"></script>
 <script src="scripts/controllers/carousel.js"></script>
 <script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/responsive.js"></script>
 <script src="scripts/directives/nlRandomGroup.js"></script>
 <script src="scripts/services/firebaseLink.js"></script>
 <script src="scripts/directives/nlRandomAlbum.js"></script>
-<script src="scripts/controllers/mainCarousel.js"></script>
 <script src="scripts/controllers/gallerylightbox.js"></script>
-<script src="scripts/directives/popUp.js"></script>
+<script src="scripts/directives/popup.js"></script>
+<script src="scripts/services/fireObjectFactory.js"></script>
+<script src="scripts/services/modelCopier.js"></script>
+<script src="scripts/reformal.js"></script>
+<script src="scripts/controllers/articles/create.js"></script>
+<script src="scripts/controllers/articles/update.js"></script>
+<script src="scripts/controllers/articles/list.js"></script>
+<script src="scripts/controllers/articles/show.js"></script>
+<script src="scripts/services/isNeedToCompileFurther.js"></script>
+<script src="scripts/directives/nlEditor.js"></script>
+<script src="scripts/controllers/nlEditor.js"></script>
+<script src="scripts/controllers/albums/list.js"></script>
+<script src="scripts/controllers/albums/create.js"></script>
+<script src="scripts/controllers/albums/show.js"></script>
+<script src="scripts/controllers/albums/update.js"></script>
+<script src="scripts/controllers/news/list.js"></script>
+<script src="scripts/controllers/news/create.js"></script>
+<script src="scripts/controllers/news/show.js"></script>
+<script src="scripts/controllers/news/update.js"></script>
+<script src="scripts/services/htmlToPlainText.js"></script>
+<script src="scripts/services/modelGrouper.js"></script>
+<script src="scripts/controllers/landing.js"></script>
+<script src="scripts/controllers/slides/list.js"></script>
+<script src="scripts/controllers/slides/create.js"></script>
+<script src="scripts/controllers/slides/show.js"></script>
+<script src="scripts/controllers/slides/update.js"></script>
+<script src="scripts/controllers/videoGallery/list.js"></script>
+<script src="scripts/controllers/videoGallery/update.js"></script>
+<script src="scripts/services/youtubeKeyHolder.js"></script>
+<script src="scripts/services/youtubeListResponseConverter.js"></script>
+<script src="scripts/services/playlistFetcher.js"></script>
+<script src="scripts/controllers/modalInstance.js"></script>
+<script src="scripts/services/playListIdExtractor.js"></script>
+<script src="scripts/services/subProjectPrefixer.js"></script>
+<script src="scripts/controllers/googleMap.js"></script>
+<script src="scripts/services/groupQtyResizer.js"></script>
 <!-- endbuild -->
 <script src="scripts/ckeditor/ckeditor.js"></script>
 

@@ -1,0 +1,24 @@
+<a href="#/{{slideModelsLocation}}"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span></a>
+
+<a type="button" class="btn btn-primary" ng-href="#/{{slideModelsLocation}}/{{slide.id}}/edit" ng-show="auth.user">
+  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+</a>
+<div class="row" ng-hide="slide.id == null">
+  <div class="col-md-2"></div>
+  <div class="col-md-8 photo-with-caption-container slider">
+    <figure class="photo-thumbnail">
+      <img ng-src="{{slide.cover}}" class="img-responsive">
+      <figcaption class="slide-caption text-center">
+        <h1 class="text-uppercase">{{slide.title}}</h1>
+        <p>
+          {{slide.description}}
+        </p>
+        <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-default">{{slide.buttonName}}</a>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="row alert-danger text-center" ng-show="slide.id == null">
+Первый слайд не редактируется из админ панели
+</div>

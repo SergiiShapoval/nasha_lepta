@@ -7,7 +7,7 @@ root = true
 
 [*]
 
-# Change these settings to your own preference
+# Change these settings to your own preference, check commit issue hooks
 indent_style = space
 indent_size = 2
 
@@ -19,3 +19,5 @@ insert_final_newline = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+# dmytro-polupan comment

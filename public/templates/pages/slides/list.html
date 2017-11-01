@@ -1,0 +1,23 @@
+<div class="slide-header" ng-show='auth.user'>
+  <div class="slides-header">
+    <h1 title="slides">Слайды</h1>
+    <a class="btn btn-default" href='#/{{slideModelsLocation}}/new'>
+      Создать слайд<span class="glyphicon glyphicon-plus-sign"></span>
+    </a>
+  </div>
+  <p ng-show="slide">Слайдов пока нет</p>
+</div>
+<div class="col-md-4 photo-with-caption-container" ng-repeat="slide in slides" >
+  <figure class="photo-thumbnail">
+    <a ng-href="#/{{slideModelsLocation}}/{{slide.id}}">
+      <img ng-src="{{slide.cover}}" class="img-responsive">
+      <figcaption class="photo-caption text-center">
+        <div class="photo-caption-content">
+          {{slide.title}}
+        </div>
+      </figcaption>
+    </a>
+  </figure>
+</div>
+
+

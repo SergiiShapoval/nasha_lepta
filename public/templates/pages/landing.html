@@ -1,0 +1,89 @@
+<div class="subprojects-set" ng-show="location() === '/'">
+  <h1 class="text-uppercase text-center margin-10">Мероприятия</h1>
+  <div class="row text-center subprojects">
+    <div class="col-md-3">
+      <img src="https://lh3.googleusercontent.com/-0ZUtpWCbNXY/VqPr_tMNMZI/AAAAAAAAKnc/nnglduvy1gQ/s912-Ic42/DSCN4170.JPG" class="img-responsive">
+      <h2>Никольские вечера</h2>
+      <p>Анонс встреч, архив видеозаписей, Ваши вопросы и заявки по тема</p>
+      <a href="#/evenings" class="subprojects-link btn btn-block"><small>подробнее</small></a>
+    </div>
+    <div class="col-md-3">
+      <img src="http://www.pravlife.org/sites/default/files/field/image/vystavka1.jpg" class="img-responsive">
+      <h2>Выставка икон</h2>
+      <p>Информация о благотворительной выставке «Украина - дом Пресвятой Богородицы»</p>
+      <a href="#/exposition" class="subprojects-link btn btn-block"><small>подробнее</small></a>
+    </div>
+    <div class="col-md-3">
+      <img src="https://lh3.googleusercontent.com/-8RXTHb223KM/VKmxFItzHTI/AAAAAAAAHJ0/OryVqnqbeW8/s912/NCH_5488.jpg" class="img-responsive">
+      <h2>Окно помощи</h2>
+      <p>Оставьте заявку о помощи, узнайте статус или ответ по заявке</p>
+      <a href="http://nasha-lepta.reformal.ru" onclick="Reformal.widgetOpen();return false;" onmouseover="Reformal.widgetPreload();" class="subprojects-link btn btn-block"><small>подробнее</small></a>
+    </div>
+    <div class="col-md-3">
+      <img src="https://lh5.googleusercontent.com/-RuWFDqkpFvE/VR11mlX2buI/AAAAAAAAH14/LNtP2nkfroo/w958-h719-no/DSCN0665.JPG" class="img-responsive">
+      <h2>Помощь получена!</h2>
+      <p>Информация о предоставленной помощи</p>
+      <a href="#/accounting" class="subprojects-link btn btn-block"><small>подробнее</small></a>
+    </div>
+  </div>
+
+</div>
+<div class="photo-set"  ng-show="albumGroups.length">
+  <h1 class="text-uppercase text-center margin-10">Фото блок</h1>
+  <uib-carousel interval="12000" class="photo-with-caption-container" active="active">
+    <uib-slide ng-repeat="albumGroup in albumGroups" index="$index"  >
+      <div class="col-md-4" ng-repeat="album in albumGroup">
+        <figure class="photo-thumbnail">
+          <a ng-href="#/{{albumModelsLocation}}/{{album.id}}">
+            <img ng-src="{{album.cover}}" class="img-responsive">
+            <figcaption class="photo-caption text-center">
+              <div class="photo-caption-content">
+                {{album.title}}
+              </div>
+            </figcaption>
+          </a>
+        </figure>
+      </div>
+    </uib-slide>
+  </uib-carousel>
+</div>
+<div class="video-set" ng-show="videoGroups.length">
+  <h1 class="text-uppercase text-center margin-10">Видео блок</h1>
+  <uib-carousel interval="12000" class="photo-with-caption-container" active="active">
+    <uib-slide ng-repeat="videoGroup in videoGroups" index="$index"  >
+      <div class="col-md-4" ng-repeat="video in videoGroup">
+        <figure class="photo-thumbnail video" ng-click="open(video)">
+          <img ng-src="{{video.thumbnailUrl}}" class="img-responsive">
+          <figcaption class="photo-caption text-center">
+            <div class="photo-caption-content">
+              {{video.title}}
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </uib-slide>
+  </uib-carousel>
+</div>
+<div class="news-set" ng-show="news.length > 0">
+  <h1 class="text-uppercase text-center margin-10">Новости проекта</h1>
+  <div ng-repeat="novelty in news | orderBy:'-date'" >
+    <div class="row novelty-summary-view">
+      <div class="col-md-3">
+        <img ng-src="{{novelty.cover}}" class="img-responsive">
+      </div>
+      <div class="col-md-9">
+        <h2>{{novelty.title}}</h2>
+        <p>{{novelty.summary}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="novelty-link-date">
+          <small>{{novelty.date | date : "dd.MM.yyyy"}}</small>
+          <a ng-href="#/{{noveltyModelsLocation}}/{{novelty.id}}" class="pull-right"><small>подробнее</small></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#/{{noveltyModelsLocation}}" class="pull-right btn btn-info margin-top-20">Показать все новости</a>
+</div>

@@ -1,0 +1,99 @@
+<div class="new-slide" ng-show="auth.user">
+  <div class="new-slide-container">
+
+
+    <ul class='errors' ng-if="errors">
+      <li ng-repeat="error in errors">{{error}}</li>
+    </ul>
+
+    <a type="button" class="btn btn-success" ng-href="#/{{slideModelsLocation}}/{{slide.id}}" ng-show="slide.status">
+      {{slide.status}} <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+    </a>
+
+    <form role="form" name="slideValidation">
+      <!--add error class if field is invalid-->
+      <fieldset class="form-group"  ng-class="{ 'has-error': slideValidation.id.$invalid }">
+        <label class="control-label" for="id">URL концовка (одно слово на английском)</label>
+        <input class="form-control"
+               id="id"
+               name="id"
+               ng-model="slide.id"
+               ng-pattern="/^[A-z,0-9,\-,_]+$/"
+               ng-required />
+      </fieldset>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': slideValidation.title.$invalid }">
+        <label class="control-label" for="title">Название слайда</label>
+        <input class="form-control"
+               id="title"
+               name="title"
+               ng-model="slide.title"
+               ng-required />
+      </fieldset>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': slideValidation.description.$invalid }">
+        <label class="control-label" for="description">Описание слайда</label>
+        <input class="form-control"
+               id="description"
+               name="description"
+               ng-model="slide.description"
+               ng-required />
+      </fieldset>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': slideValidation.buttonName.$invalid }">
+        <label class="control-label" for="buttonName">Надпись на кнопке</label>
+        <input class="form-control"
+               id="buttonName"
+               name="buttonName"
+               ng-model="slide.buttonName"
+               ng-required />
+      </fieldset>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': slideValidation.cover.$invalid }">
+        <label class="control-label" for="cover">Фото слайда</label>
+        <input class="form-control"
+               id="cover"
+               name="cover"
+               ng-model="slide.cover"
+               ng-required />
+      </fieldset>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 photo-with-caption-container slider">
+          <figure class="photo-thumbnail">
+            <img ng-src="{{slide.cover}}" class="img-responsive">
+            <figcaption class="slide-caption text-center">
+              <h1 class="text-uppercase">{{slide.title}}</h1>
+              <p>
+                {{slide.description}}
+              </p>
+              <a ng-href="{{slide.detailsLink}}" class="pull-right btn btn-default">{{slide.buttonName}}</a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <fieldset class="form-group"  ng-class="{ 'has-error': slideValidation.detailsLink.$invalid }">
+        <label class="control-label" for="detailsLink">Ссылка на детали</label>
+        <input class="form-control"
+               id="detailsLink"
+               name="detailsLink"
+               ng-model="slide.detailsLink"
+
+               ng-required />
+      </fieldset>
+      <!--disable button when saving or invalid data-->
+      <button type="submit" class="btn btn-danger"
+              ng-class="{ 'disabled': slideValidation.$invalid }"
+              ng-click="updateSlide(slide)"
+              ng-disabled="slide.updating">{{slide.updating ? 'Saving...' : 'Save'}}  <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
+      </button>
+      <button type="submit" class="btn btn-danger"
+              ng-click="removeSlide()"
+              ng-disabled="slide.removing">{{slide.removing ? 'Deleting...' : 'Delete'}}  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+    </form>
+
+
+  </div>
+</div>

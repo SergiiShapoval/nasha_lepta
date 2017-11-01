@@ -34,18 +34,18 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/**/*.js'],
+        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
       },
       jsTest: {
-        files: ['test/spec/**/*.js'],
+        files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/**/*.css'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
@@ -56,8 +56,8 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/**/*.html',
-          '.tmp/styles/**/*.css',
+          '<%= yeoman.app %>/{,*/}*.html',
+          '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -148,7 +148,10 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
+      css: {
+         src: [ 'styles/' ]
+      }
     },
 
     // Add vendor prefixed styles
@@ -180,12 +183,7 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app
     wiredep: {
       app: {
-        src: [
-          '<%= yeoman.app %>/index.html',
-          '<%= yeoman.app %>/nikolsky_evenings/index.html',
-          '<%= yeoman.app %>/requests/index.html',
-          '<%= yeoman.app %>/exposition/index.html'
-        ],
+        src: ['<%= yeoman.app %>/index.html'],
         ignorePath:  /\.\.\//
       },
       test: {
@@ -210,9 +208,9 @@ module.exports = function (grunt) {
     filerev: {
       dist: {
         src: [
-          '<%= yeoman.dist %>/scripts/**/*.js',
+          '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '!<%= yeoman.dist %>/scripts/ckeditor/**/*',
-          '<%= yeoman.dist %>/styles/**/*.css',
+          '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
@@ -230,7 +228,7 @@ module.exports = function (grunt) {
           html: {
             steps: {
               js: ['concat', 'uglifyjs'],
-              css: ['cssmin']
+              css: ['concat','cssmin']
             },
             post: {}
           }
@@ -240,7 +238,7 @@ module.exports = function (grunt) {
 
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
-      html: ['<%= yeoman.dist %>/**/*.html'],
+      html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       js: '<%= yeoman.dist %>/scripts/{,*/}*.js',
       options: {
@@ -250,43 +248,16 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/styles',
           '<%= yeoman.dist %>/scripts'
         ]
-        ,
-        blockReplacements: {
-          css: function (block) {
-            return '<link rel="stylesheet" href="../' + block.dest + '"/>';
-          },
-          js: function (block) {
-            return '<script src="../' + block.dest + '"></script>';
-          }
-        }
       }
     },
 
-    // The following *-min tasks will produce minified files in the dist folder
-    // By default, your `index.html`'s <!-- Usemin block --> will take care of
-    // minification. These next options are pre-configured if you do not wish
-    // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
+    cssmin: {
+      combine: {
+        files: {
+          '<%= yeoman.dist %>/styles/combined.css': ['.tmp/concat/styles/vendor.css', '.tmp/concat/styles/main.css']
+        }
+      }
+    },
 
     imagemin: {
       dist: {
@@ -324,10 +295,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.dist %>',
           src: [
             '*.html',
-            'views/{,*/}*.html',
-            'nikolsky_evenings/{,*/}*.html',
-            'requests/{,*/}*.html',
-            'exposition/{,*/}*.html'
+            'templates/{,*/}*.html'
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -351,10 +319,7 @@ module.exports = function (grunt) {
     cdnify: {
       dist: {
         html: [
-          '<%= yeoman.dist %>/*.html',
-          '<%= yeoman.dist %>/nikolsky_evenings/*.html',
-          '<%= yeoman.dist %>/requests/*.html',
-          '<%= yeoman.dist %>/exposition/*.html'
+          '<%= yeoman.dist %>/*.html'
         ]
       }
     },
@@ -372,9 +337,6 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'templates/**/*',
-            'nikolsky_evenings/**/*',
-            'requests/**/*',
-            'exposition/**/*',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*',
             'scripts/ckeditor/**/*',
@@ -388,6 +350,11 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           cwd: 'bower_components/bootstrap/dist',
+          src: 'fonts/*',
+          dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: 'bower_components/font-awesome',
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
         }]
@@ -432,56 +399,11 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'https://SergiiShapoval:880682ec0bdf06406ebda4e7148cbf70840a1161@github.com/SergiiShapoval/nasha_lepta.git',
+          remote: 'https://SergiiShapoval:58c1d6724256e91be860096fc3a9f03ba904bf49@github.com/SergiiShapoval/nasha_lepta.git',
           branch: 'gh-pages'
         }
       }
-    },
-    //additional configuration created as useminPrepare can work correctly only with one file
-    concat: {
-      dist: {
-        files: [{
-          dest: '.tmp\\concat\\scripts\\appExpositionScript.js',
-          src: [
-            '{.tmp,public}\\data\\appExpositionRoutes.js',
-            '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
-            '{.tmp,public}\\scripts\\appExposition.js']
-        },
-          {
-            dest: '.tmp\\concat\\scripts\\appEveningsScript.js',
-            src: [
-              '{.tmp,public}\\data\\appEveningsRoutes.js',
-              '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
-              '{.tmp,public}\\scripts\\appEvenings.js']
-          },
-          {
-            dest: '.tmp\\concat\\scripts\\appRequestsScript.js',
-            src: [
-              '{.tmp,public}\\data\\appRequestsRoutes.js',
-              '{.tmp,public}\\scripts\\vendor\\angularPicasa.js',
-              '{.tmp,public}\\scripts\\appRequests.js']
-          }
-        ]
-      }
-    },
-    //additional configuration created as useminPrepare can work correctly only with one file
-    uglify: {
-      dist: {
-        files: [{
-          dest: 'dist\\scripts\\appRequestsScript.js',
-          src: ['.tmp\\concat\\scripts\\appRequestsScript.js']
-        },
-          {
-            dest: 'dist\\scripts\\appEveningsScript.js',
-            src: ['.tmp\\concat\\scripts\\appEveningsScript.js']
-          },
-          {
-            dest: 'dist\\scripts\\appExpositionScript.js',
-            src: ['.tmp\\concat\\scripts\\appExpositionScript.js']
-          }]
-      }
     }
-
   });
 
 
@@ -528,7 +450,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'cssmin:combine'
   ]);
 
   grunt.registerTask('default', [
