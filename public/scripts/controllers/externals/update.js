@@ -47,7 +47,7 @@ angular.module('nashaLeptaApp')
       $scope.external.$remove()
         .then(function(fireNovelty) {
           $scope.external.removing = null;
-          $scope.changeRoute('#/' + externalModelsLocation);
+          $scope.changeRoute('#!/' + externalModelsLocation);
         }, function(error) {
           $scope.external.removing = null;
           console.log('NoveltysUpdateCtrl#removeNovelty: ' + error);

@@ -13,7 +13,7 @@ angular.module('nashaLeptaApp')
       buttonName: "Помочь...",
       cover: "images/slides/children_day.f1eca941.jpg",
       description: "Добрых дел много не бывает))",
-      detailsLink: "#/requisites",
+      detailsLink: "#!/requisites",
       id: "0",
       title: "Наша цель - помощь детям!"
     },
@@ -21,7 +21,7 @@ angular.module('nashaLeptaApp')
         buttonName: "Подробнее...",
         cover: "images/slides/mitropolit.5104107d.jpg",
         description: "Благотворительный проект «Наша Лепта» создан по благословению  Блаженнейшего Митрополита Киевского и всей Украины Онуфрия и действует на базе храма святителя Николая Чудотворца при 17-й больнице города Киева.",
-        detailsLink: "#/about",
+        detailsLink: "#!/about",
         id: "1",
         title: "\"Наша Лепта\""
       }];
