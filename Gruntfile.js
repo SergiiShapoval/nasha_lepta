@@ -348,6 +348,13 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
         }, {
+        }, {
+          //special case for logo that is used in dynamic content
+          expand: true,
+          cwd: '<%= yeoman.app %>/images/',
+          dest: '<%= yeoman.dist %>/images',
+          src: ['leptaLogoHorizontal.png']
+        }, {
           expand: true,
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
@@ -445,7 +452,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
+    // 'cdnify',
     'cssmin',
     'uglify',
     'filerev',
