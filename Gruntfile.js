@@ -1,3 +1,4 @@
+// N.B. works only with node@10
 // Generated on 2015-07-10 using generator-angular 0.11.1
 'use strict';
 
@@ -452,7 +453,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    // 'cdnify',
+    'cdnify',
     'cssmin',
     'uglify',
     'filerev',
