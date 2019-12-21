@@ -151,7 +151,7 @@ module.exports = function (grunt) {
       },
       server: '.tmp',
       css: {
-         src: [ 'styles/' ]
+        src: ['styles/']
       }
     },
 
@@ -185,23 +185,23 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        ignorePath:  /\.\.\//
+        ignorePath: /\.\.\//
       },
       test: {
         devDependencies: true,
         src: '<%= karma.unit.configFile %>',
-        ignorePath:  /\.\.\//,
-        fileTypes:{
+        ignorePath: /\.\.\//,
+        fileTypes: {
           js: {
             block: /(([\s\t]*)\/{2}\s*?bower:\s*?(\S*))(\n|\r|.)*?(\/{2}\s*endbower)/gi,
-              detect: {
-                js: /'(.*\.js)'/gi
-              },
-              replace: {
-                js: '\'{{filePath}}\','
-              }
+            detect: {
+              js: /'(.*\.js)'/gi
+            },
+            replace: {
+              js: '\'{{filePath}}\','
             }
           }
+        }
       }
     },
 
@@ -229,7 +229,7 @@ module.exports = function (grunt) {
           html: {
             steps: {
               js: ['concat', 'uglifyjs'],
-              css: ['concat','cssmin']
+              css: ['concat', 'cssmin']
             },
             post: {}
           }
@@ -348,14 +348,7 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
-        }, {
-        }, {
-          //special case for logo that is used in dynamic content
-          expand: true,
-          cwd: '<%= yeoman.app %>/images/',
-          dest: '<%= yeoman.dist %>/images',
-          src: ['leptaLogoHorizontal.png']
-        }, {
+        }, {}, {
           expand: true,
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
@@ -372,6 +365,15 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      logo: {
+        files: [{
+          //special case for logo that is used in dynamic content
+          expand: true,
+          cwd: '<%= yeoman.app %>/images/',
+          dest: '<%= yeoman.dist %>/images',
+          src: ['leptaLogoHorizontal.png']
+        }]
       }
     },
 
@@ -397,7 +399,7 @@ module.exports = function (grunt) {
         singleRun: true
       }
     },
-/*https://github.com/robwierzbowski/grunt-build-control*/
+    /*https://github.com/robwierzbowski/grunt-build-control*/
     buildcontrol: {
       options: {
         dir: 'dist',
@@ -459,7 +461,8 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin',
-    'cssmin:combine'
+    'cssmin:combine',
+    'copy:logo'
   ]);
 
   grunt.registerTask('default', [
